@@ -1,0 +1,3713 @@
+<vivino-product-list>
+<meta-data>
+    <feed-generation-date>2024-08-02T20:12:50.830161Z</feed-generation-date>
+</meta-data>
+<product>
+    <product-name>2019 Epiphany</product-name>
+    <price>64.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2019-epiphany</link>
+    <inventory-count>146</inventory-count>
+    <product-id>6537665b-6e13-4e2b-839e-ebcb761d5cc9</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Family Reserve Meritage</product-name>
+    <price>64.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2019-family-reserve-meritage</link>
+    <inventory-count>0</inventory-count>
+    <product-id>efb677d9-dc0e-4c8e-be70-b0c3113f6680</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Meritage</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Family Reserve Syrah</product-name>
+    <price>64.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2019-family-reserve-syrah</link>
+    <inventory-count>0</inventory-count>
+    <product-id>7a158fa4-8a5a-43a9-bb66-e2342894c11e</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Syrah</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Family Reserve Zinfandel</product-name>
+    <price>64.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2019-family-reserve-zinfandel-ship-only</link>
+    <inventory-count>0</inventory-count>
+    <product-id>3c0d3c8b-61a9-42d7-a682-2c5b2b2ef91c</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Zinfandel</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Gsm</product-name>
+    <price>65.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2019-gsm-ship-only</link>
+    <inventory-count>30</inventory-count>
+    <product-id>2a24a07c-9e9a-44e3-9729-7b2cfd956932</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Bourbon Barrel Zinfandel</product-name>
+    <price>62.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2020-bourbon-barrel-zinfandel</link>
+    <inventory-count>854</inventory-count>
+    <product-id>852cab7e-b2ab-4807-8639-90b43f12ed0c</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Zinfandel</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Gsm</product-name>
+    <price>49.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2020-gsm</link>
+    <inventory-count>-3</inventory-count>
+    <product-id>4c87f5b5-691c-4204-9b66-0f0575499d09</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Mourvedre</product-name>
+    <price>52.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2020-mourvedre-ship-to-only</link>
+    <inventory-count>0</inventory-count>
+    <product-id>18ed537b-b6c5-406f-8715-378e2dcc5ca3</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Mourvèdre</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Petite Sirah</product-name>
+    <price>69.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2020-petite-sirah-red</link>
+    <inventory-count>44</inventory-count>
+    <product-id>e450613f-37fb-4805-aded-1875e0d81fe1</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Petite Sirah</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Syrah</product-name>
+    <price>64.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2020-family-reserve-syrah</link>
+    <inventory-count>285</inventory-count>
+    <product-id>c6ab155c-8cb6-46b0-924e-05ebd06ab807</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Syrah</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Zinfandel</product-name>
+    <price>54.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2020-family-reserve-zinfandel</link>
+    <inventory-count>467</inventory-count>
+    <product-id>4eb3046e-1180-49fe-83f9-6a77d2f30e96</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Zinfandel</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Arroyo Seco Malbec</product-name>
+    <price>64.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2021-arroyo-seco-malbec</link>
+    <inventory-count>243</inventory-count>
+    <product-id>1508726a-955e-45f0-9959-d7cedd816383</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Monterey</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Malbec</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Cabernet Franc</product-name>
+    <price>74.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2021-cabernet-franc</link>
+    <inventory-count>475</inventory-count>
+    <product-id>7fc606c1-49fe-4e9c-82ea-134fe6597e50</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Franc</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Double Dog Red</product-name>
+    <price>69.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2021-double-dog-red</link>
+    <inventory-count>278</inventory-count>
+    <product-id>d40406b2-cba4-428c-b269-fe1c15f9f596</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage>2021</vintage>
+        <country></country>
+        <color>Red</color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Ecclesia</product-name>
+    <price>44.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2021-ecclesia</link>
+    <inventory-count>473</inventory-count>
+    <product-id>ac22b034-ad60-45ae-88f1-efa8ac63bacf</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Gsm</product-name>
+    <price>49.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2021-gsm</link>
+    <inventory-count>1252</inventory-count>
+    <product-id>1e99c944-f046-4585-a648-eb59b1e2ee09</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Meritage</product-name>
+    <price>64.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2021-meritage-</link>
+    <inventory-count>0</inventory-count>
+    <product-id>91506289-8903-42c7-8bbf-aa7f7a6e4d8e</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Bordeaux Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Mourvedre</product-name>
+    <price>54.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2021-mourvedre</link>
+    <inventory-count>24</inventory-count>
+    <product-id>2b6e26d3-5b21-4875-aa2e-616b36362749</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Reserve Merlot</product-name>
+    <price>55.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2021-family-reserve-merlot</link>
+    <inventory-count>432</inventory-count>
+    <product-id>417d74cc-6ed6-4875-8286-6069c19aba3d</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Merlot</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Syrah</product-name>
+    <price>64.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2021-family-reserve-syrah</link>
+    <inventory-count>992</inventory-count>
+    <product-id>9c22d633-8721-469f-921c-d11d6d40f908</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Vardande Syrah</product-name>
+    <price>49.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2021-vardande-syrah-blend</link>
+    <inventory-count>1255</inventory-count>
+    <product-id>e50396e0-408e-4f21-bc94-0fdbb2475110</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage>2021</vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Bourbon Barrel Petite Sirah</product-name>
+    <price>65.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2022-bourbon-barrel-petite-sirah</link>
+    <inventory-count>194</inventory-count>
+    <product-id>76c4b914-62e8-456c-a95d-8b710708dbb2</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Dorado</product-name>
+    <price>59.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/dorado</link>
+    <inventory-count>100</inventory-count>
+    <product-id>a197680f-ad5b-4a86-92b0-6e5cd9fe6086</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage>2022</vintage>
+        <country></country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Moscato</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2022-moscato</link>
+    <inventory-count>132</inventory-count>
+    <product-id>d087e074-a95d-4630-abbe-fd81bb3e922c</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Muscat</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Yes Dear Chardonnay</product-name>
+    <price>36.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2022-yes-dear-chardonnay</link>
+    <inventory-count>621</inventory-count>
+    <product-id>e2a36abd-e70c-4241-99c9-8b0e47ed6c14</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Pinot Grigio</product-name>
+    <price>34.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2023-pinot-grigio</link>
+    <inventory-count>396</inventory-count>
+    <product-id>6c87e033-23fc-4bc4-ba4f-66e99cf9eaad</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Pinot Grigio</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Rose Of Cinsault</product-name>
+    <price>45.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2023-rose-of-cinsault</link>
+    <inventory-count>159</inventory-count>
+    <product-id>bd9f54af-af06-4de2-afbe-454a2bc6dd48</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage>2023</vintage>
+        <country></country>
+        <color>Rose</color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Viognier</product-name>
+    <price>38.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2023-viognier-wine</link>
+    <inventory-count>107</inventory-count>
+    <product-id>54a9d308-87ad-4f4e-8882-7d0bda3f542e</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Viognier</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2024 Annual Wine Club Bbq | Aug 8th</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2024-annual-wine-club-bbq-aug-8th</link>
+    <inventory-count>5</inventory-count>
+    <product-id>147f30de-035b-498d-ab42-4c338c79e792</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2nd Anniversary Route 91 Almond</product-name>
+    <price>29.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/route-91-almond-black</link>
+    <inventory-count>0</inventory-count>
+    <product-id>38c78f2a-1b53-4e5a-8af0-2858fd70a858</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>3rd Anniversary Route 91 Almond</product-name>
+    <price>29.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/route-91-almond-sparkling-orange</link>
+    <inventory-count>0</inventory-count>
+    <product-id>64c1844b-a645-4d2b-9702-81988be66a99</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>3rd Anniversary Route 91 Chardonnay</product-name>
+    <price>34.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/route-91-chardonnay</link>
+    <inventory-count>0</inventory-count>
+    <product-id>e08782ef-66ad-420c-9eaf-9e9070fbd183</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>4th Anniversary Route 91 Almond</product-name>
+    <price>29.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/route-91-lovewins-country-strong</link>
+    <inventory-count>25</inventory-count>
+    <product-id>f25bd559-fc40-4b49-ad05-63d2455e44e1</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>5th Anniversary Route 91 Almond</product-name>
+    <price>29.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/5th-year-anniversary--route-91-almond</link>
+    <inventory-count>0</inventory-count>
+    <product-id>0c2fb08e-232f-4ab5-a4fd-7f0bc8276ae9</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>5th Anniversary Route 91 Cabernet</product-name>
+    <price>44.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/5th-year-anniversary-route-91-cabernet</link>
+    <inventory-count>0</inventory-count>
+    <product-id>62631321-9f88-447e-a6c8-1556bc130c7a</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>5th Anniversary Route 91 Peach</product-name>
+    <price>29.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/5th-year-anniversary--route-91-peach</link>
+    <inventory-count>100</inventory-count>
+    <product-id>ad1e9db7-f961-4539-92cd-3aa239845bbd</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>6th Anniversary Route 91 Almond</product-name>
+    <price>29.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/route-91-nation-almond</link>
+    <inventory-count>0</inventory-count>
+    <product-id>221b1a00-1483-437c-9979-cf80c7f4bc45</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>6th Anniversary Route 91 Cabernet</product-name>
+    <price>39.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/route-91-nation-cabernet-blend</link>
+    <inventory-count>0</inventory-count>
+    <product-id>f1cf7031-1f90-44aa-872b-e0a535495776</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>6th Anniversary Route 91 Peach</product-name>
+    <price>29.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/route-91-nation-peach</link>
+    <inventory-count>142</inventory-count>
+    <product-id>b807cabc-03b0-477c-a4d2-fd45d27857bc</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Almond Sparkling Cans 4pk</product-name>
+    <price>24.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>1000 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/almond-sparkling-cans-4-pack</link>
+    <inventory-count>61</inventory-count>
+    <product-id>a51183f4-ecbe-4cc1-8a0f-ee60c61274dc</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Almond Sparkling Combo</product-name>
+    <price>74.97</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>2750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/almond-bottle-can-3pk-combo</link>
+    <inventory-count>78</inventory-count>
+    <product-id>ed9d2ed7-767b-4821-9468-d532078cad13</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Almond Sparkling Customized</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/almond-sparkling-custom-labeled</link>
+    <inventory-count>-15</inventory-count>
+    <product-id>eb8caae3-471d-4cef-89b6-d7e5fe9dc2f5</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Almond Sparkling Omg 3pk</product-name>
+    <price>74.97</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>2250 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/almond-sparkling-omg-3pk</link>
+    <inventory-count>-66</inventory-count>
+    <product-id>e636a254-f73c-4012-828c-5d87c190e7de</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country>US</country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Almond Sparkling Wine</product-name>
+    <price>24.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/almond-sparkling-wine</link>
+    <inventory-count>-1639</inventory-count>
+    <product-id>89f39aec-bf89-4398-913f-255a92b5c718</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Lodi</appellation>
+        <vintage></vintage>
+        <country>US</country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Almond-tini</product-name>
+    <price>59.98</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>1125 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/almond-tini-2pk</link>
+    <inventory-count>0</inventory-count>
+    <product-id>4eb86cf9-edd2-4c58-a0ba-c11d1f555b37</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Almondsecco Sparkling Wine</product-name>
+    <price>24.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/almondsecco-sparkling-wine</link>
+    <inventory-count>101</inventory-count>
+    <product-id>129a881e-3b02-4863-a47e-1ea18b14e070</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Lodi</appellation>
+        <vintage></vintage>
+        <country>US</country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Angel's Kiss</product-name>
+    <price>59.98</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>1125 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/angels-kiss</link>
+    <inventory-count>0</inventory-count>
+    <product-id>194ebc7e-060a-45c7-a8e5-079e85f3a14b</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Angelica Cream Sherry</product-name>
+    <price>36.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>375 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/angelica-cream-sherry-dessert-wine</link>
+    <inventory-count>94</inventory-count>
+    <product-id>6aba1e3f-54b5-4a72-9d8e-5203613cde67</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Baby: Handsome Little Man</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/handsome-little-man</link>
+    <inventory-count>0</inventory-count>
+    <product-id>af49f317-48fc-4f0e-942a-7bcb6813f1c0</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Baby: It's A Boy</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/its-a-boy</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a422257d-02e6-4740-be35-148bac2045b2</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Baby: It's A Girl</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/its-a-girl</link>
+    <inventory-count>0</inventory-count>
+    <product-id>ef023eec-c029-4286-90dc-8690f7f5a8d7</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Baby: Sweet Little Girl</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/sweet-little-girl</link>
+    <inventory-count>0</inventory-count>
+    <product-id>5ea725a3-de2a-4e3f-8f46-dd05c610a46d</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Bbq 2pk</product-name>
+    <price>80.98</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/bbq-2pk</link>
+    <inventory-count>0</inventory-count>
+    <product-id>1498c16c-137d-4c25-880b-b3d62995d259</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Be As Bubbly As Your Drink</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/be-as-bubbly-as-your-drink</link>
+    <inventory-count>0</inventory-count>
+    <product-id>669d76e2-da12-407f-ae00-429e8c0865f0</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Birthday: Cheers</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/hbd-cheers</link>
+    <inventory-count>0</inventory-count>
+    <product-id>43d1c0df-2698-44a6-900e-480cb8821713</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Birthday: From All Of Us</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/birthday--from-all-of-us</link>
+    <inventory-count>0</inventory-count>
+    <product-id>5562e2f1-9bf2-42cc-8643-8bd0e89e1c5b</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Birthday: Happy Birthday Cabernet</product-name>
+    <price>44.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/happy-birthday-cabernet</link>
+    <inventory-count>30</inventory-count>
+    <product-id>b81a3dd7-8f65-40b5-990d-86763e4af172</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Birthday: Make A Wish</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/make-a-wish</link>
+    <inventory-count>0</inventory-count>
+    <product-id>97477014-808c-4d03-a826-b3311566f386</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Birthday: Teal</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/happy-birthday-teal</link>
+    <inventory-count>0</inventory-count>
+    <product-id>595189ae-b346-494b-a005-2f80a9de2d5e</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Boss's Day</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/bosss-day</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a14b0d0c-e5d3-4935-8579-2b8ee6e7a08b</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Brut 187 Ml Single Bottle</product-name>
+    <price>6.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/brut-187-ml-single-bottle</link>
+    <inventory-count>0</inventory-count>
+    <product-id>4ef059a8-ea73-4b46-8aea-826b7fe675e9</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Brut Sparkling Customized</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/brut-sparkling-custom-labeled</link>
+    <inventory-count>75</inventory-count>
+    <product-id>305618aa-1844-4d11-9d9f-7b63ca2c3697</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Brut Sparkling Wine</product-name>
+    <price>24.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/brut-sparkling-wine</link>
+    <inventory-count>655</inventory-count>
+    <product-id>2a3b163b-c45e-4119-8e59-c1f59b85be19</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Brut Sparkling-limited Edition</product-name>
+    <price>42.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/special-edition-brut-sparkling</link>
+    <inventory-count>987</inventory-count>
+    <product-id>01d7a5f8-b9df-470f-9ff0-9dc56c24c80f</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Bulk Corporate Tax Consolidation</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/bulk-corporate-tax-consolidation</link>
+    <inventory-count>0</inventory-count>
+    <product-id>1c7b51b1-de53-4591-9cfe-e903b97c756a</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Can I Be Frank? Sinatra Tribute | August 7th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/can-i-be-frank-sinatra-tribute-august-7th</link>
+    <inventory-count>0</inventory-count>
+    <product-id>511daec4-11d6-4696-b275-6b5a6ae4741f</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Can I Be Frank? Sinatra Tribute | December 4th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/can-i-be-frank-sinatra-tribute-dec-4</link>
+    <inventory-count>0</inventory-count>
+    <product-id>61781068-311f-422a-952f-2c1c64a9e482</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Can I Be Frank? Sinatra Tribute | June 5th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/can-i-be-frank-sinatra-tribute-june-5</link>
+    <inventory-count>0</inventory-count>
+    <product-id>79e69829-dec4-4115-8680-7d9c2accad30</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Can I Be Frank? Sinatra Tribute | November 6th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/can-i-be-frank-sinatra-tribute-november-6</link>
+    <inventory-count>0</inventory-count>
+    <product-id>5cf77034-9700-4bdd-a4e6-870b3bbd0ba6</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Can I Be Frank? Sinatra Tribute | October 2nd</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/can-i-be-frank-sinatra-tribute-october-2nd</link>
+    <inventory-count>0</inventory-count>
+    <product-id>463904ca-b2d9-40b5-9602-1cbb1fdffaa2</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Cheers To You</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/cheers-to-you</link>
+    <inventory-count>0</inventory-count>
+    <product-id>20588b05-4d39-40aa-8197-50a85c69a959</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Coconut Nui Sparkling 6pk</product-name>
+    <price>149.94</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/coconut-nui-6pk-sparkling</link>
+    <inventory-count>70</inventory-count>
+    <product-id>91efbdbd-4fa7-4654-b92d-0040ccb3585f</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country>US</country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Coconut Nui Sparkling Wine</product-name>
+    <price>24.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/coconut-nui-sparkling-wine</link>
+    <inventory-count>87</inventory-count>
+    <product-id>1cfa6a0a-fa35-49c0-8324-fe87fc89f2c4</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Corporate Thankyou Card Insert</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/corporate-thankyou-card-insert</link>
+    <inventory-count>0</inventory-count>
+    <product-id>3a915b74-dbf8-40bc-a3dc-3aed476f3550</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Crash Crush Rosé</product-name>
+    <price>29.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/crash-crush-ros</link>
+    <inventory-count>0</inventory-count>
+    <product-id>b04f4168-151d-4e31-a70c-3081dd424552</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Credit Creekside Grille/food</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/credit-creekside-grillefood</link>
+    <inventory-count>0</inventory-count>
+    <product-id>88a04c81-b646-497d-9c07-e54766a2c2df</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Decadencia®</product-name>
+    <price>36.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>375 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/decadencia-chocolate-old-vine-zinfandel</link>
+    <inventory-count>19</inventory-count>
+    <product-id>e290c1c6-3780-4549-924f-03cad7baa89e</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Decadent Cocktail</product-name>
+    <price>59.98</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/decadent-cocktail</link>
+    <inventory-count>0</inventory-count>
+    <product-id>3752104b-1cf3-44df-bf04-b818eea5a6ba</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Design Label Fee</product-name>
+    <price>45.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/design-label-fee</link>
+    <inventory-count>0</inventory-count>
+    <product-id>3eb85147-7d48-4e63-8e85-7579f9bfefa6</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Dia De Los Muertos</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>730 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/dia-de-los-muertos</link>
+    <inventory-count>0</inventory-count>
+    <product-id>87993ae6-7995-41ef-bfc5-059c890487de</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Dress Up Your Pet Day</product-name>
+    <price>44.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/dress-up-your-pet-day--golden</link>
+    <inventory-count>0</inventory-count>
+    <product-id>02758298-d0e9-476d-b7b8-19ac149fef07</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Dress Up Your Pet Day- Owl Bee</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/dress-up-your-pet-day--owl-bee</link>
+    <inventory-count>0</inventory-count>
+    <product-id>f3b5d43a-8255-4c58-95fe-f54535597bb7</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Dress Up Your Pet Day-green Bow</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/dress-up-your-pet-day-green-bow</link>
+    <inventory-count>0</inventory-count>
+    <product-id>50410027-9d3c-4844-8b90-e007f1762a91</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Dress Up Your Pet Day-pig</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/dress-up-your-pet-day-pig</link>
+    <inventory-count>0</inventory-count>
+    <product-id>09af47fb-709e-4774-87b0-e9608b85bc40</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>E-gift Card (redeemable Only Online)</product-name>
+    <price>100.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/e-gift-card-redeemable-only-online</link>
+    <inventory-count>0</inventory-count>
+    <product-id>7a591d9f-fbb2-405d-be02-b8d7cba7cb2a</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>E-gift Card (redeemable Only Online)</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/e-gift-card-redeemable-only-online1</link>
+    <inventory-count>0</inventory-count>
+    <product-id>d903678d-0040-4fab-a56c-f26c6b6820a2</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>E-gift Card (redeemable Only Online)</product-name>
+    <price>250.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/e-gift-card-redeemable-only-online2</link>
+    <inventory-count>0</inventory-count>
+    <product-id>aee3f9da-d64d-4313-b3d0-4c5ea5825e89</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Employee Appreciation Day!</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/employee-appreciation-day</link>
+    <inventory-count>0</inventory-count>
+    <product-id>b3fd767b-ddf7-4cec-9063-7507d400dc09</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Engagement Sparkling Wine Trio</product-name>
+    <price>80.97</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/engagement-sparkling-wine-trio</link>
+    <inventory-count>36</inventory-count>
+    <product-id>b26d14c5-4d76-4920-abc6-56984993784f</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Engagement: Pairs Well With Ring!</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/pairs-well-with-sparkling-ring</link>
+    <inventory-count>119</inventory-count>
+    <product-id>f22d731b-d4ef-4cfe-bab1-5656539d9b04</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Engagement: She Said Yes!</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/she-said-yes-rose-sparkling</link>
+    <inventory-count>19</inventory-count>
+    <product-id>cdc3ec22-9804-4974-b422-7ed5c5f68225</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Engagement: She Said Yes!</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/she-said-yes-almond-sparkling</link>
+    <inventory-count>23</inventory-count>
+    <product-id>db3bdd0d-05e5-4345-ae8a-68e65a81904a</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Freight Intercept/redirect Fee</product-name>
+    <price>19.50</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/freight-interceptredirect-fee</link>
+    <inventory-count>0</inventory-count>
+    <product-id>f8c85774-b5e9-460b-ab16-60ae20f186fd</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Freight Upgrade Increase</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/freight-upgrade-increase</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a3a39f12-480e-4c43-95f6-897494cbb129</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Anthem Road | Sept 6th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-anthem-road-sept-6</link>
+    <inventory-count>0</inventory-count>
+    <product-id>54e42cc0-4b73-44b3-b871-74d5c98d5506</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Anyone's Guess Band | September 20th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-anyone-s-guess-band-september-20th</link>
+    <inventory-count>0</inventory-count>
+    <product-id>50844d87-b6e5-4818-9a34-e93974b26fc5</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Big Time | Nov 1st</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-big-time-nov-1</link>
+    <inventory-count>0</inventory-count>
+    <product-id>f68ea762-89fe-4b1f-af70-d4e221eb8fa3</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Brandon Wildish Music  | Aug 2nd</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-brandon-wildish-aug-2</link>
+    <inventory-count>0</inventory-count>
+    <product-id>d120d3fb-24f3-44a5-a869-cd9e4612f381</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Brandon Wildish Music  | Oct 4</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-brandon-wildish-music-oct-4th</link>
+    <inventory-count>0</inventory-count>
+    <product-id>f32193bf-b362-4af3-bc65-06c38bc09ba9</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Full Effect | April 26th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-full-effect--may-24th-duplicate</link>
+    <inventory-count>0</inventory-count>
+    <product-id>b20e417a-14a9-4c45-bd4a-aeff59326775</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Full Effect | August 23rd</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-full-effect--april-26th-duplicate3</link>
+    <inventory-count>0</inventory-count>
+    <product-id>bc1b83e9-7b7e-48c6-b94c-97237c6ae61c</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Full Effect | May 24th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-full-effect--april-26th-duplicate</link>
+    <inventory-count>0</inventory-count>
+    <product-id>0991d741-847e-435b-9e84-b6548f2dc515</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Full Effect | October 25th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-full-effect--april-26th-duplicate5</link>
+    <inventory-count>0</inventory-count>
+    <product-id>360de7cf-4fae-411e-b26a-5677e251d86b</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Full Effect | September 27th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-full-effect--april-26th-duplicate4</link>
+    <inventory-count>0</inventory-count>
+    <product-id>d186bc1f-e54a-4c55-a764-01b10b2b5041</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Headshine | Nov 8th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-headshine-nov-8</link>
+    <inventory-count>0</inventory-count>
+    <product-id>40257387-69b2-45c5-a692-475187f70e98</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With It's Never 2l8 Band | August 30th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-its-never-2l8-band-aug30</link>
+    <inventory-count>0</inventory-count>
+    <product-id>fc10bddb-ddd7-4bfe-9752-cca50da97031</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With It's Never 2l8 Band | March 29th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-it-s-never-2l8-band</link>
+    <inventory-count>0</inventory-count>
+    <product-id>b0d1b8c3-7eb0-4547-9b11-ea1a3d07d2fe</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Jason Mann Trio | August 16th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/canceled-live-music-with-j-mann-music---february-19th-duplicate</link>
+    <inventory-count>0</inventory-count>
+    <product-id>7fc5b624-ebef-4c2b-8eaf-81237763d659</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Lextacy | August 9th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-lextacy--july-12th-duplicate</link>
+    <inventory-count>0</inventory-count>
+    <product-id>534c0cb1-adee-4cac-b932-1c0e175b8871</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Lextacy | July 12th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-lextacy--may-10th-duplicate</link>
+    <inventory-count>0</inventory-count>
+    <product-id>38d1a68a-1e03-46b0-89b2-0cacbe4e1d8e</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Lextacy | May 10th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-lextacy-may-10th</link>
+    <inventory-count>0</inventory-count>
+    <product-id>5a63762d-12d0-42d2-8c7a-62515af433d4</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Lextacy | October 11th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-lextacy--august-9th-duplicate</link>
+    <inventory-count>0</inventory-count>
+    <product-id>9f1fd839-c0a1-4dec-aa93-7f7fb52648d0</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Lextacy | September 13th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-lextacy--may-10th-duplicate1</link>
+    <inventory-count>0</inventory-count>
+    <product-id>622f6ac6-c9e6-4bd0-a916-70116839042f</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Rebel Heart | May 17th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-rebel-heart-may-17th</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a303451f-be53-4f5d-8fcd-bf981037fca1</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Sammy Listoe | April 19th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-sammy-listoe</link>
+    <inventory-count>0</inventory-count>
+    <product-id>17d88761-e145-4072-b0e5-573eabc10bdd</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Sea Monks | October 18th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-sea-monks</link>
+    <inventory-count>0</inventory-count>
+    <product-id>89d6439b-bc16-47d5-9f08-b43a39b0b7f8</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Night Late Nights With Southbound &amp; Company | June 14th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-southbound-company</link>
+    <inventory-count>0</inventory-count>
+    <product-id>5cac820f-67f2-4916-8148-eaede3751234</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Gift Card</product-name>
+    <price>25.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/gift-card</link>
+    <inventory-count>0</inventory-count>
+    <product-id>b0c81473-499a-4eac-ac27-650c3905a12c</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Graduation: Congrats</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/congrats-grad</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a5d10ebb-38d2-4074-b67a-084eaf2f5999</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Graduation: Hooray</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/graduation-hooray</link>
+    <inventory-count>0</inventory-count>
+    <product-id>b86d8b89-6be3-4319-8c30-0a8be1de9711</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Honey Badger Almond</product-name>
+    <price>29.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/honey-badger-almond</link>
+    <inventory-count>0</inventory-count>
+    <product-id>d40f2403-6b37-4b5c-92e4-e9e46e5974d6</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Icepack-1-6 Bottles</product-name>
+    <price>13.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/icepack-1-6-bottles</link>
+    <inventory-count>0</inventory-count>
+    <product-id>f58b22a9-d096-4ee4-880a-1108c9c8add7</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Icepack-7-12 Bottles</product-name>
+    <price>16.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/icepack-7-12-bottles</link>
+    <inventory-count>0</inventory-count>
+    <product-id>bd2b663f-dcb3-4b92-b842-f3171c8c5750</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>It's 3:30 Somewhere!</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/its-330-somewhere</link>
+    <inventory-count>0</inventory-count>
+    <product-id>51dc8b08-ea18-4b0d-88dc-d8ecaa5f6780</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Limoncello Sparkling Cans 4pk</product-name>
+    <price>24.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>250 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/limoncello-sparkling-cans-4-pack</link>
+    <inventory-count>40</inventory-count>
+    <product-id>769296f3-c3ec-4cc7-b022-b648d7a05fac</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Limoncello Sparkling Lemon Wine</product-name>
+    <price>24.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/limoncello-sparkling-lemon-wine</link>
+    <inventory-count>11</inventory-count>
+    <product-id>078d542c-2c88-4e04-922e-7e3e12cb17a1</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color>Sparkling</color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Live Music With Jason Mann Trio | September 2nd</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-jason-mann-trio--august-16th-duplicate</link>
+    <inventory-count>0</inventory-count>
+    <product-id>ebb4f817-cc98-45d4-8387-7c81a81cbdd2</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Live Music With Michael Battista | March 31st</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/live-music-with-michael-battista-march-31st</link>
+    <inventory-count>0</inventory-count>
+    <product-id>b8f25c8f-ef30-4f35-a7c4-8ff9f8c6ab29</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Live Music With Michael Leclerc | May 27th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/live-music-with-michael-leclerc-may-27th</link>
+    <inventory-count>0</inventory-count>
+    <product-id>717ccaec-82d0-4251-8bb9-a8bc5230c8a4</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Live Music With Nate Penland | November 11th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/live-music-with-nate-penland-november-11</link>
+    <inventory-count>0</inventory-count>
+    <product-id>c4293645-b8c3-41b8-9cf2-6f794ecb0c02</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Live Music With The Sea Monks | June 16th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/friday-night-late-nights-with-sea-monks-june-16th</link>
+    <inventory-count>0</inventory-count>
+    <product-id>2cafa9ce-0fda-4ba6-b45e-dc69e6853ed2</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Love And Laughter</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/love-and-laughter</link>
+    <inventory-count>0</inventory-count>
+    <product-id>f1b91376-2faa-4268-a559-be64efa846aa</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Mand Back 187 Almond Split Single</product-name>
+    <price>5.50</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/mand-back-187-almond-split-single</link>
+    <inventory-count>0</inventory-count>
+    <product-id>90a13af8-38f1-48fe-937d-7c172642002a</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Mi Amore</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/mi-amore</link>
+    <inventory-count>0</inventory-count>
+    <product-id>3d883133-0546-41c1-aabe-ddc207ca363e</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Mixed Sparkling Cans 4pk</product-name>
+    <price>24.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>250 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/mixed-sparkling-cans-4-pack</link>
+    <inventory-count>45</inventory-count>
+    <product-id>f852cd0c-7416-42da-a9b6-542a023eb6dc</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>My Bottle Of Happy</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/my-bottle-of-happy</link>
+    <inventory-count>31</inventory-count>
+    <product-id>30b5419d-291e-4d4a-acd6-784e3f948272</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>National Dog Day Corgi</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/national-dog-day-corgi</link>
+    <inventory-count>45</inventory-count>
+    <product-id>50a2156a-2d82-466a-85ba-e2b4ce798b7a</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>National Dog Day Golden</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/national-dog-day-golden</link>
+    <inventory-count>0</inventory-count>
+    <product-id>59d00af0-e0d5-4cc0-966c-b6fdea0e35b1</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>New Home</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/new-home</link>
+    <inventory-count>0</inventory-count>
+    <product-id>7b6ec993-cca5-421b-b359-a61ba50f75bd</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Nv Cabzin Red Blend</product-name>
+    <price>44.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/nv-cabzin-blend-shiners</link>
+    <inventory-count>147</inventory-count>
+    <product-id>317af42d-8e63-4e62-8733-11c0a5d967e7</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Nv Cinsault</product-name>
+    <price>49.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/nv-cinsault</link>
+    <inventory-count>470</inventory-count>
+    <product-id>aabf0674-d1ef-4352-b2db-f9d394d86b4a</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color>Red</color>
+        <varietal>Cinsaut</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Nv Grenache</product-name>
+    <price>45.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/nv-grenache</link>
+    <inventory-count>152</inventory-count>
+    <product-id>eb2de103-fba1-4ff5-85e3-22394a8f9430</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Nv Plethora</product-name>
+    <price>49.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/nv-plethora</link>
+    <inventory-count>80</inventory-count>
+    <product-id>7e5598d0-3f57-4baf-850b-6d36561cc216</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Nv Spring White</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/nv-spring-white</link>
+    <inventory-count>56</inventory-count>
+    <product-id>1ec8f94d-4476-4493-8dd7-e6592eea63e7</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Nv Vs Cabernet Zinfandel</product-name>
+    <price>44.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/nv-vs-cabernet-zinfandel</link>
+    <inventory-count>426</inventory-count>
+    <product-id>a40f75af-55bf-4c27-a97f-981c02f3770d</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color>Red</color>
+        <varietal>Cabernet</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Old World Cabernet</product-name>
+    <price>39.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/old-world-cabernet</link>
+    <inventory-count>0</inventory-count>
+    <product-id>42850ca9-411a-4da4-a13c-ed1f223dee40</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Other- Issues A Credit Through Clover</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/other--issues-a-credit-through-clover</link>
+    <inventory-count>0</inventory-count>
+    <product-id>84edf0f7-eb0b-44fe-ab83-ffc2a84cd07d</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Peach 187 Split Single Btl</product-name>
+    <price>6.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>187 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/peach-187-split-single-btl</link>
+    <inventory-count>0</inventory-count>
+    <product-id>aad78930-e429-4492-9246-e8f9db8bd78a</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Peach Bellini Sparkling Customized</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/peach-bellini-sparkling-custom-labeled</link>
+    <inventory-count>270</inventory-count>
+    <product-id>c4c8c599-d2b8-4907-9a20-fb48897b35c5</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Peach Bellini Sparkling Wine</product-name>
+    <price>24.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/peach-bellini-sparkling-wine</link>
+    <inventory-count>-497</inventory-count>
+    <product-id>3f3f6c8e-82f7-4e2a-93d9-6009acd7fbc6</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Lodi</appellation>
+        <vintage></vintage>
+        <country>US</country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Peach Sparkling Cans 4pk</product-name>
+    <price>24.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>1000 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/peach-sparkling-cans-4-pack</link>
+    <inventory-count>68</inventory-count>
+    <product-id>83da33ad-eb72-41c1-99dd-db6aa838c5f7</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country>US</country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Peach Sparkling Combo</product-name>
+    <price>74.97</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>1500 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/peach-bottle-can-3pk-combo</link>
+    <inventory-count>101</inventory-count>
+    <product-id>f2d9cfa4-fcc2-4c89-9d04-2b1abb538e43</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Perfect Wine &amp; Cheese Pairing</product-name>
+    <price>122.97</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/perfect-wine--cheese-pairing</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a58ff915-5aeb-4cc5-9aa9-add2371a8811</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Picnic Pack Favorites 3pk</product-name>
+    <price>84.97</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/3pk-picnic-pack-favorites</link>
+    <inventory-count>99</inventory-count>
+    <product-id>7a04a814-917a-4217-94c2-07a3c52b4fae</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Plethora Shiners</product-name>
+    <price>44.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/plethora-shiners</link>
+    <inventory-count>60</inventory-count>
+    <product-id>f62c27a1-6b86-4581-ab45-45733de7ef53</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Private: Legacy Realty</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/legacy-realty-sparkling-brut</link>
+    <inventory-count>96</inventory-count>
+    <product-id>46c454bb-47b1-4ba9-926d-f93ed5422671</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Private: Manoela</product-name>
+    <price>39.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/manoela-cabernet-sauvignon</link>
+    <inventory-count>0</inventory-count>
+    <product-id>280c0d0b-915b-4cd4-97d9-796ec0ef8cb1</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Private: Mtg</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/mtg-custom-labeled-sparkling</link>
+    <inventory-count>120</inventory-count>
+    <product-id>2b70c9be-ef26-4206-b2ce-e04fb9d5fba5</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Private: Revolv3  Brut</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/revolv3-sparkling-brut</link>
+    <inventory-count>96</inventory-count>
+    <product-id>8db60536-d3a3-44f1-ae12-027bd4d43a69</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Private: Revolv3 Almond</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/revolv3-custom-label-almond</link>
+    <inventory-count>0</inventory-count>
+    <product-id>089db359-3988-44d8-8617-efbe039c7588</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Private: Revolv3 Cab</product-name>
+    <price>39.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/revolv3-cabernet-sauvignon</link>
+    <inventory-count>0</inventory-count>
+    <product-id>19d594f9-060c-4c26-a594-3da5cf3f13a8</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Private: Stark Carpet</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/stark-carpet-custom-labeled</link>
+    <inventory-count>0</inventory-count>
+    <product-id>6aaabf07-f409-45f0-8e14-00a4b069dc19</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Promotion</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/promotion</link>
+    <inventory-count>0</inventory-count>
+    <product-id>b975bba6-dcfb-451a-ac2b-128c4fb4b7a0</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Red, Almond &amp; Blue</product-name>
+    <price>104.97</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>2250 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/3-pk--white-cabcabzin--almond</link>
+    <inventory-count>22</inventory-count>
+    <product-id>91bf80df-fcee-4646-9c9c-9517b390d95a</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Regenerative Academy Dinner | August 15th</product-name>
+    <price>99.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/regenerative-academy-dinner-august-15th</link>
+    <inventory-count>70</inventory-count>
+    <product-id>4d54aef2-63cb-4aff-9976-117642e695f3</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Retirement: Beach &amp; Chairs</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/retirement-beach--chairs</link>
+    <inventory-count>0</inventory-count>
+    <product-id>72b8ef7e-d5d0-4080-a795-2022aab274ec</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Retirement: Gold Stars</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/happy-retirement-gold-stars</link>
+    <inventory-count>0</inventory-count>
+    <product-id>4a0fb663-b9ec-4264-8b35-f06ce747e505</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Rose Sparkling Cans 4pk</product-name>
+    <price>24.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>250 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/rose-sparkling-cans-4-pack</link>
+    <inventory-count>43</inventory-count>
+    <product-id>dbdd0473-9dc6-4e20-90ca-f8812a7ef0b7</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Rose Sparkling Combo</product-name>
+    <price>74.97</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/rose-bottle-can-3pk-combo</link>
+    <inventory-count>22</inventory-count>
+    <product-id>d45703c5-a754-472c-b988-063d3bde27d8</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Rose Sparkling Wine</product-name>
+    <price>24.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/rose-sparkling-wine</link>
+    <inventory-count>72</inventory-count>
+    <product-id>3fc2a440-23c1-4f03-b043-08cc41a77638</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Sangria Sparkling Wine</product-name>
+    <price>24.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/sangria-sparkling-wine</link>
+    <inventory-count>-2</inventory-count>
+    <product-id>d97faac6-33e3-4b66-a807-85fb36c9e363</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Sangria Splash 3pk</product-name>
+    <price>74.97</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/sangria-splash-3pk</link>
+    <inventory-count>88</inventory-count>
+    <product-id>333e696f-6174-49d0-bf46-a41247da4d22</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color>Sparkling</color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Sold Out - Dylan Scott Country Concert | September 18</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/dylan-scott-country-concert</link>
+    <inventory-count>0</inventory-count>
+    <product-id>89ae64c2-5ea5-42be-883e-71c608cc92da</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Sold Out - Reserve Member Happy Hour | Aug 14th</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/reserve-member-happy-hour-aug-14</link>
+    <inventory-count>0</inventory-count>
+    <product-id>8d6ec3e7-86c7-4c7e-bc14-830f6ed9f75a</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Sparkling Delight 6pk</product-name>
+    <price>149.94</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/sparkling-delight-assorted-6pk</link>
+    <inventory-count>75</inventory-count>
+    <product-id>46e53512-c93a-4ca9-b726-e49282565593</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country>US</country>
+        <color>Sparkling</color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Sparkling Monastrell Rose</product-name>
+    <price>45.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/sparkling-monastrell-rose-</link>
+    <inventory-count>248</inventory-count>
+    <product-id>d4ce8be2-9067-4da9-a862-46a5aab16567</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Sparkling Rose 3pk</product-name>
+    <price>74.97</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>2250 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/sparkling-rose-3pk</link>
+    <inventory-count>50</inventory-count>
+    <product-id>c0313f38-bb70-4a70-962e-fd01289b2c81</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Sparkling Sangria 6pk</product-name>
+    <price>134.94</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/sparkling-sangria-6pk</link>
+    <inventory-count>-1</inventory-count>
+    <product-id>d2fd3770-e54f-49f7-8a95-2b9fa3bdcd87</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color>Sparkling</color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Special Edition Malbec Postcard</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/special-edition-malbec-postcard</link>
+    <inventory-count>0</inventory-count>
+    <product-id>232ed6bb-f14c-4ad3-8cab-b9832a06800d</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Special Edition Pinot Noir Postcard</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/special-edition-pinot-noir-postcard</link>
+    <inventory-count>0</inventory-count>
+    <product-id>3cd0c399-f27a-4738-8793-dc66a30f22f3</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Stand-up Comedy Dinner &amp; Show | Sept 5th</product-name>
+    <price>80.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/stand-up-comedy-dinner-show-sept-5th</link>
+    <inventory-count>150</inventory-count>
+    <product-id>fa081fee-21e8-442b-b90f-4a5d28e89793</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Summer Vibe 3pk Sparkling</product-name>
+    <price>74.97</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/summer-vibe-3pk</link>
+    <inventory-count>72</inventory-count>
+    <product-id>ee0af522-a687-4448-9189-0fddaa3d5dc0</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>The Wilson Creek Story</product-name>
+    <price>24.95</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/the-wilson-creek-story</link>
+    <inventory-count>0</inventory-count>
+    <product-id>e270b24e-fa82-496d-9589-dd4c56484d1e</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Valentine's Day Dinner</product-name>
+    <price>150.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/valentine-day-dinner-2024</link>
+    <inventory-count>1</inventory-count>
+    <product-id>c8d01db7-c686-4859-a66b-cd4809926816</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Variant Series 6 Pack-shipping Included</product-name>
+    <price>203.94</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>4500 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/variant-series-6-pack-shipping-included</link>
+    <inventory-count>0</inventory-count>
+    <product-id>35bd4871-6da7-4e44-9b77-7d8513b2a921</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Virtual Gift Card</product-name>
+    <price>25.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/virtual-gift-card-25</link>
+    <inventory-count>992</inventory-count>
+    <product-id>5926173c-bca6-4566-9622-e925e1c12372</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Vs Cabernet Zinfandel 4pk</product-name>
+    <price>179.96</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>3000 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/4pk-vs-cabernet-zinfandel</link>
+    <inventory-count>104</inventory-count>
+    <product-id>433c8464-8f89-44ad-9242-ed30e46e859a</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Vs Series 6pk</product-name>
+    <price>239.94</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>4500 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/6pk-vs-white-cabernet--cabernet-zinfandel</link>
+    <inventory-count>0</inventory-count>
+    <product-id>e757c8c0-c5c1-495e-a05e-772d8b4250c0</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Vs White Cabernet Lover 4pk</product-name>
+    <price>139.96</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>3000 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/4pk-vs-white-cabernet-lover</link>
+    <inventory-count>11</inventory-count>
+    <product-id>838b96d1-c0a9-4b39-9981-e357ed3e8692</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color>White</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Vs White Cabernet Sauvignon</product-name>
+    <price>34.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/nv-variant-series-white-cabernet-sauvignon</link>
+    <inventory-count>71</inventory-count>
+    <product-id>eea00f17-ae75-4d96-8dc5-7c0ae7c5b5c0</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation>Temecula Valley</appellation>
+        <vintage></vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wakefield Reunion</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/wakefield-reunion</link>
+    <inventory-count>0</inventory-count>
+    <product-id>c804be3b-731f-4213-ad74-af69fe1431e0</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Watermelon Sparkling Wine</product-name>
+    <price>24.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/watermelon-sparkling-wine</link>
+    <inventory-count>777</inventory-count>
+    <product-id>ae1dc8ad-634e-4b22-86ae-042d432951a8</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wedding: Brides Tribe</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/brides-tribe</link>
+    <inventory-count>20</inventory-count>
+    <product-id>6396daa6-3f29-4837-9bd0-959805083a54</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wedding: Eat Drink &amp; Be Married</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/eat-drink--be-married</link>
+    <inventory-count>0</inventory-count>
+    <product-id>2a232e28-90f7-47c7-966d-e53f80add0c2</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wedding: Future Mrs</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/cheers-future-mrs</link>
+    <inventory-count>0</inventory-count>
+    <product-id>126b6a21-118e-46b4-aeda-41deb07c9d1e</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wedding: Happily Ever After</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/happily-ever-after</link>
+    <inventory-count>18</inventory-count>
+    <product-id>9a5af5c2-cbb4-41b8-ac15-079197bd26f2</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wedding: I'd Marry You!</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/id-marry-you</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a49552d1-c3a8-4392-82af-727a54ecb801</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wedding: Mr. &amp; Mrs.</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/mr---mrs-------------blk--wht-design</link>
+    <inventory-count>0</inventory-count>
+    <product-id>59b0ec13-898e-4a7f-ba9c-0999fe81b11e</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wedding: Mr. &amp; Mrs. Classic</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/mr---mrs--classic</link>
+    <inventory-count>0</inventory-count>
+    <product-id>1d053ea1-b70f-4f57-9d55-867542cf50ea</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wholesale Adjustment</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/wholesale-adjustment</link>
+    <inventory-count>0</inventory-count>
+    <product-id>95dab855-8100-43ac-9ff7-8467600d16cb</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Will You Bridesmaid</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/will-you-bridesmaid</link>
+    <inventory-count>0</inventory-count>
+    <product-id>0a1c4462-6538-406f-bb11-e5363072c97b</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Will You Marry Me</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/will-you-marry-me</link>
+    <inventory-count>0</inventory-count>
+    <product-id>5f0bf191-23eb-4343-9617-3e2f082fcf94</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wilson Creek Logo- 2 Pack Glassware</product-name>
+    <price>12.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/wilson-creek-logo--2-pack-glassware</link>
+    <inventory-count>0</inventory-count>
+    <product-id>74139e73-6323-4613-9d99-7d912fb259aa</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wine Country Favorites 3pk</product-name>
+    <price>97.97</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>2250 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/3pk-wine-country-favorites</link>
+    <inventory-count>0</inventory-count>
+    <product-id>be979807-e7cb-4a9b-8bda-c3123188bbf4</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wine Wishes</product-name>
+    <price>26.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/wine-wishes</link>
+    <inventory-count>0</inventory-count>
+    <product-id>8f28d66a-5f94-4a42-9f33-8a729d3f6dee</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Zin-delite 3pk</product-name>
+    <price>172.97</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>2250 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/zin-delite-3pk</link>
+    <inventory-count>0</inventory-count>
+    <product-id>58dd6c7f-bf5c-40b5-a2c5-673f15d73bd5</product-id>
+    <extras>
+        <producer>Wilson Creek</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+</vivino-product-list>

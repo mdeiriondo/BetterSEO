@@ -1,0 +1,707 @@
+<vivino-product-list>
+<meta-data>
+    <feed-generation-date>2024-09-25T16:04:23.157838Z</feed-generation-date>
+</meta-data>
+<product>
+    <product-name>2019 Double L Pinot Noir 1.5l</product-name>
+    <price>155.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>1500 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/double-l-pinot-noir-1-5l</link>
+    <inventory-count>10</inventory-count>
+    <product-id>443405d6-2f14-41b9-b9ef-869b10b50d17</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Cotes Du Crow's</product-name>
+    <price>22.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/cotes-du-crows</link>
+    <inventory-count>775</inventory-count>
+    <product-id>27f91347-e9ea-4135-9618-cb0c7dfbde78</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Monterey</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Double L Chardonnay</product-name>
+    <price>48.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/double-l-chardonnay</link>
+    <inventory-count>1147</inventory-count>
+    <product-id>857a47a7-0daf-44d9-8112-a7bbc190997c</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Double L Chardonnay 1.5l</product-name>
+    <price>100.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>1500 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/double-l-chardonnay-1-5l-duplicate</link>
+    <inventory-count>6</inventory-count>
+    <product-id>ce493921-c419-46b9-a26f-9ef4d58c9088</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Double L Pinot Noir</product-name>
+    <price>75.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/double-l-pinot-noir</link>
+    <inventory-count>1012</inventory-count>
+    <product-id>17632a3f-f921-4849-8e20-5e010046919f</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 G17 Syrah</product-name>
+    <price>27.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/g17-syrah</link>
+    <inventory-count>1063</inventory-count>
+    <product-id>b713a647-6bc9-4a64-a694-19f164158d2b</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Syrah</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Mcintyre Chardonnay</product-name>
+    <price>48.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/mcintyre-chardonnay</link>
+    <inventory-count>1138</inventory-count>
+    <product-id>7e768db3-3dae-45df-8ba9-c1589295ab73</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Quattro Pinots Pack</product-name>
+    <price>360.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>3000 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/quattro-pinots-pack</link>
+    <inventory-count>1197</inventory-count>
+    <product-id>5afc6065-515c-4848-b0a9-36eabf3d2a2e</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Tempranillo</product-name>
+    <price>27.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/tempranillo</link>
+    <inventory-count>1059</inventory-count>
+    <product-id>6f564a1e-f761-49b1-bd5c-3b97555bac46</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Arroyo Seco</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Tempranillo</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Double L Chardonnay (clone 76)</product-name>
+    <price>48.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/double-l-chardonnay-clone-76</link>
+    <inventory-count>1152</inventory-count>
+    <product-id>77c22c4f-5aee-4b6e-a792-7315e2109140</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Double L Chardonnay (dijon Clones)</product-name>
+    <price>48.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/double-l-chardonnay-dijon-clones</link>
+    <inventory-count>1176</inventory-count>
+    <product-id>e1c4b64a-0533-47d5-bcc4-43aa054386bf</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Double L Pinot Noir (clone 667)</product-name>
+    <price>75.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/double-l-pinot-noir-clone-667</link>
+    <inventory-count>1190</inventory-count>
+    <product-id>234b40b4-4939-48f5-b497-79284e9e9629</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Double L Pinot Noir (clone 828)</product-name>
+    <price>75.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/double-l-pinot-noir-clone-828</link>
+    <inventory-count>1081</inventory-count>
+    <product-id>7c3c97fa-e988-4635-a248-c6e81e232f08</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation></appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Double L Pinot Noir (clone Lt)</product-name>
+    <price>75.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/double-l-pinot-noir-clone-lt</link>
+    <inventory-count>2304</inventory-count>
+    <product-id>156220c8-3384-43c1-b19e-4bf155b1100e</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Double L Pinot Noir (clone Pommard 5)</product-name>
+    <price>75.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/double-l-pinot-noir-clone-pommard-5</link>
+    <inventory-count>1047</inventory-count>
+    <product-id>ae3fbbff-defc-4b1a-8b28-11c91787793e</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Double L Pinot Noir (dijon Clones)</product-name>
+    <price>75.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/double-l-pinot-noir-dijon-clones</link>
+    <inventory-count>1123</inventory-count>
+    <product-id>dc9069bb-18fc-458a-9989-7a821b26a52e</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Double L Syrah</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/double-l-syrah</link>
+    <inventory-count>1025</inventory-count>
+    <product-id>765b885c-f41e-4dbc-8348-efb25878e0eb</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Syrah</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Highland Chardonnay 1.5l</product-name>
+    <price>65.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>1500 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/highland-chardonnay-1-5l</link>
+    <inventory-count>100</inventory-count>
+    <product-id>78ba3c42-9b05-4757-982a-f56290365bab</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Tondré Chardonnay</product-name>
+    <price>48.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/tondre-chardonnay</link>
+    <inventory-count>2329</inventory-count>
+    <product-id>bbe81620-5229-461a-b360-3b055339eb90</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Tondré Pinot Noir</product-name>
+    <price>75.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/tondre-pinot-noir</link>
+    <inventory-count>1100</inventory-count>
+    <product-id>c6030570-f087-4593-92b5-30fe0f3b83fa</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Twelve Clones Pinot Noir</product-name>
+    <price>39.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/twelve-clones-pinot-noir</link>
+    <inventory-count>1004</inventory-count>
+    <product-id>06de92c7-a860-4eec-a727-71546210871a</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Twelve Clones Pinot Noir 1.5l</product-name>
+    <price>85.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>1500 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/twelve-clones-pinot-noir-1-5l-duplicate</link>
+    <inventory-count>40</inventory-count>
+    <product-id>88a99d92-18d0-4816-bdcb-df3b5be4db43</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Albarino</product-name>
+    <price>26.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/albarino</link>
+    <inventory-count>905</inventory-count>
+    <product-id>c77e4ec9-48dc-4e58-a5ec-a6c87e75d658</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Arroyo Seco</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Albarino</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Double L Dry Riesling</product-name>
+    <price>26.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/double-l-dry-riesling</link>
+    <inventory-count>1064</inventory-count>
+    <product-id>b9d08972-1deb-4731-b21e-8bf13cb8262a</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Double L Riesling</product-name>
+    <price>26.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/double-l-riesling</link>
+    <inventory-count>1154</inventory-count>
+    <product-id>fe160b53-735d-4aac-8d4a-f222b6e3c20b</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Highland Chardonnay</product-name>
+    <price>30.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/highland-chardonnay</link>
+    <inventory-count>733</inventory-count>
+    <product-id>91eea7b3-543d-4fa8-896b-7d22df390465</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Metallico Un-oaked Chardonnay</product-name>
+    <price>24.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/metallico-unoaked-chardonnay</link>
+    <inventory-count>847</inventory-count>
+    <product-id>9ca93752-c94d-4bb3-8f55-8cb3f610ea10</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Santa Lucia Highlands</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Rosé Of Grenache</product-name>
+    <price>24.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/rose-of-grenache</link>
+    <inventory-count>750</inventory-count>
+    <product-id>9cbde6b2-2464-4a46-acee-cdfb2fdd865d</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Arroyo Seco</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>Rose</color>
+        <varietal>Rose</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Sauvignon Blanc</product-name>
+    <price>23.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/sauvignon-blanc</link>
+    <inventory-count>970</inventory-count>
+    <product-id>348ae494-b75f-4a6f-a836-4f9fcd52d64d</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation>Arroyo Seco</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Sauvignon Blanc</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Bbq In The Vineyard Club Ticket</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/bbq-in-the-vineyard-club-ticket</link>
+    <inventory-count>0</inventory-count>
+    <product-id>1e1f4ef5-8d8b-4300-97cc-a20070a4529b</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Duo Gift Set</product-name>
+    <price>135.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/estate-duo-gift-set</link>
+    <inventory-count>0</inventory-count>
+    <product-id>ee201f54-73d4-4a4d-b49d-eea9ecc7583a</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Trio Gift Set</product-name>
+    <price>185.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/estate-trio-gift-set</link>
+    <inventory-count>0</inventory-count>
+    <product-id>427eebb1-29ca-4da4-8a44-3feefc47cc1b</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Gift Wrap - Three Bottle</product-name>
+    <price>12.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/gift-wrap-three-bottle</link>
+    <inventory-count>0</inventory-count>
+    <product-id>0c381de3-81e6-41e0-b3f1-10e89742fa36</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Gift Wrap - Two Bottle</product-name>
+    <price>12.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/gift-wrap-two-bottle</link>
+    <inventory-count>0</inventory-count>
+    <product-id>935faf54-4dc1-4853-a98f-46292f3ffb3e</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Slh Duo Gift Set</product-name>
+    <price>81.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/slh-duo-gift-set</link>
+    <inventory-count>0</inventory-count>
+    <product-id>7df7931a-e3dc-47b5-8593-90b4d9357088</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Slh Trio Gift Set</product-name>
+    <price>108.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/slh-trio-gift-set</link>
+    <inventory-count>0</inventory-count>
+    <product-id>fc6adf31-1116-47db-a843-7b19b73bf1c7</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Virtual Morgan Gift Card</product-name>
+    <price>25.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/virtual-morgan-gift-card</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a6c1ce40-e788-45d8-b693-d83f071269a0</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wood Box - Four Bottle</product-name>
+    <price>60.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/wood-box-four-bottle</link>
+    <inventory-count>0</inventory-count>
+    <product-id>e2f3134c-2a65-4503-913a-ce8c4f453606</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wood Box - Six Bottle</product-name>
+    <price>60.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.morganwinery.com/product/wood-box-six-bottle</link>
+    <inventory-count>0</inventory-count>
+    <product-id>d8dcfcd3-bee9-4911-886b-afd9e58020f9</product-id>
+    <extras>
+        <producer>Morgan Winery</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+</vivino-product-list>

@@ -1,0 +1,77 @@
+<vivino-product-list>
+<meta-data>
+    <feed-generation-date>2024-09-10T01:16:55.873962Z</feed-generation-date>
+</meta-data>
+<product>
+    <product-name>2015 Cabernet Sauvignon Los Carneros</product-name>
+    <price>105.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>1500 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2015-cabernet-sauvignon-los-carneros</link>
+    <inventory-count>144</inventory-count>
+    <product-id>f987e043-9c8c-4a7f-a96f-0e6fb215ed0d</product-id>
+    <extras>
+        <producer>Gorilion</producer>
+        <appellation>Los Carneros</appellation>
+        <vintage>2015</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2017 Cabernet Sauvignon Stags Leap District</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2017-cabernet-sauvignon-stags-leap-district</link>
+    <inventory-count>121</inventory-count>
+    <product-id>d7d0f147-605d-4765-b789-88180278d61a</product-id>
+    <extras>
+        <producer>Gorilion</producer>
+        <appellation>Stags Leap District</appellation>
+        <vintage>2012</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Almond Sparkling Custom Labeled</product-name>
+    <price>45.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2012-cabernet-sauvignon-oakville-napa-valley</link>
+    <inventory-count>281</inventory-count>
+    <product-id>c5b48ef4-9c95-4e0a-9752-f078e8ebda8a</product-id>
+    <extras>
+        <producer>Gorilion</producer>
+        <appellation>Oakville</appellation>
+        <vintage>2015</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Peach Bellini Sparkling Custom Labeled</product-name>
+    <price>36.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wilsoncreek.wpengine.com/product/2017-chardonnay-carneros</link>
+    <inventory-count>750</inventory-count>
+    <product-id>316e0c62-ad29-443a-85ae-f03bbdb0185b</product-id>
+    <extras>
+        <producer>Gorilion</producer>
+        <appellation>Los Carneros</appellation>
+        <vintage>2017</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+</vivino-product-list>

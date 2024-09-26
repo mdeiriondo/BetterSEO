@@ -1,0 +1,527 @@
+<vivino-product-list>
+<meta-data>
+    <feed-generation-date>2024-08-19T21:28:42.665905Z</feed-generation-date>
+</meta-data>
+<product>
+    <product-name>2017 Cabernet Franc Bennett Valley</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2017-cabernet-franc-bennett-valley</link>
+    <inventory-count>0</inventory-count>
+    <product-id>6c72b27a-4c8a-407f-9ca7-34cf7892753b</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2018 Grenache Napa Valley</product-name>
+    <price>38.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2018-grenache-napa-valley</link>
+    <inventory-count>-107</inventory-count>
+    <product-id>8b9b857f-5263-40e5-8c7c-32d38d6c77d8</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation>Napa Valley</appellation>
+        <vintage>2018</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Grenache</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Cabernet Franc Bennett Valley</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2019-cabernet-franc-bennett-valley</link>
+    <inventory-count>11</inventory-count>
+    <product-id>900abf12-2a08-46e5-86b9-41bda4c6a6d9</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation>Bennett Valley</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Franc</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Draft Horse Red North Coast</product-name>
+    <price>22.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2019-draft-horse-red-north-coast</link>
+    <inventory-count>21</inventory-count>
+    <product-id>a90e1b94-9d23-4ad7-8ea5-d48de4a76de5</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation>North Coast</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Other</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 The Gardener Chardonnay Viluko Vineyard</product-name>
+    <price>40.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2019-the-gardener-chardonnay-viluko-vineyard</link>
+    <inventory-count>13</inventory-count>
+    <product-id>308e8483-2325-4e56-9494-6515fa9cd36a</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 The Gardener Pinot Noir Anderson Valley</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2021-the-gardener-pinot-noir-anderson-valley</link>
+    <inventory-count>13</inventory-count>
+    <product-id>75106d01-8750-4142-b662-2682913d6696</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 The Gardener Pinot Noir Russian River Valley</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2021-the-gardener-pinot-noir-russian-river-valley</link>
+    <inventory-count>-110</inventory-count>
+    <product-id>9af48fd6-30e0-4023-a3c0-c7df2d79f9ae</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Gewürztraminer Carneros</product-name>
+    <price>28.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2022-gewurztraminer-carneros</link>
+    <inventory-count>-12</inventory-count>
+    <product-id>df13d9f7-a072-43b9-842a-0638bc46784e</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Old Vine Carignane Mendocino</product-name>
+    <price>32.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2018-carignane-redwood-valley-duplicate</link>
+    <inventory-count>11</inventory-count>
+    <product-id>a8f041bc-8828-4fdc-8341-4e0b62a4ff11</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Pinot Gris Napa Valley</product-name>
+    <price>29.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2022-pinot-gris-napa-valley</link>
+    <inventory-count>10</inventory-count>
+    <product-id>62824055-7c04-42d6-9bdf-e50024bd269c</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 The Gardener Pinot Blanc Napa Valley</product-name>
+    <price>30.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2022-the-gardener-pinot-blanc-napa-valley</link>
+    <inventory-count>7</inventory-count>
+    <product-id>abc201a7-53a8-4ca2-b291-c45e1dabfc38</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Rosé Mendocino County</product-name>
+    <price>22.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2023-rose-mendocino-county</link>
+    <inventory-count>-463</inventory-count>
+    <product-id>0fe4354b-b579-4349-bbff-1edaff67a39a</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation>Mendocino</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>Rose</color>
+        <varietal>Rose</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Sauvignon Blanc Sonoma County</product-name>
+    <price>30.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2023-sauvignon-blanc-sonoma-county</link>
+    <inventory-count>0</inventory-count>
+    <product-id>4f8cd317-8db5-41aa-93c6-e1acfe51f557</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation>Sonoma County</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Sauvignon Blanc</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Art Reception With Gage Opdenbrouw</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/art-reception-with-gage-opdenbrouw</link>
+    <inventory-count>48</inventory-count>
+    <product-id>4260607d-e8ba-4da7-9567-cd0231fe9a11</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Brown Shirt</product-name>
+    <price>30.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/brown-shirt</link>
+    <inventory-count>5</inventory-count>
+    <product-id>1c760b3f-db0d-471f-a057-214ad8aac479</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Farmhouse Cider</product-name>
+    <price>17.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2021-farmhouse-cider</link>
+    <inventory-count>0</inventory-count>
+    <product-id>6d64ad9a-38c8-4cc6-9075-84e9324174e2</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Gravenstein Cider</product-name>
+    <price>17.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/gravenstein-cider-21</link>
+    <inventory-count>0</inventory-count>
+    <product-id>33a462f3-4f9d-4379-bb18-1afd71d53578</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Heirloom Cider</product-name>
+    <price>20.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2021-heirloom-cider</link>
+    <inventory-count>0</inventory-count>
+    <product-id>44a3b9fc-ac65-4f8e-a417-612e0774745c</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Hops &amp; Honey Cider</product-name>
+    <price>17.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/2021-hops-honey-cider</link>
+    <inventory-count>0</inventory-count>
+    <product-id>abc4ed77-271b-485e-9c6d-a3b01814992f</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Horse &amp; Plow Gift Card</product-name>
+    <price>25.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/gift-card</link>
+    <inventory-count>0</inventory-count>
+    <product-id>687b7c03-074f-4a18-bbf1-b732c4a9b752</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Live Music Sunday With Gabe Duran</product-name>
+    <price>10.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/live-music-sunday-with-gabe-duran</link>
+    <inventory-count>48</inventory-count>
+    <product-id>7e33a0fa-26ea-4a67-b76b-48542721e41c</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Live Music Sunday With Kayatta</product-name>
+    <price>10.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/live-music-sunday-with-kayatta</link>
+    <inventory-count>48</inventory-count>
+    <product-id>bde8f0f3-f1eb-42e3-9727-4efe29423937</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Live Music Sunday With Mike Hellman &amp; Full Band</product-name>
+    <price>10.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/live-music-sunday-with-mike-hellman</link>
+    <inventory-count>48</inventory-count>
+    <product-id>23ae0e7c-c318-4b4c-8ba0-62b05d657fe5</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Live Music Sunday With Morrison Conway</product-name>
+    <price>10.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/live-music-sunday-with-morrison-conway</link>
+    <inventory-count>48</inventory-count>
+    <product-id>348603f8-5cf9-4b8b-bfda-8e56e7a4669f</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Live Music Sunday With Nate Lopez</product-name>
+    <price>10.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/live-music-sunday-with-nate-lopez-sep-1</link>
+    <inventory-count>48</inventory-count>
+    <product-id>202dcbf1-f687-4ded-85d7-aabc41cf5143</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Live Music Sunday With Sebastian Saint James</product-name>
+    <price>10.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/live-music-sunday-with-sebastian-saint-james-august-11</link>
+    <inventory-count>48</inventory-count>
+    <product-id>d2856bb6-5c6b-45ec-8a29-c71838f71742</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Live Music Sunday With Spike Sikes</product-name>
+    <price>10.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/live-music-sunday-with-spike-sikes</link>
+    <inventory-count>48</inventory-count>
+    <product-id>e92c8154-8883-4c88-b2b7-1aea31dbe604</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Live Music Sunday With Twin Soles</product-name>
+    <price>10.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/live-music-sunday-with-twin-soles</link>
+    <inventory-count>48</inventory-count>
+    <product-id>e6c8cf58-cef9-469a-8987-dade5172a5d3</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Yoga In The Grove</product-name>
+    <price>40.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://horseandplow.com/product/yoga-in-the-grove</link>
+    <inventory-count>17</inventory-count>
+    <product-id>e6554e66-e578-4a18-bd3b-921b753b129a</product-id>
+    <extras>
+        <producer>Horse & Plow</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+</vivino-product-list>

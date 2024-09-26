@@ -1,0 +1,2633 @@
+<vivino-product-list>
+<meta-data>
+    <feed-generation-date>2024-08-01T19:54:31.743375Z</feed-generation-date>
+</meta-data>
+<product>
+    <product-name>1976 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1976</link>
+    <inventory-count>0</inventory-count>
+    <product-id>aa82a3aa-6195-47dd-a39b-b20a29e50def</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1976</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1978 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1978</link>
+    <inventory-count>0</inventory-count>
+    <product-id>ea1e3d6d-bafa-4e2b-a3e8-54a308f1a1fd</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1978</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1979 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1979</link>
+    <inventory-count>0</inventory-count>
+    <product-id>ed49be7e-8cfa-4c90-b168-fd0a6de08974</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1979</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1980 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1980</link>
+    <inventory-count>0</inventory-count>
+    <product-id>5124d654-30bc-46b5-9225-aae55c5eb9da</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1980</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1980 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1980</link>
+    <inventory-count>0</inventory-count>
+    <product-id>d4c97f10-6afd-44c6-8e52-bbc6c20da6df</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1980</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1981 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1981</link>
+    <inventory-count>0</inventory-count>
+    <product-id>c7e30338-c6bc-40e5-9607-70f6a2568bbf</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1981</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1982 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1982</link>
+    <inventory-count>0</inventory-count>
+    <product-id>28024954-0887-4751-8681-18e2a549d5da</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1982</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1982 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1982</link>
+    <inventory-count>0</inventory-count>
+    <product-id>5adf5cfe-7e3f-40ce-8d6f-c03e2aebd8de</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1982</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1983 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1983</link>
+    <inventory-count>0</inventory-count>
+    <product-id>2fd5761e-3ead-4956-be5c-37402e3fde1d</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1983</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1983 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1983</link>
+    <inventory-count>0</inventory-count>
+    <product-id>1073677e-4f67-4078-a369-beb81e58fe3d</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1983</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1984 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1984</link>
+    <inventory-count>0</inventory-count>
+    <product-id>ff113697-d8a9-42ad-8f73-c80ad0cfa414</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1984</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1984 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1984</link>
+    <inventory-count>0</inventory-count>
+    <product-id>7d58584e-e48b-48ef-a006-6cab5de6ddd3</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1984</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1985 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1985</link>
+    <inventory-count>0</inventory-count>
+    <product-id>27b76bc4-7c6b-42ea-8f54-65dab3695da0</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1985</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1985 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1985</link>
+    <inventory-count>0</inventory-count>
+    <product-id>ea2608ed-c04d-4ec1-9304-8b242e5ca580</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1985</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1986 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1986</link>
+    <inventory-count>0</inventory-count>
+    <product-id>ba2c184d-1de7-431e-b11d-417143604c21</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1986</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1986 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1986</link>
+    <inventory-count>0</inventory-count>
+    <product-id>4806b8be-678d-448e-9568-2bbae00a43a2</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1986</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1987 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1987</link>
+    <inventory-count>0</inventory-count>
+    <product-id>c8079d76-6187-4f8f-82b7-7db46ffd4530</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1987</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1987 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1987</link>
+    <inventory-count>0</inventory-count>
+    <product-id>83beb9a7-1a7c-4989-8cdb-30480f3e1c80</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1987</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1988 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1988</link>
+    <inventory-count>0</inventory-count>
+    <product-id>2eb5f4fb-f736-4179-8733-b2b405d62c69</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1988</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1988 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1988</link>
+    <inventory-count>0</inventory-count>
+    <product-id>30da517b-e856-42fa-9f91-91541bfbb308</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1988</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1989 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1989</link>
+    <inventory-count>0</inventory-count>
+    <product-id>6b1357f9-b0c8-4efb-972b-3ca7b852a4c8</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1989</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1989 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1989</link>
+    <inventory-count>0</inventory-count>
+    <product-id>7c6a1aae-e97c-4276-9de3-1aee68ae52fe</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1989</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1990 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1990</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a1a18de5-43db-4398-b550-3e39712f2dfd</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1990</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1990 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1990</link>
+    <inventory-count>0</inventory-count>
+    <product-id>1014c686-6745-4fb7-bac1-a072075c97f4</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1990</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1991 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1991</link>
+    <inventory-count>0</inventory-count>
+    <product-id>6ff8b616-8278-44c8-8c2e-df7a6ea1cdc2</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1991</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1991 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1991</link>
+    <inventory-count>0</inventory-count>
+    <product-id>1bf7a567-7102-40cd-94c6-6e49a4b84e67</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1991</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1992 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1992</link>
+    <inventory-count>0</inventory-count>
+    <product-id>6707a636-4b9b-4b9c-b0d4-3c3a945bafc1</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1992</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1992 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1992</link>
+    <inventory-count>0</inventory-count>
+    <product-id>b714e045-f379-4fc3-ab0c-5d0fa039b4d4</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1992</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1993 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1993</link>
+    <inventory-count>0</inventory-count>
+    <product-id>cf0baa66-ec1e-4a68-8dfc-bcd87d47d119</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1993</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1993 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1993</link>
+    <inventory-count>0</inventory-count>
+    <product-id>890b5474-82aa-4aa9-b60e-05d4b8a76dc2</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Sonoma Valley</appellation>
+        <vintage>1993</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1994 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1994</link>
+    <inventory-count>0</inventory-count>
+    <product-id>491ab76f-3aba-4429-a808-566487db4894</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1994</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1994 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1994</link>
+    <inventory-count>0</inventory-count>
+    <product-id>3d6f744d-207c-4184-add4-2be6bd40f1a5</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Sonoma Valley</appellation>
+        <vintage>1994</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1995 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1995</link>
+    <inventory-count>0</inventory-count>
+    <product-id>51d6a8eb-b566-474b-a467-6eb77c2dc5c7</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>1995</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1995 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1995</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a939a457-cce6-4cca-b678-55c556920cc8</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Sonoma Valley</appellation>
+        <vintage>1995</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1996 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1996</link>
+    <inventory-count>0</inventory-count>
+    <product-id>64199a86-46a1-4bac-946b-7e1fdaf15abc</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Sonoma Valley</appellation>
+        <vintage>1996</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1996 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1996</link>
+    <inventory-count>0</inventory-count>
+    <product-id>f59590f0-b748-44ec-99e0-71965cf8e116</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Sonoma Valley</appellation>
+        <vintage>1996</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1997 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1997</link>
+    <inventory-count>0</inventory-count>
+    <product-id>7cef27c8-01f2-4871-85ed-84219920a739</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Sonoma Valley</appellation>
+        <vintage>1997</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1997 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1997</link>
+    <inventory-count>0</inventory-count>
+    <product-id>96bd131a-420e-4da2-ae51-d11309c7a0f4</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Sonoma Valley</appellation>
+        <vintage>1997</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1998 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1998</link>
+    <inventory-count>0</inventory-count>
+    <product-id>3d069bc9-ceb8-4880-82fc-943edb751523</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Sonoma Valley</appellation>
+        <vintage>1998</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1998 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1998</link>
+    <inventory-count>0</inventory-count>
+    <product-id>7a589b59-0bdf-4ea7-9217-22d758ce85e7</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Sonoma Valley</appellation>
+        <vintage>1998</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1999 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-1999</link>
+    <inventory-count>0</inventory-count>
+    <product-id>ff3decf4-2880-4353-9a70-37d1606fe441</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Sonoma Valley</appellation>
+        <vintage>1999</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>1999 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-1999</link>
+    <inventory-count>0</inventory-count>
+    <product-id>36768204-0d52-415b-99b8-f99bc614fcba</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Sonoma Valley</appellation>
+        <vintage>1999</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2000 Cabernet Sauvignon</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2000</link>
+    <inventory-count>0</inventory-count>
+    <product-id>586f75b4-d688-4505-8b7d-23a84c3824f8</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Sonoma Valley</appellation>
+        <vintage>2000</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2000 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-2000</link>
+    <inventory-count>0</inventory-count>
+    <product-id>e28aa43d-24ce-4bf7-9b32-daf48f21304b</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2000</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2001 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-2001</link>
+    <inventory-count>0</inventory-count>
+    <product-id>ec5e4cef-218a-43a2-9128-d29f13137030</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2001</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2002 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-2002</link>
+    <inventory-count>0</inventory-count>
+    <product-id>6f96aebe-4e25-4c1e-832a-0152a4e404df</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2002</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2003 Cabernet Sauvignon</product-name>
+    <price>250.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2003</link>
+    <inventory-count>66</inventory-count>
+    <product-id>4847e276-6947-4377-8755-3834f1f64965</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2003</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2003 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-2003</link>
+    <inventory-count>0</inventory-count>
+    <product-id>77c5c8b4-9037-4189-8f5b-fa418f2cea50</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2003</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2004 Cabernet Sauvignon</product-name>
+    <price>250.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2004</link>
+    <inventory-count>66</inventory-count>
+    <product-id>f540d50e-1a77-4923-a59d-7061b46f82f8</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2004</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2004 Cabernet Sauvignon</product-name>
+    <price>400.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-magnum-2004-wood-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>44e977e2-956d-4e0f-95dc-6c7b56d2ee48</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2004 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-2004</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a2d89fd3-92fa-4363-a9af-853071803c7d</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2004</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2005 Cabernet Sauvignon</product-name>
+    <price>400.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-magnum-2005-wood-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>3178dccd-9f7c-4189-91b5-6622b282de3e</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2005 Cabernet Sauvignon</product-name>
+    <price>250.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2005</link>
+    <inventory-count>49</inventory-count>
+    <product-id>ffe623c8-d5c6-42c2-b227-d081713a4a4e</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2005</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2005 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-2005</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a7a1ed33-5aed-41d6-b957-51bafd3ad9d3</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2005</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2006 Cabernet Sauvignon</product-name>
+    <price>250.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2006</link>
+    <inventory-count>82</inventory-count>
+    <product-id>5ee6952e-271c-4dd5-be06-11b9da1eeaed</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2006</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2006 Cabernet Sauvignon</product-name>
+    <price>400.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-magnum-2006-wood-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>97f7c262-3115-4f7c-8546-0a9163c32573</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2006 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-2006</link>
+    <inventory-count>0</inventory-count>
+    <product-id>3f92ee78-16e1-4075-91d7-1c49e0744f92</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2006</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2006 Signed Magnum In Wood Box</product-name>
+    <price>450.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>1500 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2006-signed-magnum-in-wine-boxes</link>
+    <inventory-count>52</inventory-count>
+    <product-id>2119427c-5552-4a4a-afe9-30ffa63dda9a</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2006</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2007 Cabernet Sauvignon</product-name>
+    <price>295.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2007</link>
+    <inventory-count>77</inventory-count>
+    <product-id>4a6d6c2b-de93-462b-85bc-138227423032</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2007</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2007 Cabernet Sauvignon</product-name>
+    <price>400.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-magnum-2007-wood-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>94fae84b-2fb2-4892-b4e6-4aa6e41f259b</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2007 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-2007</link>
+    <inventory-count>0</inventory-count>
+    <product-id>bb255f9d-e19b-41fb-b909-9e3e28a7390a</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2007</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2008 Cabernet Sauvignon</product-name>
+    <price>300.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-magnum-2008-wood-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>90d2a31b-211d-4383-834a-e8fc61019313</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2008 Cabernet Sauvignon</product-name>
+    <price>200.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2008</link>
+    <inventory-count>162</inventory-count>
+    <product-id>153bed17-281e-4b03-8720-67be29915260</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2008</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2008 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-2008</link>
+    <inventory-count>0</inventory-count>
+    <product-id>75c85f83-5c56-4036-ac6c-e8cf89c0360d</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2008</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2009 Cabernet Sauvignon</product-name>
+    <price>175.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2009</link>
+    <inventory-count>78</inventory-count>
+    <product-id>1b109d4f-02d6-4648-8379-61f42221e9b1</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2009</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2009 Cabernet Sauvignon</product-name>
+    <price>275.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-magnum-2009-wood-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>1f8196d3-e4e3-4574-ad4f-e686626e3736</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2009 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-2009</link>
+    <inventory-count>0</inventory-count>
+    <product-id>17ed17ad-af00-45b0-9463-465ca45cb37c</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2009</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2010 Cabernet Sauvignon</product-name>
+    <price>150.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2010</link>
+    <inventory-count>89</inventory-count>
+    <product-id>aa98fac1-e2c0-4401-a31a-bf5c9069f5c7</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2010</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2010 Cabernet Sauvignon</product-name>
+    <price>265.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-magnum-2010-wood-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>af310ee8-1779-49d0-ac06-20c067b95564</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2010 Chardonnay</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-2010</link>
+    <inventory-count>0</inventory-count>
+    <product-id>f6875189-2e53-4d64-adb7-34d76f352510</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2010</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2010-2014-2016 Cabernet Sauvignon- 3 Bottles</product-name>
+    <price>215.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2010-2014-2016-cabernet-sauvignon-3-bottles</link>
+    <inventory-count>0</inventory-count>
+    <product-id>e58bb33d-d523-4d8c-b65f-4c197b735b40</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2011 Cabernet Sauvignon</product-name>
+    <price>125.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2011</link>
+    <inventory-count>114</inventory-count>
+    <product-id>33e01839-5778-4d1a-a4ca-56e6e5d1fb47</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2011</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2011 Cabernet Sauvignon</product-name>
+    <price>255.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-magnum-2011-wood-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>1cdfcac2-e308-48d0-8f45-a652a46a23dd</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2012 Cabernet Sauvignon</product-name>
+    <price>250.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2012</link>
+    <inventory-count>862</inventory-count>
+    <product-id>4d402975-d53b-4849-b03a-f665bac7b3e9</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2012</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2012 Cabernet Sauvignon</product-name>
+    <price>300.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-magnum-2012-wood-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>db214c7e-032a-4fea-8bb6-39309ee9ff06</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2013 Cabernet Sauvignon</product-name>
+    <price>100.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2013</link>
+    <inventory-count>392</inventory-count>
+    <product-id>daaa3d42-c172-4301-a40c-53970417872b</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2013</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2013 Cabernet Sauvignon</product-name>
+    <price>245.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-magnum-2013-wood-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>025c3d78-ba7f-4a7b-b641-81c4bbe94d80</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2014 Cabernet Sauvignon</product-name>
+    <price>235.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-magnum-2014-wood-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>51b147b2-4887-46c3-8b73-1c7e44e62192</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2014 Cabernet Sauvignon</product-name>
+    <price>95.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2014</link>
+    <inventory-count>51</inventory-count>
+    <product-id>6f831369-3f1d-4efd-aa6f-3119cc2aa51e</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2014</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2014 Cabernet Sauvignon</product-name>
+    <price>1600.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>6000 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2014-cabernet-sauvignon-6l</link>
+    <inventory-count>2</inventory-count>
+    <product-id>730b9c46-7285-4a9d-9840-1ee4aa38b0c9</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2013</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2014 Through 2019 Cabernet Sauvignon In Wood Box</product-name>
+    <price>471.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>4500 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2014-through-2019-cabernet-sauvignon-in-wood-box</link>
+    <inventory-count>47</inventory-count>
+    <product-id>341b1151-46d5-406b-8ca6-826166307c71</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2015 Cabernet Sauvignon</product-name>
+    <price>85.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2015</link>
+    <inventory-count>162</inventory-count>
+    <product-id>6688a1fe-486b-45f3-a87a-471c1b155d8b</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2015</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2015 Cabernet Sauvignon</product-name>
+    <price>225.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-magnum-2015-wood-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>89511145-4563-4e98-bbd4-987f58edf8f1</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2015 Cabernet Sauvignon</product-name>
+    <price>850.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>3000 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2015-cabernet-sauvignon-3l</link>
+    <inventory-count>3</inventory-count>
+    <product-id>898d9fe1-0727-46f6-8818-abc2fee896aa</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2015</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2015, 2016 &amp; 2017 Cabernet In Wood Box - 12 Bottles</product-name>
+    <price>930.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>9000 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2015-2016-2017-cabernet-in-wood-box-12-bottles</link>
+    <inventory-count>3</inventory-count>
+    <product-id>fc4a2cc6-d796-44c4-b13b-ae59b4ada075</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2016 Cabernet Sauvignon</product-name>
+    <price>800.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>3000 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2016-cabernet-sauvignon-3l</link>
+    <inventory-count>1</inventory-count>
+    <product-id>ba2388f6-58cb-40fe-b50c-00c1c7f78210</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2015</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2016 Cabernet Sauvignon</product-name>
+    <price>215.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>1500 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2015-cabernet-sauvignon-duplicate1</link>
+    <inventory-count>29</inventory-count>
+    <product-id>2d12485a-e440-4981-b949-93de5a27c643</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2016 Cabernet Sauvignon</product-name>
+    <price>4800.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>18000 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-18l-2016</link>
+    <inventory-count>0</inventory-count>
+    <product-id>00e7aae9-07ee-42c6-a7b6-d503b6f71ccc</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2016</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2016 Cabernet Sauvignon</product-name>
+    <price>70.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2016</link>
+    <inventory-count>173</inventory-count>
+    <product-id>824bfd4a-65c3-4360-a522-9a93575bf19d</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2016</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2016 Cabernet Sauvignon</product-name>
+    <price>215.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-magnum-2016-wood-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>426e0405-18af-4d1f-8104-e1f554b15355</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2016 Cabernet Sauvignon Etched Magnum</product-name>
+    <price>315.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2016-cabernet-sauvignon-etched-magnum</link>
+    <inventory-count>0</inventory-count>
+    <product-id>8878543a-fee1-49f9-9f81-ab307be8ee28</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2017 Cabernet Sauvignon</product-name>
+    <price>220.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2017-cabernet-sauvignon-magnum-wood-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>8a1ce0b8-5780-4637-9a32-961d1793be5f</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2017 Cabernet Sauvignon</product-name>
+    <price>65.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2017</link>
+    <inventory-count>125</inventory-count>
+    <product-id>6bb7a321-41b5-406e-ae92-c8fdc3cc764a</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2017</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2018 Cabernet Sauvignon</product-name>
+    <price>4800.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>18000 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2018-cabernet-sauvignon-duplicate</link>
+    <inventory-count>1</inventory-count>
+    <product-id>b4eecdfe-0393-463d-a13f-5b8dd7d90cd7</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2018</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2018 Cabernet Sauvignon</product-name>
+    <price>64.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2018</link>
+    <inventory-count>493</inventory-count>
+    <product-id>5cf795fc-b63d-4795-b1e8-9d855585ecc4</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2018</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2018 Cabernet Sauvignon</product-name>
+    <price>215.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2018-cabernet-sauvignon-magnum-wood-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>e78bb468-ac4c-4742-b7cd-64b2816b9b01</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2018 Chardonnay</product-name>
+    <price>45.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-2018</link>
+    <inventory-count>268</inventory-count>
+    <product-id>8e078c0f-c5a3-4d35-82c2-10a0e7a59fdd</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2018</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Cabernet Sauvignon</product-name>
+    <price>4800.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>18000 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2019-cabernet-sauvignon-18l</link>
+    <inventory-count>1</inventory-count>
+    <product-id>4efb7cf6-1d4b-46dd-bc3f-7be00457be75</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2018</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Cabernet Sauvignon</product-name>
+    <price>62.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cabernet-sauvignon-2019</link>
+    <inventory-count>324</inventory-count>
+    <product-id>da3db23b-d279-437b-986b-6e6d9c2be7a1</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Chardonnay</product-name>
+    <price>45.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-2019</link>
+    <inventory-count>552</inventory-count>
+    <product-id>a08155f4-8664-4dba-9b31-7179eab6ccef</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Cabernet &amp; 2022 Chardonnay In Gift Box</product-name>
+    <price>110.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2020-cabernet-2022-chardonnay-in-gift-box</link>
+    <inventory-count>145</inventory-count>
+    <product-id>6c930056-583d-4219-93a1-65d15bcab204</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Cabernet &amp; 2022 Chardonnay In Wood Box</product-name>
+    <price>117.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2020-cabernet-2022-chardonnay-in-wood-box</link>
+    <inventory-count>31</inventory-count>
+    <product-id>92e31dc0-4b22-415e-a822-58ac4dfa2b0c</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country>US</country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Cabernet &amp; 2022 Chardonnay In Wood Box</product-name>
+    <price>336.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2020-cabernet-2022-chardonnay-in-wood-box-six</link>
+    <inventory-count>6</inventory-count>
+    <product-id>722eccbb-6d3a-4b3b-a1cd-6f0598fdc96b</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Cabernet Sauvignon</product-name>
+    <price>60.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2020-cabernet-sauvignon</link>
+    <inventory-count>1839</inventory-count>
+    <product-id>ea166910-5bfe-4162-bd38-7d6cc1a5c389</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Cabernet Sauvignon &amp; 2023 Olive Oil In Gift Box</product-name>
+    <price>160.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/cabernet-olive-oil-in-gift-box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>e5b5f651-855b-4e88-a585-e12a1fc75eee</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Cabernet Sauvignon In Gift Box</product-name>
+    <price>65.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2020-cabernet-sauvignon-in-gift-box</link>
+    <inventory-count>1367</inventory-count>
+    <product-id>daf70bbd-9f91-4d1a-8a66-71aaf8f586a3</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Chardonnay</product-name>
+    <price>45.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chardonnay-2020</link>
+    <inventory-count>226</inventory-count>
+    <product-id>67894b71-3a48-4473-9f80-c3ccbf74e796</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Chardonnay</product-name>
+    <price>90.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>1500 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2020-chardonnay-magnum</link>
+    <inventory-count>46</inventory-count>
+    <product-id>2050cb0e-5ffd-4e58-a4e2-1bfc01282543</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Chardonnay</product-name>
+    <price>42.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2022-chardonnay</link>
+    <inventory-count>441</inventory-count>
+    <product-id>7f7706fb-5475-40f5-8a2f-efd10eb4de8d</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Chardonnay In Gift Box</product-name>
+    <price>45.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2022-chardonnay-in-gift-box</link>
+    <inventory-count>136</inventory-count>
+    <product-id>01e0769d-e803-45b5-be1b-b0301ad3bb94</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Jordan Estate Extra Virgin Olive Oil</product-name>
+    <price>30.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>375 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2023-jordan-estate-extra-virgin-olive-oil</link>
+    <inventory-count>389</inventory-count>
+    <product-id>09435796-3f48-4927-93ac-915efe31c529</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Jordan Estate Extra Virgin Olive Oil In Gift Box</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>375 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/2023-jordan-estate-extra-virgin-olive-oil-in-gift-box</link>
+    <inventory-count>23</inventory-count>
+    <product-id>924d8700-c0dd-4e19-9c85-47d634ca4bf0</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Artisan Salumi Set</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/charcuterie-set</link>
+    <inventory-count>-2</inventory-count>
+    <product-id>67a9a9d3-e025-4c55-b917-b967372c7081</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Caviar Sampler Gift Set</product-name>
+    <price>240.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/caviar-sampler-gift-set</link>
+    <inventory-count>0</inventory-count>
+    <product-id>c20adf97-b856-4158-b7c2-6e1d90991e9a</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Champagne Saber - Engraved</product-name>
+    <price>170.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/champagne-saber-engraved</link>
+    <inventory-count>-5</inventory-count>
+    <product-id>b35321f5-c9eb-4a8b-ab61-b93dce933851</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Crystal Jordan Ornament</product-name>
+    <price>58.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/crystal-ornament</link>
+    <inventory-count>0</inventory-count>
+    <product-id>381503aa-623f-44a0-b5f7-ab9590740399</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Earth Week Nature Hike, April 20</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/spring-sonoma-hiking-2</link>
+    <inventory-count>0</inventory-count>
+    <product-id>c51c9ba8-67d4-481c-bb5c-57ac819770e8</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Earth Week Nature Hike, April 21</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/spring-sonoma-hiking-3</link>
+    <inventory-count>0</inventory-count>
+    <product-id>e788a88d-eb01-4b0d-bcab-8ef8e70aa1c7</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Engraved Durand Wine Opener</product-name>
+    <price>140.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/engraved-durand-wine-opener</link>
+    <inventory-count>10</inventory-count>
+    <product-id>5e4115ca-ea79-410a-9ed1-e80900722bd4</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Gift Box - 1 Bottle</product-name>
+    <price>5.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/gift-box-1-bottle</link>
+    <inventory-count>16</inventory-count>
+    <product-id>2d96eebd-0ade-44a1-8e27-2fd666101868</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Gourmet Cheese Sampler</product-name>
+    <price>90.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/gourmet-cheese-sampler</link>
+    <inventory-count>0</inventory-count>
+    <product-id>b9f33c92-56ea-4904-b0d0-d3d335843161</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Gourmet Chocolate Gift Box</product-name>
+    <price>16.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/luxury-chocolate-gift-box</link>
+    <inventory-count>-18</inventory-count>
+    <product-id>54ef1ae4-1710-44a8-852e-250b20875580</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Jordan 50th Anniversary Baccarat Decanter</product-name>
+    <price>1500.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/baccarat-decanter-jordan50th</link>
+    <inventory-count>0</inventory-count>
+    <product-id>26e567a3-756f-46f9-95fb-3fc481e3eac7</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Jordan Champagne Bouchon</product-name>
+    <price>12.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-winery-champagne-bouchon</link>
+    <inventory-count>104</inventory-count>
+    <product-id>fd43b7f7-5cee-4c62-b444-5dadf87c165d</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Jordan Chateau Coaster</product-name>
+    <price>12.50</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/square-marble-coasters-chateau</link>
+    <inventory-count>83</inventory-count>
+    <product-id>3cb21753-0d66-4d05-a77c-4fa39642dc6a</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Jordan Chef’s Reserve Caviar</product-name>
+    <price>135.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-chefs-reserve-caviar-by-tsar-nicoulai</link>
+    <inventory-count>0</inventory-count>
+    <product-id>f76f9060-b948-47c7-8db5-1a8169af8817</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Jordan Cuvée By Champagne Ar Lenoble</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-cuvee-by-champagne-ar-lenoble</link>
+    <inventory-count>173</inventory-count>
+    <product-id>df4ca07e-b69b-4346-ade8-1241bd438f39</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country>US</country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Jordan Etched Olive Wood Cheese Board</product-name>
+    <price>65.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-olive-wood-cheese-board</link>
+    <inventory-count>-7</inventory-count>
+    <product-id>3aa5440d-c4e0-412c-b2c6-ae891b8c59d8</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Jordan Halloween 2024</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/halloween-2024</link>
+    <inventory-count>0</inventory-count>
+    <product-id>5b2d860f-277d-46e6-be89-212c057d75e1</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Jordan Logo Coaster</product-name>
+    <price>12.50</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/square-marble-coasters-logo</link>
+    <inventory-count>166</inventory-count>
+    <product-id>f4a545ae-335f-4555-91f2-55ce9b7e9b18</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Jordan Reclaimed Wine Barrel Waiter’s Corkscrew</product-name>
+    <price>45.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-reclaimed-wood-barrel-corkscrew</link>
+    <inventory-count>194</inventory-count>
+    <product-id>56e65cc9-0bf7-4ecb-8dd1-5a1f56791143</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Jordan Signature Trio Collection In Gift Box</product-name>
+    <price>142.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/jordan-signature-trio-collection-in-gift-box-3-bottles</link>
+    <inventory-count>0</inventory-count>
+    <product-id>086f01e0-a575-424a-bda8-798b24513824</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Jordan Virtual Gift Card</product-name>
+    <price>75.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/virtual-gift-card</link>
+    <inventory-count>0</inventory-count>
+    <product-id>9014924d-ba2c-48b2-9ce6-28821f6ce1d6</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Library Cabernet 2 Bottles</product-name>
+    <price>165.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/library-cabernet-2-bottles</link>
+    <inventory-count>0</inventory-count>
+    <product-id>7775386e-a2ed-46f1-8895-91bfe02cce51</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Parisian Pop-up Dinner Series, August 16</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/parisian-3</link>
+    <inventory-count>0</inventory-count>
+    <product-id>4508833d-73da-4425-bbd1-3b26a11102ec</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Parisian Pop-up Dinner Series, August 23</product-name>
+    <price>295.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/parisian-4</link>
+    <inventory-count>1</inventory-count>
+    <product-id>5b53207e-7831-410f-bca1-cd1ff3fdfb00</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Parisian Pop-up Dinner Series, August 9</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/parisian-2</link>
+    <inventory-count>0</inventory-count>
+    <product-id>55eae839-bf55-418a-b274-53b50e6e33eb</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Pizza Cooking Class &amp; Luncheon-october 12</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/outdoor-winery-lunch-3</link>
+    <inventory-count>0</inventory-count>
+    <product-id>904625a8-c53f-40f8-a4ca-2c4d5793ca58</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Pizza Cooking Class &amp; Luncheon-october 19</product-name>
+    <price>240.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/outdoor-winery-lunch-4</link>
+    <inventory-count>2</inventory-count>
+    <product-id>26f9684a-1f05-4672-bd8d-d12fab5c0d2a</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Pizza Cooking Class &amp; Luncheon-october 5</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/outdoor-winery-lunch-2</link>
+    <inventory-count>0</inventory-count>
+    <product-id>c7192ed0-ca56-4489-b239-44e39f43a672</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Riedel Amadeo Decanter - Engraved</product-name>
+    <price>650.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/riedel-amadeo-decanter-engraved</link>
+    <inventory-count>15</inventory-count>
+    <product-id>798bb502-7b00-4a5f-8eaf-5a38c3e2d24c</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Riedel Champagne Wine Glass - Engraved</product-name>
+    <price>29.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/riedel-champagne-wine-glass-engraved</link>
+    <inventory-count>28</inventory-count>
+    <product-id>01ff0883-f889-4404-a656-2a1d5e071c81</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Riedel Vinum Bordeaux Glass - Engraved</product-name>
+    <price>29.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/riedel-vinum-wine-glass-bordeaux</link>
+    <inventory-count>52</inventory-count>
+    <product-id>c8080967-f748-4987-8509-9f700374cf59</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Riedel Vinum Chardonnay Glass - Engraved</product-name>
+    <price>24.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/riedel-vinum-wine-glass-chardonnay</link>
+    <inventory-count>36</inventory-count>
+    <product-id>d05833f2-5392-4497-b2a3-3846d5c3c083</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wine Lover’s Spice Blends</product-name>
+    <price>42.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/wine-lovers-spice-blends-kit</link>
+    <inventory-count>16</inventory-count>
+    <product-id>282f872b-2f14-4aa7-8e19-b6dfd950b009</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wooden Box 1 Magnum Bottle</product-name>
+    <price>10.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.jordanwinery.com/product/wooden-box-1-magnum-bottle</link>
+    <inventory-count>10</inventory-count>
+    <product-id>7fddca51-72ea-4f2b-871c-b8ec8aab8248</product-id>
+    <extras>
+        <producer>Jordan</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+</vivino-product-list>

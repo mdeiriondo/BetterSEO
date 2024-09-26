@@ -1,0 +1,1121 @@
+<vivino-product-list>
+<meta-data>
+    <feed-generation-date>2024-08-02T19:21:26.282009Z</feed-generation-date>
+</meta-data>
+<product>
+    <product-name>2018 Cabernet Sauvignon Magnum</product-name>
+    <price>225.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>2 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/2018-cabernet-sauvignon-magnum</link>
+    <inventory-count>28</inventory-count>
+    <product-id>7518c408-7fae-47bb-96ee-ec72b76eaf3b</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>Fountaingrove District</appellation>
+        <vintage>2018</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2018 Pinot Noir  Special Selection Magnum</product-name>
+    <price>225.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>2 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/2018-pinot-noir-magnum-special-selection</link>
+    <inventory-count>23</inventory-count>
+    <product-id>d59b7d92-229a-4dd7-927b-1ea20677926d</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2018</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Pinot Noir Magnum</product-name>
+    <price>175.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>2 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/2019-pinot-noir-magnum</link>
+    <inventory-count>19</inventory-count>
+    <product-id>9c23d964-993e-4a59-859e-05e67a0bb49e</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Alexander Valley Zinfandel</product-name>
+    <price>55.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/2021-alexander-valley-zinfandel</link>
+    <inventory-count>321</inventory-count>
+    <product-id>b6cb8d55-c4fa-4dc4-9537-f6653d099ce4</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>Alexander Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Zinfandel</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Kick Ranch Petite Sirah</product-name>
+    <price>65.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/2021-kick-ranch-petite-sirah</link>
+    <inventory-count>206</inventory-count>
+    <product-id>13577157-faf5-4efd-84ea-22b0bdddf728</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>Fountaingrove District</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Petite Sirah</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 La Rumeur Red Blend</product-name>
+    <price>65.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/2021-la-rumeur-red-blend</link>
+    <inventory-count>876</inventory-count>
+    <product-id>daedd544-93f9-4486-999b-b9e51c334c33</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>Sonoma County</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Pinot Noir</product-name>
+    <price>65.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/2021-pinot-noir</link>
+    <inventory-count>278</inventory-count>
+    <product-id>b2b383ed-a34a-48b7-94ec-a3f0f4793c6c</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Rockpile Zinfandel</product-name>
+    <price>65.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/2021-rockpile-zinfandel</link>
+    <inventory-count>284</inventory-count>
+    <product-id>0c909af0-850d-4230-82d1-efe520dd0d23</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>Rockpile</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Zinfandel</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Rockpile Zinfandel Magnum</product-name>
+    <price>195.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>1500 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/2021-rockpile-zinfandel-magnum</link>
+    <inventory-count>0</inventory-count>
+    <product-id>9c254b08-e261-4cba-b97a-99653e926dbe</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>Rockpile</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Zinfandel</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Syrah</product-name>
+    <price>60.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/2021-syrah</link>
+    <inventory-count>856</inventory-count>
+    <product-id>a27d588d-4491-490d-900d-814e23be1c9d</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>Sonoma Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Syrah</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Rosé Of Grenache</product-name>
+    <price>36.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/2023-rose-of-grenache</link>
+    <inventory-count>335</inventory-count>
+    <product-id>351c9f40-704e-4de5-8295-0c77378cfa47</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>Fountaingrove District</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>Rose</color>
+        <varietal>Rose</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Sauvignon Blanc</product-name>
+    <price>36.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/2023-sauvignon-blanc</link>
+    <inventory-count>10898</inventory-count>
+    <product-id>112b575d-9767-49a1-b2e1-9d883a7e3299</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>Fountaingrove District</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Sauvignon Blanc</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Unoaked Chardonnay</product-name>
+    <price>36.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/2023-unoaked-chardonnay</link>
+    <inventory-count>331</inventory-count>
+    <product-id>563f2d4b-3f01-433c-a7fd-3f7f9d7c3853</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>Russian River Valley</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Viognier</product-name>
+    <price>40.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/2023-viognier</link>
+    <inventory-count>242</inventory-count>
+    <product-id>c1224a9a-cad5-4fdc-bcb3-86cdccf73921</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>Fountaingrove District</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Viognier</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>5th Annual Harvest Party</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/5th-annual-harvest-party</link>
+    <inventory-count>0</inventory-count>
+    <product-id>ade47298-0b0a-4b11-8b28-dbb779a80436</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>6th Annual Fall Club Dinner</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/6th-annual-fall-club-dinner</link>
+    <inventory-count>0</inventory-count>
+    <product-id>eb907b04-f7d6-47ed-9951-cb878875e82b</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>8 Person Rooted For Vineyard Residence</product-name>
+    <price>600.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/8-person-rooted-for-vineyard-residence</link>
+    <inventory-count>0</inventory-count>
+    <product-id>b09f8b61-6c1b-4140-87d3-29d57af15c22</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Amber Glass Spray Bottle</product-name>
+    <price>8.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/amber-glass-spray-bottle</link>
+    <inventory-count>8</inventory-count>
+    <product-id>4b858dd3-ca94-486a-bee6-4a959fe8e8a5</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Atelier Bricoleur</product-name>
+    <price>7200.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/8-person-atelier-bricoleur</link>
+    <inventory-count>0</inventory-count>
+    <product-id>eb7c9f5a-1371-4615-b916-20a01c56f381</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Bricoleur At Charlie Palmer Steak Iv - Nyc</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/bricoleur-nyc-cp-steak</link>
+    <inventory-count>0</inventory-count>
+    <product-id>daba9fb9-ded7-4a9c-83ac-33e5c85f2a5d</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Bricoleur Vineyards E-gift Card</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/e-gift-card</link>
+    <inventory-count>0</inventory-count>
+    <product-id>8f09517e-8db1-4931-980b-d49c924312ba</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Bricoleur Vineyards Holiday Concert</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/bricoleur-holiday-concert</link>
+    <inventory-count>0</inventory-count>
+    <product-id>53c4ccbc-b8c0-41db-9fb8-7e9a1fb49aa6</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Bricoleur Vineyards Holiday Market</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/bricoleur-vineyards-holiday-market</link>
+    <inventory-count>0</inventory-count>
+    <product-id>2e1194aa-d4ca-4347-9d09-406e8fc21a8a</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Bricoleur X Tsar Nicolai Caviar Dinner</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/bricoleur-x-tsar-nicolai-caviar-dinner</link>
+    <inventory-count>0</inventory-count>
+    <product-id>cc0c01b8-5a3b-456b-b082-29227f9da3b0</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Butter Love &amp; Hardwork Chocolate Bar &amp; Zinfandel Gift Set</product-name>
+    <price>100.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/butter-love-hardwork-chocolate-bar-zinfandel-gift-set</link>
+    <inventory-count>0</inventory-count>
+    <product-id>7342dce8-9b27-464f-815d-7cd5afe8de46</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Cast Iron Taper</product-name>
+    <price>28.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/cast-iron-tapers</link>
+    <inventory-count>2</inventory-count>
+    <product-id>99b1547e-4950-458f-a8e8-7a517eda2d87</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Enso Village And The Appellation Virtual Cooking Class Wine Bundle</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/enso-village-and-the-appellation-virtual-cooking-class-wine-bundle</link>
+    <inventory-count>0</inventory-count>
+    <product-id>cbc4273f-e30a-49f6-bd5a-5dbea57a0d2e</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Extra Virgin Olive Oil</product-name>
+    <price>48.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/estate-extra-virgin-olive-oil</link>
+    <inventory-count>920</inventory-count>
+    <product-id>06b2196b-a20f-454a-a716-af587ef43ec1</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate-made Pasta Sauce</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/estate-made-pasta-sauce</link>
+    <inventory-count>0</inventory-count>
+    <product-id>06d52847-3849-4826-8820-ee2d337755c9</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Family Style With Bricoleur</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/family-style-with-bricoleur-august-23rd</link>
+    <inventory-count>0</inventory-count>
+    <product-id>97530e60-b683-4776-8a27-e292f338e252</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Friday Evening Yoga Class</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/friday-evening-yoga-class</link>
+    <inventory-count>0</inventory-count>
+    <product-id>00772964-7f45-4dea-97d5-6c7387168399</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Garden Summer Harvest Class With Farmer Mikey</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/garden-summer-harvest-class-with-farmer-mikey</link>
+    <inventory-count>0</inventory-count>
+    <product-id>f89fe4c7-96d8-479c-89b3-12d576d07ffc</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Glass Tea Infuser</product-name>
+    <price>12.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/glass-tea-infuser</link>
+    <inventory-count>160</inventory-count>
+    <product-id>33be3435-c4d0-438f-98a1-250681bbf4be</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Green Tee</product-name>
+    <price>25.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/unisex-green-tee</link>
+    <inventory-count>18</inventory-count>
+    <product-id>d641587e-7d53-4091-9764-2fec4c33a838</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Halloween Family Style With Bricoleur</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/family-style-with-bricoleur-october-25th</link>
+    <inventory-count>0</inventory-count>
+    <product-id>32454629-894c-48c5-a479-9089a189ebaa</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Hog Island Oyster Lover's Cookbook</product-name>
+    <price>20.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/hog-island-oyster-lover-s-cookbook</link>
+    <inventory-count>9</inventory-count>
+    <product-id>cbab872f-c6de-4a6e-a44c-0b0504d3a730</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Isla Rose Brut Rosé</product-name>
+    <price>60.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/isla-rose-brut-rose</link>
+    <inventory-count>300</inventory-count>
+    <product-id>528459c1-6389-45ea-9226-1a8f2f1ae47c</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>Sonoma County</appellation>
+        <vintage></vintage>
+        <country>US</country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Local Love</product-name>
+    <price>70.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/local-love</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a3fc54aa-efbc-4a10-9404-b3be60ff8442</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Magnums &amp; Mcf Dinner</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/maitres-cusiniers-de-france-dinner</link>
+    <inventory-count>0</inventory-count>
+    <product-id>16dbb47b-fb4b-4391-85da-792288d86b90</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Mother's Day Sale: 6 Bottles Of 2019 Rosé Of Pinot Noir</product-name>
+    <price>192.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/mothers-day-sale-6-bottles-of-2019-rose-of-pinot-noir</link>
+    <inventory-count>0</inventory-count>
+    <product-id>bb63ed83-a3e7-471a-a0e7-3a90c2ca6666</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>North Coast Brut</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/north-coast-brut-new</link>
+    <inventory-count>412</inventory-count>
+    <product-id>e06062f6-a1e0-4a3e-a2af-c1386fdc2e21</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>North Coast</appellation>
+        <vintage></vintage>
+        <country>US</country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>North Coast Brut Magnum</product-name>
+    <price>125.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>1500 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/north-coast-brut-magnum</link>
+    <inventory-count>89</inventory-count>
+    <product-id>8cb10075-1b7c-4f49-b1b3-4d12f8dd8fa4</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation>North Coast</appellation>
+        <vintage></vintage>
+        <country>US</country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Nye Bubbly Case Sale</product-name>
+    <price>550.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/nye-bubbly-case-sale</link>
+    <inventory-count>0</inventory-count>
+    <product-id>0cb5ce14-45c5-40e5-982d-3d4e867c03d3</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Olive Oil Collection</product-name>
+    <price>65.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/olive-oil-collection</link>
+    <inventory-count>0</inventory-count>
+    <product-id>e91e5b9e-0efd-443f-b7af-b2c870563134</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Olive Oil Infusion Kit</product-name>
+    <price>125.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/olive-oil-infusion-kit</link>
+    <inventory-count>0</inventory-count>
+    <product-id>62c1950f-11ea-485e-ad9e-51c174d53b36</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Pinot Lovers Collection (shipping Included)</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/pinot-lovers-package</link>
+    <inventory-count>0</inventory-count>
+    <product-id>59a6b516-490a-4d20-aada-22d4e57bb9ee</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Premium Recycled Glass Bedside Carafe &amp; Tumbler Set</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/bedside-carafe-and-tumbler-set</link>
+    <inventory-count>0</inventory-count>
+    <product-id>6a77909a-3278-4d53-b632-2ae86af1da7f</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Ready To Gift - Chardonnay Case</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/ready-to-gift-chardonnay-case</link>
+    <inventory-count>0</inventory-count>
+    <product-id>8a648f4a-5bf4-4c77-92ec-a03659a64726</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Ready To Gift - Mixed Case</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/ready-to-gift-mixed-case</link>
+    <inventory-count>0</inventory-count>
+    <product-id>28e4f7d2-6175-45c7-b8c9-6a857da3df1d</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Ready To Gift - North Coast Brut Case</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/ready-to-gift-north-coast-brut</link>
+    <inventory-count>0</inventory-count>
+    <product-id>96db3404-cebd-4f50-8b93-bf98b5713339</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Ready To Gift - Pinot Noir Case</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/ready-to-gift-pinot-noir-case</link>
+    <inventory-count>0</inventory-count>
+    <product-id>ce528c2d-11ec-40bc-b6cb-0b3c7d433610</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Red Wine Lovers Collection (shipping Included)</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/red-wine-lovers-package</link>
+    <inventory-count>0</inventory-count>
+    <product-id>8bae15f3-62cc-4030-9d57-1cc630bfe4b6</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Relay For Life Of Sonoma County</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/realy-for-life</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a2eea531-9397-417d-add3-70fc48369656</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Residence Dog Stay</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/residence-dog-stay</link>
+    <inventory-count>0</inventory-count>
+    <product-id>8d3fd28c-efe3-49a5-a5b0-d7abcb320c90</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Riddle Oil X Bricoleur</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/riddle-oil-x-bricoleur</link>
+    <inventory-count>0</inventory-count>
+    <product-id>c7167569-724a-49bb-8dde-defd46504e77</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Seasonings &amp; Salts Collection</product-name>
+    <price>45.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/seasonings-salts-and-spices-kit</link>
+    <inventory-count>0</inventory-count>
+    <product-id>23dab3ac-2cdd-42fe-8de6-61498c369e0e</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Sunday Morning Yoga Class</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/weekly-sunday-yoga-class-2</link>
+    <inventory-count>0</inventory-count>
+    <product-id>54e1a1e6-72d5-4a25-9cc7-ba7320eb9286</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Sweet Tobacco Wooden Candle - 20 Inch</product-name>
+    <price>49.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/sweet-tobacco-wooden-candle-20-inch</link>
+    <inventory-count>1</inventory-count>
+    <product-id>9d5f2605-f2ee-4f31-9ab3-3e06dceedde4</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Tot Tax For Vineyard Residence Only</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/tot-tax-for-vineyard-residence-only</link>
+    <inventory-count>0</inventory-count>
+    <product-id>13041163-0abf-4c9e-a27a-83edaae47a07</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Under 21 Ticket</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/under-21-ticket</link>
+    <inventory-count>0</inventory-count>
+    <product-id>736685bb-4934-4434-b081-c98100dd5913</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Wine Bottle Opener</product-name>
+    <price>12.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/wine-bottle-opener</link>
+    <inventory-count>276</inventory-count>
+    <product-id>73244fb9-d80a-4664-82bb-bd3473a85404</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Yoga At Bricoleur Vineyards</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.bricoleurvineyards.com/product/weekly-yoga-at-bricoleur-vineyards</link>
+    <inventory-count>0</inventory-count>
+    <product-id>7274c897-38e4-4ab6-ba4b-8a080f278c1a</product-id>
+    <extras>
+        <producer>Bricoleur Vineyard</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+</vivino-product-list>

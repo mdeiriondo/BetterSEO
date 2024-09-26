@@ -1,0 +1,923 @@
+<vivino-product-list>
+<meta-data>
+    <feed-generation-date>2024-04-25T14:42:28.324616Z</feed-generation-date>
+</meta-data>
+<product>
+    <product-name>Estate Cabernet 2021</product-name>
+    <price>40.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-cabernet-2021</link>
+    <inventory-count>0</inventory-count>
+    <product-id>106d068f-0c23-49f6-83bf-4e95866a66c3</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2021</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Chardonnay 2022</product-name>
+    <price>36.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-chardonnay-2022</link>
+    <inventory-count>0</inventory-count>
+    <product-id>3b925de4-4ae8-44b0-a532-6af9658746d8</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2022</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Gewurztraminer 2021</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-gewurztraminer-2021</link>
+    <inventory-count>0</inventory-count>
+    <product-id>1f0038e9-da32-4ae7-8497-d350f6f011b9</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2021</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Gewurztraminer</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Gewurztraminer 2023</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-gewurztraminer-2023</link>
+    <inventory-count>0</inventory-count>
+    <product-id>d05af2fb-256f-493a-9830-d249d6961460</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2023</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Gewurztraminer</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Riesling 2011</product-name>
+    <price>40.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-riesling-2011</link>
+    <inventory-count>0</inventory-count>
+    <product-id>5f575f01-181f-4925-8bf3-0c7f61cb40bd</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2011</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Riesling 2012</product-name>
+    <price>40.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-riesling-2012</link>
+    <inventory-count>0</inventory-count>
+    <product-id>242bba49-162c-4970-aec4-cdb0777c703f</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2012</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Riesling 2013</product-name>
+    <price>36.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-riesling-2013</link>
+    <inventory-count>0</inventory-count>
+    <product-id>178312a3-a69e-4a1d-be51-c38f50fcdfa6</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2013</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Riesling 2014</product-name>
+    <price>42.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-riesling-2014</link>
+    <inventory-count>0</inventory-count>
+    <product-id>138b7bd1-7cb8-4ffd-a0a6-63d446e1a6e4</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2014</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Riesling 2015</product-name>
+    <price>42.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-riesling-2015</link>
+    <inventory-count>0</inventory-count>
+    <product-id>36c3a0d0-4753-4baf-acc3-48cef3bef86d</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2015</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Riesling 2016</product-name>
+    <price>42.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-riesling-2016</link>
+    <inventory-count>0</inventory-count>
+    <product-id>eb0d6ce9-b0f7-4ef3-994f-89e8a534adfc</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2016</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Riesling 2017</product-name>
+    <price>42.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-riesling-2017</link>
+    <inventory-count>0</inventory-count>
+    <product-id>d397a3f2-282b-43f6-872e-9c12fbdfb7f7</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2017</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Riesling 2018</product-name>
+    <price>42.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-riesling-2018</link>
+    <inventory-count>0</inventory-count>
+    <product-id>63ec3c26-bc0d-4506-b674-f04df97e8d9e</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2018</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Riesling 2022</product-name>
+    <price>30.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-riesling-2022</link>
+    <inventory-count>0</inventory-count>
+    <product-id>8ba6fe9e-ce04-41ed-94ca-f6fd99a511d8</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2022</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Riesling 2023</product-name>
+    <price>30.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-riesling-2023</link>
+    <inventory-count>0</inventory-count>
+    <product-id>8c84d2c5-c5c9-450f-8891-053d665c42dd</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2023</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Rosé 2021</product-name>
+    <price>25.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-rose-2021</link>
+    <inventory-count>0</inventory-count>
+    <product-id>490fc9f5-11b9-438b-a319-5e0e87e4e192</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2021</vintage>
+        <country>AU</country>
+        <color>Rose</color>
+        <varietal>Rose</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Rosé 2022</product-name>
+    <price>25.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-rose-2022</link>
+    <inventory-count>0</inventory-count>
+    <product-id>e20097fa-a5c5-4404-8f66-70681705d9f8</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2022</vintage>
+        <country>AU</country>
+        <color>Rose</color>
+        <varietal>Rose</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Rosé 2023</product-name>
+    <price>30.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-rose-2023</link>
+    <inventory-count>0</inventory-count>
+    <product-id>64d5599a-e054-489c-a2e0-39d12526e25d</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2023</vintage>
+        <country>AU</country>
+        <color>Rose</color>
+        <varietal>Rose</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Shiraz 2013</product-name>
+    <price>81.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-shiraz-2013</link>
+    <inventory-count>0</inventory-count>
+    <product-id>825e9f57-f917-4684-88a0-eb2f5e55bf0b</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2013</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Shiraz</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Shiraz 2014</product-name>
+    <price>73.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-shiraz-2014</link>
+    <inventory-count>0</inventory-count>
+    <product-id>58b257bb-8dd2-4d80-b8d6-9a8b66928836</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2014</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Shiraz</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Shiraz 2015</product-name>
+    <price>65.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-shiraz-2015</link>
+    <inventory-count>0</inventory-count>
+    <product-id>939814a7-f9a2-4fd2-b0ed-4f94d95f7350</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2015</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Shiraz</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Shiraz 2016</product-name>
+    <price>59.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-shiraz-2016</link>
+    <inventory-count>0</inventory-count>
+    <product-id>178a64f1-f705-4a88-b278-7e5faaf6cdfd</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2016</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Shiraz</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Shiraz 2018</product-name>
+    <price>48.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-shiraz-2018</link>
+    <inventory-count>0</inventory-count>
+    <product-id>74ec7809-0f1e-47b0-a731-37f47969f5e3</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2018</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Shiraz</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Shiraz 2021</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/estate-shiraz-2021</link>
+    <inventory-count>0</inventory-count>
+    <product-id>52726190-9f09-4891-9d33-23e3e7b2c068</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2021</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Shiraz</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Gift Card</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/gift-card</link>
+    <inventory-count>0</inventory-count>
+    <product-id>df73bc97-4afb-42c5-9302-8380fd78abc4</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Harvest Gold 2016</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>375 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/harvest-gold-2016</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a146b075-2c2f-44bd-aefa-cf96964f1fb4</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2016</vintage>
+        <country>AU</country>
+        <color>Dessert</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Liqueur Muscat</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>500 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/liqueur-muscat</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a4670d65-f1ce-441f-a712-9b3bf2acaf76</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage></vintage>
+        <country>AU</country>
+        <color>Dessert</color>
+        <varietal>Moscato</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Skilly Riesling 2022</product-name>
+    <price>20.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/skilly-riesling-2022</link>
+    <inventory-count>0</inventory-count>
+    <product-id>76edab16-f112-45b7-bed2-5fc9bb738871</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2022</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Skilly Shiraz 2021</product-name>
+    <price>20.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/skilly-shiraz-2021</link>
+    <inventory-count>0</inventory-count>
+    <product-id>d6b52831-091c-49df-94f9-99654ca0dd26</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2021</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Shiraz</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Small Batch Cabernet Franc 2022</product-name>
+    <price>55.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/small-batch-cabernet-franc-2022</link>
+    <inventory-count>0</inventory-count>
+    <product-id>b9f5a3bf-6413-4030-b7b4-ab9b9943efc9</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2022</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Cabernet Franc</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Small Batch Collection</product-name>
+    <price>295.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/small-batch-collection</link>
+    <inventory-count>0</inventory-count>
+    <product-id>54b1f3ec-a155-4371-b292-12fba86fa968</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Small Batch Grenache 2023</product-name>
+    <price>55.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/small-batch-grenache-2023</link>
+    <inventory-count>0</inventory-count>
+    <product-id>4362cd8a-3b6d-4a22-80cd-2c7d99fefe26</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2023</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Grenache</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Small Batch Malbec 2022</product-name>
+    <price>55.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/small-batch-malbec-2022</link>
+    <inventory-count>0</inventory-count>
+    <product-id>d7f935d1-024f-417a-99b2-d00573e29565</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2022</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Malbec</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Small Batch Syrah 2023</product-name>
+    <price>55.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/small-batch-syrah-2023</link>
+    <inventory-count>0</inventory-count>
+    <product-id>23ad78c6-c086-4a27-8205-3f19fbdfab61</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2023</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Syrah</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Sparkling Collection</product-name>
+    <price>70.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/sparkling-collection</link>
+    <inventory-count>0</inventory-count>
+    <product-id>183bf0ec-ac3d-4072-94c4-1c60fd79fc97</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Sparkling Riesling</product-name>
+    <price>40.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/sparkling-riesling</link>
+    <inventory-count>0</inventory-count>
+    <product-id>c4182f71-c648-4e64-9c4a-be18e9d97a3b</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage></vintage>
+        <country>AU</country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Sparkling Shiraz</product-name>
+    <price>40.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/sparkling-shiraz</link>
+    <inventory-count>0</inventory-count>
+    <product-id>36522b95-e5cc-48d6-a0ef-44f722a409be</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage></vintage>
+        <country>AU</country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Take Two 2015</product-name>
+    <price>30.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/take-two-2015</link>
+    <inventory-count>0</inventory-count>
+    <product-id>092adb3d-68a5-4b44-8381-990548ee6712</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2015</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Take Two 2016</product-name>
+    <price>30.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/take-two-2016</link>
+    <inventory-count>0</inventory-count>
+    <product-id>9efd8243-60f7-4535-b0d6-56a04b7b9495</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2016</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Take Two 2018</product-name>
+    <price>30.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/take-two-2018</link>
+    <inventory-count>0</inventory-count>
+    <product-id>cf65dff8-61bf-4111-84b1-3ce86a18d4dd</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2018</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>The Cabernets 2009</product-name>
+    <price>60.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/the-cabernets-2009</link>
+    <inventory-count>0</inventory-count>
+    <product-id>159e21b6-00a5-439b-887f-fd6503c86529</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2009</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Bordeaux Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>The Cabernets 2016</product-name>
+    <price>65.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/the-cabernets-2016</link>
+    <inventory-count>0</inventory-count>
+    <product-id>82d9b239-4c9d-4d82-88d4-a88ca16b604b</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2016</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Bordeaux Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>The Cabernets 2018</product-name>
+    <price>53.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/the-cabernets-2018</link>
+    <inventory-count>0</inventory-count>
+    <product-id>b6b372fa-c50c-4504-8889-c06f76ef4638</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2018</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Bordeaux Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Trevarrick Cabernet 2021</product-name>
+    <price>75.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/trevarrick-cabernet-2021</link>
+    <inventory-count>0</inventory-count>
+    <product-id>b0baffdb-6c19-437d-8137-bf6b6000af26</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2021</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Trevarrick Cabernet Franc 2021</product-name>
+    <price>55.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/trevarrick-cabernet-franc-2021</link>
+    <inventory-count>0</inventory-count>
+    <product-id>4b609f1d-077f-4ca4-a44f-870863cc9e71</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2021</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Cabernet Franc</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Trevarrick Collection</product-name>
+    <price>369.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/trevarrick-collection</link>
+    <inventory-count>0</inventory-count>
+    <product-id>346e58d7-9200-4787-960e-ed7f27688146</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Trevarrick Riesling 2021</product-name>
+    <price>60.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/trevarrick-riesling-2021</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a331b9dd-c3ee-4f21-b5e8-565968f2060e</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2021</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Trevarrick Riesling 2022</product-name>
+    <price>60.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/trevarrick-riesling-2022</link>
+    <inventory-count>0</inventory-count>
+    <product-id>f9ef7cc3-5ef2-4fe1-9e51-4a2ea8a9d9f8</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2022</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Trevarrick Riesling 2023</product-name>
+    <price>55.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/trevarrick-riesling-2023</link>
+    <inventory-count>0</inventory-count>
+    <product-id>8209ec07-ddb5-4e00-b698-a8b199d95b5a</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2023</vintage>
+        <country>AU</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Trevarrick Shiraz 2015</product-name>
+    <price>100.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/trevarrick-shiraz-2015</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a0ab05bd-0590-4ea8-8d3a-1016a55df451</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2015</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Shiraz</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Trevarrick Shiraz 2020</product-name>
+    <price>80.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/trevarrick-shiraz-2020</link>
+    <inventory-count>0</inventory-count>
+    <product-id>2494e1bf-ed7b-4077-a03c-715e6f6d4ca5</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2020</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Shiraz</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Trevarrick Shiraz 2021</product-name>
+    <price>75.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.skillogalee.com.au/product/trevarrick-shiraz-2021</link>
+    <inventory-count>0</inventory-count>
+    <product-id>909e1fff-22ba-4f37-bfaf-eb51fc646664</product-id>
+    <extras>
+        <producer>Skillogalee</producer>
+        <appellation>Clare Valley</appellation>
+        <vintage>2021</vintage>
+        <country>AU</country>
+        <color>Red</color>
+        <varietal>Shiraz</varietal>
+    </extras>
+</product>
+</vivino-product-list>

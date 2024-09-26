@@ -1,0 +1,185 @@
+<vivino-product-list>
+<meta-data>
+    <feed-generation-date>2023-08-30T18:33:23.621358Z</feed-generation-date>
+</meta-data>
+<product>
+    <product-name>2016 Estate Selection</product-name>
+    <price>1050.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.crownpointvineyards.com/product/2016CrownPointEstateSelection750ml1Box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>50ba51e1-4bf9-4825-b896-36560d84df9f</product-id>
+    <extras>
+        <producer>Crown Point</producer>
+        <appellation>Happy Canyon of Santa Barbara</appellation>
+        <vintage>2016</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2017 Cabernet Sauvignon</product-name>
+    <price>150.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.crownpointvineyards.com/product/2017CrownPointCabernetSauvignon750ml1Box</link>
+    <inventory-count>3</inventory-count>
+    <product-id>63c3c9dd-0319-4eca-a8de-f269328075b9</product-id>
+    <extras>
+        <producer>Crown Point</producer>
+        <appellation>Happy Canyon of Santa Barbara</appellation>
+        <vintage>2017</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2018 Cabernet Sauvignon</product-name>
+    <price>175.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.crownpointvineyards.com/product/2018CrownPointCabernetSauvignon750mlBottle</link>
+    <inventory-count>-200</inventory-count>
+    <product-id>a741eb2a-30b1-4209-b7ea-2101d8d1e66e</product-id>
+    <extras>
+        <producer>Crown Point</producer>
+        <appellation>Happy Canyon of Santa Barbara</appellation>
+        <vintage>2018</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2018 Cabernet Sauvignon</product-name>
+    <price>1050.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>9 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.crownpointvineyards.com/product/-2018-cabernet-sauvignon</link>
+    <inventory-count>98</inventory-count>
+    <product-id>3cd57c10-f4c4-4293-88cb-23c5eadaafb6</product-id>
+    <extras>
+        <producer>Crown Point</producer>
+        <appellation>Happy Canyon of Santa Barbara</appellation>
+        <vintage>2018</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2018 Estate Selection</product-name>
+    <price>175.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.crownpointvineyards.com/product/2018CrownPointEstateSelection750mlBottle</link>
+    <inventory-count>0</inventory-count>
+    <product-id>5472e4e7-ac2c-4e24-a633-659e09ca4a35</product-id>
+    <extras>
+        <producer>Crown Point</producer>
+        <appellation>Happy Canyon of Santa Barbara</appellation>
+        <vintage>2018</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Cabernet Sauvignon - Fall '23 Release</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.crownpointvineyards.com/product/cabernet-sauvignon</link>
+    <inventory-count>0</inventory-count>
+    <product-id>01318d3d-71e8-44b8-bd4c-d390acd420e7</product-id>
+    <extras>
+        <producer>Crown Point</producer>
+        <appellation>Happy Canyon of Santa Barbara</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Estate Selection</product-name>
+    <price>175.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.crownpointvineyards.com/product/2019CrownPointEstateSelection750mlBottle</link>
+    <inventory-count>0</inventory-count>
+    <product-id>20a1bd4a-f48b-44d6-b35f-560a0d8946a0</product-id>
+    <extras>
+        <producer>Crown Point</producer>
+        <appellation>Happy Canyon of Santa Barbara</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Estate Selection - Sold Out</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.crownpointvineyards.com/product/estate-selection</link>
+    <inventory-count>0</inventory-count>
+    <product-id>2b808398-4d54-4c4d-86da-dcc9fecfeda9</product-id>
+    <extras>
+        <producer>Crown Point</producer>
+        <appellation>Happy Canyon of Santa Barbara</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Estate Olive Oil (2-pack)</product-name>
+    <price>60.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>375 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.crownpointvineyards.com/product/CrownPointExtraVirginOliveOil2Box</link>
+    <inventory-count>-16</inventory-count>
+    <product-id>575b5c41-791b-4966-93bd-ad9bf251784b</product-id>
+    <extras>
+        <producer>Crown Point</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Pack: '14, '15, '16 Estate Selection Vertical</product-name>
+    <price>450.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.crownpointvineyards.com/product/Pack:2014,2015,and2016CrownPointEstateSelectionVertical750ml3Box</link>
+    <inventory-count>0</inventory-count>
+    <product-id>5cbec159-fe99-4505-8992-8931099d307a</product-id>
+    <extras>
+        <producer>Crown Point</producer>
+        <appellation>Happy Canyon of Santa Barbara</appellation>
+        <vintage></vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+</vivino-product-list>

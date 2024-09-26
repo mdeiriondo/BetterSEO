@@ -1,0 +1,1679 @@
+<vivino-product-list>
+<meta-data>
+    <feed-generation-date>2024-08-02T19:21:58.043491Z</feed-generation-date>
+</meta-data>
+<product>
+    <product-name>2017 Nth Degree Merlot</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2017-nth-degree-merlot</link>
+    <inventory-count>0</inventory-count>
+    <product-id>fb94af54-0c2c-83af-2e79-13a41fcc8bd1</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2017</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Merlot</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2018 Nth Degree Cabernet Sauvignon</product-name>
+    <price>120.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2018-nth-degree-cabernet-sauvignon</link>
+    <inventory-count>23</inventory-count>
+    <product-id>cb387084-ed55-4088-d607-4680f932a87d</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2018</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2018 Nth Degree Cabernet Sauvignon - 6 Pack</product-name>
+    <price>500.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2018-nth-degree-cabernet-6-pack</link>
+    <inventory-count>0</inventory-count>
+    <product-id>48174722-cf96-454a-b99f-e1f0468350ab</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Cabernet Franc - 6 Pack</product-name>
+    <price>225.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2019-cabernet-franc-6-pack</link>
+    <inventory-count>0</inventory-count>
+    <product-id>9807e2ce-3474-47a4-a84c-1f6006e05380</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Petite Sirah</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2019-petite-sirah</link>
+    <inventory-count>134</inventory-count>
+    <product-id>cb461d0e-c8b7-4dcd-8ec9-61ae117e4764</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Petite Sirah</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Petite Sirah Port</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>375 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2019-petite-sirah-port</link>
+    <inventory-count>119</inventory-count>
+    <product-id>08de8a1e-7166-4d0d-8d70-19f20714298a</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2018</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Petite Sirah</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Cabernet Franc</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2020-cabernet-franc</link>
+    <inventory-count>3680</inventory-count>
+    <product-id>c9c94598-ce8d-4dff-920e-af1be16c677b</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Franc</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Duetto Cabernet Sauvignon</product-name>
+    <price>60.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2020-duetto</link>
+    <inventory-count>3700</inventory-count>
+    <product-id>87f14718-11c8-4825-8dd9-aae4e3f791ec</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Gsm</product-name>
+    <price>55.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2020-gsm</link>
+    <inventory-count>300</inventory-count>
+    <product-id>a737d91e-2e43-404b-8535-99f6bc961455</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Harmony</product-name>
+    <price>55.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2020-harmony</link>
+    <inventory-count>177</inventory-count>
+    <product-id>a751dc2b-d9e4-45c5-a540-9e01429d3312</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Central Coast</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Meritage</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2020-meritage</link>
+    <inventory-count>190</inventory-count>
+    <product-id>66c7d711-2c5d-4b09-b347-312b4f1b71da</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Meritage</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Nth Degree Cabernet Sauvignon</product-name>
+    <price>120.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2020-nth-degree-cabernet-sauvignon</link>
+    <inventory-count>195</inventory-count>
+    <product-id>efa0fc61-0acc-4936-868c-c34e53dcf122</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Nth Degree Merlot</product-name>
+    <price>95.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2020-nth-degree-merlot</link>
+    <inventory-count>188</inventory-count>
+    <product-id>0df500d6-2b3d-450e-a600-8b44eb351381</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Merlot</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Nth Degree Pinot Noir</product-name>
+    <price>95.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2020-nth-degree-pinot-noir</link>
+    <inventory-count>2655</inventory-count>
+    <product-id>2d077e97-b601-4b31-9360-87909ac6cd77</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Nth Degree Pinot Noir 6 Pack</product-name>
+    <price>427.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2020-nth-degree-pinot-6-pack</link>
+    <inventory-count>0</inventory-count>
+    <product-id>33e287e8-14b7-4d9f-a6f9-bd4865459445</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Nth Degree Syrah</product-name>
+    <price>90.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2020-nth-degree-syrah</link>
+    <inventory-count>174</inventory-count>
+    <product-id>8f28e240-128f-49b0-8ee2-777d101faa26</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Syrah</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Nth Degree Syrah - 6 Pack</product-name>
+    <price>405.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2020-nth-degree-syrah-6-pack</link>
+    <inventory-count>0</inventory-count>
+    <product-id>22acff1c-af5d-48fa-87fa-724291c7789e</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Serenity</product-name>
+    <price>55.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/wv-sl-serenity-red-12750-2020</link>
+    <inventory-count>148</inventory-count>
+    <product-id>d6715520-9a24-4186-972d-4b7f2137e8a9</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Central Coast</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2020 Zinfandel</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2020-zinfandel</link>
+    <inventory-count>128</inventory-count>
+    <product-id>9695c45f-d9c2-4a38-8e94-87022fc934e1</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Zinfandel</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Aly's Pinot Noir</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2021-alys-pinot-noir</link>
+    <inventory-count>203</inventory-count>
+    <product-id>cb6d38e5-070f-4b17-93a4-d24c58cb2202</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Baily Hill Pinot Noir</product-name>
+    <price>20.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/baily-hill-pinot-noir</link>
+    <inventory-count>0</inventory-count>
+    <product-id>feb34cb9-2d76-4d1b-be07-2f19924b5ca8</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Central Coast</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Beyer Ranch Zinfandel</product-name>
+    <price>20.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/wv-beyer-zinfandel-21</link>
+    <inventory-count>0</inventory-count>
+    <product-id>681cbcb7-65ff-410d-bbd6-7d741713eb91</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Zinfandel</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Cabernet Franc</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2021-cabernet-franc</link>
+    <inventory-count>193</inventory-count>
+    <product-id>b22ed048-8178-4ceb-8cdc-0780b5dcfb18</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Franc</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Duetto</product-name>
+    <price>60.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2021-duetto</link>
+    <inventory-count>191</inventory-count>
+    <product-id>ff5ace3f-a46d-40a4-a547-1e32abe254cb</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Gsm</product-name>
+    <price>55.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2021-gsm</link>
+    <inventory-count>201</inventory-count>
+    <product-id>5303a5cb-bee9-4409-8610-475b3ad2021b</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Meritage</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2021-meritage</link>
+    <inventory-count>210</inventory-count>
+    <product-id>3fb27896-c9f0-492d-b697-a863f83dcdd9</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Meritage</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Mount Diablo Highlands Red Blend</product-name>
+    <price>20.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2021-mount-diablo-highlands-red-blend</link>
+    <inventory-count>49690</inventory-count>
+    <product-id>6a24c6c5-cdd9-4ccc-97f5-dd0173dd401a</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Central Coast</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Nth Degree Chardonnay</product-name>
+    <price>70.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2021-nth-degree-chardonnay</link>
+    <inventory-count>58</inventory-count>
+    <product-id>3310ec95-c3ab-4061-9372-4fbe0fb33849</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Nth Degree Merlot</product-name>
+    <price>95.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2021-nth-degree-merlot</link>
+    <inventory-count>127</inventory-count>
+    <product-id>33b23810-dce0-4c08-b07b-253c02e9dbee</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Merlot</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Nth Degree Pinot Noir</product-name>
+    <price>95.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2021-nth-degree-pinot-noir</link>
+    <inventory-count>168</inventory-count>
+    <product-id>4a6ed779-fc12-47e9-8e56-659c579045a3</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Nth Degree Syrah</product-name>
+    <price>90.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/wv-nth-deg-syrah-12750-21</link>
+    <inventory-count>183</inventory-count>
+    <product-id>eacb0175-3356-40b8-b49c-50f553117df3</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Syrah</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Sandstone Merlot</product-name>
+    <price>20.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/wv-sandstone-merlot</link>
+    <inventory-count>0</inventory-count>
+    <product-id>7bc930c5-6c4d-4ad7-b184-0e295dcaeb26</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Central Coast</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Merlot</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Serenity</product-name>
+    <price>55.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2021-serenity</link>
+    <inventory-count>345</inventory-count>
+    <product-id>c558e762-d4d5-4385-a5e9-ac79dc1d3a1c</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Sonata</product-name>
+    <price>60.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2021-sonata</link>
+    <inventory-count>6926</inventory-count>
+    <product-id>a81b91e1-4671-45bc-a890-87b45fe544b7</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Central Coast</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Southern Hills Cabernet Sauvignon</product-name>
+    <price>20.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2021-southern-hills-cabernet-sauvignon</link>
+    <inventory-count>169</inventory-count>
+    <product-id>55915c4c-652b-43fb-b8a4-73bc13d07635</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Wetmore Vineyard Cabernet Sauvignon</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2021-wetmore-vineyard-cabernet-sauvignon</link>
+    <inventory-count>17821</inventory-count>
+    <product-id>68da2221-28ae-46c8-9a4b-7606f1df99e0</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2020</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Zinfandel</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/wv-slw-zinfandel-lv-12750-21</link>
+    <inventory-count>148</inventory-count>
+    <product-id>b92dad50-a332-4f61-a623-3bd5257d1de4</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Zinfandel</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Aly's Pinot Noir</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2022-alys-pinot-noir-</link>
+    <inventory-count>158</inventory-count>
+    <product-id>5ee4f086-f5c3-44f5-a820-2f03943d16a8</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Gsm</product-name>
+    <price>55.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2022-gsm</link>
+    <inventory-count>99</inventory-count>
+    <product-id>ed544701-31bd-4145-b39b-e7192c7eb886</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Nth Degree Chardonnay</product-name>
+    <price>70.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2022-nth-degree-chardonnay</link>
+    <inventory-count>267</inventory-count>
+    <product-id>81365f69-e272-4b35-a69d-decd13d2bb5e</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Nth Degree Pinot Noir</product-name>
+    <price>95.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2022-nth-degree-pinot-noir</link>
+    <inventory-count>207</inventory-count>
+    <product-id>a293f699-8895-4f8e-8072-a20e503320e9</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Riva Ranch Chardonnay</product-name>
+    <price>22.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2022-riva-ranch-chardonnay</link>
+    <inventory-count>0</inventory-count>
+    <product-id>89cafa37-6b50-4c62-aa5e-e86e9e57ea80</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Arroyo Seco</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Riva Ranch Pinot Noir</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2022-riva-ranch-pinot-noir</link>
+    <inventory-count>179</inventory-count>
+    <product-id>a8f648d6-9b91-4bcb-b752-e569eaef1c2f</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Arroyo Seco</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Riverbank Riesling</product-name>
+    <price>28.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/wv-riverbank-riesling</link>
+    <inventory-count>0</inventory-count>
+    <product-id>9ff49980-8baa-4ffc-abf1-19fb16996505</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Central Coast</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Riesling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Eric's Chardonnay</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2023-erics-chardonnay</link>
+    <inventory-count>314</inventory-count>
+    <product-id>816e5acc-4853-4122-bad4-b20502de7af2</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Hayes Ranch Rosé</product-name>
+    <price>28.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2023-hayes-ranch-rose</link>
+    <inventory-count>459</inventory-count>
+    <product-id>2318c537-12f2-4d38-9d89-b47f9c3731e8</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>Rose</color>
+        <varietal>Rose</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Louis Mel Sauvignon Blanc</product-name>
+    <price>18.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2023-louis-mel-sauvignon-blanc</link>
+    <inventory-count>26919</inventory-count>
+    <product-id>cd053cd3-3b1f-4490-b5dc-1116d2890e50</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Central Coast</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Sauvignon Blanc</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Morning Fog Chardonnay</product-name>
+    <price>18.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2023-morning-fog-chardonnay</link>
+    <inventory-count>-8</inventory-count>
+    <product-id>493c244b-117b-4daf-8cab-cee982fdf6ca</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Central Coast</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2023 Sauvignon Blanc</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/2023-sauvignon-blanc</link>
+    <inventory-count>273</inventory-count>
+    <product-id>ca30bcf9-9424-4639-ab44-a799437d8220</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Livermore Valley</appellation>
+        <vintage>2023</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Sauvignon Blanc</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Artist Series Duo</product-name>
+    <price>99.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/artist-series-duo</link>
+    <inventory-count>0</inventory-count>
+    <product-id>a2bced2c-f34d-4a73-ae95-0ab22608e921</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Artist Series Set</product-name>
+    <price>200.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/artist-series-set</link>
+    <inventory-count>0</inventory-count>
+    <product-id>d5d80bff-a30a-4ffc-81d3-6f8ab4736096</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Billy Nation, July 19</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/billy-nation-july-19</link>
+    <inventory-count>68</inventory-count>
+    <product-id>2a40491d-3be5-4573-8525-4286b416ad07</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Brut Duo</product-name>
+    <price>80.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/brut-bundle</link>
+    <inventory-count>0</inventory-count>
+    <product-id>19e05b3b-a4b2-4b48-95c9-6ed93b05e1de</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Brut Sparkling Wine</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/brut-sparkling-wine</link>
+    <inventory-count>449</inventory-count>
+    <product-id>071dd234-abf8-4bbc-a56a-da6c79ba9fe0</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation>Arroyo Seco</appellation>
+        <vintage></vintage>
+        <country>US</country>
+        <color>Sparkling</color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Cabernet Duo</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/cabernet-duo</link>
+    <inventory-count>0</inventory-count>
+    <product-id>3fe7c217-8f20-4728-a8f4-6dcab186cf37</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Cabernet Sauvignon Lovers</product-name>
+    <price>148.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/cabernet-lovers</link>
+    <inventory-count>0</inventory-count>
+    <product-id>2dbeacc5-65e2-4770-b762-b337f909be08</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Chardonnay Lovers</product-name>
+    <price>99.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/chardonnay-lovers</link>
+    <inventory-count>0</inventory-count>
+    <product-id>af55ba7f-7a6e-4d6b-9a92-81bc404d47eb</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Chardonnay Lovers 6 Pack</product-name>
+    <price>198.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/chardonnay-lovers-6-pack</link>
+    <inventory-count>0</inventory-count>
+    <product-id>ddba08b5-0f96-419d-9577-4ad3b275bb96</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Cheeseboard With Knife - Red</product-name>
+    <price>25.99</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/cheeseboard-with-knife-allegra</link>
+    <inventory-count>0</inventory-count>
+    <product-id>52fb6749-e79e-4a72-b328-7c8b0710e145</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Club Wente Golf Membership</product-name>
+    <price>299.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/wente-golf-membership</link>
+    <inventory-count>0</inventory-count>
+    <product-id>c809eaf3-0c77-4637-ba5b-b4ff0cb549cc</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Crawdad Republic Plus Wolf Hamlin And The Front Porch Drifters, June 14</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/crawdad-republic-june-14</link>
+    <inventory-count>120</inventory-count>
+    <product-id>7e3cbe59-350a-40f1-8471-66d30f0e5fc0</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Custom Etch Fee</product-name>
+    <price>610.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/custom-etch-fee</link>
+    <inventory-count>0</inventory-count>
+    <product-id>78c41c43-16dd-4932-a9ea-bdd3d4d6bca3</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Dinner Party Set</product-name>
+    <price>95.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/dinner-party-set</link>
+    <inventory-count>0</inventory-count>
+    <product-id>0e8972be-817e-4b39-b684-459a55223390</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Dinner With Niki Wente - Club</product-name>
+    <price>165.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/dinner-with-niki-wente-club</link>
+    <inventory-count>58</inventory-count>
+    <product-id>db7a11b0-31ee-4541-bb92-a1f883f6d83f</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Dinner With Niki Wente - Guest</product-name>
+    <price>175.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/dinner-with-niki-wente-guest</link>
+    <inventory-count>14</inventory-count>
+    <product-id>454f50af-662f-4925-8dee-7dc7276b105b</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Egift Card</product-name>
+    <price>25.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/egift</link>
+    <inventory-count>0</inventory-count>
+    <product-id>e5ed5fe2-f489-4c63-b036-3704e44ad6e9</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Evolution (journey Tribute), August 24</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/evolution-august-24</link>
+    <inventory-count>149</inventory-count>
+    <product-id>d497a560-2a7f-419d-90a1-fcc7b72d24a4</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Evolution Vip Table, 10 Top</product-name>
+    <price>1500.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/evolution-vip-table-10-top</link>
+    <inventory-count>1</inventory-count>
+    <product-id>623d756c-10bc-4591-9840-1f0c2ef675cd</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Evolution Vip Table, 8 Top</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/evolution-vip-table-8-top</link>
+    <inventory-count>0</inventory-count>
+    <product-id>3e681b84-8d0d-44b4-a8ac-d34e8c9433a2</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>From Our Vineyard</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/from-our-vineyard</link>
+    <inventory-count>0</inventory-count>
+    <product-id>94bf6e35-fc96-44c8-95b2-88a1c1118bac</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Gather Cookbook</product-name>
+    <price>25.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/gather-cookbook</link>
+    <inventory-count>0</inventory-count>
+    <product-id>d72a95f8-ad5e-e7a0-0f08-3367451608cd</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Gingerbread House Event</product-name>
+    <price>80.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/gingerbread-house-event</link>
+    <inventory-count>3</inventory-count>
+    <product-id>625fb714-b8d8-492e-8353-46ae071d7784</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Hayes Ranch Rose - 6 Pack</product-name>
+    <price>118.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/hayes-ranch-rose-6-pack</link>
+    <inventory-count>0</inventory-count>
+    <product-id>e5d5ca2f-e020-49f6-aece-a279a7930801</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Holiday To The Nth Degree</product-name>
+    <price>225.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/holiday-to-the-nth-degree</link>
+    <inventory-count>0</inventory-count>
+    <product-id>be1bc868-00ca-4b0b-bf59-1c8537c5e60c</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Jazz Festival In The Vineyard</product-name>
+    <price>65.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/jazz-festival</link>
+    <inventory-count>0</inventory-count>
+    <product-id>29825f92-bbe9-4b7a-b7aa-762ae9ee7edf</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Jazz Festival Vip Table, 10 Top</product-name>
+    <price>1650.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/jazz-festival-vip-table-10-top</link>
+    <inventory-count>4</inventory-count>
+    <product-id>a1ab5cde-0caa-43cf-a9dc-d30185f24268</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Jazz Festival Vip Table, 8 Top</product-name>
+    <price>1320.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/jazz-festival-vip-table-8-top</link>
+    <inventory-count>4</inventory-count>
+    <product-id>675ad5fc-7c18-4d7b-99a7-40127cf4674f</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>May 3rd Release Party</product-name>
+    <price>25.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/may-3rd-release-party</link>
+    <inventory-count>132</inventory-count>
+    <product-id>cca7ffcf-bddb-4a8f-8efb-3009c9dabdd0</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>May 4th Release Party</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/may-4th-release-party</link>
+    <inventory-count>115</inventory-count>
+    <product-id>59012bf7-4bff-4573-8dc6-e8111b8c197f</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Mustache Harbor - General Admission</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/mustache-harbor</link>
+    <inventory-count>5</inventory-count>
+    <product-id>336939ba-9b3d-469c-bc5d-7eb869abdf67</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Mustache Harbor - Vip Table</product-name>
+    <price>1000.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/mustache-harbor-vip-table</link>
+    <inventory-count>0</inventory-count>
+    <product-id>f0c0384a-2ec5-49b5-96c6-2af689219a61</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Nth Degree Set</product-name>
+    <price>0.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/nth-degree-set</link>
+    <inventory-count>0</inventory-count>
+    <product-id>1cac178c-8496-48e2-be7e-fdfe9c9d7ce7</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Red Wine Lovers</product-name>
+    <price>90.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/red-wine-lovers</link>
+    <inventory-count>0</inventory-count>
+    <product-id>8fe1f53c-04f6-42ea-928e-99e6d5bbacd8</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Riva Ranch Duo</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/riva-ranch-duo</link>
+    <inventory-count>0</inventory-count>
+    <product-id>160ebd13-4a20-41dd-805c-37faa3e4d70d</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Sauvignon Blanc Case</product-name>
+    <price>199.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/sauvignon-blanc-case</link>
+    <inventory-count>0</inventory-count>
+    <product-id>235aa227-a024-4b25-a67c-dd630d2d886f</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Tasting With Karl Wente - Club</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/tasting-with-karl-wente-club</link>
+    <inventory-count>284</inventory-count>
+    <product-id>b8bb741d-0fc5-457f-ad0a-c4531681def6</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Tasting With Karl Wente - Guest</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/tasting-with-karl-wente-guest</link>
+    <inventory-count>100</inventory-count>
+    <product-id>5e940534-eab8-4e08-b6c7-27ccfa6752f5</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Test Joe</product-name>
+    <price>10.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/test-joe-</link>
+    <inventory-count>0</inventory-count>
+    <product-id>96c0b2c5-6c07-499f-8193-9c8a86d30adc</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>The Best Intentions, June 28</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/the-best-intentions-june-28</link>
+    <inventory-count>39</inventory-count>
+    <product-id>ba2d6b5d-a68c-4219-a316-85bec2c40d9d</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>The Illeagles Vip Table, 10 Top</product-name>
+    <price>1500.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/the-illeagles-vip-table-10-top</link>
+    <inventory-count>2</inventory-count>
+    <product-id>6e97c231-77d6-4cd0-a14e-e01263a5eaee</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>The Illeagles Vip Table, 8 Top</product-name>
+    <price>1200.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/the-illeagles-vip-table-8-top</link>
+    <inventory-count>0</inventory-count>
+    <product-id>e4eeb991-d7ad-453f-9cbc-ab9c8761a437</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>The Sun Kings, July 6</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/the-sun-kings-july-6-</link>
+    <inventory-count>39</inventory-count>
+    <product-id>c8f8ba65-f299-4826-8889-4df55192fadd</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>Ultimate Red Wines</product-name>
+    <price>162.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://wentevineyards.com/product/ultimate-red-wines</link>
+    <inventory-count>0</inventory-count>
+    <product-id>c6088e97-0e58-4d83-a08b-705db12ecde2</product-id>
+    <extras>
+        <producer>Wente Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+</vivino-product-list>

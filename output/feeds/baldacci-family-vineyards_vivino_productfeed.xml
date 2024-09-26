@@ -1,0 +1,257 @@
+<vivino-product-list>
+<meta-data>
+    <feed-generation-date>2024-09-09T22:01:16.616271Z</feed-generation-date>
+</meta-data>
+<product>
+    <product-name>2014 Winemaker's Collection</product-name>
+    <price>825.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.baldaccivineyards.com/product/the-winemakers-collection-2014-vintage</link>
+    <inventory-count>0</inventory-count>
+    <product-id>4524a855-31f7-4cba-ab2d-70cdfcd2aa38</product-id>
+    <extras>
+        <producer>Baldacci Family Vineyards</producer>
+        <appellation></appellation>
+        <vintage></vintage>
+        <country></country>
+        <color></color>
+        <varietal></varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2018 Black Label Cabernet Sauvignon</product-name>
+    <price>155.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.baldaccivineyards.com/product/2018-black-label-estate-grown-cabernet-sauvignon</link>
+    <inventory-count>160</inventory-count>
+    <product-id>018b1cbc-2f4f-4125-ab78-ac4ff30d2789</product-id>
+    <extras>
+        <producer>Baldacci Family Vineyards</producer>
+        <appellation>Stags Leap District</appellation>
+        <vintage>2018</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2018 Late Harvest Gewürztraminer</product-name>
+    <price>35.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>375 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.baldaccivineyards.com/product/2018-late-harvest-gewurztraminer</link>
+    <inventory-count>113</inventory-count>
+    <product-id>867fa15b-1b13-4223-a258-cbfa3fbb7a83</product-id>
+    <extras>
+        <producer>Baldacci Family Vineyards</producer>
+        <appellation>Carneros</appellation>
+        <vintage>2018</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Gewurztraminer</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2018 Thomas Collection</product-name>
+    <price>1000.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>2250 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.baldaccivineyards.com/product/2018-thomas-collection-3-bottle-set</link>
+    <inventory-count>74</inventory-count>
+    <product-id>d7ddcf2a-a60e-45cb-90f3-0e0672283d4d</product-id>
+    <extras>
+        <producer>Baldacci Family Vineyards</producer>
+        <appellation>Napa Valley</appellation>
+        <vintage>2018</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2019 Ruppert Cabernet Sauvignon</product-name>
+    <price>190.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.baldaccivineyards.com/product/2019-ruppert-coombsville-cabernet-sauvignon</link>
+    <inventory-count>203</inventory-count>
+    <product-id>9a5e7669-80ca-4232-a1df-bcc5de0a78d3</product-id>
+    <extras>
+        <producer>Baldacci Family Vineyards</producer>
+        <appellation>Coombsville</appellation>
+        <vintage>2019</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Black Label Cabernet Sauvignon</product-name>
+    <price>125.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.baldaccivineyards.com/product/2021-black-label-cabernet-sauvignon</link>
+    <inventory-count>1019</inventory-count>
+    <product-id>08e5bd6c-f36b-4159-b0dd-dd306784f47e</product-id>
+    <extras>
+        <producer>Baldacci Family Vineyards</producer>
+        <appellation>Stags Leap District</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Calistoga Cabernet Sauvignon</product-name>
+    <price>125.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.baldaccivineyards.com/product/2021-calistoga-cabernet-sauvignon</link>
+    <inventory-count>997</inventory-count>
+    <product-id>bf9430e6-0e85-4d06-955b-a999b3ebb865</product-id>
+    <extras>
+        <producer>Baldacci Family Vineyards</producer>
+        <appellation>Calistoga</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Carneros Estate Syrah</product-name>
+    <price>55.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>751 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.baldaccivineyards.com/product/carneros-syrah</link>
+    <inventory-count>10</inventory-count>
+    <product-id>a9023291-5559-4331-8b53-32979f6110f6</product-id>
+    <extras>
+        <producer>Baldacci Family Vineyards</producer>
+        <appellation>Los Carneros</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Syrah</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Fraternity Red Blend</product-name>
+    <price>85.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.baldaccivineyards.com/product/2021-fraternity-napa-valley-red-wine-blend</link>
+    <inventory-count>990</inventory-count>
+    <product-id>f9a916da-3370-40f8-806d-a91c1ead716b</product-id>
+    <extras>
+        <producer>Baldacci Family Vineyards</producer>
+        <appellation>Napa Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Oakville Cabernet Sauvignon</product-name>
+    <price>125.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.baldaccivineyards.com/product/2021-oakville-cabernet-sauvignon</link>
+    <inventory-count>228</inventory-count>
+    <product-id>1a0432c4-7a4f-4b1a-a395-d89b3cb8da43</product-id>
+    <extras>
+        <producer>Baldacci Family Vineyards</producer>
+        <appellation>Oakville</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Cabernet Sauvignon</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Pops Sparkling Wine</product-name>
+    <price>55.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.baldaccivineyards.com/product/pops-sparkling-wine-2021</link>
+    <inventory-count>1557</inventory-count>
+    <product-id>09827c56-3a10-4781-9ea9-31610ffeebed</product-id>
+    <extras>
+        <producer>Baldacci Family Vineyards</producer>
+        <appellation></appellation>
+        <vintage>2021</vintage>
+        <country></country>
+        <color>Sparkling</color>
+        <varietal>Sparkling</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2021 Proprietary Red Blend</product-name>
+    <price>70.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.baldaccivineyards.com/product/2021-proprietary-red-wine-blend</link>
+    <inventory-count>174</inventory-count>
+    <product-id>831bf609-08fd-4ae5-8c65-39307b64efed</product-id>
+    <extras>
+        <producer>Baldacci Family Vineyards</producer>
+        <appellation>Napa Valley</appellation>
+        <vintage>2021</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Blend</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Carneros Chardonnay</product-name>
+    <price>50.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.baldaccivineyards.com/product/2022-carneros-chardonnay</link>
+    <inventory-count>559</inventory-count>
+    <product-id>d1e69a88-c600-4573-bd1e-a5e38a69d9d5</product-id>
+    <extras>
+        <producer>Baldacci Family Vineyards</producer>
+        <appellation>Carneros</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>White</color>
+        <varietal>Chardonnay</varietal>
+    </extras>
+</product>
+<product>
+    <product-name>2022 Elizabeth Pinot Noir</product-name>
+    <price>65.00</price>
+    <quantity-is-minimum>false</quantity-is-minimum>
+    <bottle_size>750 ml</bottle_size>
+    <bottle_quantity>1</bottle_quantity>
+    <link>https://www.baldaccivineyards.com/product/2022-elizabeth-pinot-noir</link>
+    <inventory-count>31</inventory-count>
+    <product-id>0bf8b3f2-b91b-44f9-8f25-73039ee3ac41</product-id>
+    <extras>
+        <producer>Baldacci Family Vineyards</producer>
+        <appellation>Carneros</appellation>
+        <vintage>2022</vintage>
+        <country>US</country>
+        <color>Red</color>
+        <varietal>Pinot Noir</varietal>
+    </extras>
+</product>
+</vivino-product-list>
