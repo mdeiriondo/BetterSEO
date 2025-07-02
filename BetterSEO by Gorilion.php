@@ -47,7 +47,7 @@ if (class_exists('Puc_v4_Factory')) {
     $updateChecker = Puc_v4_Factory::buildUpdateChecker(
         'https://github.com/mdeiriondo/BetterSEO/',  // Replace with your GitHub repo URL.
         __FILE__,  // Path to the main plugin file.
-        'BetterSEO'  // Plugin slug (unique identifier).
+        'BetterSEO by Gorilion'  // Plugin slug (unique identifier).
     );
     // Set the branch (could be 'main' or 'master') used in your repo.
     $updateChecker->setBranch('main');
