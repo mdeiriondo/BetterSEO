@@ -45,12 +45,16 @@ if (!class_exists('Puc_v4_Factory')) {
 if (class_exists('Puc_v4_Factory')) {
     // Initialize the update checker, pointing to your GitHub repository.
     $updateChecker = Puc_v4_Factory::buildUpdateChecker(
-        'https://github.com/mdeiriondo/BetterSEO/',  // Replace with your GitHub repo URL.
+        'https://github.com/mdeiriondo/BetterSEO',  // Replace with your GitHub repo URL.
         __FILE__,  // Path to the main plugin file.
-        'BetterSEO by Gorilion'  // Plugin slug (unique identifier).
+        'plugin_basename(__FILE__)'  // Plugin slug (unique identifier).
     );
     // Set the branch (could be 'main' or 'master') used in your repo.
     $updateChecker->setBranch('main');
+
+	if ( method_exists($updateChecker, 'getVcsApi') && $updateChecker->getVcsApi() ) {
+        $updateChecker->getVcsApi()->enableReleaseAssets();
+    }
 }
 
 /**
