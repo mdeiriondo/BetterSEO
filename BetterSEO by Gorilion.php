@@ -26,7 +26,7 @@ if (!defined('ABSPATH')) {
 
 // Define the plugin version constant (used in debugging comments)
 if (!defined('BETTERSEO_VERSION')) {
-    define('BETTERSEO_VERSION', '1.33');
+    define('BETTERSEO_VERSION', '1.34');
 }
 
 /**
@@ -43,6 +43,50 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 
 //Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('main');
+
+/**
+ * Dashboard update notifications
+ */
+
+/* Force the update check on every admin page load. */
+add_action('admin_init', function () use ($myUpdateChecker) {
+    $myUpdateChecker->checkForUpdates();
+});
+
+/* Display an admin notice across the entire backend when an update is available. */
+add_action('admin_notices', function () use ($myUpdateChecker) {
+    if (!current_user_can('update_plugins')) return;
+
+    if (isset($_GET['betterseo_dismiss_update'])
+        && wp_verify_nonce($_GET['_wpnonce'] ?? '', 'betterseo_dismiss_update')) {
+        update_user_meta(get_current_user_id(), 'betterseo_dismiss_update', '1');
+    }
+
+    // Stop showing the notice if the user has dismissed it
+    if (get_user_meta(get_current_user_id(), 'betterseo_dismiss_update', true)) return;
+
+    $update = $myUpdateChecker->getUpdate(); 
+    if (!$update) return;
+
+    // Build URLs for "Update now" and "Dismiss"
+    $plugin_file = plugin_basename(__FILE__);
+    $update_url = wp_nonce_url(
+        self_admin_url('update.php?action=upgrade-plugin&plugin=' . urlencode($plugin_file)),
+        'upgrade-plugin_' . $plugin_file
+    );
+
+    // Optional: link to GitHub release notes or changelog
+    $details_url = 'https://github.com/mdeiriondo/BetterSEO/releases';
+
+    // Render the notice
+    echo '<div class="notice notice-warning is-dismissible" style="border-left-color:#d63638;">
+            <p><strong>BetterSEO by Gorilion</strong>: a new version is available
+            (<code>' . esc_html($update->version) . '</code>).
+            <a href="' . esc_url($update_url) . '">Update now</a> ·
+            <a href="' . esc_url($details_url) . '" target="_blank" rel="noopener">View details</a>
+          </div>';
+});
+
 
 /**
  * ------------------------------------------------------------------
