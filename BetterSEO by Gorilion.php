@@ -3,7 +3,7 @@
  * Plugin Name: BetterSEO by Gorilion
  * Plugin URI: https://www.gorilion.com/better-seo/
  * Description: Dynamically enable code for Rank Math or Yoast SEO, and update from GitHub.
- * Version:     1.35
+ * Version:     1.36
  * Author:      Gorilion
  * Author URI:  https://www.gorilion.com
  * License:     GPL2
@@ -22,6 +22,11 @@
 // Prevent direct file access.
 if (!defined('ABSPATH')) {
     exit;
+}
+
+if ( ! defined('BETTERSEO_VERSION') ) {
+	$data = get_file_data(__FILE__, array('Version' => 'Version'), 'plugin');
+	define('BETTERSEO_VERSION', isset($data['Version']) ? $data['Version'] : '');
 }
 
 /**
@@ -96,13 +101,13 @@ add_action('admin_menu', 'gorilion_seo_switcher_admin_menu');
 
 function gorilion_seo_switcher_admin_menu()
 {
-    add_options_page(
-        'BetterSEO Configuration',  // Page title
-        'BetterSEO',  // Menu title
-        'manage_options',  // Capability required
-        'gorilion_seo_switcher',  // Menu slug
-        'gorilion_seo_switcher_options_page'  // Callback function
-    );
+	add_options_page(
+		'BetterSEO Configuration',  // Page title
+		'BetterSEO',  // Menu title
+		'manage_options',  // Capability required
+		'gorilion_seo_switcher',  // Menu slug
+		'gorilion_seo_switcher_options_page'  // Callback function
+	);
 }
 
 // Register the settings where we store the user's choices.
@@ -110,16 +115,20 @@ add_action('admin_init', 'gorilion_seo_switcher_register_settings');
 
 function gorilion_seo_switcher_register_settings()
 {
-    // Register the SEO plugin choice setting.
-    register_setting(
-        'gorilion_seo_switcher_settings_group',
-        'gorilion_seo_switcher_choice'
-    );
-    // Register the Tenant ID setting.
-    register_setting(
-        'gorilion_seo_switcher_settings_group',
-        'betterseo_tenant_id'
-    );
+	// Register the SEO plugin choice setting.
+	register_setting(
+		'gorilion_seo_switcher_settings_group',
+		'gorilion_seo_switcher_choice'
+	);
+	// Register the Tenant ID setting.
+	register_setting(
+		'gorilion_seo_switcher_settings_group',
+		'betterseo_tenant_id'
+	);
+	// Platform selector: commerce7 | ecellar
+	register_setting('gorilion_seo_switcher_settings_group','betterseo_platform');
+	// eCellar credentials
+	register_setting('gorilion_seo_switcher_settings_group','betterseo_ecellar_api_key');
 }
 
 /**
@@ -127,49 +136,79 @@ function gorilion_seo_switcher_register_settings()
  */
 function gorilion_seo_switcher_options_page()
 {
-    ?>
-    <div class="wrap">
-        <h1>BetterSEO Configuration</h1>
-        <form method="post" action="options.php">
-            <?php
-            settings_fields('gorilion_seo_switcher_settings_group');
-            do_settings_sections('gorilion_seo_switcher_settings_group');
+?>
+<div class="wrap">
+	<h1>BetterSEO Configuration</h1>
+	<form method="post" action="options.php">
+		<?php
+	settings_fields('gorilion_seo_switcher_settings_group');
+	do_settings_sections('gorilion_seo_switcher_settings_group');
 
-            // Get current choice or default to 'rankmath'
-            $choice = get_option('gorilion_seo_switcher_choice', 'rankmath');
-            // Get the Tenant ID value
-            $tenant_id = get_option('betterseo_tenant_id', '');
-            ?>
+	// Get current choice or default to 'rankmath'
+	$choice = get_option('gorilion_seo_switcher_choice', 'rankmath');
+	// Get the Tenant ID value
+	$tenant_id = get_option('betterseo_tenant_id', '');
+	$betterseo_platform = get_option('betterseo_platform', 'commerce7');
+	$ecellar_api_key = get_option('betterseo_ecellar_api_key', '');
+		?>
 
-            <table class="form-table">
-                <tr valign="top">
-                    <th scope="row">Which SEO plugin do you use?</th>
-                    <td>
-                        <label>
-                            <input type="radio" name="gorilion_seo_switcher_choice"
-                                   value="rankmath" <?php checked($choice, 'rankmath'); ?>>
-                            Rank Math
-                        </label>
-                        <br/>
-                        <label>
-                            <input type="radio" name="gorilion_seo_switcher_choice"
-                                   value="yoast" <?php checked($choice, 'yoast'); ?>>
-                            Yoast SEO
-                        </label>
-                    </td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row">Tenant ID for Warehouse</th>
-                    <td>
-                        <input type="text" name="betterseo_tenant_id" value="<?php echo esc_attr($tenant_id); ?>" />
-                    </td>
-                </tr>
-            </table>
+		<table class="form-table">
+			<tr valign="top">
+				<th scope="row">Which SEO plugin do you use?</th>
+				<td>
+					<label>
+						<input type="radio" name="gorilion_seo_switcher_choice"
+							   value="rankmath" <?php checked($choice, 'rankmath'); ?>>
+						Rank Math
+					</label>
+					<br/>
+					<label>
+						<input type="radio" name="gorilion_seo_switcher_choice"
+							   value="yoast" <?php checked($choice, 'yoast'); ?>>
+						Yoast SEO
+					</label>
+				</td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">Platform</th>
+				<td>
+					<label><input type="radio" name="betterseo_platform" value="commerce7" <?php checked($betterseo_platform, 'commerce7'); ?>> Commerce7</label><br/>
+					<label><input type="radio" name="betterseo_platform" value="ecellar" <?php checked($betterseo_platform, 'ecellar'); ?>> eCellar</label>
+				</td>
+			</tr>
+			<tr valign="top" class="field-commerce7">
+				<th scope="row">Tenant ID for Warehouse</th>
+				<td>
+					<input type="text" name="betterseo_tenant_id" value="<?php echo esc_attr($tenant_id); ?>" />
+				</td>
+			</tr>
+			<tr valign="top" class="field-ecellar">
+				<th scope="row">eCellar API Key</th>
+				<td><input type="text" name="betterseo_ecellar_api_key" value="<?php echo esc_attr($ecellar_api_key); ?>" /></td>
+			</tr>
+		</table>
 
-            <?php submit_button(); ?>
-        </form>
-    </div>
-    <?php
+		<?php submit_button(); ?>
+	</form>
+</div>
+<script>
+	jQuery(document).ready(function($){
+		function togglePlatformFields() {
+			var platform = $('input[name="betterseo_platform"]:checked').val();
+			if (platform === 'commerce7') {
+				$('.field-commerce7').show();
+				$('.field-ecellar').hide();
+			} else if (platform === 'ecellar') {
+				$('.field-ecellar').show();
+				$('.field-commerce7').hide();
+			}
+		}
+
+		togglePlatformFields();
+		$('input[name="betterseo_platform"]').on('change', togglePlatformFields);
+	});
+</script>
+<?php
 }
 
 /**
@@ -177,7 +216,7 @@ function gorilion_seo_switcher_options_page()
  */
 function betterseo_missing_request_notice()
 {
-    echo '<div class="notice notice-error">
+	echo '<div class="notice notice-error">
             <p>Your server needs to have REQUEST_URI or REDIRECT_URL for BetterSEO to function correctly.</p>
           </div>';
 }
@@ -191,134 +230,137 @@ add_action('plugins_loaded', 'gorilion_seo_switcher_inject_functions');
 
 function gorilion_seo_switcher_inject_functions()
 {
-    $choice = get_option('gorilion_seo_switcher_choice', 'rankmath');
+	$choice = get_option('gorilion_seo_switcher_choice', 'rankmath');
+    $platform = get_option('betterseo_platform', 'commerce7');
 
-    if ($choice === 'rankmath') {
-        // --------------------------------------------------
-        // RANK MATH CODE BLOCK
-        // --------------------------------------------------
+    	if ($choice === 'rankmath') {
+		// --------------------------------------------------
+		// RANK MATH CODE BLOCK
+		// --------------------------------------------------
 
-        add_action('wp_head', 'rankmath_disable_features', 1);
+		add_action('wp_head', 'rankmath_disable_features', 1);
 
-        function rankmath_disable_features()
-        {
-            global $post;
-            // Safety check: $post might be null on some pages.
-            if (!is_object($post)) {
-                return;
-            }
+		function rankmath_disable_features()
+		{
+			global $post;
+			// Safety check: $post might be null on some pages.
+			if (!is_object($post)) {
+				return;
+			}
 
-            if ($post->post_name === 'product' || $post->post_name === 'collection') {
-                remove_all_actions('rank_math/head');
-            }
-        }
+			if ($post->post_name === 'product' || $post->post_name === 'collection' || $post->post_name == "product-detail" || $post->post_name == "shop") {
+				remove_all_actions('rank_math/head');
+			}
+		}
 
-        add_filter('rank_math/sitemap/providers', function ($external_providers) {
-            $external_providers['custom'] = new \RankMath\Sitemap\Providers\Custom();
-            return $external_providers;
-        });
+		add_filter('rank_math/sitemap/providers', function ($external_providers) {
+			$external_providers['custom'] = new \RankMath\Sitemap\Providers\Custom();
+			return $external_providers;
+		});
 
-        add_action('wp_head', 'gorilion_opengraph_rankmath');
+		add_action('wp_head', 'gorilion_opengraph_rankmath');
 
-        function gorilion_opengraph_rankmath()
-        {
-            global $post;
-            if (!is_object($post)) {
-                return;
-            }
+		function gorilion_opengraph_rankmath()
+		{
+			global $post;
+			if (!is_object($post)) {
+				return;
+			}
 
-            // Remove canonical if it's a product page.
-            if ($post->post_name === 'product') {
-                add_filter('wpseo_canonical', '__return_false');
-            }
+			// Remove canonical if it's a product page.
+			if ($post->post_name === 'product' || $post->post_name === 'shop') {
+				add_filter('wpseo_canonical', '__return_false');
+			}
 
-            // Get the request URL to determine slug.
-            $request_url = $_SERVER['REQUEST_URI'];
-            $request_url = trim($request_url, '/');
-            $parts = explode('/', $request_url);
-            $result = end($parts);
+			// Get the request URL to determine slug.
+			$request_url = $_SERVER['REQUEST_URI'];
+			$request_url = trim($request_url, '/');
+			$parts = explode('/', $request_url);
+			$result = end($parts);
 
-            // Fallback logic if slug is missing.
-            if (!$result || $result === '' || $result === 'product') {
-                $redirect_url = isset($_SERVER['REDIRECT_URL']) ? $_SERVER['REDIRECT_URL'] : '';
-                $redirect_url = trim($redirect_url, '/');
-                $parts2 = explode('/', $redirect_url);
-                $result = end($parts2);
-            }
-            if (!$result || $result === '' || $result === 'product') {
-                if (is_admin()) {
-                    add_action('admin_notices', 'betterseo_missing_request_notice');
-                }
-            }
+			// Fallback logic if slug is missing.
+			if (!$result || $result === '' || $result === 'product' || $post->post_name == "product-detail" || $post->post_name == "shop") {
+				$redirect_url = isset($_SERVER['REDIRECT_URL']) ? $_SERVER['REDIRECT_URL'] : '';
+				$redirect_url = trim($redirect_url, '/');
+				$parts2 = explode('/', $redirect_url);
+				$result = end($parts2);
+			}
+			if (!$result || $result === '' || $result === 'product' || $post->post_name == "product-detail" || $post->post_name == "shop") {
+				if (is_admin()) {
+					add_action('admin_notices', 'betterseo_missing_request_notice');
+				}
+			}
 
-            // Retrieve the Tenant ID from settings.
-            $tenant_id = get_option('betterseo_tenant_id', 'default-tenant-id');
+			// Platform check (only run Commerce7 blocks if platform is commerce7)
+			$betterseo_platform = get_option('betterseo_platform');
 
-            // If it's a "collection" page.
-            // ToDo: Collection should be variable
-            if ($post->post_name === 'collection') {
-                $collection_url_base = 'https://api.commerce7.com/v1/product/for-web?&collectionSlug=';
-                $url = $collection_url_base . $result;
-                $headers = array('tenant: ' . $tenant_id);
+			// If it's a "collection" page (Commerce7 only).
+			if ($betterseo_platform === 'commerce7' && $post->post_name === 'collection') {
+				$tenant_id = get_option('betterseo_tenant_id', 'default-tenant-id');
+				$collection_url_base = 'https://api.commerce7.com/v1/product/for-web?&collectionSlug=';
+				$url = $collection_url_base . $result;
+				$headers = array('tenant: ' . $tenant_id);
 
-                $curl = curl_init($url);
-                curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-                curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-                $response = curl_exec($curl);
-                if ($response) {
-                    $response = json_decode($response);
-                    $new_title = isset($response->collection->seo->title) ? $response->collection->seo->title : '';
-                    $new_description = isset($response->collection->seo->description) ? $response->collection->seo->description : '';
+				$curl = curl_init($url);
+				curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+				$response = curl_exec($curl);
+				if ($response) {
+					$response = json_decode($response);
+					$new_title = isset($response->collection->seo->title) ? $response->collection->seo->title : '';
+					$new_description = isset($response->collection->seo->description) ? $response->collection->seo->description : '';
 
-                    echo '<!-- BetterSEO meta -->';
-                    echo '<title>' . $new_title . "</title>\n";
-                    echo '<meta name="description" content="' . $new_description . "\"/>\n";
-                }
-            }
+					echo '<!-- BetterSEO meta -->';
+					echo '<title>' . $new_title . "</title>\n";
+					echo '<meta name="description" content="' . $new_description . "\"/>\n";
+				}
+			}
 
-            // If it's a "product" page.
-            if ($post->post_name === 'product') {
-                $url = 'https://api.commerce7.com/v1/product/slug/' . $result . '/for-web';
-                $headers = array('tenant: ' . $tenant_id);
-                $curl = curl_init($url);
-                curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-                curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+			// If it's a "product" page (Commerce7 only).
+			if ($betterseo_platform === 'commerce7' && $post->post_name === 'product') {
+				$tenant_id = get_option('betterseo_tenant_id', 'default-tenant-id');
+				$url = 'https://api.commerce7.com/v1/product/slug/' . $result . '/for-web';
+				$headers = array('tenant: ' . $tenant_id);
 
-                $responseData = curl_exec($curl);
-                if ($responseData === false || empty($responseData)) {
-                    $error = curl_error($curl);
-                    echo 'Error from curl: ' . esc_html($error);
-                } else {
-                    curl_close($curl);
-                    $response = json_decode($responseData);
-                }
+				$curl = curl_init($url);
+				curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
-                // Avoid warnings if data doesn't exist.
-                $price = isset($response->variants[0]->price) ? $response->variants[0]->price / 100.0 : '';
-                $description = isset($response->seo->description) ? $response->seo->description : '';
-                $wine = isset($response->wine) ? $response->wine : array();
-                $title = isset($response->seo->title) ? $response->seo->title : '';
-                $sku = isset($response->variants[0]->sku) ? $response->variants[0]->sku : '';
-                $img = isset($response->image) ? $response->image : '';
+				$responseData = curl_exec($curl);
+				if ($responseData === false || empty($responseData)) {
+					$error = curl_error($curl);
+					echo 'Error from curl: ' . esc_html($error);
+				} else {
+					curl_close($curl);
+					$response = json_decode($responseData);
+				}
 
-                $keywords = implode(',', array($title, $sku, implode(',', (array) $wine)));
-                $full_url = 'https://' . rtrim($_SERVER['HTTP_HOST'], '/') . '/' . $request_url;
-                $site_title = get_bloginfo('name');
+				// Avoid warnings if data doesn't exist.
+				$price = isset($response->variants[0]->price) ? $response->variants[0]->price / 100.0 : '';
+				$description = isset($response->seo->description) ? $response->seo->description : '';
+				$wine = isset($response->wine) ? $response->wine : array();
+				$title = isset($response->seo->title) ? $response->seo->title : '';
+				$sku = isset($response->variants[0]->sku) ? $response->variants[0]->sku : '';
+				$img = isset($response->image) ? $response->image : '';
 
-                echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' -->';
-                echo '<title>' . $title . "</title>\n";
-                echo '<meta name="description" content="' . $description . "\"/>\n";
-                echo '<meta name="keywords" content="' . $keywords . "\">\n";
-                echo '<link rel="canonical" href="' . esc_url($full_url) . "\"/>\n";
-                echo "<meta property=\"og:type\" content=\"product\" />\n";
-                echo '<meta property="og:title" content="' . $title . "\"/>\n";
-                echo '<meta property="og:description" content="' . $description . "\"/>\n";
-                echo '<meta property="og:image" content="' . esc_url($img) . "\"/>\n";
-                echo '<meta property="og:url" content="' . esc_url($full_url) . "\"/>\n";
-                echo '<meta property="og:site_name" content="' . esc_attr($site_title) . "\" />\n";
-                echo "<meta name=\"twitter:card\" content=\"summary_large_image\" />\n";
+				$keywords = implode(',', array($title, $sku, implode(',', (array) $wine)));
+				$full_url = 'https://' . rtrim($_SERVER['HTTP_HOST'], '/') . '/' . $request_url;
+				$site_title = get_bloginfo('name');
 
-                echo '<script type="application/ld+json">
+				echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' -->';
+				echo '<title>' . $title . "</title>\n";
+				echo '<meta name="description" content="' . $description . "\"/>\n";
+				echo '<meta name="keywords" content="' . $keywords . "\">\n";
+				echo '<link rel="canonical" href="' . esc_url($full_url) . "\"/>\n";
+				echo "<meta property=\"og:type\" content=\"product\" />\n";
+				echo '<meta property="og:title" content="' . $title . "\"/>\n";
+				echo '<meta property="og:description" content="' . $description . "\"/>\n";
+				echo '<meta property="og:image" content="' . esc_url($img) . "\"/>\n";
+				echo '<meta property="og:url" content="' . esc_url($full_url) . "\"/>\n";
+				echo '<meta property="og:site_name" content="' . esc_attr($site_title) . "\" />\n";
+				echo "<meta name=\"twitter:card\" content=\"summary_large_image\" />\n";
+
+				echo '<script type="application/ld+json">
                         {
                             "@context": "http://schema.org",
                             "@type": "Product",
@@ -337,149 +379,152 @@ function gorilion_seo_switcher_inject_functions()
                             }
                         }
                       </script>';
-            }
-        }
-    } else {
-        // --------------------------------------------------
-        // YOAST SEO CODE BLOCK
-        // --------------------------------------------------
+			}
+		}
+	} else {
+		// --------------------------------------------------
+		// YOAST SEO CODE BLOCK
+		// --------------------------------------------------
 
-        // Remove Yoast SEO functions
-        if (function_exists('wpseo_head')) {
-            add_filter('wpseo_json_ld_output', '__return_false');
-            add_filter('wpseo_opengraph_output', '__return_false');
-            add_filter('wpseo_twitter_output', '__return_false');
-            remove_action('wp_head', 'wpseo_head');
-            remove_action('wpseo_head', 'wpseo_schema_head');
-            remove_action('wpseo_head', 'wpseo_schema_article');
-            remove_action('wpseo_head', 'wpseo_schema_webpage');
-            remove_action('wpseo_head', 'wpseo_schema_breadcrumb');
-            remove_action('wpseo_head', 'wpseo_json_ld');
-            remove_action('wpseo_head', 'wpseo_opengraph');
-            remove_action('wpseo_head', 'wpseo_twitter');
-            remove_action('wpseo_head', 'wpseo_canonical');
-            remove_action('wpseo_head', 'wpseo_adjacent_rel_links');
-            remove_action('wpseo_head', 'wpseo_metadesc');
-            remove_action('wpseo_head', 'wpseo_title');
-        }
+		// Remove Yoast SEO functions
+		if (function_exists('wpseo_head')) {
+			add_filter('wpseo_json_ld_output', '__return_false');
+			add_filter('wpseo_opengraph_output', '__return_false');
+			add_filter('wpseo_twitter_output', '__return_false');
+			remove_action('wp_head', 'wpseo_head');
+			remove_action('wpseo_head', 'wpseo_schema_head');
+			remove_action('wpseo_head', 'wpseo_schema_article');
+			remove_action('wpseo_head', 'wpseo_schema_webpage');
+			remove_action('wpseo_head', 'wpseo_schema_breadcrumb');
+			remove_action('wpseo_head', 'wpseo_json_ld');
+			remove_action('wpseo_head', 'wpseo_opengraph');
+			remove_action('wpseo_head', 'wpseo_twitter');
+			remove_action('wpseo_head', 'wpseo_canonical');
+			remove_action('wpseo_head', 'wpseo_adjacent_rel_links');
+			remove_action('wpseo_head', 'wpseo_metadesc');
+			remove_action('wpseo_head', 'wpseo_title');
+		}
 
-        add_action('wp_head', 'gorilion_opengraph_yoast');
-		
+		add_action('wp_head', 'gorilion_opengraph_yoast');
+
 		// Remove Yoast SEO - Alternative
 		add_action("template_redirect", "remove_wpseo_from_product");
 		function remove_wpseo_from_product() {
 			global $post;
-			if ($post->post_name == "product-detail" || $post->post_name == "collection" || $post->post_name == "product") {
+			if ($post->post_name == "product-detail" || $post->post_name == "collection" || $post->post_name == "product" || $post->post_name == "shop") {
 				$front_end = YoastSEO()->classes->get("Yoast\WP\SEO\Integrations\Front_End_Integration");
 				remove_action( "wpseo_head", [ $front_end, "present_head" ], -9999 );
 			}
 		}
 
-        function gorilion_opengraph_yoast()
-        {
-            global $post;
-            if (!is_object($post)) {
-                return;
-            }
-			
-            // Remove canonical if it's a product page.
-            if ($post->post_name === 'product') {
-                add_filter('wpseo_canonical', '__return_false');
-            }
+		function gorilion_opengraph_yoast()
+		{
+			global $post;
+			if (!is_object($post)) {
+				return;
+			}
 
-            // Check if the Yoast SEO integration class exists
-            if (class_exists('Yoast\WP\SEO\Integrations\Front_End_Integration')) {
-                $front_end = YoastSEO()->classes->get('Yoast\WP\SEO\Integrations\Front_End_Integration');
+			// Remove canonical if it's a product page.
+			if ($post->post_name === 'product' || $post->post_name === 'shop' || $post->post_name == "product-detail") {
+				add_filter('wpseo_canonical', '__return_false');
+			}
 
-                // Check if the 'present_head' method exists in the $front_end object
-                if (method_exists($front_end, 'present_head')) {
-                    remove_action('wpseo_head', [$front_end, 'present_head'], -9999);
-                }
-            }
+			// Check if the Yoast SEO integration class exists
+			if (class_exists('Yoast\WP\SEO\Integrations\Front_End_Integration')) {
+				$front_end = YoastSEO()->classes->get('Yoast\WP\SEO\Integrations\Front_End_Integration');
 
-            // Similar logic to get $result from the request URI.
-            $request_url = $_SERVER['REQUEST_URI'];
-            $request_url = trim($request_url, '/');
-            $parts = explode('/', $request_url);
-            $result = end($parts);
+				// Check if the 'present_head' method exists in the $front_end object
+				if (method_exists($front_end, 'present_head')) {
+					remove_action('wpseo_head', [$front_end, 'present_head'], -9999);
+				}
+			}
 
-            if (!$result || $result === '' || $result === 'product') {
-                $redirect_url = isset($_SERVER['REDIRECT_URL']) ? $_SERVER['REDIRECT_URL'] : '';
-                $redirect_url = trim($redirect_url, '/');
-                $parts2 = explode('/', $redirect_url);
-                $result = end($parts2);
-            }
-            if (!$result || $result === '' || $result === 'product') {
-                if (is_admin()) {
-                    add_action('admin_notices', 'betterseo_missing_request_notice');
-                }
-            }
+			// Similar logic to get $result from the request URI.
+			$request_url = $_SERVER['REQUEST_URI'];
+			$request_url = trim($request_url, '/');
+			$parts = explode('/', $request_url);
+			$result = end($parts);
 
-            // Retrieve the Tenant ID from settings.
-            $tenant_id = get_option('betterseo_tenant_id', 'default-tenant-id');
+			if (!$result || $result === '' || $result === 'product' || $post->post_name === 'shop' || $post->post_name == "product-detail") {
+				$redirect_url = isset($_SERVER['REDIRECT_URL']) ? $_SERVER['REDIRECT_URL'] : '';
+				$redirect_url = trim($redirect_url, '/');
+				$parts2 = explode('/', $redirect_url);
+				$result = end($parts2);
+			}
+			if (!$result || $result === '' || $result === 'product' || $post->post_name === 'shop' || $post->post_name == "product-detail") {
+				if (is_admin()) {
+					add_action('admin_notices', 'betterseo_missing_request_notice');
+				}
+			}
 
-            // If it's a "collection" page.
-            if ($post->post_name === 'collection') {
-                $collection_url_base = 'https://api.commerce7.com/v1/product/for-web?&collectionSlug=';
-                $url = $collection_url_base . $result;
-                $headers = array('tenant: ' . $tenant_id);
-                $curl = curl_init($url);
-                curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-                curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-                $response = curl_exec($curl);
-                if ($response) {
-                    $response = json_decode($response);
-                    $new_title = isset($response->collection->seo->title) ? $response->collection->seo->title : '';
-                    $new_description = isset($response->collection->seo->description) ? $response->collection->seo->description : '';
+			// Platform check (only run Commerce7 blocks if platform is commerce7)
+			$betterseo_platform = get_option('betterseo_platform');
 
-                    echo '<!-- BetterSEO meta -->';
-                    echo '<title>' . $new_title . "</title>\n";
-                    echo '<meta name="description" content="' . $new_description . "\"/>\n";
-                }
-            }
+			// If it's a "collection" page (Commerce7 only).
+			if ($betterseo_platform === 'commerce7' && $post->post_name === 'collection') {
+				$tenant_id = get_option('betterseo_tenant_id', 'default-tenant-id');
+				$collection_url_base = 'https://api.commerce7.com/v1/product/for-web?&collectionSlug=';
+				$url = $collection_url_base . $result;
+				$headers = array('tenant: ' . $tenant_id);
+				$curl = curl_init($url);
+				curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+				$response = curl_exec($curl);
+				if ($response) {
+					$response = json_decode($response);
+					$new_title = isset($response->collection->seo->title) ? $response->collection->seo->title : '';
+					$new_description = isset($response->collection->seo->description) ? $response->collection->seo->description : '';
 
-            // If it's a "product" page.
-            if ($post->post_name === 'product') {
-                $url = 'https://api.commerce7.com/v1/product/slug/' . $result . '/for-web';
-                $headers = array('tenant: ' . $tenant_id);
-                $curl = curl_init($url);
-                curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-                curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+					echo '<!-- BetterSEO meta -->';
+					echo '<title>' . $new_title . "</title>\n";
+					echo '<meta name="description" content="' . $new_description . "\"/>\n";
+				}
+			}
 
-                $responseData = curl_exec($curl);
-                if ($responseData === false || empty($responseData)) {
-                    $error = curl_error($curl);
-                    echo 'Error from curl: ' . esc_html($error);
-                } else {
-                    curl_close($curl);
-                    $response = json_decode($responseData);
-                }
+			// If it's a "product" page (Commerce7 only).
+			if ($betterseo_platform === 'commerce7' && $post->post_name === 'product') {
+				$tenant_id = get_option('betterseo_tenant_id', 'default-tenant-id');
+				$url = 'https://api.commerce7.com/v1/product/slug/' . $result . '/for-web';
+				$headers = array('tenant: ' . $tenant_id);
 
-                $price = isset($response->variants[0]->price) ? $response->variants[0]->price / 100.0 : '';
-                $description = isset($response->seo->description) ? $response->seo->description : '';
-                $wine = isset($response->wine) ? $response->wine : array();
-                $title = isset($response->seo->title) ? $response->seo->title : '';
-                $sku = isset($response->variants[0]->sku) ? $response->variants[0]->sku : '';
-                $img = isset($response->image) ? $response->image : '';
+				$curl = curl_init($url);
+				curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
-                $keywords = implode(',', array($title, $sku, implode(',', (array) $wine)));
-                $full_url = 'https://' . rtrim($_SERVER['HTTP_HOST'], '/') . '/' . $request_url . '/' . $result;
-                $site_title = get_bloginfo('name');
+				$responseData = curl_exec($curl);
+				if ($responseData === false || empty($responseData)) {
+					$error = curl_error($curl);
+					echo 'Error from curl: ' . esc_html($error);
+				} else {
+					curl_close($curl);
+					$response = json_decode($responseData);
+				}
 
-                echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' -->';
-                echo '<title>' . $title . "</title>\n";
-                echo '<meta name="description" content="' . $description . "\"/>\n";
-                echo '<meta name="keywords" content="' . $keywords . "\">\n";
-                echo '<link rel="canonical" href="' . esc_url($full_url) . "\"/>\n";
-                echo "<meta property=\"og:type\" content=\"product\" />\n";
-                echo '<meta property="og:title" content="' . $title . "\"/>\n";
-                echo '<meta property="og:description" content="' . $description . "\"/>\n";
-                echo '<meta property="og:image" content="' . esc_url($img) . "\"/>\n";
-                echo '<meta property="og:url" content="' . esc_url($full_url) . "\"/>\n";
-                echo '<meta property="og:site_name" content="' . esc_attr($site_title) . "\" />\n";
-                echo "<meta name=\"twitter:card\" content=\"summary_large_image\" />\n";
+				$price = isset($response->variants[0]->price) ? $response->variants[0]->price / 100.0 : '';
+				$description = isset($response->seo->description) ? $response->seo->description : '';
+				$wine = isset($response->wine) ? $response->wine : array();
+				$title = isset($response->seo->title) ? $response->seo->title : '';
+				$sku = isset($response->variants[0]->sku) ? $response->variants[0]->sku : '';
+				$img = isset($response->image) ? $response->image : '';
 
-                echo '<script type="application/ld+json">
+				$keywords = implode(',', array($title, $sku, implode(',', (array) $wine)));
+				$full_url = 'https://' . rtrim($_SERVER['HTTP_HOST'], '/') . '/' . $request_url . '/' . $result;
+				$site_title = get_bloginfo('name');
+
+				echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' -->';
+				echo '<title>' . $title . "</title>\n";
+				echo '<meta name="description" content="' . $description . "\"/>\n";
+				echo '<meta name="keywords" content="' . $keywords . "\">\n";
+				echo '<link rel="canonical" href="' . esc_url($full_url) . "\"/>\n";
+				echo "<meta property=\"og:type\" content=\"product\" />\n";
+				echo '<meta property="og:title" content="' . $title . "\"/>\n";
+				echo '<meta property="og:description" content="' . $description . "\"/>\n";
+				echo '<meta property="og:image" content="' . esc_url($img) . "\"/>\n";
+				echo '<meta property="og:url" content="' . esc_url($full_url) . "\"/>\n";
+				echo '<meta property="og:site_name" content="' . esc_attr($site_title) . "\" />\n";
+				echo "<meta name=\"twitter:card\" content=\"summary_large_image\" />\n";
+
+				echo '<script type="application/ld+json">
                         {
                             "@context": "http://schema.org",
                             "@type": "Product",
@@ -498,7 +543,114 @@ function gorilion_seo_switcher_inject_functions()
                             }
                         }
                       </script>';
-            }
-        }
-    }
+			}
+		}
+	}
+};
+
+
+// eCellar integration
+add_action("wp_head", "gorilion_opengraph_ecellar");
+function gorilion_opengraph_ecellar(){
+    $platform = get_option('betterseo_platform');
+	if($platform != "ecellar"){
+		return;
+	}
+	$ecellar_api_key = get_option('betterseo_ecellar_api_key');
+
+	global $post;
+
+	if ($post->post_name == "product-detail" || $post->post_name == "shop") {
+		$curl = null;
+
+		$key = $ecellar_api_key; 
+		if (str_contains($request_url, "product/")){
+			$result = end(explode("/", $request_url));
+		}
+		elseif (!empty($_SERVER["QUERY_STRING"])){
+			$queryString = $_SERVER["QUERY_STRING"];
+			// Parse the query string
+			parse_str($queryString, $queryParams);
+			// Check if "slug" is set in the query parameters
+			if (isset($queryParams["slug"])) {
+				$result = $queryParams["slug"];
+			}
+		}
+		$url = "https://public.ecellar-api.com/v1/products/" . $result;
+		$headers = array(
+			"X-API-Key: " . $key,
+			"User-Agent: WordPress" // Replace with your desired user agent
+		);
+		$curl = curl_init($url);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+
+		$responseData = curl_exec($curl);
+
+		$url = "https://public.ecellar-api.com/v1/products/" . $result . "/metadata";
+		$curl = curl_init($url);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+
+		$responseMetadata = curl_exec($curl);
+
+		if ($responseData === false || empty($responseData)) {
+			// Error handling
+			$error = curl_error($curl);
+			echo "Error from curl: " . $error;
+		} else {
+			// Close the cURL request
+			curl_close($curl);
+			// Decode the JSON response
+			$response = json_decode($responseData);
+			$responseMetadata = json_decode($responseMetadata);
+		}
+		$title = $responseMetadata->meta_title;
+		if($title == null || $title == ""){
+			$title = $response->product_name;
+		}
+		$price = $response->price / 1.00;
+		$description = str_replace('"', '', strip_tags($responseMetadata->meta_description));
+		$description = substr($description, 0 , 200);
+		$wine = $response->wine;
+		$sku = $response->SKU;
+		$img = $response->image_1 ? $response->image_1 : $response->header_image;
+		//$keywords =  implode(",", [$title, $sku, implode(",", (array)$wine)]);
+		$keywords = $responseMetadata->meta_keywords;
+
+
+		// Get data
+		$url = "https://" . rtrim($_SERVER["HTTP_HOST"], "/") . "/" . $request_url;
+		echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' -->';
+		$site_title = get_bloginfo( "name" );
+		echo "<title>" . $title . "</title>" . PHP_EOL;
+		echo "<meta name=\"description\" content=\"" . $description . "\"/>" . PHP_EOL;
+		echo "<meta name=\"keywords\" content=\"" . $keywords . "\">" . PHP_EOL;
+		echo "<link rel=\"canonical\" href=\"" . $url . "\"/>" . PHP_EOL;
+		echo "<meta property=\"og:type\" content=\"product\" />" . PHP_EOL;
+		echo "<meta property=\"og:title\" content=\"" . $title . "\"/>" . PHP_EOL;
+		echo "<meta property=\"og:description\" content=\"" . $description . "\"/>" . PHP_EOL;
+		echo "<meta property=\"og:image\" content=\"" . $img . "\"/>" . PHP_EOL;
+		echo "<meta property=\"og:url\" content=\"" . $url . "\"/>" . PHP_EOL;
+		echo "<meta property=\"og:site_name\" content=\"".$site_title."\" />" . PHP_EOL;
+		echo '<script type="application/ld+json">
+                {
+                    "@context" : "http://schema.org",
+                    "@type" : "Product",
+                    "name" : "' .$title .'",
+                    "image" : "' . $img . '",
+                    "description" : "' . $description .'",
+                    "brand" : {
+                        "@type" : "Brand",
+                        "name" : "' . $site_title . '",
+                        "logo" : "' . esc_url( wp_get_attachment_image_src( get_theme_mod( "custom_logo" ), "full" )[0] ) . '"
+                    },
+                    "offers" : {
+                        "@type" : "Offer",
+                        "priceCurrency" : "USD",
+                        "price" : "' . $price . '"
+                    }
+                }
+              </script>';
+	}
 }
