@@ -3,7 +3,7 @@
  * Plugin Name: BetterSEO by Gorilion
  * Plugin URI: https://www.gorilion.com/better-seo/
  * Description: Dynamically enable code for Rank Math or Yoast SEO, and update from GitHub.
- * Version:     1.37
+ * Version:     1.38
  * Author:      Gorilion
  * Author URI:  https://www.gorilion.com
  * License:     GPL2
@@ -21,7 +21,7 @@
 
 // Prevent direct file access.
 if (!defined('ABSPATH')) {
-    exit;
+	exit;
 }
 
 if ( ! defined('BETTERSEO_VERSION') ) {
@@ -37,9 +37,9 @@ if ( ! defined('BETTERSEO_VERSION') ) {
 
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://github.com/mdeiriondo/BetterSEO', 
-    __FILE__,
-    'BetterSEO by Gorilion'
+	'https://github.com/mdeiriondo/BetterSEO', 
+	__FILE__,
+	'BetterSEO by Gorilion'
 );
 
 //Set the branch that contains the stable release.
@@ -51,36 +51,36 @@ $myUpdateChecker->setBranch('main');
 
 /* Force the update check on every admin page load. */
 add_action('admin_init', function () use ($myUpdateChecker) {
-    $myUpdateChecker->checkForUpdates();
+	$myUpdateChecker->checkForUpdates();
 });
 
 /* Display an admin notice across the entire backend when an update is available. */
 add_action('admin_notices', function () use ($myUpdateChecker) {
-    if (!current_user_can('update_plugins')) return;
+	if (!current_user_can('update_plugins')) return;
 
-    if (isset($_GET['betterseo_dismiss_update'])
-        && wp_verify_nonce($_GET['_wpnonce'] ?? '', 'betterseo_dismiss_update')) {
-        update_user_meta(get_current_user_id(), 'betterseo_dismiss_update', '1');
-    }
+	if (isset($_GET['betterseo_dismiss_update'])
+		&& wp_verify_nonce($_GET['_wpnonce'] ?? '', 'betterseo_dismiss_update')) {
+		update_user_meta(get_current_user_id(), 'betterseo_dismiss_update', '1');
+	}
 
-    // Stop showing the notice if the user has dismissed it
-    if (get_user_meta(get_current_user_id(), 'betterseo_dismiss_update', true)) return;
+	// Stop showing the notice if the user has dismissed it
+	if (get_user_meta(get_current_user_id(), 'betterseo_dismiss_update', true)) return;
 
-    $update = $myUpdateChecker->getUpdate(); 
-    if (!$update) return;
+	$update = $myUpdateChecker->getUpdate(); 
+	if (!$update) return;
 
-    // Build URLs for "Update now" and "Dismiss"
-    $plugin_file = plugin_basename(__FILE__);
-    $update_url = wp_nonce_url(
-        self_admin_url('update.php?action=upgrade-plugin&plugin=' . urlencode($plugin_file)),
-        'upgrade-plugin_' . $plugin_file
-    );
+	// Build URLs for "Update now" and "Dismiss"
+	$plugin_file = plugin_basename(__FILE__);
+	$update_url = wp_nonce_url(
+		self_admin_url('update.php?action=upgrade-plugin&plugin=' . urlencode($plugin_file)),
+		'upgrade-plugin_' . $plugin_file
+	);
 
-    // Optional: link to GitHub release notes or changelog
-    $details_url = 'https://github.com/mdeiriondo/BetterSEO/releases';
+	// Optional: link to GitHub release notes or changelog
+	$details_url = 'https://github.com/mdeiriondo/BetterSEO/releases';
 
-    // Render the notice
-    echo '<div class="notice notice-warning is-dismissible" style="border-left-color:#d63638;">
+	// Render the notice
+	echo '<div class="notice notice-warning is-dismissible" style="border-left-color:#d63638;">
             <p><strong>BetterSEO by Gorilion</strong>: a new version is available
             (<code>' . esc_html($update->version) . '</code>).
             <a href="' . esc_url($update_url) . '">Update now</a> ·
@@ -231,9 +231,9 @@ add_action('plugins_loaded', 'gorilion_seo_switcher_inject_functions');
 function gorilion_seo_switcher_inject_functions()
 {
 	$choice = get_option('gorilion_seo_switcher_choice', 'rankmath');
-    $platform = get_option('betterseo_platform', 'commerce7');
+	$platform = get_option('betterseo_platform', 'commerce7');
 
-    	if ($choice === 'rankmath') {
+	if ($choice === 'rankmath') {
 		// --------------------------------------------------
 		// RANK MATH CODE BLOCK
 		// --------------------------------------------------
@@ -552,260 +552,401 @@ function gorilion_seo_switcher_inject_functions()
 // eCellar integration
 add_action("wp_head", "gorilion_opengraph_ecellar");
 function gorilion_opengraph_ecellar() {
-    $platform = get_option('betterseo_platform');
-    if ($platform != "ecellar") return;
+	$platform = get_option('betterseo_platform');
+	if ($platform != "ecellar") return;
 
-    $ecellar_api_key = get_option('betterseo_ecellar_api_key');
-    global $post;
+	$ecellar_api_key = get_option('betterseo_ecellar_api_key');
+	global $post;
 
-    if ($post->post_name == "product-detail" || $post->post_name == "shop") {
-        $key = $ecellar_api_key;
-        $request_url = trim($_SERVER["REQUEST_URI"], "/");
+	if ($post->post_name == "product-detail" || $post->post_name == "shop") {
+		$key = $ecellar_api_key;
+		$request_url = trim($_SERVER["REQUEST_URI"], "/");
 
-        if (str_contains($request_url, "product/")) {
-            $result = end(explode("/", $request_url));
-        } elseif (!empty($_SERVER["QUERY_STRING"])) {
-            parse_str($_SERVER["QUERY_STRING"], $queryParams);
-            if (!empty($queryParams["slug"])) $result = $queryParams["slug"];
-        }
+		if (str_contains($request_url, "product/")) {
+			$result = end(explode("/", $request_url));
+		} elseif (!empty($_SERVER["QUERY_STRING"])) {
+			parse_str($_SERVER["QUERY_STRING"], $queryParams);
+			if (!empty($queryParams["slug"])) $result = $queryParams["slug"];
+		}
 
-        $headers = array("X-API-Key: " . $key, "User-Agent: WordPress");
+		$headers = array("X-API-Key: " . $key, "User-Agent: WordPress");
 
-        // Fetch product data
-        $curl = curl_init("https://public.ecellar-api.com/v1/products/" . $result);
-        curl_setopt_array($curl, [
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_HTTPHEADER     => $headers,
-        ]);
-        $responseData = curl_exec($curl);
+		// Fetch product data
+		$curl = curl_init("https://public.ecellar-api.com/v1/products/" . $result);
+		curl_setopt_array($curl, [
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_HTTPHEADER     => $headers,
+		]);
+		$responseData = curl_exec($curl);
 
-        // Fetch metadata
-        $curl2 = curl_init("https://public.ecellar-api.com/v1/products/" . $result . "/metadata");
-        curl_setopt_array($curl2, [
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_HTTPHEADER     => $headers,
-        ]);
-        $responseMetadata = curl_exec($curl2);
+		// Fetch metadata
+		$curl2 = curl_init("https://public.ecellar-api.com/v1/products/" . $result . "/metadata");
+		curl_setopt_array($curl2, [
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_HTTPHEADER     => $headers,
+		]);
+		$responseMetadata = curl_exec($curl2);
 
-        if ($responseData === false || empty($responseData)) {
-            echo "Error from curl: " . curl_error($curl);
-            return;
-        }
-        curl_close($curl);
-        curl_close($curl2);
+		if ($responseData === false || empty($responseData)) {
+			echo "Error from curl: " . curl_error($curl);
+			return;
+		}
+		curl_close($curl);
+		curl_close($curl2);
 
-        $response         = json_decode($responseData);
-        $responseMetadata = json_decode($responseMetadata);
+		$response         = json_decode($responseData);
+		$responseMetadata = json_decode($responseMetadata);
 
-        // Clean helpers
-        $clean_text = function($val) {
-            if (!is_string($val)) $val = (string)$val;
-            $val = preg_replace('/<\s*br\s*\/?>/i', ' ', $val);   // <br> → space
-            $val = strip_tags($val);                              // strip HTML
-            $val = html_entity_decode($val, ENT_QUOTES | ENT_HTML5, 'UTF-8');
-            $val = preg_replace('/\s+/u', ' ', $val);             // collapse spaces
-            $val = str_replace('"', '', $val);                    // remove "
-            return trim($val);
-        };
+		// Clean helpers
+		$clean_text = function($val) {
+			if (!is_string($val)) $val = (string)$val;
+			$val = preg_replace('/<\s*br\s*\/?>/i', ' ', $val);
+			$val = strip_tags($val);
+			$val = html_entity_decode($val, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+			$val = preg_replace('/\s+/u', ' ', $val);
+			$val = str_replace('"', '', $val);
+			return trim($val);
+		};
 
-        // SEO fields (cleaned)
-        $title_src   = $responseMetadata->meta_title ?? $response->product_name ?? '';
-        $title       = $clean_text($title_src);
+		// --- CASE 1: ARRAY response (catalog) ---
+		if (is_array($response)) {
+			$encoded = json_encode($response, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
-        $desc_src    = $responseMetadata->meta_description ?? '';
-        $description = $clean_text($desc_src);
-        $description = mb_substr($description, 0, 200);
+			// Server-side scaffold so meta tags exist before JS updates
+			$site_title = get_bloginfo("name");
+			$url        = "https://" . rtrim($_SERVER["HTTP_HOST"], "/") . "/" . $request_url;
 
-        $keywords    = $clean_text($responseMetadata->meta_keywords ?? '');
-        $price       = isset($response->price) ? ($response->price / 1.00) : '';
+			echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' -->' . PHP_EOL;
+			echo '<meta name="description" content="" />' . PHP_EOL;
+			echo '<meta name="keywords" content="" />' . PHP_EOL;
+			echo "<link rel=\"canonical\" href=\"{$url}\"/>" . PHP_EOL;
+			echo '<meta property="og:type" content="product" />' . PHP_EOL;
+			echo '<meta property="og:title" content="" />' . PHP_EOL;
+			echo '<meta property="og:description" content="" />' . PHP_EOL;
+			echo '<meta property="og:image" content="" />' . PHP_EOL;
+			echo '<meta property="og:site_name" content="' . esc_attr($site_title) . '" />' . PHP_EOL;
+			echo '<script type="application/ld+json" class="ecellar-jsonld">{}</script>' . PHP_EOL;
 
-        $img         = !empty($response->image_1) ? $response->image_1 : ($response->header_image ?? '');
-        $site_title  = get_bloginfo("name");
-        $url         = "https://" . rtrim($_SERVER["HTTP_HOST"], "/") . "/" . $request_url;
+?>
+<script>
+	(function(){
+		var catalog = <?php echo $encoded; ?>;
 
-        // Force document <title> via filters
-        add_filter('pre_get_document_title', function() use ($title) { return $title; }, 99);
-        add_filter('document_title_parts', function($parts) use ($title) { $parts['title'] = $title; return $parts; }, 99);
-        // Yoast & Rank Math
-        add_filter('wpseo_title', function() use ($title) { return $title; }, 99);
-        add_filter('rank_math/frontend/title', function() use ($title) { return $title; }, 99);
+		console.group("%cBetterSEO eCellar Data","color:green;font-weight:bold;");
+		console.log("Full Array Response:", catalog);
+		console.groupEnd();
 
-        echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' -->' . PHP_EOL;
-        echo "<meta name=\"description\" content=\"{$description}\"/>" . PHP_EOL;
-        echo "<meta name=\"keywords\" content=\"{$keywords}\"/>" . PHP_EOL;
-        echo "<link rel=\"canonical\" href=\"{$url}\"/>" . PHP_EOL;
+		function clean(t){
+			t = (t || "").toString();
+			t = t.replace(/<\s*br\s*\/?>/gi, ' ');
+			t = t.replace(/<[^>]+>/g, '');
+			t = t.replace(/\s+/g, ' ').trim();
+			return t.replace(/"/g, '');
+		}
 
-        echo "<meta property=\"og:type\" content=\"product\" />" . PHP_EOL;
-        echo "<meta property=\"og:title\" content=\"{$title}\"/>" . PHP_EOL;
-        echo "<meta property=\"og:description\" content=\"{$description}\"/>" . PHP_EOL;
-        echo "<meta property=\"og:image\" content=\"{$img}\"/>" . PHP_EOL;
-        echo "<meta property=\"og:url\" content=\"{$url}\"/>" . PHP_EOL;
-        echo "<meta property=\"og:site_name\" content=\"{$site_title}\" />" . PHP_EOL;
+		function setMeta(selector, attr, value){
+			var el = document.querySelector(selector);
+			if(!el){
+				el = document.createElement('meta');
+				if (selector.indexOf('property="') !== -1) {
+					el.setAttribute('property', selector.match(/property="([^"]+)"/)[1]);
+				} else if (selector.indexOf('name="') !== -1) {
+					el.setAttribute('name', selector.match(/name="([^"]+)"/)[1]);
+				}
+				document.head.appendChild(el);
+			}
+			if (el.getAttribute(attr) !== value) el.setAttribute(attr, value);
+		}
 
-        echo '<script type="application/ld+json">' . PHP_EOL;
-        echo json_encode([
-            "@context" => "http://schema.org",
-            "@type"    => "Product",
-            "name"     => $title,
-            "image"    => $img,
-            "description" => $description,
-            "brand"    => [
-                "@type" => "Brand",
-                "name"  => $site_title,
-                "logo"  => esc_url(wp_get_attachment_image_src(get_theme_mod("custom_logo"), "full")[0] ?? ''),
-            ],
-            "offers"   => [
-                "@type"         => "Offer",
-                "priceCurrency" => "USD",
-                "price"         => $price,
-            ]
-        ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-        echo '</script>' . PHP_EOL;
-    }
+		function applyFrom(prod){
+			if(!prod) return;
+
+			var title = clean(prod.product_name || "");
+			var desc  = clean(prod.description || "");
+			if (desc.length > 200) desc = desc.slice(0,200);
+			var img   = prod.image_1 || prod.header_image || "";
+			var price = prod.price || "";
+			var site  = <?php echo json_encode($site_title); ?>;
+
+			// Update title + metas
+			if (document.title !== title) document.title = title;
+			setMeta('meta[property="og:title"]', 'content', title);
+			setMeta('meta[name="description"]', 'content', desc);
+			setMeta('meta[property="og:description"]', 'content', desc);
+			if (img) setMeta('meta[property="og:image"]', 'content', img);
+
+			// JSON-LD
+			var ld = {
+				"@context":"http://schema.org",
+				"@type":"Product",
+				"name": title,
+				"image": img || undefined,
+				"description": desc,
+				"brand": {"@type":"Brand","name": site},
+				"offers": {"@type":"Offer","priceCurrency":"USD","price": String(price || "")}
+			};
+			var s = document.querySelector('script[type="application/ld+json"].ecellar-jsonld');
+			if (!s){ s = document.createElement('script'); s.type='application/ld+json'; s.className='ecellar-jsonld'; document.head.appendChild(s); }
+			s.textContent = JSON.stringify(ld);
+
+			// Logs for debugging
+			console.group('%cBetterSEO eCellar Matched','color:purple;font-weight:bold;');
+			console.log('Found product_id:', prod.product_id);
+			console.log('Product:', prod);
+			console.groupEnd();
+		}
+
+		// Find data-ecp-id with robust strategies
+		function getCurrentId(){
+			var sel = [
+				'.ecp_ProductDetail > [data-ecp-id]',
+				'.ecp_ProductDetail [data-ecp-id]',
+				'[data-ecp-id]'
+			];
+			for (var i=0;i<sel.length;i++){
+				var el = document.querySelector(sel[i]);
+				if (el) {
+					var v = el.getAttribute('data-ecp-id');
+					if (v && v.trim() !== '') return String(v).trim();
+				}
+			}
+			return null;
+		}
+
+		function tryResolve(){
+			var pid = getCurrentId();
+			if (!pid) {
+				console.warn('BetterSEO eCellar: data-ecp-id not found yet.');
+				return false;
+			}
+			console.log('BetterSEO eCellar: resolved data-ecp-id =', pid);
+			var prod = catalog.find(function(it){ return String(it.product_id) === String(pid); });
+			if (!prod) {
+				console.warn('BetterSEO eCellar: product id ' + pid + ' not found in array.');
+				return false;
+			}
+			applyFrom(prod);
+			return true;
+		}
+
+		// Immediate try + scheduled retries
+		if (!tryResolve()){
+			var attempts = 0;
+			var maxAttempts = 10; // ~5s total
+			var iv = setInterval(function(){
+				attempts++;
+				if (tryResolve() || attempts >= maxAttempts) clearInterval(iv);
+			}, 500);
+		}
+
+		// Observe late DOM inserts under .ecp_ProductDetail
+		var host = document.querySelector('.ecp_ProductDetail') || document.body;
+		var mo = new MutationObserver(function(){
+			tryResolve();
+		});
+		mo.observe(host, {subtree:true, childList:true, attributes:true, attributeFilter:['data-ecp-id']});
+		// Auto-stop after 10s
+		setTimeout(function(){ try { mo.disconnect(); } catch(e){} }, 10000);
+	})();
+</script>
+<?php
+			return;
+		}
+
+		// --- CASE 2: Single product object ---
+		$title_src   = $responseMetadata->meta_title ?? $response->product_name ?? '';
+		$title       = $clean_text($title_src);
+		$desc_src    = $responseMetadata->meta_description ?? '';
+		$description = mb_substr($clean_text($desc_src), 0, 200);
+		$keywords    = $clean_text($responseMetadata->meta_keywords ?? '');
+		$price       = isset($response->price) ? ($response->price / 1.00) : '';
+		$img         = !empty($response->image_1) ? $response->image_1 : ($response->header_image ?? '');
+		$site_title  = get_bloginfo("name");
+		$url         = "https://" . rtrim($_SERVER["HTTP_HOST"], "/") . "/" . $request_url;
+
+		// Force document <title> via filters
+		add_filter('pre_get_document_title', fn() => $title, 99);
+		add_filter('document_title_parts', fn($parts) => ['title' => $title], 99);
+		add_filter('wpseo_title', fn() => $title, 99);
+		add_filter('rank_math/frontend/title', fn() => $title, 99);
+
+		echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' -->' . PHP_EOL;
+		echo "<meta name=\"description\" content=\"{$description}\"/>" . PHP_EOL;
+		echo "<meta name=\"keywords\" content=\"{$keywords}\"/>" . PHP_EOL;
+		echo "<link rel=\"canonical\" href=\"{$url}\"/>" . PHP_EOL;
+		echo "<meta property=\"og:type\" content=\"product\" />" . PHP_EOL;
+		echo "<meta property=\"og:title\" content=\"{$title}\"/>" . PHP_EOL;
+		echo "<meta property=\"og:description\" content=\"{$description}\"/>" . PHP_EOL;
+		echo "<meta property=\"og:image\" content=\"{$img}\"/>" . PHP_EOL;
+		echo "<meta property=\"og:url\" content=\"{$url}\"/>" . PHP_EOL;
+		echo "<meta property=\"og:site_name\" content=\"{$site_title}\" />" . PHP_EOL;
+
+		// JSON-LD
+		echo '<script type="application/ld+json">' . PHP_EOL;
+		echo json_encode([
+			"@context" => "http://schema.org",
+			"@type"    => "Product",
+			"name"     => $title,
+			"image"    => $img,
+			"description" => $description,
+			"brand"    => [
+				"@type" => "Brand",
+				"name"  => $site_title,
+				"logo"  => esc_url(wp_get_attachment_image_src(get_theme_mod("custom_logo"), "full")[0] ?? ''),
+			],
+			"offers"   => [
+				"@type"         => "Offer",
+				"priceCurrency" => "USD",
+				"price"         => $price,
+			]
+		], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+		echo '</script>' . PHP_EOL;
+	}
 }
+
 
 
 // Early resolver + hard lock for <title>
 add_action('wp', function () {
-    // Only for eCellar on product-detail/shop
-    if (get_option('betterseo_platform') !== 'ecellar') return;
+	// Only for eCellar on product-detail/shop
+	if (get_option('betterseo_platform') !== 'ecellar') return;
 
-    global $post;
-    if (empty($post) || !in_array($post->post_name, ['product-detail','shop'], true)) return;
+	global $post;
+	if (empty($post) || !in_array($post->post_name, ['product-detail','shop'], true)) return;
 
-    // Resolve slug
-    $request_url = trim($_SERVER['REQUEST_URI'] ?? '', '/');
-    $slug = '';
-    if ($request_url && strpos($request_url, 'product/') !== false) {
-        $parts = explode('/', $request_url);
-        $slug  = end($parts);
-    } elseif (!empty($_SERVER['QUERY_STRING'])) {
-        parse_str($_SERVER['QUERY_STRING'], $qp);
-        if (!empty($qp['slug'])) $slug = $qp['slug'];
-    }
-    if (!$slug) return;
+	// Resolve slug
+	$request_url = trim($_SERVER['REQUEST_URI'] ?? '', '/');
+	$slug = '';
+	if ($request_url && strpos($request_url, 'product/') !== false) {
+		$parts = explode('/', $request_url);
+		$slug  = end($parts);
+	} elseif (!empty($_SERVER['QUERY_STRING'])) {
+		parse_str($_SERVER['QUERY_STRING'], $qp);
+		if (!empty($qp['slug'])) $slug = $qp['slug'];
+	}
+	if (!$slug) return;
 
-    // Fast metadata-only API call
-    $key = get_option('betterseo_ecellar_api_key');
-    $headers = ["X-API-Key: {$key}", "User-Agent: WordPress"];
+	// Fast metadata-only API call
+	$key = get_option('betterseo_ecellar_api_key');
+	$headers = ["X-API-Key: {$key}", "User-Agent: WordPress"];
 
-    $curl = curl_init("https://public.ecellar-api.com/v1/products/{$slug}/metadata");
-    curl_setopt_array($curl, [
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_HTTPHEADER     => $headers,
-        CURLOPT_TIMEOUT        => 5,
-    ]);
-    $metaRaw = curl_exec($curl);
-    curl_close($curl);
+	$curl = curl_init("https://public.ecellar-api.com/v1/products/{$slug}/metadata");
+	curl_setopt_array($curl, [
+		CURLOPT_RETURNTRANSFER => true,
+		CURLOPT_HTTPHEADER     => $headers,
+		CURLOPT_TIMEOUT        => 5,
+	]);
+	$metaRaw = curl_exec($curl);
+	curl_close($curl);
 
-    $metaObj = $metaRaw ? json_decode($metaRaw) : null;
+	$metaObj = $metaRaw ? json_decode($metaRaw) : null;
 
-    // Fallback to product name if meta_title is empty
-    if (empty($metaObj->meta_title)) {
-        $curl = curl_init("https://public.ecellar-api.com/v1/products/{$slug}");
-        curl_setopt_array($curl, [
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_HTTPHEADER     => $headers,
-            CURLOPT_TIMEOUT        => 5,
-        ]);
-        $prodRaw = curl_exec($curl);
-        curl_close($curl);
-        $prodObj  = $prodRaw ? json_decode($prodRaw) : null;
-        $rawTitle = $metaObj->meta_title ?? ($prodObj->product_name ?? '');
-    } else {
-        $rawTitle = $metaObj->meta_title;
-    }
+	// Fallback to product name if meta_title is empty
+	if (empty($metaObj->meta_title)) {
+		$curl = curl_init("https://public.ecellar-api.com/v1/products/{$slug}");
+		curl_setopt_array($curl, [
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_HTTPHEADER     => $headers,
+			CURLOPT_TIMEOUT        => 5,
+		]);
+		$prodRaw = curl_exec($curl);
+		curl_close($curl);
+		$prodObj  = $prodRaw ? json_decode($prodRaw) : null;
+		$rawTitle = $metaObj->meta_title ?? ($prodObj->product_name ?? '');
+	} else {
+		$rawTitle = $metaObj->meta_title;
+	}
 
-    // Normalize text (<br>, spaces, quotes)
-    $clean = function($val) {
-        if (!is_string($val)) $val = (string)$val;
-        $val = preg_replace('/<\s*br\s*\/?>/i', ' ', $val);
-        $val = strip_tags($val);
-        $val = html_entity_decode($val, ENT_QUOTES|ENT_HTML5, 'UTF-8');
-        $val = preg_replace('/\s+/u', ' ', $val);
-        $val = str_replace('"', '', $val);
-        return trim($val);
-    };
-    $finalTitle = $clean($rawTitle);
-    if ($finalTitle === '') return;
+	// Normalize text (<br>, spaces, quotes)
+	$clean = function($val) {
+		if (!is_string($val)) $val = (string)$val;
+		$val = preg_replace('/<\s*br\s*\/?>/i', ' ', $val);
+		$val = strip_tags($val);
+		$val = html_entity_decode($val, ENT_QUOTES|ENT_HTML5, 'UTF-8');
+		$val = preg_replace('/\s+/u', ' ', $val);
+		$val = str_replace('"', '', $val);
+		return trim($val);
+	};
+	$finalTitle = $clean($rawTitle);
+	if ($finalTitle === '') return;
 
-    // Store globally for later hooks
-    $GLOBALS['gorilion_ecellar_final_title'] = $finalTitle;
+	// Store globally for later hooks
+	$GLOBALS['gorilion_ecellar_final_title'] = $finalTitle;
 
-    // Force titles at max priority
-    $force = function() use ($finalTitle) { return $finalTitle; };
-    add_filter('pre_get_document_title', $force, PHP_INT_MAX);           // Core
-    add_filter('document_title_parts', function($parts) use ($finalTitle){
-        $parts['title'] = $finalTitle; return $parts;
-    }, PHP_INT_MAX);
+	// Force titles at max priority
+	$force = function() use ($finalTitle) { return $finalTitle; };
+	add_filter('pre_get_document_title', $force, PHP_INT_MAX);           // Core
+	add_filter('document_title_parts', function($parts) use ($finalTitle){
+		$parts['title'] = $finalTitle; return $parts;
+	}, PHP_INT_MAX);
 
-    add_filter('wpseo_title', $force, PHP_INT_MAX);                       // Yoast
-    add_filter('rank_math/frontend/title', $force, PHP_INT_MAX);          // Rank Math
+	add_filter('wpseo_title', $force, PHP_INT_MAX);                       // Yoast
+	add_filter('rank_math/frontend/title', $force, PHP_INT_MAX);          // Rank Math
 
-    // client-side safety net if theme prints <title> manually
-    add_action('wp_print_scripts', function() use ($finalTitle){
-        echo '<script>if(document && document.title!=="'.esc_js($finalTitle).'"){document.title="'.esc_js($finalTitle).'";}</script>';
-    }, PHP_INT_MAX);
+	// client-side safety net if theme prints <title> manually
+	add_action('wp_print_scripts', function() use ($finalTitle){
+		echo '<script>if(document && document.title!=="'.esc_js($finalTitle).'"){document.title="'.esc_js($finalTitle).'";}</script>';
+	}, PHP_INT_MAX);
 }, 1);
 
 // Client-side watcher to prevent late overrides
 add_action('wp_print_scripts', function () {
-    if (empty($GLOBALS['gorilion_ecellar_final_title'])) return;
-    $finalTitle = $GLOBALS['gorilion_ecellar_final_title'];
-    ?>
-    <script>
-    (function () {
-        var DESIRED = <?php echo json_encode($finalTitle, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>;
+	if (empty($GLOBALS['gorilion_ecellar_final_title'])) return;
+	$finalTitle = $GLOBALS['gorilion_ecellar_final_title'];
+?>
+<script>
+	(function () {
+		var DESIRED = <?php echo json_encode($finalTitle, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>;
 
-        function clean(s) {
-            s = (s || '').toString();
-            s = s.replace(/<\s*br\s*\/?>/gi, ' ');
-            s = s.replace(/<[^>]*>/g, ' ');
-            s = s.replace(/\s+/g, ' ').trim();
-            return s.replace(/"/g, '');
-        }
+		function clean(s) {
+			s = (s || '').toString();
+			s = s.replace(/<\s*br\s*\/?>/gi, ' ');
+			s = s.replace(/<[^>]*>/g, ' ');
+			s = s.replace(/\s+/g, ' ').trim();
+			return s.replace(/"/g, '');
+		}
 
-        function apply() {
-            // <title>
-            if (clean(document.title) !== DESIRED) {
-                document.title = DESIRED;
-            }
-            // og:title / twitter:title / name="title"
-            [
-                ['meta[property="og:title"]','content'],
-                ['meta[name="twitter:title"]','content'],
-                ['meta[name="title"]','content']
-            ].forEach(function (pair) {
-                var el = document.querySelector(pair[0]);
-                if (el && clean(el.getAttribute(pair[1])) !== DESIRED) {
-                    el.setAttribute(pair[1], DESIRED);
-                }
-            });
-        }
+		function apply() {
+			// <title>
+			if (clean(document.title) !== DESIRED) {
+				document.title = DESIRED;
+			}
+			// og:title / twitter:title / name="title"
+			[
+				['meta[property="og:title"]','content'],
+				['meta[name="twitter:title"]','content'],
+				['meta[name="title"]','content']
+			].forEach(function (pair) {
+				var el = document.querySelector(pair[0]);
+				if (el && clean(el.getAttribute(pair[1])) !== DESIRED) {
+					el.setAttribute(pair[1], DESIRED);
+				}
+			});
+		}
 
-        // Apply now
-        apply();
+		// Apply now
+		apply();
 
-        // Watch for late mutations (plugins/widgets)
-        var stopAt = Date.now() + 8000;
-        var mo = new MutationObserver(function () {
-            apply();
-            if (Date.now() > stopAt) mo.disconnect();
-        });
-        mo.observe(document.head || document.documentElement, {
-            subtree: true,
-            childList: true,
-            attributes: true,
-            attributeFilter: ['content']
-        });
+		// Watch for late mutations (plugins/widgets)
+		var stopAt = Date.now() + 8000;
+		var mo = new MutationObserver(function () {
+			apply();
+			if (Date.now() > stopAt) mo.disconnect();
+		});
+		mo.observe(document.head || document.documentElement, {
+			subtree: true,
+			childList: true,
+			attributes: true,
+			attributeFilter: ['content']
+		});
 
-        // Re-apply after load for deferred hydration
-        window.addEventListener('load', function () {
-            setTimeout(apply, 0);
-            setTimeout(apply, 1200);
-            setTimeout(apply, 3500);
-        });
-    })();
-    </script>
-    <?php
+		// Re-apply after load for deferred hydration
+		window.addEventListener('load', function () {
+			setTimeout(apply, 0);
+			setTimeout(apply, 1200);
+			setTimeout(apply, 3500);
+		});
+	})();
+</script>
+<?php
 }, PHP_INT_MAX);
