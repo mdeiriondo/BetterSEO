@@ -3,10 +3,10 @@
  * Plugin Name: BetterSEO by Gorilion
  * Plugin URI: https://www.gorilion.com/better-seo/
  * Description: Dynamically enable code for Rank Math or Yoast SEO, and update from GitHub.
- * Version:     1.39
- * Author:      Gorilion
- * Author URI:  https://www.gorilion.com
- * License:     GPL2
+ * Version: 1.40
+ * Author: Gorilion
+ * Author URI: https://www.gorilion.com
+ * License: GPL2
  * Text Domain: gorilion-seo-switcher
  *
  * -----------------------------------------------------------------------
@@ -24,7 +24,7 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
-if ( ! defined('BETTERSEO_VERSION') ) {
+if (!defined('BETTERSEO_VERSION')) {
 	$data = get_file_data(__FILE__, array('Version' => 'Version'), 'plugin');
 	define('BETTERSEO_VERSION', isset($data['Version']) ? $data['Version'] : '');
 }
@@ -37,12 +37,12 @@ if ( ! defined('BETTERSEO_VERSION') ) {
 
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/mdeiriondo/BetterSEO', 
+	'https://github.com/mdeiriondo/BetterSEO',
 	__FILE__,
 	'BetterSEO by Gorilion'
 );
 
-//Set the branch that contains the stable release.
+// Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('main');
 
 /**
@@ -66,7 +66,7 @@ add_action('admin_notices', function () use ($myUpdateChecker) {
 	// Stop showing the notice if the user has dismissed it
 	if (get_user_meta(get_current_user_id(), 'betterseo_dismiss_update', true)) return;
 
-	$update = $myUpdateChecker->getUpdate(); 
+	$update = $myUpdateChecker->getUpdate();
 	if (!$update) return;
 
 	// Build URLs for "Update now" and "Dismiss"
@@ -103,9 +103,9 @@ function gorilion_seo_switcher_admin_menu()
 {
 	add_options_page(
 		'BetterSEO Configuration',  // Page title
-		'BetterSEO',  // Menu title
-		'manage_options',  // Capability required
-		'gorilion_seo_switcher',  // Menu slug
+		'BetterSEO',                // Menu title
+		'manage_options',           // Capability required
+		'gorilion_seo_switcher',    // Menu slug
 		'gorilion_seo_switcher_options_page'  // Callback function
 	);
 }
@@ -126,9 +126,9 @@ function gorilion_seo_switcher_register_settings()
 		'betterseo_tenant_id'
 	);
 	// Platform selector: commerce7 | ecellar
-	register_setting('gorilion_seo_switcher_settings_group','betterseo_platform');
+	register_setting('gorilion_seo_switcher_settings_group', 'betterseo_platform');
 	// eCellar credentials
-	register_setting('gorilion_seo_switcher_settings_group','betterseo_ecellar_api_key');
+	register_setting('gorilion_seo_switcher_settings_group', 'betterseo_ecellar_api_key');
 }
 
 /**
@@ -136,79 +136,79 @@ function gorilion_seo_switcher_register_settings()
  */
 function gorilion_seo_switcher_options_page()
 {
-?>
-<div class="wrap">
-	<h1>BetterSEO Configuration</h1>
-	<form method="post" action="options.php">
-		<?php
-	settings_fields('gorilion_seo_switcher_settings_group');
-	do_settings_sections('gorilion_seo_switcher_settings_group');
+	?>
+	<div class="wrap">
+		<h1>BetterSEO Configuration</h1>
+		<form method="post" action="options.php">
+			<?php
+			settings_fields('gorilion_seo_switcher_settings_group');
+			do_settings_sections('gorilion_seo_switcher_settings_group');
 
-	// Get current choice or default to 'rankmath'
-	$choice = get_option('gorilion_seo_switcher_choice', 'rankmath');
-	// Get the Tenant ID value
-	$tenant_id = get_option('betterseo_tenant_id', '');
-	$betterseo_platform = get_option('betterseo_platform', 'commerce7');
-	$ecellar_api_key = get_option('betterseo_ecellar_api_key', '');
-		?>
+			// Get current choice or default to 'rankmath'
+			$choice = get_option('gorilion_seo_switcher_choice', 'rankmath');
+			// Get the Tenant ID value
+			$tenant_id = get_option('betterseo_tenant_id', '');
+			$betterseo_platform = get_option('betterseo_platform', 'commerce7');
+			$ecellar_api_key = get_option('betterseo_ecellar_api_key', '');
+			?>
 
-		<table class="form-table">
-			<tr valign="top">
-				<th scope="row">Which SEO plugin do you use?</th>
-				<td>
-					<label>
-						<input type="radio" name="gorilion_seo_switcher_choice"
-							   value="rankmath" <?php checked($choice, 'rankmath'); ?>>
-						Rank Math
-					</label>
-					<br/>
-					<label>
-						<input type="radio" name="gorilion_seo_switcher_choice"
-							   value="yoast" <?php checked($choice, 'yoast'); ?>>
-						Yoast SEO
-					</label>
-				</td>
-			</tr>
-			<tr valign="top">
-				<th scope="row">Platform</th>
-				<td>
-					<label><input type="radio" name="betterseo_platform" value="commerce7" <?php checked($betterseo_platform, 'commerce7'); ?>> Commerce7</label><br/>
-					<label><input type="radio" name="betterseo_platform" value="ecellar" <?php checked($betterseo_platform, 'ecellar'); ?>> eCellar</label>
-				</td>
-			</tr>
-			<tr valign="top" class="field-commerce7">
-				<th scope="row">Tenant ID for Warehouse</th>
-				<td>
-					<input type="text" name="betterseo_tenant_id" value="<?php echo esc_attr($tenant_id); ?>" />
-				</td>
-			</tr>
-			<tr valign="top" class="field-ecellar">
-				<th scope="row">eCellar API Key</th>
-				<td><input type="text" name="betterseo_ecellar_api_key" value="<?php echo esc_attr($ecellar_api_key); ?>" /></td>
-			</tr>
-		</table>
+			<table class="form-table">
+				<tr valign="top">
+					<th scope="row">Which SEO plugin do you use?</th>
+					<td>
+						<label>
+							<input type="radio" name="gorilion_seo_switcher_choice"
+								   value="rankmath" <?php checked($choice, 'rankmath'); ?>>
+							Rank Math
+						</label>
+						<br/>
+						<label>
+							<input type="radio" name="gorilion_seo_switcher_choice"
+								   value="yoast" <?php checked($choice, 'yoast'); ?>>
+							Yoast SEO
+						</label>
+					</td>
+				</tr>
+				<tr valign="top">
+					<th scope="row">Platform</th>
+					<td>
+						<label><input type="radio" name="betterseo_platform" value="commerce7" <?php checked($betterseo_platform, 'commerce7'); ?>> Commerce7</label><br/>
+						<label><input type="radio" name="betterseo_platform" value="ecellar" <?php checked($betterseo_platform, 'ecellar'); ?>> eCellar</label>
+					</td>
+				</tr>
+				<tr valign="top" class="field-commerce7">
+					<th scope="row">Tenant ID for Warehouse</th>
+					<td>
+						<input type="text" name="betterseo_tenant_id" value="<?php echo esc_attr($tenant_id); ?>" />
+					</td>
+				</tr>
+				<tr valign="top" class="field-ecellar">
+					<th scope="row">eCellar API Key</th>
+					<td><input type="text" name="betterseo_ecellar_api_key" value="<?php echo esc_attr($ecellar_api_key); ?>" /></td>
+				</tr>
+			</table>
 
-		<?php submit_button(); ?>
-	</form>
-</div>
-<script>
-	jQuery(document).ready(function($){
-		function togglePlatformFields() {
-			var platform = $('input[name="betterseo_platform"]:checked').val();
-			if (platform === 'commerce7') {
-				$('.field-commerce7').show();
-				$('.field-ecellar').hide();
-			} else if (platform === 'ecellar') {
-				$('.field-ecellar').show();
-				$('.field-commerce7').hide();
+			<?php submit_button(); ?>
+		</form>
+	</div>
+	<script>
+		jQuery(document).ready(function($){
+			function togglePlatformFields() {
+				var platform = $('input[name="betterseo_platform"]:checked').val();
+				if (platform === 'commerce7') {
+					$('.field-commerce7').show();
+					$('.field-ecellar').hide();
+				} else if (platform === 'ecellar') {
+					$('.field-ecellar').show();
+					$('.field-commerce7').hide();
+				}
 			}
-		}
 
-		togglePlatformFields();
-		$('input[name="betterseo_platform"]').on('change', togglePlatformFields);
-	});
-</script>
-<?php
+			togglePlatformFields();
+			$('input[name="betterseo_platform"]').on('change', togglePlatformFields);
+		});
+	</script>
+	<?php
 }
 
 /**
@@ -550,7 +550,7 @@ function gorilion_seo_switcher_inject_functions()
 
 
 /** --------------------
- * eCellar integration 
+ * eCellar integration
  * ------------------ */
 add_action("wp_head", "gorilion_opengraph_ecellar");
 function gorilion_opengraph_ecellar() {
@@ -629,129 +629,129 @@ function gorilion_opengraph_ecellar() {
 			echo '<meta property="og:site_name" content="' . esc_attr($site_title) . '" />' . PHP_EOL;
 			echo '<script type="application/ld+json" class="ecellar-jsonld">{}</script>' . PHP_EOL;
 
-?>
-<script>
-	(function(){
-		var catalog = <?php echo $encoded; ?>;
+			?>
+			<script>
+				(function(){
+					var catalog = <?php echo $encoded; ?>;
 
-		console.group("%cBetterSEO eCellar Data","color:green;font-weight:bold;");
-		console.log("Full Array Response:", catalog);
-		console.groupEnd();
+					console.group("%cBetterSEO eCellar Data","color:green;font-weight:bold;");
+					console.log("Full Array Response:", catalog);
+					console.groupEnd();
 
-		function clean(t){
-			t = (t || "").toString();
-			t = t.replace(/<\s*br\s*\/?>/gi, ' ');
-			t = t.replace(/<[^>]+>/g, '');
-			t = t.replace(/\s+/g, ' ').trim();
-			return t.replace(/"/g, '');
-		}
+					function clean(t){
+						t = (t || "").toString();
+						t = t.replace(/<\s*br\s*\/?>/gi, ' ');
+						t = t.replace(/<[^>]+>/g, '');
+						t = t.replace(/\s+/g, ' ').trim();
+						return t.replace(/"/g, '');
+					}
 
-		function setMeta(selector, attr, value){
-			var el = document.querySelector(selector);
-			if(!el){
-				el = document.createElement('meta');
-				if (selector.indexOf('property="') !== -1) {
-					el.setAttribute('property', selector.match(/property="([^"]+)"/)[1]);
-				} else if (selector.indexOf('name="') !== -1) {
-					el.setAttribute('name', selector.match(/name="([^"]+)"/)[1]);
-				}
-				document.head.appendChild(el);
-			}
-			if (el.getAttribute(attr) !== value) el.setAttribute(attr, value);
-		}
+					function setMeta(selector, attr, value){
+						var el = document.querySelector(selector);
+						if(!el){
+							el = document.createElement('meta');
+							if (selector.indexOf('property="') !== -1) {
+								el.setAttribute('property', selector.match(/property="([^"]+)"/)[1]);
+							} else if (selector.indexOf('name="') !== -1) {
+								el.setAttribute('name', selector.match(/name="([^"]+)"/)[1]);
+							}
+							document.head.appendChild(el);
+						}
+						if (el.getAttribute(attr) !== value) el.setAttribute(attr, value);
+					}
 
-		function applyFrom(prod){
-			if(!prod) return;
+					function applyFrom(prod){
+						if(!prod) return;
 
-			var title = clean(prod.product_name || "");
-			var desc  = clean(prod.description || "");
-			if (desc.length > 200) desc = desc.slice(0,200);
-			var img   = prod.image_1 || prod.header_image || "";
-			var price = prod.price || "";
-			var site  = <?php echo json_encode($site_title); ?>;
+						var title = clean(prod.product_name || "");
+						var desc  = clean(prod.description || "");
+						if (desc.length > 200) desc = desc.slice(0,200);
+						var img   = prod.image_1 || prod.header_image || "";
+						var price = prod.price || "";
+						var site  = <?php echo json_encode($site_title); ?>;
 
-			// Update title + metas
-			if (document.title !== title) document.title = title;
-			setMeta('meta[property="og:title"]', 'content', title);
-			setMeta('meta[name="description"]', 'content', desc);
-			setMeta('meta[property="og:description"]', 'content', desc);
-			if (img) setMeta('meta[property="og:image"]', 'content', img);
+						// Update title + metas
+						if (document.title !== title) document.title = title;
+						setMeta('meta[property="og:title"]', 'content', title);
+						setMeta('meta[name="description"]', 'content', desc);
+						setMeta('meta[property="og:description"]', 'content', desc);
+						if (img) setMeta('meta[property="og:image"]', 'content', img);
 
-			// JSON-LD
-			var ld = {
-				"@context":"http://schema.org",
-				"@type":"Product",
-				"name": title,
-				"image": img || undefined,
-				"description": desc,
-				"brand": {"@type":"Brand","name": site},
-				"offers": {"@type":"Offer","priceCurrency":"USD","price": String(price || "")}
-			};
-			var s = document.querySelector('script[type="application/ld+json"].ecellar-jsonld');
-			if (!s){ s = document.createElement('script'); s.type='application/ld+json'; s.className='ecellar-jsonld'; document.head.appendChild(s); }
-			s.textContent = JSON.stringify(ld);
+						// JSON-LD
+						var ld = {
+							"@context":"http://schema.org",
+							"@type":"Product",
+							"name": title,
+							"image": img || undefined,
+							"description": desc,
+							"brand": {"@type":"Brand","name": site},
+							"offers": {"@type":"Offer","priceCurrency":"USD","price": String(price || "")}
+						};
+						var s = document.querySelector('script[type="application/ld+json"].ecellar-jsonld');
+						if (!s){ s = document.createElement('script'); s.type='application/ld+json'; s.className='ecellar-jsonld'; document.head.appendChild(s); }
+						s.textContent = JSON.stringify(ld);
 
-			// Logs for debugging
-			console.group('%cBetterSEO eCellar Matched','color:purple;font-weight:bold;');
-			console.log('Found product_id:', prod.product_id);
-			console.log('Product:', prod);
-			console.groupEnd();
-		}
+						// Logs for debugging
+						console.group('%cBetterSEO eCellar Matched','color:purple;font-weight:bold;');
+						console.log('Found product_id:', prod.product_id);
+						console.log('Product:', prod);
+						console.groupEnd();
+					}
 
-		// Find data-ecp-id with robust strategies
-		function getCurrentId(){
-			var sel = [
-				'.ecp_ProductDetail > [data-ecp-id]',
-				'.ecp_ProductDetail [data-ecp-id]',
-				'[data-ecp-id]'
-			];
-			for (var i=0;i<sel.length;i++){
-				var el = document.querySelector(sel[i]);
-				if (el) {
-					var v = el.getAttribute('data-ecp-id');
-					if (v && v.trim() !== '') return String(v).trim();
-				}
-			}
-			return null;
-		}
+					// Find data-ecp-id with robust strategies
+					function getCurrentId(){
+						var sel = [
+							'.ecp_ProductDetail > [data-ecp-id]',
+							'.ecp_ProductDetail [data-ecp-id]',
+							'[data-ecp-id]'
+						];
+						for (var i=0;i<sel.length;i++){
+							var el = document.querySelector(sel[i]);
+							if (el) {
+								var v = el.getAttribute('data-ecp-id');
+								if (v && v.trim() !== '') return String(v).trim();
+							}
+						}
+						return null;
+					}
 
-		function tryResolve(){
-			var pid = getCurrentId();
-			if (!pid) {
-				console.warn('BetterSEO eCellar: data-ecp-id not found yet.');
-				return false;
-			}
-			console.log('BetterSEO eCellar: resolved data-ecp-id =', pid);
-			var prod = catalog.find(function(it){ return String(it.product_id) === String(pid); });
-			if (!prod) {
-				console.warn('BetterSEO eCellar: product id ' + pid + ' not found in array.');
-				return false;
-			}
-			applyFrom(prod);
-			return true;
-		}
+					function tryResolve(){
+						var pid = getCurrentId();
+						if (!pid) {
+							console.warn('BetterSEO eCellar: data-ecp-id not found yet.');
+							return false;
+						}
+						console.log('BetterSEO eCellar: resolved data-ecp-id =', pid);
+						var prod = catalog.find(function(it){ return String(it.product_id) === String(pid); });
+						if (!prod) {
+							console.warn('BetterSEO eCellar: product id ' + pid + ' not found in array.');
+							return false;
+						}
+						applyFrom(prod);
+						return true;
+					}
 
-		// Immediate try + scheduled retries
-		if (!tryResolve()){
-			var attempts = 0;
-			var maxAttempts = 10; // ~5s total
-			var iv = setInterval(function(){
-				attempts++;
-				if (tryResolve() || attempts >= maxAttempts) clearInterval(iv);
-			}, 500);
-		}
+					// Immediate try + scheduled retries
+					if (!tryResolve()){
+						var attempts = 0;
+						var maxAttempts = 10; // ~5s total
+						var iv = setInterval(function(){
+							attempts++;
+							if (tryResolve() || attempts >= maxAttempts) clearInterval(iv);
+						}, 500);
+					}
 
-		// Observe late DOM inserts under .ecp_ProductDetail
-		var host = document.querySelector('.ecp_ProductDetail') || document.body;
-		var mo = new MutationObserver(function(){
-			tryResolve();
-		});
-		mo.observe(host, {subtree:true, childList:true, attributes:true, attributeFilter:['data-ecp-id']});
-		// Auto-stop after 10s
-		setTimeout(function(){ try { mo.disconnect(); } catch(e){} }, 10000);
-	})();
-</script>
-<?php
+					// Observe late DOM inserts under .ecp_ProductDetail
+					var host = document.querySelector('.ecp_ProductDetail') || document.body;
+					var mo = new MutationObserver(function(){
+						tryResolve();
+					});
+					mo.observe(host, {subtree:true, childList:true, attributes:true, attributeFilter:['data-ecp-id']});
+					// Auto-stop after 10s
+					setTimeout(function(){ try { mo.disconnect(); } catch(e){} }, 10000);
+				})();
+			</script>
+			<?php
 			return;
 		}
 
@@ -805,7 +805,6 @@ function gorilion_opengraph_ecellar() {
 		echo '</script>' . PHP_EOL;
 	}
 }
-
 
 
 // Early resolver + hard lock for <title>
@@ -896,68 +895,68 @@ add_action('wp', function () {
 add_action('wp_print_scripts', function () {
 	if (empty($GLOBALS['gorilion_ecellar_final_title'])) return;
 	$finalTitle = $GLOBALS['gorilion_ecellar_final_title'];
-?>
-<script>
-	(function () {
-		var DESIRED = <?php echo json_encode($finalTitle, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>;
+	?>
+	<script>
+		(function () {
+			var DESIRED = <?php echo json_encode($finalTitle, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>;
 
-		function clean(s) {
-			s = (s || '').toString();
-			var t = document.createElement('textarea'); t.innerHTML = s; s = t.value;
-			s = s.replace(/<\s*br\s*\/?>/gi, ' ');
-			s = s.replace(/<[^>]*>/g, ' ');
-			s = s.replace(/\s+/g, ' ').trim();
-			return s.replace(/"/g, '');
-		}
-
-		function apply() {
-			// <title>
-			if (clean(document.title) !== DESIRED) {
-				document.title = DESIRED;
+			function clean(s) {
+				s = (s || '').toString();
+				var t = document.createElement('textarea'); t.innerHTML = s; s = t.value;
+				s = s.replace(/<\s*br\s*\/?>/gi, ' ');
+				s = s.replace(/<[^>]*>/g, ' ');
+				s = s.replace(/\s+/g, ' ').trim();
+				return s.replace(/"/g, '');
 			}
-			// og:title / twitter:title / name="title"
-			[
-				['meta[property="og:title"]','content'],
-				['meta[name="twitter:title"]','content'],
-				['meta[name="title"]','content']
-			].forEach(function (pair) {
-				var el = document.querySelector(pair[0]);
-				if (el && clean(el.getAttribute(pair[1])) !== DESIRED) {
-					el.setAttribute(pair[1], DESIRED);
+
+			function apply() {
+				// <title>
+				if (clean(document.title) !== DESIRED) {
+					document.title = DESIRED;
 				}
-			});
-		}
+				// og:title / twitter:title / name="title"
+				[
+					['meta[property="og:title"]','content'],
+					['meta[name="twitter:title"]','content'],
+					['meta[name="title"]','content']
+				].forEach(function (pair) {
+					var el = document.querySelector(pair[0]);
+					if (el && clean(el.getAttribute(pair[1])) !== DESIRED) {
+						el.setAttribute(pair[1], DESIRED);
+					}
+				});
+			}
 
-		// Apply now
-		apply();
-
-		// Watch for late mutations (plugins/widgets)
-		var stopAt = Date.now() + 8000;
-		var mo = new MutationObserver(function () {
+			// Apply now
 			apply();
-			if (Date.now() > stopAt) mo.disconnect();
-		});
-		mo.observe(document.head || document.documentElement, {
-			subtree: true,
-			childList: true,
-			attributes: true,
-			attributeFilter: ['content']
-		});
 
-		// Re-apply after load for deferred hydration
-		window.addEventListener('load', function () {
-			setTimeout(apply, 0);
-			setTimeout(apply, 1200);
-			setTimeout(apply, 3500);
-		});
-	})();
-</script>
-<?php
+			// Watch for late mutations (plugins/widgets)
+			var stopAt = Date.now() + 8000;
+			var mo = new MutationObserver(function () {
+				apply();
+				if (Date.now() > stopAt) mo.disconnect();
+			});
+			mo.observe(document.head || document.documentElement, {
+				subtree: true,
+				childList: true,
+				attributes: true,
+				attributeFilter: ['content']
+			});
+
+			// Re-apply after load for deferred hydration
+			window.addEventListener('load', function () {
+				setTimeout(apply, 0);
+				setTimeout(apply, 1200);
+				setTimeout(apply, 3500);
+			});
+		})();
+	</script>
+	<?php
 }, PHP_INT_MAX);
 
 
 /** ---------------
- * SPA overwrite 
+ * SPA overwrite
  * ------------- */
 add_action('wp_print_scripts', function () {
 	if (get_option('betterseo_platform') !== 'ecellar') return;
