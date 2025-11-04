@@ -3,7 +3,7 @@
  * Plugin Name: BetterSEO by Gorilion
  * Plugin URI: https://www.gorilion.com/better-seo/
  * Description: Dynamically enable code for Rank Math or Yoast SEO, and update from GitHub.
- * Version: 1.40
+ * Version: 1.41
  * Author: Gorilion
  * Author URI: https://www.gorilion.com
  * License: GPL2
@@ -126,9 +126,24 @@ function gorilion_seo_switcher_register_settings()
 		'betterseo_tenant_id'
 	);
 	// Platform selector: commerce7 | ecellar
-	register_setting('gorilion_seo_switcher_settings_group', 'betterseo_platform');
+	register_setting(
+		'gorilion_seo_switcher_settings_group', 
+		'betterseo_platform'
+	);
 	// eCellar credentials
-	register_setting('gorilion_seo_switcher_settings_group', 'betterseo_ecellar_api_key');
+	register_setting(
+		'gorilion_seo_switcher_settings_group', 
+		'betterseo_ecellar_api_key'
+	);
+	// BetterSEO fields
+ 	register_setting(
+        'gorilion_seo_switcher_settings_group',
+        'betterseo_user'
+    );
+    register_setting(
+        'gorilion_seo_switcher_settings_group',
+        'betterseo_wp_product_page_slug'
+    );
 }
 
 /**
@@ -253,9 +268,15 @@ function gorilion_seo_switcher_inject_functions()
 			}
 		}
 
-		add_filter('rank_math/sitemap/providers', function ($external_providers) {
-			$external_providers['custom'] = new \RankMath\Sitemap\Providers\Custom();
-			return $external_providers;
+		add_filter('rank_math/sitemap/providers', function ($providers) {
+			if (class_exists('\RankMath\Sitemap\Providers\Custom')) {
+				try {
+					$providers['custom'] = new \RankMath\Sitemap\Providers\Custom();
+				} catch (\Throwable $e) {
+					// If instantiation fails, silently fall back to default providers
+				}
+			}
+			return $providers;
 		});
 
 		add_action('wp_head', 'gorilion_opengraph_rankmath');
