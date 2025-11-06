@@ -3,7 +3,7 @@
  * Plugin Name: BetterSEO by Gorilion
  * Plugin URI: https://www.gorilion.com/better-seo/
  * Description: Dynamically enable code for Rank Math or Yoast SEO, and update from GitHub.
- * Version: 1.41
+ * Version: 1.42
  * Author: Gorilion
  * Author URI: https://www.gorilion.com
  * License: GPL2
@@ -136,14 +136,14 @@ function gorilion_seo_switcher_register_settings()
 		'betterseo_ecellar_api_key'
 	);
 	// BetterSEO fields
- 	register_setting(
-        'gorilion_seo_switcher_settings_group',
-        'betterseo_user'
-    );
-    register_setting(
-        'gorilion_seo_switcher_settings_group',
-        'betterseo_wp_product_page_slug'
-    );
+	register_setting(
+		'gorilion_seo_switcher_settings_group',
+		'betterseo_user'
+	);
+	register_setting(
+		'gorilion_seo_switcher_settings_group',
+		'betterseo_wp_product_page_slug'
+	);
 }
 
 /**
@@ -151,79 +151,100 @@ function gorilion_seo_switcher_register_settings()
  */
 function gorilion_seo_switcher_options_page()
 {
-	?>
-	<div class="wrap">
-		<h1>BetterSEO Configuration</h1>
-		<form method="post" action="options.php">
-			<?php
-			settings_fields('gorilion_seo_switcher_settings_group');
-			do_settings_sections('gorilion_seo_switcher_settings_group');
+    ?>
+    <div class="wrap">
+        <h1>BetterSEO Configuration</h1>
+        <form method="post" action="options.php">
+            <?php
+            settings_fields('gorilion_seo_switcher_settings_group');
+            do_settings_sections('gorilion_seo_switcher_settings_group');
 
-			// Get current choice or default to 'rankmath'
-			$choice = get_option('gorilion_seo_switcher_choice', 'rankmath');
-			// Get the Tenant ID value
-			$tenant_id = get_option('betterseo_tenant_id', '');
-			$betterseo_platform = get_option('betterseo_platform', 'commerce7');
-			$ecellar_api_key = get_option('betterseo_ecellar_api_key', '');
-			?>
+            // Current settings
+            $choice              = get_option('gorilion_seo_switcher_choice', 'rankmath');
+            $tenant_id           = get_option('betterseo_tenant_id', '');
+            $betterseo_platform  = get_option('betterseo_platform', 'commerce7');
+            $ecellar_api_key     = get_option('betterseo_ecellar_api_key', '');
+            $betterseo_user      = get_option('betterseo_user', '');
 
-			<table class="form-table">
-				<tr valign="top">
-					<th scope="row">Which SEO plugin do you use?</th>
-					<td>
-						<label>
-							<input type="radio" name="gorilion_seo_switcher_choice"
-								   value="rankmath" <?php checked($choice, 'rankmath'); ?>>
-							Rank Math
-						</label>
-						<br/>
-						<label>
-							<input type="radio" name="gorilion_seo_switcher_choice"
-								   value="yoast" <?php checked($choice, 'yoast'); ?>>
-							Yoast SEO
-						</label>
-					</td>
-				</tr>
-				<tr valign="top">
-					<th scope="row">Platform</th>
-					<td>
-						<label><input type="radio" name="betterseo_platform" value="commerce7" <?php checked($betterseo_platform, 'commerce7'); ?>> Commerce7</label><br/>
-						<label><input type="radio" name="betterseo_platform" value="ecellar" <?php checked($betterseo_platform, 'ecellar'); ?>> eCellar</label>
-					</td>
-				</tr>
-				<tr valign="top" class="field-commerce7">
-					<th scope="row">Tenant ID for Warehouse</th>
-					<td>
-						<input type="text" name="betterseo_tenant_id" value="<?php echo esc_attr($tenant_id); ?>" />
-					</td>
-				</tr>
-				<tr valign="top" class="field-ecellar">
-					<th scope="row">eCellar API Key</th>
-					<td><input type="text" name="betterseo_ecellar_api_key" value="<?php echo esc_attr($ecellar_api_key); ?>" /></td>
-				</tr>
-			</table>
+            // Build Commerce7 Admin URL only when platform is commerce7 and tenant is present
+            $commerce7_admin_url = '';
+            if ($betterseo_platform === 'commerce7' && !empty($tenant_id)) {
+                // Sanitize tenant for subdomain usage
+                $tenant_clean = strtolower(preg_replace('/[^a-z0-9\-]/i', '', $tenant_id));
+                $commerce7_admin_url = sprintf('https://%s.admin.platform.commerce7.com/login', $tenant_clean);
+            }
+            ?>
+            <table class="form-table">
+                <tr valign="top">
+                    <th scope="row">Which SEO plugin do you use?</th>
+                    <td>
+                        <label>
+                            <input type="radio" name="gorilion_seo_switcher_choice" value="rankmath" <?php checked($choice, 'rankmath'); ?>>
+                            Rank Math
+                        </label>
+                        <br/>
+                        <label>
+                            <input type="radio" name="gorilion_seo_switcher_choice" value="yoast" <?php checked($choice, 'yoast'); ?>>
+                            Yoast SEO
+                        </label>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row">Platform</th>
+                    <td>
+                        <label><input type="radio" name="betterseo_platform" value="commerce7" <?php checked($betterseo_platform, 'commerce7'); ?>> Commerce7</label><br/>
+                        <label><input type="radio" name="betterseo_platform" value="ecellar" <?php checked($betterseo_platform, 'ecellar'); ?>> eCellar</label>
+                    </td>
+                </tr>
+                <tr valign="top" class="field-commerce7">
+                    <th scope="row">Tenant ID for Warehouse</th>
+                    <td>
+                        <input type="text" name="betterseo_tenant_id" value="<?php echo esc_attr($tenant_id); ?>" />
+                    </td>
+                </tr>
+                <tr valign="top" class="field-ecellar">
+                    <th scope="row">eCellar API Key</th>
+                    <td><input type="text" name="betterseo_ecellar_api_key" value="<?php echo esc_attr($ecellar_api_key); ?>" /></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row">BetterSEO Username</th>
+                    <td><input type="text" name="betterseo_user" value="<?php echo esc_attr($betterseo_user); ?>" /></td>
+                </tr>
+            </table>
 
-			<?php submit_button(); ?>
-		</form>
-	</div>
-	<script>
-		jQuery(document).ready(function($){
-			function togglePlatformFields() {
-				var platform = $('input[name="betterseo_platform"]:checked').val();
-				if (platform === 'commerce7') {
-					$('.field-commerce7').show();
-					$('.field-ecellar').hide();
-				} else if (platform === 'ecellar') {
-					$('.field-ecellar').show();
-					$('.field-commerce7').hide();
-				}
-			}
+            <?php submit_button(); ?>
+        </form>
+        <div class="betterseo-links">
+            <p>
+                <a href="https://betterseo.gorilion.com/" target="_blank" rel="noopener">BetterSEO by Gorilion</a>
+                <?php if (!empty($commerce7_admin_url)) : ?>
+                    &nbsp;-&nbsp;
+                    <a href="<?php echo esc_url($commerce7_admin_url); ?>" target="_blank" rel="noopener">
+                        BetterSEO by Gorilion
+                    </a>
+                <?php endif; ?>
+            </p>
+        </div>
+    </div>
 
-			togglePlatformFields();
-			$('input[name="betterseo_platform"]').on('change', togglePlatformFields);
-		});
-	</script>
-	<?php
+    <script>
+    jQuery(document).ready(function($){
+        // Toggle visibility of platform-specific rows
+        function togglePlatformFields() {
+            var platform = $('input[name="betterseo_platform"]:checked').val();
+            if (platform === 'commerce7') {
+                $('.field-commerce7').show();
+                $('.field-ecellar').hide();
+            } else if (platform === 'ecellar') {
+                $('.field-ecellar').show();
+                $('.field-commerce7').hide();
+            }
+        }
+        togglePlatformFields();
+        $('input[name="betterseo_platform"]').on('change', togglePlatformFields);
+    });
+    </script>
+    <?php
 }
 
 /**
@@ -268,16 +289,31 @@ function gorilion_seo_switcher_inject_functions()
 			}
 		}
 
+		// Load the Custom provider class only if Rank Math's interface exists.
+		add_action('init', function () {
+			if (interface_exists('\RankMath\Sitemap\Providers\Provider')) {
+				$provider_file = plugin_dir_path(__FILE__) . 'inc/rankmath-custom-sitemap.php';
+				if (file_exists($provider_file)) {
+					require_once $provider_file;
+				}
+			}
+		}, 1);
+
+		// Register the provider; fall back silently if anything fails.
 		add_filter('rank_math/sitemap/providers', function ($providers) {
 			if (class_exists('\RankMath\Sitemap\Providers\Custom')) {
 				try {
 					$providers['custom'] = new \RankMath\Sitemap\Providers\Custom();
 				} catch (\Throwable $e) {
-					// If instantiation fails, silently fall back to default providers
+					// Keep Rank Math defaults if instantiation fails.
 				}
 			}
 			return $providers;
-		});
+		}, 50);
+
+		// Disable sitemap caching during testing to force a fresh index build.
+		add_filter('rank_math/sitemap/enable_caching', '__return_false');
+
 
 		add_action('wp_head', 'gorilion_opengraph_rankmath');
 
@@ -650,129 +686,129 @@ function gorilion_opengraph_ecellar() {
 			echo '<meta property="og:site_name" content="' . esc_attr($site_title) . '" />' . PHP_EOL;
 			echo '<script type="application/ld+json" class="ecellar-jsonld">{}</script>' . PHP_EOL;
 
-			?>
-			<script>
-				(function(){
-					var catalog = <?php echo $encoded; ?>;
+?>
+<script>
+	(function(){
+		var catalog = <?php echo $encoded; ?>;
 
-					console.group("%cBetterSEO eCellar Data","color:green;font-weight:bold;");
-					console.log("Full Array Response:", catalog);
-					console.groupEnd();
+		console.group("%cBetterSEO eCellar Data","color:green;font-weight:bold;");
+		console.log("Full Array Response:", catalog);
+		console.groupEnd();
 
-					function clean(t){
-						t = (t || "").toString();
-						t = t.replace(/<\s*br\s*\/?>/gi, ' ');
-						t = t.replace(/<[^>]+>/g, '');
-						t = t.replace(/\s+/g, ' ').trim();
-						return t.replace(/"/g, '');
-					}
+		function clean(t){
+			t = (t || "").toString();
+			t = t.replace(/<\s*br\s*\/?>/gi, ' ');
+			t = t.replace(/<[^>]+>/g, '');
+			t = t.replace(/\s+/g, ' ').trim();
+			return t.replace(/"/g, '');
+		}
 
-					function setMeta(selector, attr, value){
-						var el = document.querySelector(selector);
-						if(!el){
-							el = document.createElement('meta');
-							if (selector.indexOf('property="') !== -1) {
-								el.setAttribute('property', selector.match(/property="([^"]+)"/)[1]);
-							} else if (selector.indexOf('name="') !== -1) {
-								el.setAttribute('name', selector.match(/name="([^"]+)"/)[1]);
-							}
-							document.head.appendChild(el);
-						}
-						if (el.getAttribute(attr) !== value) el.setAttribute(attr, value);
-					}
+		function setMeta(selector, attr, value){
+			var el = document.querySelector(selector);
+			if(!el){
+				el = document.createElement('meta');
+				if (selector.indexOf('property="') !== -1) {
+					el.setAttribute('property', selector.match(/property="([^"]+)"/)[1]);
+				} else if (selector.indexOf('name="') !== -1) {
+					el.setAttribute('name', selector.match(/name="([^"]+)"/)[1]);
+				}
+				document.head.appendChild(el);
+			}
+			if (el.getAttribute(attr) !== value) el.setAttribute(attr, value);
+		}
 
-					function applyFrom(prod){
-						if(!prod) return;
+		function applyFrom(prod){
+			if(!prod) return;
 
-						var title = clean(prod.product_name || "");
-						var desc  = clean(prod.description || "");
-						if (desc.length > 200) desc = desc.slice(0,200);
-						var img   = prod.image_1 || prod.header_image || "";
-						var price = prod.price || "";
-						var site  = <?php echo json_encode($site_title); ?>;
+			var title = clean(prod.product_name || "");
+			var desc  = clean(prod.description || "");
+			if (desc.length > 200) desc = desc.slice(0,200);
+			var img   = prod.image_1 || prod.header_image || "";
+			var price = prod.price || "";
+			var site  = <?php echo json_encode($site_title); ?>;
 
-						// Update title + metas
-						if (document.title !== title) document.title = title;
-						setMeta('meta[property="og:title"]', 'content', title);
-						setMeta('meta[name="description"]', 'content', desc);
-						setMeta('meta[property="og:description"]', 'content', desc);
-						if (img) setMeta('meta[property="og:image"]', 'content', img);
+			// Update title + metas
+			if (document.title !== title) document.title = title;
+			setMeta('meta[property="og:title"]', 'content', title);
+			setMeta('meta[name="description"]', 'content', desc);
+			setMeta('meta[property="og:description"]', 'content', desc);
+			if (img) setMeta('meta[property="og:image"]', 'content', img);
 
-						// JSON-LD
-						var ld = {
-							"@context":"http://schema.org",
-							"@type":"Product",
-							"name": title,
-							"image": img || undefined,
-							"description": desc,
-							"brand": {"@type":"Brand","name": site},
-							"offers": {"@type":"Offer","priceCurrency":"USD","price": String(price || "")}
-						};
-						var s = document.querySelector('script[type="application/ld+json"].ecellar-jsonld');
-						if (!s){ s = document.createElement('script'); s.type='application/ld+json'; s.className='ecellar-jsonld'; document.head.appendChild(s); }
-						s.textContent = JSON.stringify(ld);
+			// JSON-LD
+			var ld = {
+				"@context":"http://schema.org",
+				"@type":"Product",
+				"name": title,
+				"image": img || undefined,
+				"description": desc,
+				"brand": {"@type":"Brand","name": site},
+				"offers": {"@type":"Offer","priceCurrency":"USD","price": String(price || "")}
+			};
+			var s = document.querySelector('script[type="application/ld+json"].ecellar-jsonld');
+			if (!s){ s = document.createElement('script'); s.type='application/ld+json'; s.className='ecellar-jsonld'; document.head.appendChild(s); }
+			s.textContent = JSON.stringify(ld);
 
-						// Logs for debugging
-						console.group('%cBetterSEO eCellar Matched','color:purple;font-weight:bold;');
-						console.log('Found product_id:', prod.product_id);
-						console.log('Product:', prod);
-						console.groupEnd();
-					}
+			// Logs for debugging
+			console.group('%cBetterSEO eCellar Matched','color:purple;font-weight:bold;');
+			console.log('Found product_id:', prod.product_id);
+			console.log('Product:', prod);
+			console.groupEnd();
+		}
 
-					// Find data-ecp-id with robust strategies
-					function getCurrentId(){
-						var sel = [
-							'.ecp_ProductDetail > [data-ecp-id]',
-							'.ecp_ProductDetail [data-ecp-id]',
-							'[data-ecp-id]'
-						];
-						for (var i=0;i<sel.length;i++){
-							var el = document.querySelector(sel[i]);
-							if (el) {
-								var v = el.getAttribute('data-ecp-id');
-								if (v && v.trim() !== '') return String(v).trim();
-							}
-						}
-						return null;
-					}
+		// Find data-ecp-id with robust strategies
+		function getCurrentId(){
+			var sel = [
+				'.ecp_ProductDetail > [data-ecp-id]',
+				'.ecp_ProductDetail [data-ecp-id]',
+				'[data-ecp-id]'
+			];
+			for (var i=0;i<sel.length;i++){
+				var el = document.querySelector(sel[i]);
+				if (el) {
+					var v = el.getAttribute('data-ecp-id');
+					if (v && v.trim() !== '') return String(v).trim();
+				}
+			}
+			return null;
+		}
 
-					function tryResolve(){
-						var pid = getCurrentId();
-						if (!pid) {
-							console.warn('BetterSEO eCellar: data-ecp-id not found yet.');
-							return false;
-						}
-						console.log('BetterSEO eCellar: resolved data-ecp-id =', pid);
-						var prod = catalog.find(function(it){ return String(it.product_id) === String(pid); });
-						if (!prod) {
-							console.warn('BetterSEO eCellar: product id ' + pid + ' not found in array.');
-							return false;
-						}
-						applyFrom(prod);
-						return true;
-					}
+		function tryResolve(){
+			var pid = getCurrentId();
+			if (!pid) {
+				console.warn('BetterSEO eCellar: data-ecp-id not found yet.');
+				return false;
+			}
+			console.log('BetterSEO eCellar: resolved data-ecp-id =', pid);
+			var prod = catalog.find(function(it){ return String(it.product_id) === String(pid); });
+			if (!prod) {
+				console.warn('BetterSEO eCellar: product id ' + pid + ' not found in array.');
+				return false;
+			}
+			applyFrom(prod);
+			return true;
+		}
 
-					// Immediate try + scheduled retries
-					if (!tryResolve()){
-						var attempts = 0;
-						var maxAttempts = 10; // ~5s total
-						var iv = setInterval(function(){
-							attempts++;
-							if (tryResolve() || attempts >= maxAttempts) clearInterval(iv);
-						}, 500);
-					}
+		// Immediate try + scheduled retries
+		if (!tryResolve()){
+			var attempts = 0;
+			var maxAttempts = 10; // ~5s total
+			var iv = setInterval(function(){
+				attempts++;
+				if (tryResolve() || attempts >= maxAttempts) clearInterval(iv);
+			}, 500);
+		}
 
-					// Observe late DOM inserts under .ecp_ProductDetail
-					var host = document.querySelector('.ecp_ProductDetail') || document.body;
-					var mo = new MutationObserver(function(){
-						tryResolve();
-					});
-					mo.observe(host, {subtree:true, childList:true, attributes:true, attributeFilter:['data-ecp-id']});
-					// Auto-stop after 10s
-					setTimeout(function(){ try { mo.disconnect(); } catch(e){} }, 10000);
-				})();
-			</script>
-			<?php
+		// Observe late DOM inserts under .ecp_ProductDetail
+		var host = document.querySelector('.ecp_ProductDetail') || document.body;
+		var mo = new MutationObserver(function(){
+			tryResolve();
+		});
+		mo.observe(host, {subtree:true, childList:true, attributes:true, attributeFilter:['data-ecp-id']});
+		// Auto-stop after 10s
+		setTimeout(function(){ try { mo.disconnect(); } catch(e){} }, 10000);
+	})();
+</script>
+<?php
 			return;
 		}
 
@@ -916,63 +952,63 @@ add_action('wp', function () {
 add_action('wp_print_scripts', function () {
 	if (empty($GLOBALS['gorilion_ecellar_final_title'])) return;
 	$finalTitle = $GLOBALS['gorilion_ecellar_final_title'];
-	?>
-	<script>
-		(function () {
-			var DESIRED = <?php echo json_encode($finalTitle, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>;
+?>
+<script>
+	(function () {
+		var DESIRED = <?php echo json_encode($finalTitle, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>;
 
-			function clean(s) {
-				s = (s || '').toString();
-				var t = document.createElement('textarea'); t.innerHTML = s; s = t.value;
-				s = s.replace(/<\s*br\s*\/?>/gi, ' ');
-				s = s.replace(/<[^>]*>/g, ' ');
-				s = s.replace(/\s+/g, ' ').trim();
-				return s.replace(/"/g, '');
+		function clean(s) {
+			s = (s || '').toString();
+			var t = document.createElement('textarea'); t.innerHTML = s; s = t.value;
+			s = s.replace(/<\s*br\s*\/?>/gi, ' ');
+			s = s.replace(/<[^>]*>/g, ' ');
+			s = s.replace(/\s+/g, ' ').trim();
+			return s.replace(/"/g, '');
+		}
+
+		function apply() {
+			// <title>
+			if (clean(document.title) !== DESIRED) {
+				document.title = DESIRED;
 			}
-
-			function apply() {
-				// <title>
-				if (clean(document.title) !== DESIRED) {
-					document.title = DESIRED;
+			// og:title / twitter:title / name="title"
+			[
+				['meta[property="og:title"]','content'],
+				['meta[name="twitter:title"]','content'],
+				['meta[name="title"]','content']
+			].forEach(function (pair) {
+				var el = document.querySelector(pair[0]);
+				if (el && clean(el.getAttribute(pair[1])) !== DESIRED) {
+					el.setAttribute(pair[1], DESIRED);
 				}
-				// og:title / twitter:title / name="title"
-				[
-					['meta[property="og:title"]','content'],
-					['meta[name="twitter:title"]','content'],
-					['meta[name="title"]','content']
-				].forEach(function (pair) {
-					var el = document.querySelector(pair[0]);
-					if (el && clean(el.getAttribute(pair[1])) !== DESIRED) {
-						el.setAttribute(pair[1], DESIRED);
-					}
-				});
-			}
+			});
+		}
 
-			// Apply now
+		// Apply now
+		apply();
+
+		// Watch for late mutations (plugins/widgets)
+		var stopAt = Date.now() + 8000;
+		var mo = new MutationObserver(function () {
 			apply();
+			if (Date.now() > stopAt) mo.disconnect();
+		});
+		mo.observe(document.head || document.documentElement, {
+			subtree: true,
+			childList: true,
+			attributes: true,
+			attributeFilter: ['content']
+		});
 
-			// Watch for late mutations (plugins/widgets)
-			var stopAt = Date.now() + 8000;
-			var mo = new MutationObserver(function () {
-				apply();
-				if (Date.now() > stopAt) mo.disconnect();
-			});
-			mo.observe(document.head || document.documentElement, {
-				subtree: true,
-				childList: true,
-				attributes: true,
-				attributeFilter: ['content']
-			});
-
-			// Re-apply after load for deferred hydration
-			window.addEventListener('load', function () {
-				setTimeout(apply, 0);
-				setTimeout(apply, 1200);
-				setTimeout(apply, 3500);
-			});
-		})();
-	</script>
-	<?php
+		// Re-apply after load for deferred hydration
+		window.addEventListener('load', function () {
+			setTimeout(apply, 0);
+			setTimeout(apply, 1200);
+			setTimeout(apply, 3500);
+		});
+	})();
+</script>
+<?php
 }, PHP_INT_MAX);
 
 
@@ -985,8 +1021,8 @@ add_action('wp_print_scripts', function () {
 	if (empty($post) || !in_array($post->post_name, ['product-detail','shop'], true)) return;
 
 	$site_title = get_bloginfo("name");
-	?>
-	<script>
+?>
+<script>
 	(function(){
 		function q(s){return document.querySelector(s);}
 		function getParam(n){ try{ return new URL(location.href).searchParams.get(n); }catch(e){ return null; } }
@@ -1032,103 +1068,103 @@ add_action('wp_print_scripts', function () {
 							  (q('meta[property="og:description"]') && q('meta[property="og:description"]').content) || '');
 			if (desc.length > 200) desc = desc.slice(0,200);
 			var img   = (imgEl && (imgEl.getAttribute('data-ecp-image') || imgEl.src)) ||
-						(q('meta[property="og:image"]') && q('meta[property="og:image"]').content) || '';
+				(q('meta[property="og:image"]') && q('meta[property="og:image"]').content) || '';
 			var priceEl = q('[data-ecp-price]') || q('[data-price]') || q('.product-price, .price');
 			var price = priceEl ? clean(priceEl.getAttribute('data-ecp-price') || priceEl.getAttribute('data-price') || priceEl.textContent) : '';
 			return { title, desc, img, price, url: location.href };
 		}
 		function collectCategory(){
 			var catTitleEl = q('.ecp_ProductList [data-ecp-collection-name]') ||
-							 q('.ecp_ProductList h1') ||
-							 q('.collection-title') ||
-							 q('.ecp-columns-right h1') ||
-							 q('.ecp-columns-right h2');
+				q('.ecp_ProductList h1') ||
+				q('.collection-title') ||
+				q('.ecp-columns-right h1') ||
+				q('.ecp-columns-right h2');
 			var title = clean( (catTitleEl && (catTitleEl.getAttribute?.('data-ecp-collection-name') || catTitleEl.innerHTML || catTitleEl.textContent)) );
-			if (!title) title = (function(){ var s=getParam('slug')||''; return s?titleCase(s):''; })();
-			var descEl = q('.ecp_ProductList .collection-description') || q('.ecp-columns-right p');
-			var desc = clean(descEl ? (descEl.innerHTML || descEl.textContent) : '');
+											   if (!title) title = (function(){ var s=getParam('slug')||''; return s?titleCase(s):''; })();
+								var descEl = q('.ecp_ProductList .collection-description') || q('.ecp-columns-right p');
+							  var desc = clean(descEl ? (descEl.innerHTML || descEl.textContent) : '');
 			if (desc.length > 200) desc = desc.slice(0,200);
 			var imgEl = q('.ecp_ProductList img[data-ecp-image], .ecp_ProductList img[src]');
 			var img = imgEl ? (imgEl.getAttribute('data-ecp-image') || imgEl.src) : (q('meta[property="og:image"]')?.content || '');
-			return { title, desc, img, price: '', url: location.href };
-		}
+																					 return { title, desc, img, price: '', url: location.href };
+																					 }
 
-		var isApplying = false;
-		var lastApplied = {title:'', desc:'', img:'', url:''};
-		function apply(d){
-			if(!d) return;
-			if (d.title === lastApplied.title && d.desc===lastApplied.desc && d.img===lastApplied.img && d.url===lastApplied.url) return;
-			isApplying = true;
+																					 var isApplying = false;
+																					 var lastApplied = {title:'', desc:'', img:'', url:''};
+																					 function apply(d){
+				if(!d) return;
+				if (d.title === lastApplied.title && d.desc===lastApplied.desc && d.img===lastApplied.img && d.url===lastApplied.url) return;
+				isApplying = true;
 
-			if (d.title && document.title !== d.title) document.title = d.title;
-			if (d.url){ setLink('canonical', d.url); setMeta('meta[property="og:url"]','content', d.url); }
-			if (d.desc){ setMeta('meta[name="description"]','content', d.desc); setMeta('meta[property="og:description"]','content', d.desc); setMeta('meta[name="twitter:description"]','content', d.desc); }
-			if (d.title){ setMeta('meta[property="og:title"]','content', d.title); setMeta('meta[name="title"]','content', d.title); setMeta('meta[name="twitter:title"]','content', d.title); }
-			if (d.img){ setMeta('meta[property="og:image"]','content', d.img); setMeta('meta[name="twitter:image"]','content', d.img); }
-			setMeta('meta[property="og:site_name"]','content', <?php echo json_encode($site_title); ?>);
-			setMeta('meta[name="twitter:card"]','content', 'summary_large_image');
+				if (d.title && document.title !== d.title) document.title = d.title;
+				if (d.url){ setLink('canonical', d.url); setMeta('meta[property="og:url"]','content', d.url); }
+				if (d.desc){ setMeta('meta[name="description"]','content', d.desc); setMeta('meta[property="og:description"]','content', d.desc); setMeta('meta[name="twitter:description"]','content', d.desc); }
+				if (d.title){ setMeta('meta[property="og:title"]','content', d.title); setMeta('meta[name="title"]','content', d.title); setMeta('meta[name="twitter:title"]','content', d.title); }
+				if (d.img){ setMeta('meta[property="og:image"]','content', d.img); setMeta('meta[name="twitter:image"]','content', d.img); }
+				setMeta('meta[property="og:site_name"]','content', <?php echo json_encode($site_title); ?>);
+				setMeta('meta[name="twitter:card"]','content', 'summary_large_image');
 
-			if (!isCategoryView()){
-				try{
-					var s = document.querySelector('script[type="application/ld+json"].ecellar-jsonld');
-					if (!s){ s = document.createElement('script'); s.type='application/ld+json'; s.className='ecellar-jsonld'; (document.head||document.documentElement).appendChild(s); }
-					s.textContent = JSON.stringify({
-						"@context":"http://schema.org","@type":"Product",
-						"name": d.title || undefined,
-						"image": d.img || undefined,
-						"description": d.desc || undefined,
-						"brand": {"@type":"Brand","name": <?php echo json_encode($site_title); ?>},
-						"offers": {"@type":"Offer","priceCurrency":"USD","price": (d.price?String(d.price):undefined)}
-					});
-				}catch(e){}
-			}
-			lastApplied = {title:d.title, desc:d.desc, img:d.img, url:d.url};
-			setTimeout(function(){ isApplying = false; }, 0);
-		}
+				if (!isCategoryView()){
+					try{
+						var s = document.querySelector('script[type="application/ld+json"].ecellar-jsonld');
+						if (!s){ s = document.createElement('script'); s.type='application/ld+json'; s.className='ecellar-jsonld'; (document.head||document.documentElement).appendChild(s); }
+						s.textContent = JSON.stringify({
+							"@context":"http://schema.org","@type":"Product",
+							"name": d.title || undefined,
+							"image": d.img || undefined,
+							"description": d.desc || undefined,
+							"brand": {"@type":"Brand","name": <?php echo json_encode($site_title); ?>},
+									  "offers": {"@type":"Offer","priceCurrency":"USD","price": (d.price?String(d.price):undefined)}
+									 });
+						}catch(e){}
+					}
+					lastApplied = {title:d.title, desc:d.desc, img:d.img, url:d.url};
+					setTimeout(function(){ isApplying = false; }, 0);
+				}
 
-		var tDebounce = null;
-		function scheduleApply(delay){
-			if (tDebounce) clearTimeout(tDebounce);
-			tDebounce = setTimeout(function(){
-				apply(isCategoryView() ? collectCategory() : collectProduct());
-			}, delay || 0);
-		}
+				var tDebounce = null;
+				function scheduleApply(delay){
+					if (tDebounce) clearTimeout(tDebounce);
+					tDebounce = setTimeout(function(){
+						apply(isCategoryView() ? collectCategory() : collectProduct());
+					}, delay || 0);
+				}
 
-		var lastHref = location.href;
-		function onUrlMaybeChanged(){
-			if (location.href !== lastHref){
-				lastHref = location.href;
-				scheduleApply(0);
-				scheduleApply(400);
-				scheduleApply(1200);
-			}
-		}
-		document.addEventListener('click', function(e){
-			setTimeout(onUrlMaybeChanged, 0);
-			setTimeout(onUrlMaybeChanged, 200);
-		}, true);
-		['pushState','replaceState'].forEach(function(fn){
-			var orig = history[fn]; if(!orig) return;
-			history[fn] = function(){ var ret = orig.apply(this, arguments); onUrlMaybeChanged(); return ret; };
-		});
-		window.addEventListener('popstate', onUrlMaybeChanged);
-		window.addEventListener('hashchange', onUrlMaybeChanged);
+				var lastHref = location.href;
+				function onUrlMaybeChanged(){
+					if (location.href !== lastHref){
+						lastHref = location.href;
+						scheduleApply(0);
+						scheduleApply(400);
+						scheduleApply(1200);
+					}
+				}
+				document.addEventListener('click', function(e){
+					setTimeout(onUrlMaybeChanged, 0);
+					setTimeout(onUrlMaybeChanged, 200);
+				}, true);
+				['pushState','replaceState'].forEach(function(fn){
+					var orig = history[fn]; if(!orig) return;
+					history[fn] = function(){ var ret = orig.apply(this, arguments); onUrlMaybeChanged(); return ret; };
+				});
+				window.addEventListener('popstate', onUrlMaybeChanged);
+				window.addEventListener('hashchange', onUrlMaybeChanged);
 
-		var headMO = new MutationObserver(function(muts){
-			if (isApplying) return;
-			var relevant = muts.some(function(m){ return m.type==='attributes' && ['content','href'].includes(m.attributeName); });
-			if (relevant) scheduleApply(80);
-		});
-		headMO.observe(document.head || document.documentElement, {subtree:true, attributes:true, attributeFilter:['content','href']});
+				var headMO = new MutationObserver(function(muts){
+					if (isApplying) return;
+					var relevant = muts.some(function(m){ return m.type==='attributes' && ['content','href'].includes(m.attributeName); });
+					if (relevant) scheduleApply(80);
+				});
+				headMO.observe(document.head || document.documentElement, {subtree:true, attributes:true, attributeFilter:['content','href']});
 
-		var host = q('.ecp_ProductDetail') || document.body;
-		var bodyMO = new MutationObserver(function(){ if (!isApplying) scheduleApply(120); });
-		bodyMO.observe(host, {subtree:true, childList:true, attributes:true});
+				var host = q('.ecp_ProductDetail') || document.body;
+				var bodyMO = new MutationObserver(function(){ if (!isApplying) scheduleApply(120); });
+				bodyMO.observe(host, {subtree:true, childList:true, attributes:true});
 
-		function runInitial(){ scheduleApply(0); scheduleApply(400); scheduleApply(1200); }
-		if (document.readyState === 'complete' || document.readyState === 'interactive'){ runInitial(); }
-		else { document.addEventListener('DOMContentLoaded', runInitial); window.addEventListener('load', runInitial); }
-	})();
-	</script>
-	<?php
+				function runInitial(){ scheduleApply(0); scheduleApply(400); scheduleApply(1200); }
+				if (document.readyState === 'complete' || document.readyState === 'interactive'){ runInitial(); }
+				else { document.addEventListener('DOMContentLoaded', runInitial); window.addEventListener('load', runInitial); }
+			})();
+</script>
+<?php
 }, PHP_INT_MAX - 1);
