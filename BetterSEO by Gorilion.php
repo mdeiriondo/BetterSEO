@@ -442,6 +442,15 @@ function gorilion_seo_switcher_inject_functions()
 		// --------------------------------------------------
 		// YOAST SEO CODE BLOCK
 		// --------------------------------------------------
+		add_action('wp', function () {
+        if (is_page('product')) {
+            add_filter('wpseo_frontend_presenters', '__return_empty_array', 99);
+            add_filter('wpseo_schema_output', '__return_false', 99);
+            if (class_exists('WPSEO_Frontend')) {
+                remove_action('wp_head', [ WPSEO_Frontend::get_instance(), 'head' ], 1);
+            }
+        }
+    	});
 
 		// Remove Yoast SEO functions
 		if (function_exists('wpseo_head')) {
