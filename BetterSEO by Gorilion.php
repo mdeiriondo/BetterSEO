@@ -216,11 +216,11 @@ function gorilion_seo_switcher_options_page()
         </form>
         <div class="betterseo-links">
             <p>
-                <a href="https://betterseo.gorilion.com/" target="_blank" rel="noopener">BetterSEO by Gorilion</a>
+                <a href="https://www.gorilion.com/better-seo/" target="_blank" rel="noopener">BetterSEO by Gorilion</a>
                 <?php if (!empty($commerce7_admin_url)) : ?>
                     &nbsp;-&nbsp;
                     <a href="<?php echo esc_url($commerce7_admin_url); ?>" target="_blank" rel="noopener">
-                        BetterSEO by Gorilion
+                        Commerce7 Admin
                     </a>
                 <?php endif; ?>
             </p>
@@ -404,7 +404,7 @@ function gorilion_seo_switcher_inject_functions()
 				$full_url = 'https://' . rtrim($_SERVER['HTTP_HOST'], '/') . '/' . $request_url;
 				$site_title = get_bloginfo('name');
 
-				echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' -->';
+				echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' :: RANKMATH -->';
 				echo '<title>' . $title . "</title>\n";
 				echo '<meta name="description" content="' . $description . "\"/>\n";
 				echo '<meta name="keywords" content="' . $keywords . "\">\n";
@@ -541,7 +541,7 @@ function gorilion_seo_switcher_inject_functions()
 					$new_title = isset($response->collection->seo->title) ? $response->collection->seo->title : '';
 					$new_description = isset($response->collection->seo->description) ? $response->collection->seo->description : '';
 
-					echo '<!-- BetterSEO meta -->';
+					echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' :: YOASTSEO -->'."\n";
 					echo '<title>' . $new_title . "</title>\n";
 					echo '<meta name="description" content="' . $new_description . "\"/>\n";
 				}
@@ -577,7 +577,7 @@ function gorilion_seo_switcher_inject_functions()
 				$full_url = 'https://' . rtrim($_SERVER['HTTP_HOST'], '/') . '/' . $request_url . '/' . $result;
 				$site_title = get_bloginfo('name');
 
-				echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' -->';
+				echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' :: YOASTSEO -->'."\n";
 				echo '<title>' . $title . "</title>\n";
 				echo '<meta name="description" content="' . $description . "\"/>\n";
 				echo '<meta name="keywords" content="' . $keywords . "\">\n";
@@ -684,7 +684,7 @@ function gorilion_opengraph_ecellar() {
 			$site_title = get_bloginfo("name");
 			$url        = "https://" . rtrim($_SERVER["HTTP_HOST"], "/") . "/" . trim($_SERVER["REQUEST_URI"], "/");
 
-			echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' -->' . PHP_EOL;
+			echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' :: ECELLAR -->' . PHP_EOL;
 			echo '<meta name="description" content="" />' . PHP_EOL;
 			echo '<meta name="keywords" content="" />' . PHP_EOL;
 			echo "<link rel=\"canonical\" href=\"{$url}\"/>" . PHP_EOL;
