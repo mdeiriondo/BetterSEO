@@ -330,7 +330,7 @@ function gorilion_seo_switcher_inject_functions()
 			}
 
 			// Get the request URL to determine slug.
-			$request_url = $_SERVER['REQUEST_URI'];
+			$request_url = filter_var($_SERVER['REQUEST_URI'], FILTER_SANITIZE_URL);
 			$request_url = trim($request_url, '/');
 			$parts = explode('/', $request_url);
 			$result = end($parts);
@@ -506,7 +506,7 @@ function gorilion_seo_switcher_inject_functions()
 			}
 
 			// Similar logic to get $result from the request URI.
-			$request_url = $_SERVER['REQUEST_URI'];
+			$request_url = filter_var($_SERVER['REQUEST_URI'], FILTER_SANITIZE_URL);
 			$request_url = trim($request_url, '/');
 			$parts = explode('/', $request_url);
 			$result = end($parts);
