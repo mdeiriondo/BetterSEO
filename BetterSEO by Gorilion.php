@@ -31,6 +31,45 @@ if (!defined('BETTERSEO_VERSION')) {
 
 /**
  * ------------------------------------------------------------------
+ * PLUGIN ACTIVATION HOOK
+ * ------------------------------------------------------------------
+ */
+register_activation_hook(__FILE__, 'betterseo_activation');
+function betterseo_activation() {
+	// Register the custom post type
+	betterseo_register_product_cpt();
+	
+	// Flush rewrite rules so URLs work immediately
+	flush_rewrite_rules();
+	
+	// Schedule daily cron job for product sync
+	if (!wp_next_scheduled('betterseo_daily_product_sync')) {
+		wp_schedule_event(time(), 'daily', 'betterseo_daily_product_sync');
+	}
+	
+	// Trigger initial product sync
+	betterseo_sync_c7_products();
+}
+
+/**
+ * ------------------------------------------------------------------
+ * PLUGIN DEACTIVATION HOOK
+ * ------------------------------------------------------------------
+ */
+register_deactivation_hook(__FILE__, 'betterseo_deactivation');
+function betterseo_deactivation() {
+	// Clear scheduled cron job
+	$timestamp = wp_next_scheduled('betterseo_daily_product_sync');
+	if ($timestamp) {
+		wp_unschedule_event($timestamp, 'betterseo_daily_product_sync');
+	}
+	
+	// Flush rewrite rules
+	flush_rewrite_rules();
+}
+
+/**
+ * ------------------------------------------------------------------
  * 1) GITHUB PLUGIN UPDATE CONFIGURATION
  * ------------------------------------------------------------------
  */
@@ -144,6 +183,228 @@ function gorilion_seo_switcher_register_settings()
 		'gorilion_seo_switcher_settings_group',
 		'betterseo_wp_product_page_slug'
 	);
+}
+
+/**
+ * ------------------------------------------------------------------
+ * REGISTER CUSTOM POST TYPE FOR PRODUCTS
+ * ------------------------------------------------------------------
+ */
+add_action('init', 'betterseo_register_product_cpt');
+function betterseo_register_product_cpt() {
+	register_post_type('c7_product', array(
+		'labels' => array(
+			'name' => 'BetterSEO Products',
+			'singular_name' => 'BetterSEO Product',
+			'add_new' => 'Add New Product',
+			'add_new_item' => 'Add New BetterSEO Product',
+			'edit_item' => 'Edit BetterSEO Product'
+		),
+		'public' => true,
+		'has_archive' => false,
+		'rewrite' => array('slug' => 'product'),
+		'supports' => array('title', 'editor', 'elementor'),
+		'show_in_rest' => true,
+		'show_in_menu' => true,
+		'menu_icon' => 'dashicons-products'
+	));
+}
+
+/**
+ * ------------------------------------------------------------------
+ * COMMERCE7 PRODUCT SYNC FUNCTIONS
+ * ------------------------------------------------------------------
+ */
+
+/**
+ * Hook the daily cron event to the sync function
+ */
+add_action('betterseo_daily_product_sync', 'betterseo_sync_c7_products');
+
+/**
+ * Fetch all products from Commerce7 and create/update WordPress posts
+ */
+function betterseo_sync_c7_products() {
+	$platform = get_option('betterseo_platform', 'commerce7');
+	if ($platform !== 'commerce7') {
+		error_log('BetterSEO: Skipping product sync - platform is not Commerce7');
+		return;
+	}
+	
+	$tenant_id = get_option('betterseo_tenant_id', '');
+	if (empty($tenant_id)) {
+		error_log('BetterSEO: Cannot sync products - Tenant ID is not configured');
+		return;
+	}
+	
+	error_log('BetterSEO: Starting Commerce7 product sync...');
+	
+	$products = betterseo_fetch_c7_products($tenant_id);
+	
+	if (empty($products)) {
+		error_log('BetterSEO: No products found or API error');
+		return;
+	}
+	
+	error_log('BetterSEO: Found ' . count($products) . ' products from Commerce7');
+	
+	$created = 0;
+	$updated = 0;
+	
+	foreach ($products as $product) {
+		$result = betterseo_create_or_update_product_post($product);
+		if ($result === 'created') {
+			$created++;
+		} elseif ($result === 'updated') {
+			$updated++;
+		}
+	}
+	
+	error_log("BetterSEO: Product sync complete - Created: $created, Updated: $updated");
+}
+
+/**
+ * Fetch all products from Commerce7 API
+ */
+function betterseo_fetch_c7_products($tenant_id) {
+	$url = 'https://api.commerce7.com/v1/product/for-web';
+	$headers = array('tenant: ' . $tenant_id);
+	
+	$curl = curl_init($url);
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+	curl_setopt($curl, CURLOPT_TIMEOUT, 30);
+	
+	$response = curl_exec($curl);
+	$http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+	
+	if ($response === false || $http_code !== 200) {
+		$error = curl_error($curl);
+		error_log('BetterSEO: Commerce7 API error - ' . $error . ' (HTTP ' . $http_code . ')');
+		curl_close($curl);
+		return array();
+	}
+	
+	curl_close($curl);
+	
+	$data = json_decode($response, true);
+	
+	if (!isset($data['products']) || !is_array($data['products'])) {
+		error_log('BetterSEO: Invalid API response format');
+		return array();
+	}
+	
+	return $data['products'];
+}
+
+/**
+ * Create or update a WordPress post for a Commerce7 product
+ */
+function betterseo_create_or_update_product_post($product) {
+	if (empty($product['slug'])) {
+		error_log('BetterSEO: Product missing slug, skipping');
+		return false;
+	}
+	
+	$slug = sanitize_title($product['slug']);
+	$title = isset($product['title']) ? $product['title'] : (isset($product['name']) ? $product['name'] : $slug);
+	$c7_product_id = isset($product['id']) ? $product['id'] : '';
+	
+	$existing_posts = get_posts(array(
+		'post_type' => 'c7_product',
+		'name' => $slug,
+		'posts_per_page' => 1,
+		'post_status' => 'any'
+	));
+	
+	$post_content = '<div id="c7-content"></div>';
+	
+	$post_data = array(
+		'post_title' => $title,
+		'post_name' => $slug,
+		'post_content' => $post_content,
+		'post_status' => 'publish',
+		'post_type' => 'c7_product',
+		'post_author' => 1
+	);
+	
+	if (!empty($existing_posts)) {
+		$post_data['ID'] = $existing_posts[0]->ID;
+		wp_update_post($post_data);
+		
+		update_post_meta($existing_posts[0]->ID, '_c7_product_id', $c7_product_id);
+		update_post_meta($existing_posts[0]->ID, '_c7_slug', $slug);
+		
+		error_log("BetterSEO: Updated product post - Slug: $slug, ID: {$existing_posts[0]->ID}");
+		return 'updated';
+	} else {
+		$post_id = wp_insert_post($post_data);
+		
+		if (is_wp_error($post_id)) {
+			error_log('BetterSEO: Error creating post for slug: ' . $slug . ' - ' . $post_id->get_error_message());
+			return false;
+		}
+		
+		update_post_meta($post_id, '_c7_product_id', $c7_product_id);
+		update_post_meta($post_id, '_c7_slug', $slug);
+		
+		update_post_meta($post_id, '_elementor_edit_mode', 'builder');
+		
+		error_log("BetterSEO: Created product post - Slug: $slug, ID: $post_id");
+		return 'created';
+	}
+}
+
+/**
+ * ------------------------------------------------------------------
+ * 404 HANDLER - TRIGGER FULL PRODUCT SYNC
+ * ------------------------------------------------------------------
+ */
+add_action('template_redirect', 'betterseo_handle_product_404');
+
+function betterseo_handle_product_404() {
+	$platform = get_option('betterseo_platform', 'commerce7');
+	if ($platform !== 'commerce7' || !is_404()) {
+		return;
+	}
+	
+	$request_uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
+	$request_uri = strtok($request_uri, '?');
+	$request_uri = trim($request_uri, '/');
+	
+	if (!preg_match('#^product/([^/]+)$#', $request_uri, $matches)) {
+		return;
+	}
+	
+	$slug = $matches[1];
+	
+	error_log("BetterSEO: 404 detected for product slug: $slug - Triggering full product sync");
+	
+	$last_sync = get_transient('betterseo_last_404_sync');
+	if ($last_sync) {
+		error_log("BetterSEO: Sync already triggered recently, skipping");
+		return;
+	}
+	
+	// Set transient to prevent multiple syncs within 5 minutes
+	set_transient('betterseo_last_404_sync', time(), 5 * MINUTE_IN_SECONDS);
+	
+	betterseo_sync_c7_products();
+	
+	$existing_posts = get_posts(array(
+		'post_type' => 'c7_product',
+		'name' => $slug,
+		'posts_per_page' => 1,
+		'post_status' => 'publish'
+	));
+	
+	if (!empty($existing_posts)) {
+		error_log("BetterSEO: Product now exists after sync, redirecting to: /product/$slug/");
+		wp_redirect(home_url('/product/' . $slug . '/'), 302);
+		exit;
+	} else {
+		error_log("BetterSEO: Product still not found after sync: $slug");
+	}
 }
 
 /**
@@ -373,8 +634,8 @@ function gorilion_seo_switcher_inject_functions()
 				}
 			}
 
-			// If it's a "product" page (Commerce7 only).
-			if ($betterseo_platform === 'commerce7' && $post->post_name === 'product') {
+			// If it's a "c7_product" type page (Commerce7 only).
+			if ($betterseo_platform === 'commerce7' && $post->post_type === 'c7_product') {
 				$tenant_id = get_option('betterseo_tenant_id', 'default-tenant-id');
 				$url = 'https://api.commerce7.com/v1/product/slug/' . $result . '/for-web';
 				$headers = array('tenant: ' . $tenant_id);
@@ -547,8 +808,8 @@ function gorilion_seo_switcher_inject_functions()
 				}
 			}
 
-			// If it's a "product" page (Commerce7 only).
-			if ($betterseo_platform === 'commerce7' && $post->post_name === 'product') {
+			// If it's a "c7_product" type page (Commerce7 only).
+			if ($betterseo_platform === 'commerce7' && $post->post_type === 'c7_product') {
 				$tenant_id = get_option('betterseo_tenant_id', 'default-tenant-id');
 				$url = 'https://api.commerce7.com/v1/product/slug/' . $result . '/for-web';
 				$headers = array('tenant: ' . $tenant_id);
