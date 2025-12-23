@@ -205,7 +205,7 @@ function betterseo_register_product_cpt() {
 		'rewrite' => array('slug' => 'product'),
 		'supports' => array('title', 'editor', 'elementor'),
 		'show_in_rest' => true,
-		'show_in_menu' => true,
+		'show_in_menu' => false,
 		'menu_icon' => 'dashicons-products'
 	));
 }
