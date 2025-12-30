@@ -49,6 +49,27 @@ function betterseo_activation() {
 	
 	// Trigger initial product sync
 	betterseo_sync_c7_products();
+
+	// Delete existing WordPress page with slug 'product' to avoid conflicts
+	$product_page = get_page_by_path('product');
+	if ($product_page instanceof WP_Post) {
+		wp_delete_post($product_page->ID, true);
+	}
+
+	// Disable Redirection plugin rules that point to the product slug
+	global $wpdb;
+	$table_items = $wpdb->prefix . 'redirection_items';
+	if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table_items)) === $table_items) {
+		// Older and newer Redirection versions may use different columns; handle both when present.
+		// Disable rules where the source URL starts with '/product'.
+		$wpdb->query(
+			$wpdb->prepare(
+				"UPDATE {$table_items} SET status = 'disabled' WHERE (url LIKE %s OR match_url LIKE %s)",
+				'/product%',
+				'/product%'
+			)
+		);
+	}
 }
 
 /**
@@ -183,6 +204,116 @@ function gorilion_seo_switcher_register_settings()
 		'gorilion_seo_switcher_settings_group',
 		'betterseo_wp_product_page_slug'
 	);
+	// Mode: 'cpt' (new) or 'page' (legacy)
+	register_setting(
+		'gorilion_seo_switcher_settings_group',
+		'betterseo_mode'
+	);
+}
+
+/**
+ * ------------------------------------------------------------------
+ * MODE HELPERS
+ * ------------------------------------------------------------------
+ */
+function betterseo_get_mode() {
+	$mode = get_option('betterseo_mode', 'cpt');
+	return ($mode === 'page') ? 'page' : 'cpt';
+}
+
+/**
+ * Migrate to legacy PAGE mode (rollback from CPT mode).
+ */
+function betterseo_migrate_to_page_mode() {
+	// 1) Ensure /product page exists with required content
+	$product_page = get_page_by_path('product');
+	if (!$product_page instanceof WP_Post) {
+		$page_id = wp_insert_post(array(
+			'post_title'   => 'Product',
+			'post_name'    => 'product',
+			'post_content' => '<div id="c7-content"></div>',
+			'post_status'  => 'publish',
+			'post_type'    => 'page',
+		));
+		if (!is_wp_error($page_id)) {
+			$product_page = get_post($page_id);
+		}
+	} else {
+		// Ensure content and status are correct
+		wp_update_post(array(
+			'ID'           => $product_page->ID,
+			'post_content' => '<div id="c7-content"></div>',
+			'post_status'  => 'publish',
+		));
+	}
+
+	// 2) Re-enable Redirection rules for /product
+	global $wpdb;
+	$table_items = $wpdb->prefix . 'redirection_items';
+	if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table_items)) === $table_items) {
+		$wpdb->query(
+			$wpdb->prepare(
+				"UPDATE {$table_items} SET status = 'enabled' WHERE (url LIKE %s OR match_url LIKE %s)",
+				'/product%',
+				'/product%'
+			)
+		);
+	}
+
+	// 3) Delete all c7_product posts
+	$cpt_posts = get_posts(array(
+		'post_type'      => 'c7_product',
+		'post_status'    => 'any',
+		'posts_per_page' => -1,
+		'fields'         => 'ids',
+	));
+	if (!empty($cpt_posts)) {
+		foreach ($cpt_posts as $post_id) {
+			wp_delete_post($post_id, true);
+		}
+	}
+
+	// 4) Unschedule Commerce7 sync cron
+	$timestamp = wp_next_scheduled('betterseo_daily_product_sync');
+	if ($timestamp) {
+		wp_unschedule_event($timestamp, 'betterseo_daily_product_sync');
+	}
+
+	// 5) Switch mode flag
+	update_option('betterseo_mode', 'page');
+}
+
+/**
+ * Migrate to CPT mode (from legacy PAGE mode).
+ */
+function betterseo_migrate_to_cpt_mode() {
+	// 1) Delete /product page to avoid conflicts
+	$product_page = get_page_by_path('product');
+	if ($product_page instanceof WP_Post) {
+		wp_delete_post($product_page->ID, true);
+	}
+
+	// 2) Disable Redirection rules for /product
+	global $wpdb;
+	$table_items = $wpdb->prefix . 'redirection_items';
+	if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table_items)) === $table_items) {
+		$wpdb->query(
+			$wpdb->prepare(
+				"UPDATE {$table_items} SET status = 'disabled' WHERE (url LIKE %s OR match_url LIKE %s)",
+				'/product%',
+				'/product%'
+			)
+		);
+	}
+
+	// 3) Ensure cron is scheduled for Commerce7 sync
+	if (!wp_next_scheduled('betterseo_daily_product_sync')) {
+		wp_schedule_event(time(), 'daily', 'betterseo_daily_product_sync');
+	}
+
+	// 4) Switch mode flag and optionally trigger an initial sync
+	update_option('betterseo_mode', 'cpt');
+	betterseo_sync_c7_products();
 }
 
 /**
@@ -192,22 +323,24 @@ function gorilion_seo_switcher_register_settings()
  */
 add_action('init', 'betterseo_register_product_cpt');
 function betterseo_register_product_cpt() {
-	register_post_type('c7_product', array(
-		'labels' => array(
-			'name' => 'BetterSEO Products',
-			'singular_name' => 'BetterSEO Product',
-			'add_new' => 'Add New Product',
-			'add_new_item' => 'Add New BetterSEO Product',
-			'edit_item' => 'Edit BetterSEO Product'
-		),
-		'public' => true,
-		'has_archive' => false,
-		'rewrite' => array('slug' => 'product'),
-		'supports' => array('title', 'editor', 'elementor'),
-		'show_in_rest' => true,
-		'show_in_menu' => false,
-		'menu_icon' => 'dashicons-products'
-	));
+	if (betterseo_get_mode() === 'cpt') {
+		register_post_type('c7_product', array(
+			'labels' => array(
+				'name' => 'BetterSEO Products',
+				'singular_name' => 'BetterSEO Product',
+				'add_new' => 'Add New Product',
+				'add_new_item' => 'Add New BetterSEO Product',
+				'edit_item' => 'Edit BetterSEO Product'
+			),
+			'public' => true,
+			'has_archive' => false,
+			'rewrite' => array('slug' => 'product'),
+			'supports' => array('title', 'editor', 'elementor'),
+			'show_in_rest' => true,
+			'show_in_menu' => false,
+			'menu_icon' => 'dashicons-products'
+		));
+	}
 }
 
 /**
@@ -225,9 +358,20 @@ add_action('betterseo_daily_product_sync', 'betterseo_sync_c7_products');
  * Fetch all products from Commerce7 and create/update WordPress posts
  */
 function betterseo_sync_c7_products() {
+	// Only run in CPT mode
+	if (betterseo_get_mode() !== 'cpt') {
+		return;
+	}
+	
 	$platform = get_option('betterseo_platform', 'commerce7');
 	if ($platform !== 'commerce7') {
 		error_log('BetterSEO: Skipping product sync - platform is not Commerce7');
+		return;
+	}
+	
+	// Ensure the c7_product post type exists before attempting to sync
+	if (!post_type_exists('c7_product')) {
+		error_log('BetterSEO: Skipping product sync - post type c7_product does not exist');
 		return;
 	}
 	
@@ -363,6 +507,11 @@ function betterseo_create_or_update_product_post($product) {
 add_action('template_redirect', 'betterseo_handle_product_404');
 
 function betterseo_handle_product_404() {
+	// Only use the 404 sync handler in CPT mode
+	if (betterseo_get_mode() !== 'cpt') {
+		return;
+	}
+
 	$platform = get_option('betterseo_platform', 'commerce7');
 	if ($platform !== 'commerce7' || !is_404()) {
 		return;
@@ -412,6 +561,18 @@ function betterseo_handle_product_404() {
  */
 function gorilion_seo_switcher_options_page()
 {
+    // Handle mode migration actions (rollback / switch to new CPT mode).
+    if (!empty($_POST['betterseo_migrate_mode'])) {
+        check_admin_referer('betterseo_migrate_mode_action');
+        $action = sanitize_text_field(wp_unslash($_POST['betterseo_migrate_mode']));
+        if ($action === 'to_page') {
+            betterseo_migrate_to_page_mode();
+        } elseif ($action === 'to_cpt') {
+            betterseo_migrate_to_cpt_mode();
+        }
+    }
+
+    $current_mode = betterseo_get_mode();
     ?>
     <div class="wrap">
         <h1>BetterSEO Configuration</h1>
@@ -486,6 +647,23 @@ function gorilion_seo_switcher_options_page()
                 <?php endif; ?>
             </p>
         </div>
+
+        <h2>Mode &amp; Rollback</h2>
+        <p>Current mode: <strong><?php echo esc_html($current_mode === 'cpt' ? 'New CPT mode' : 'Legacy PAGE mode'); ?></strong></p>
+        <form method="post">
+            <?php wp_nonce_field('betterseo_migrate_mode_action'); ?>
+            <?php if ($current_mode === 'cpt') : ?>
+                <p>
+                    <input type="hidden" name="betterseo_migrate_mode" value="to_page" />
+                    <?php submit_button('Rollback to legacy PAGE mode', 'secondary', 'submit', false); ?>
+                </p>
+            <?php else : ?>
+                <p>
+                    <input type="hidden" name="betterseo_migrate_mode" value="to_cpt" />
+                    <?php submit_button('Switch to new CPT mode', 'secondary', 'submit', false); ?>
+                </p>
+            <?php endif; ?>
+        </form>
     </div>
 
     <script>
@@ -545,7 +723,7 @@ function gorilion_seo_switcher_inject_functions()
 				return;
 			}
 
-			if ($post->post_name === 'product' || $post->post_name === 'collection' || $post->post_name == "product-detail" || $post->post_name == "shop") {
+			if ($post->post_type === 'c7_product' || $post->post_name === 'product' || $post->post_name === 'collection' || $post->post_name == "product-detail" || $post->post_name == "shop") {
 				remove_all_actions('rank_math/head');
 			}
 		}
@@ -585,8 +763,9 @@ function gorilion_seo_switcher_inject_functions()
 				return;
 			}
 
-			// Remove canonical if it's a product page.
-			if ($post->post_name === 'product' || $post->post_name === 'shop') {
+			$mode = betterseo_get_mode();
+	
+			if ($post->post_name === 'product' || $post->post_name === 'shop' || $post->post_type === 'c7_product') {
 				add_filter('wpseo_canonical', '__return_false');
 			}
 
@@ -596,7 +775,6 @@ function gorilion_seo_switcher_inject_functions()
 			$parts = explode('/', $request_url);
 			$result = end($parts);
 
-			// Fallback logic if slug is missing.
 			if (!$result || $result === '' || $result === 'product' || $post->post_name == "product-detail" || $post->post_name == "shop") {
 				$redirect_url = isset($_SERVER['REDIRECT_URL']) ? $_SERVER['REDIRECT_URL'] : '';
 				$redirect_url = trim($redirect_url, '/');
@@ -635,7 +813,7 @@ function gorilion_seo_switcher_inject_functions()
 			}
 
 			// If it's a "c7_product" type page (Commerce7 only).
-			if ($betterseo_platform === 'commerce7' && $post->post_type === 'c7_product') {
+			if ($betterseo_platform === 'commerce7' && ($post->post_type === 'c7_product' || $post->post_name === 'product')) {
 				$tenant_id = get_option('betterseo_tenant_id', 'default-tenant-id');
 				$url = 'https://api.commerce7.com/v1/product/slug/' . $result . '/for-web';
 				$headers = array('tenant: ' . $tenant_id);
@@ -751,8 +929,12 @@ function gorilion_seo_switcher_inject_functions()
 				return;
 			}
 
-			// Remove canonical if it's a product page.
-			if ($post->post_name === 'product' || $post->post_name === 'shop' || $post->post_name == "product-detail") {
+			if (
+				$post->post_name === 'product' ||
+				$post->post_name === 'shop' ||
+				$post->post_name == "product-detail" ||
+				$post->post_type === 'c7_product'
+			) {
 				add_filter('wpseo_canonical', '__return_false');
 			}
 
