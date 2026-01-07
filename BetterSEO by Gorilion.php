@@ -36,40 +36,54 @@ if (!defined('BETTERSEO_VERSION')) {
  */
 register_activation_hook(__FILE__, 'betterseo_activation');
 function betterseo_activation() {
-	// Register the custom post type
-	betterseo_register_product_cpt();
-	
-	// Flush rewrite rules so URLs work immediately
+	$mode = betterseo_get_mode();
+
+	if ($mode === 'cpt') {
+		// Prevent activation if CPT already exists
+		if (post_type_exists('c7_product')) {
+			wp_die(__('BetterSEO by Gorilion cannot be activated because the post type "c7_product" already exists.', 'gorilion-seo-switcher'));
+		}
+		
+		// If a /product PAGE exists, move it to trash to avoid route conflicts with the CPT.
+		// The page can be restored later when switching back to PAGE mode.
+		$product_page = get_page_by_path('product');
+		if ($product_page instanceof WP_Post) {
+			wp_trash_post($product_page->ID);
+		}
+
+		// Register the custom post type
+		betterseo_register_product_cpt();
+		update_option('betterseo_c7_product_owned', 1);
+		
+		// Schedule daily cron job for product sync
+		if (!wp_next_scheduled('betterseo_daily_product_sync')) {
+			wp_schedule_event(time(), 'daily', 'betterseo_daily_product_sync');
+		}
+		
+		// If a tenant is already configured, validate route and trigger initial product sync
+		$tenant_id = get_option('betterseo_tenant_id', '');
+		if (!empty($tenant_id)) {
+			betterseo_validate_and_sync_for_tenant($tenant_id);
+		}
+		
+		// Disable Redirection plugin rules that point to the product slug
+		global $wpdb;
+		$table_items = $wpdb->prefix . 'redirection_items';
+		if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table_items)) === $table_items) {
+			// Older and newer Redirection versions may use different columns; handle both when present.
+			// Disable rules where the source URL starts with '/product'.
+			$wpdb->query(
+				$wpdb->prepare(
+					"UPDATE {$table_items} SET status = 'disabled' WHERE (url LIKE %s OR match_url LIKE %s)",
+					'/product%',
+					'/product%'
+				)
+			);
+		}
+	}
+
+	// Flush rewrite rules so URLs work immediately (for both modes)
 	flush_rewrite_rules();
-	
-	// Schedule daily cron job for product sync
-	if (!wp_next_scheduled('betterseo_daily_product_sync')) {
-		wp_schedule_event(time(), 'daily', 'betterseo_daily_product_sync');
-	}
-	
-	// Trigger initial product sync
-	betterseo_sync_c7_products();
-
-	// Delete existing WordPress page with slug 'product' to avoid conflicts
-	$product_page = get_page_by_path('product');
-	if ($product_page instanceof WP_Post) {
-		wp_delete_post($product_page->ID, true);
-	}
-
-	// Disable Redirection plugin rules that point to the product slug
-	global $wpdb;
-	$table_items = $wpdb->prefix . 'redirection_items';
-	if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table_items)) === $table_items) {
-		// Older and newer Redirection versions may use different columns; handle both when present.
-		// Disable rules where the source URL starts with '/product'.
-		$wpdb->query(
-			$wpdb->prepare(
-				"UPDATE {$table_items} SET status = 'disabled' WHERE (url LIKE %s OR match_url LIKE %s)",
-				'/product%',
-				'/product%'
-			)
-		);
-	}
 }
 
 /**
@@ -200,10 +214,6 @@ function gorilion_seo_switcher_register_settings()
 		'gorilion_seo_switcher_settings_group',
 		'betterseo_user'
 	);
-	register_setting(
-		'gorilion_seo_switcher_settings_group',
-		'betterseo_wp_product_page_slug'
-	);
 	// Mode: 'cpt' (new) or 'page' (legacy)
 	register_setting(
 		'gorilion_seo_switcher_settings_group',
@@ -211,11 +221,15 @@ function gorilion_seo_switcher_register_settings()
 	);
 }
 
-/**
- * ------------------------------------------------------------------
- * MODE HELPERS
- * ------------------------------------------------------------------
- */
+add_action('update_option_betterseo_tenant_id', 'betterseo_on_tenant_change', 10, 3);
+
+function betterseo_on_tenant_change($old_value, $value, $option) {
+	if (empty($value) || $value === $old_value) {
+		return;
+	}
+	betterseo_validate_and_sync_for_tenant($value);
+}
+
 function betterseo_get_mode() {
 	$mode = get_option('betterseo_mode', 'cpt');
 	return ($mode === 'page') ? 'page' : 'cpt';
@@ -225,9 +239,15 @@ function betterseo_get_mode() {
  * Migrate to legacy PAGE mode (rollback from CPT mode).
  */
 function betterseo_migrate_to_page_mode() {
-	// 1) Ensure /product page exists with required content
+	// 1) Ensure /product page exists with required content.
+	//    Do not run any manual SQL; just rely on core helpers and create if missing.
 	$product_page = get_page_by_path('product');
-	if (!$product_page instanceof WP_Post) {
+	if ($product_page instanceof WP_Post) {
+		wp_update_post(array(
+			'ID'          => $product_page->ID,
+			'post_status' => 'publish',
+		));
+	} else {
 		$page_id = wp_insert_post(array(
 			'post_title'   => 'Product',
 			'post_name'    => 'product',
@@ -235,16 +255,9 @@ function betterseo_migrate_to_page_mode() {
 			'post_status'  => 'publish',
 			'post_type'    => 'page',
 		));
-		if (!is_wp_error($page_id)) {
+		if ($page_id && !is_wp_error($page_id)) {
 			$product_page = get_post($page_id);
 		}
-	} else {
-		// Ensure content and status are correct
-		wp_update_post(array(
-			'ID'           => $product_page->ID,
-			'post_content' => '<div id="c7-content"></div>',
-			'post_status'  => 'publish',
-		));
 	}
 
 	// 2) Re-enable Redirection rules for /product
@@ -260,17 +273,20 @@ function betterseo_migrate_to_page_mode() {
 		);
 	}
 
-	// 3) Delete all c7_product posts
-	$cpt_posts = get_posts(array(
-		'post_type'      => 'c7_product',
-		'post_status'    => 'any',
-		'posts_per_page' => -1,
-		'fields'         => 'ids',
-	));
-	if (!empty($cpt_posts)) {
-		foreach ($cpt_posts as $post_id) {
-			wp_delete_post($post_id, true);
+	// 3) Delete all c7_product posts only if they were created by this plugin
+	if (get_option('betterseo_c7_product_owned')) {
+		$cpt_posts = get_posts(array(
+			'post_type'      => 'c7_product',
+			'post_status'    => 'any',
+			'posts_per_page' => -1,
+			'fields'         => 'ids',
+		));
+		if (!empty($cpt_posts)) {
+			foreach ($cpt_posts as $post_id) {
+				wp_delete_post($post_id, true);
+			}
 		}
+		delete_option('betterseo_c7_product_owned');
 	}
 
 	// 4) Unschedule Commerce7 sync cron
@@ -290,7 +306,9 @@ function betterseo_migrate_to_cpt_mode() {
 	// 1) Delete /product page to avoid conflicts
 	$product_page = get_page_by_path('product');
 	if ($product_page instanceof WP_Post) {
-		wp_delete_post($product_page->ID, true);
+		// Move the page to trash instead of permanently deleting it, so any
+		// custom layout (e.g. Elementor) can be restored when rolling back.
+		wp_trash_post($product_page->ID);
 	}
 
 	// 2) Disable Redirection rules for /product
@@ -439,6 +457,49 @@ function betterseo_fetch_c7_products($tenant_id) {
 	}
 	
 	return $data['products'];
+}
+
+function betterseo_validate_and_sync_for_tenant($tenant_id) {
+	// Only validate and sync in CPT mode for Commerce7
+	if (betterseo_get_mode() !== 'cpt') {
+		return;
+	}
+
+	$platform = get_option('betterseo_platform', 'commerce7');
+	if ($platform !== 'commerce7') {
+		return;
+	}
+
+	$products = betterseo_fetch_c7_products($tenant_id);
+	if (empty($products)) {
+		wp_die(__('BetterSEO by Gorilion cannot validate Commerce7 products for the configured tenant. No products were returned from the API.', 'gorilion-seo-switcher'));
+	}
+
+	$slug = '';
+	foreach ($products as $product) {
+		if (!empty($product['slug'])) {
+			$slug = sanitize_title($product['slug']);
+			break;
+		}
+	}
+
+	if (empty($slug)) {
+		wp_die(__('BetterSEO by Gorilion cannot validate Commerce7 products because no product with a slug was found.', 'gorilion-seo-switcher'));
+	}
+
+	$url = home_url('/product/' . $slug . '/');
+	$response = wp_remote_get($url, array('timeout' => 5));
+	if (is_wp_error($response)) {
+		wp_die(__('BetterSEO by Gorilion could not verify the /product route for Commerce7 products due to an HTTP error when requesting the product URL.', 'gorilion-seo-switcher'));
+	}
+
+	$code = wp_remote_retrieve_response_code($response);
+	if ($code >= 400) {
+		wp_die(__('BetterSEO by Gorilion cannot be activated or updated because the /product route does not appear to serve Commerce7 products on this site.', 'gorilion-seo-switcher'));
+	}
+
+	// If validation passes, perform a full sync using the current tenant
+	betterseo_sync_c7_products();
 }
 
 /**
@@ -812,7 +873,7 @@ function gorilion_seo_switcher_inject_functions()
 				}
 			}
 
-			// If it's a "c7_product" type page (Commerce7 only).
+			// If it's a product page (Commerce7 only).
 			if ($betterseo_platform === 'commerce7' && ($post->post_type === 'c7_product' || $post->post_name === 'product')) {
 				$tenant_id = get_option('betterseo_tenant_id', 'default-tenant-id');
 				$url = 'https://api.commerce7.com/v1/product/slug/' . $result . '/for-web';
@@ -990,8 +1051,8 @@ function gorilion_seo_switcher_inject_functions()
 				}
 			}
 
-			// If it's a "c7_product" type page (Commerce7 only).
-			if ($betterseo_platform === 'commerce7' && $post->post_type === 'c7_product') {
+			// If it's a product page (Commerce7 only).
+			if ($betterseo_platform === 'commerce7' && ($post->post_type === 'c7_product' || $post->post_name === 'product')) {
 				$tenant_id = get_option('betterseo_tenant_id', 'default-tenant-id');
 				$url = 'https://api.commerce7.com/v1/product/slug/' . $result . '/for-web';
 				$headers = array('tenant: ' . $tenant_id);
