@@ -55,8 +55,8 @@ function betterseo_activation() {
 		betterseo_register_product_cpt();
 		update_option('betterseo_c7_product_owned', 1);
 		
-		// Schedule daily cron job for Commerce7 product sync only when platform is commerce7
-		if (get_option('betterseo_platform') === 'commerce7' && !wp_next_scheduled('betterseo_daily_product_sync')) {
+		// Schedule daily cron job for product sync (sync function itself guards by platform/mode)
+		if (!wp_next_scheduled('betterseo_daily_product_sync')) {
 			wp_schedule_event(time(), 'daily', 'betterseo_daily_product_sync');
 		}
 		
@@ -289,12 +289,10 @@ function betterseo_migrate_to_page_mode() {
 		delete_option('betterseo_c7_product_owned');
 	}
 
-	// 4) Unschedule Commerce7 sync cron (only relevant for commerce7 platform)
-	if (get_option('betterseo_platform') === 'commerce7') {
-		$timestamp = wp_next_scheduled('betterseo_daily_product_sync');
-		if ($timestamp) {
-			wp_unschedule_event($timestamp, 'betterseo_daily_product_sync');
-		}
+	// 4) Unschedule Commerce7 sync cron
+	$timestamp = wp_next_scheduled('betterseo_daily_product_sync');
+	if ($timestamp) {
+		wp_unschedule_event($timestamp, 'betterseo_daily_product_sync');
 	}
 
 	// 5) Switch mode flag
@@ -326,8 +324,8 @@ function betterseo_migrate_to_cpt_mode() {
 		);
 	}
 
-	// 3) Ensure cron is scheduled for Commerce7 sync only when platform is commerce7
-	if (get_option('betterseo_platform') === 'commerce7' && !wp_next_scheduled('betterseo_daily_product_sync')) {
+	// 3) Ensure cron is scheduled for Commerce7 sync (sync function itself guards by platform/mode)
+	if (!wp_next_scheduled('betterseo_daily_product_sync')) {
 		wp_schedule_event(time(), 'daily', 'betterseo_daily_product_sync');
 	}
 
@@ -357,7 +355,7 @@ function betterseo_register_product_cpt() {
 			'rewrite' => array('slug' => 'product'),
 			'supports' => array('title', 'editor', 'elementor'),
 			'show_in_rest' => true,
-			'show_in_menu' => false,
+			'show_in_menu' => true,
 			'menu_icon' => 'dashicons-products'
 		));
 	}
@@ -372,23 +370,19 @@ function betterseo_register_product_cpt() {
 /**
  * Hook the daily cron event to the sync function
  */
-add_action('betterseo_daily_product_sync', 'betterseo_sync_c7_products');
 
 /**
  * Fetch all products from Commerce7 and create/update WordPress posts
  */
 function betterseo_sync_c7_products() {
-	// Only run in CPT mode and when platform is Commerce7
+	// Only run in CPT mode and when platform is effectively Commerce7.
+	// If the platform option is unset, we treat it as 'commerce7' to keep
+	// backward compatibility with existing installs.
 	if (betterseo_get_mode() !== 'cpt') {
 		return;
 	}
-	if (get_option('betterseo_platform') !== 'commerce7') {
-		return;
-	}
-	
 	$platform = get_option('betterseo_platform', 'commerce7');
-	if ($platform !== 'commerce7') {
-		error_log('BetterSEO: Skipping product sync - platform is not Commerce7');
+	if ($platform === 'ecellar') {
 		return;
 	}
 	
