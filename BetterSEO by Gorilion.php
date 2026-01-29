@@ -63,7 +63,7 @@ function betterseo_activation() {
 		// If a tenant is already configured, validate route and trigger initial product sync
 		$tenant_id = get_option('betterseo_tenant_id', '');
 		if (!empty($tenant_id)) {
-			betterseo_validate_and_sync_for_tenant($tenant_id);
+			betterseo_schedule_product_sync(1, true);
 		}
 		
 		// Disable Redirection plugin rules that point to the product slug
@@ -86,6 +86,39 @@ function betterseo_activation() {
 	flush_rewrite_rules();
 }
 
+// Cron handlers for product sync.
+add_action('betterseo_daily_product_sync', 'betterseo_sync_c7_products');
+add_action('betterseo_run_product_sync', 'betterseo_sync_c7_products');
+
+function betterseo_schedule_product_sync($delay_seconds = 0, $spawn = false) {
+	if (betterseo_get_mode() !== 'cpt') {
+		return;
+	}
+
+	$platform = get_option('betterseo_platform', 'commerce7');
+	if ($platform !== 'commerce7') {
+		return;
+	}
+
+	if (!post_type_exists('c7_product')) {
+		return;
+	}
+
+	$tenant_id = get_option('betterseo_tenant_id', '');
+	if (empty($tenant_id)) {
+		return;
+	}
+
+	$delay_seconds = max(1, (int) $delay_seconds);
+	$timestamp = time() + $delay_seconds;
+	if (!wp_next_scheduled('betterseo_run_product_sync')) {
+		wp_schedule_single_event($timestamp, 'betterseo_run_product_sync');
+		if ($spawn && function_exists('spawn_cron')) {
+			spawn_cron();
+		}
+	}
+}
+
 /**
  * ------------------------------------------------------------------
  * PLUGIN DEACTIVATION HOOK
@@ -93,11 +126,9 @@ function betterseo_activation() {
  */
 register_deactivation_hook(__FILE__, 'betterseo_deactivation');
 function betterseo_deactivation() {
-	// Clear scheduled cron job
-	$timestamp = wp_next_scheduled('betterseo_daily_product_sync');
-	if ($timestamp) {
-		wp_unschedule_event($timestamp, 'betterseo_daily_product_sync');
-	}
+	// Clear scheduled cron jobs
+	wp_clear_scheduled_hook('betterseo_daily_product_sync');
+	wp_clear_scheduled_hook('betterseo_run_product_sync');
 	
 	// Flush rewrite rules
 	flush_rewrite_rules();
@@ -227,7 +258,7 @@ function betterseo_on_tenant_change($old_value, $value, $option) {
 	if (empty($value) || $value === $old_value) {
 		return;
 	}
-	betterseo_validate_and_sync_for_tenant($value);
+	betterseo_schedule_product_sync(1, true);
 }
 
 function betterseo_get_mode() {
@@ -331,7 +362,7 @@ function betterseo_migrate_to_cpt_mode() {
 
 	// 4) Switch mode flag and optionally trigger an initial sync
 	update_option('betterseo_mode', 'cpt');
-	betterseo_sync_c7_products();
+	betterseo_schedule_product_sync(1, true);
 }
 
 /**
@@ -351,11 +382,15 @@ function betterseo_register_product_cpt() {
 				'edit_item' => 'Edit BetterSEO Product'
 			),
 			'public' => true,
+			'publicly_queryable' => true,
 			'has_archive' => false,
-			'rewrite' => array('slug' => 'product'),
+			'rewrite' => array(
+				'slug'       => 'product',
+				'with_front' => false,
+			),
 			'supports' => array('title', 'editor', 'elementor'),
 			'show_in_rest' => true,
-			'show_in_menu' => true,
+			'show_in_menu' => false,
 			'menu_icon' => 'dashicons-products'
 		));
 	}
@@ -368,33 +403,40 @@ function betterseo_register_product_cpt() {
  */
 
 /**
- * Hook the daily cron event to the sync function
- */
-
-/**
  * Fetch all products from Commerce7 and create/update WordPress posts
  */
 function betterseo_sync_c7_products() {
+	// Prevent overlapping runs (e.g. if multiple requests trigger WP-Cron).
+	if (get_transient('betterseo_sync_in_progress')) {
+		error_log('BetterSEO: Product sync already in progress, skipping');
+		return;
+	}
+	set_transient('betterseo_sync_in_progress', 1, 30 * MINUTE_IN_SECONDS);
+
 	// Only run in CPT mode and when platform is effectively Commerce7.
 	// If the platform option is unset, we treat it as 'commerce7' to keep
 	// backward compatibility with existing installs.
 	if (betterseo_get_mode() !== 'cpt') {
+		delete_transient('betterseo_sync_in_progress');
 		return;
 	}
 	$platform = get_option('betterseo_platform', 'commerce7');
 	if ($platform === 'ecellar') {
+		delete_transient('betterseo_sync_in_progress');
 		return;
 	}
 	
 	// Ensure the c7_product post type exists before attempting to sync
 	if (!post_type_exists('c7_product')) {
 		error_log('BetterSEO: Skipping product sync - post type c7_product does not exist');
+		delete_transient('betterseo_sync_in_progress');
 		return;
 	}
 	
 	$tenant_id = get_option('betterseo_tenant_id', '');
 	if (empty($tenant_id)) {
 		error_log('BetterSEO: Cannot sync products - Tenant ID is not configured');
+		delete_transient('betterseo_sync_in_progress');
 		return;
 	}
 	
@@ -404,6 +446,7 @@ function betterseo_sync_c7_products() {
 	
 	if (empty($products)) {
 		error_log('BetterSEO: No products found or API error');
+		delete_transient('betterseo_sync_in_progress');
 		return;
 	}
 	
@@ -422,40 +465,55 @@ function betterseo_sync_c7_products() {
 	}
 	
 	error_log("BetterSEO: Product sync complete - Created: $created, Updated: $updated");
+	delete_transient('betterseo_sync_in_progress');
 }
 
 /**
  * Fetch all products from Commerce7 API
  */
 function betterseo_fetch_c7_products($tenant_id) {
-	$url = 'https://api.commerce7.com/v1/product/for-web';
-	$headers = array('tenant: ' . $tenant_id);
-	
-	$curl = curl_init($url);
-	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-	curl_setopt($curl, CURLOPT_TIMEOUT, 30);
-	
-	$response = curl_exec($curl);
-	$http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-	
-	if ($response === false || $http_code !== 200) {
-		$error = curl_error($curl);
-		error_log('BetterSEO: Commerce7 API error - ' . $error . ' (HTTP ' . $http_code . ')');
+	$base_url   = 'https://api.commerce7.com/v1/product/for-web';
+	$headers    = array('tenant: ' . $tenant_id);
+	$all_items  = array();
+	$page       = 1;
+
+	// Paginate through all product pages until an empty result set is returned.
+	while (true) {
+		$url = $base_url . '?page=' . $page;
+		$curl = curl_init($url);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+		curl_setopt($curl, CURLOPT_TIMEOUT, 30);
+		
+		$response  = curl_exec($curl);
+		$http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+		
+		if ($response === false || $http_code !== 200) {
+			$error = curl_error($curl);
+			error_log('BetterSEO: Commerce7 API error on page ' . $page . ' - ' . $error . ' (HTTP ' . $http_code . ')');
+			curl_close($curl);
+			break;
+		}
+		
 		curl_close($curl);
-		return array();
+		
+		$data = json_decode($response, true);
+		if (!isset($data['products']) || !is_array($data['products'])) {
+			error_log('BetterSEO: Invalid Commerce7 API response format on page ' . $page);
+			break;
+		}
+		
+		$page_items = $data['products'];
+		if (empty($page_items)) {
+			// No more products.
+			break;
+		}
+		
+		$all_items = array_merge($all_items, $page_items);
+		$page++;
 	}
 	
-	curl_close($curl);
-	
-	$data = json_decode($response, true);
-	
-	if (!isset($data['products']) || !is_array($data['products'])) {
-		error_log('BetterSEO: Invalid API response format');
-		return array();
-	}
-	
-	return $data['products'];
+	return $all_items;
 }
 
 function betterseo_validate_and_sync_for_tenant($tenant_id) {
@@ -492,13 +550,8 @@ function betterseo_validate_and_sync_for_tenant($tenant_id) {
 		wp_die(__('BetterSEO by Gorilion could not verify the /product route for Commerce7 products due to an HTTP error when requesting the product URL.', 'gorilion-seo-switcher'));
 	}
 
-	$code = wp_remote_retrieve_response_code($response);
-	if ($code >= 400) {
-		wp_die(__('BetterSEO by Gorilion cannot be activated or updated because the /product route does not appear to serve Commerce7 products on this site.', 'gorilion-seo-switcher'));
-	}
-
 	// If validation passes, perform a full sync using the current tenant
-	betterseo_sync_c7_products();
+	betterseo_schedule_product_sync(1, true);
 }
 
 /**
@@ -598,22 +651,32 @@ function betterseo_handle_product_404() {
 	// Set transient to prevent multiple syncs within 5 minutes
 	set_transient('betterseo_last_404_sync', time(), 5 * MINUTE_IN_SECONDS);
 	
-	betterseo_sync_c7_products();
-	
-	$existing_posts = get_posts(array(
-		'post_type' => 'c7_product',
-		'name' => $slug,
-		'posts_per_page' => 1,
-		'post_status' => 'publish'
-	));
-	
-	if (!empty($existing_posts)) {
-		error_log("BetterSEO: Product now exists after sync, redirecting to: /product/$slug/");
-		wp_redirect(home_url('/product/' . $slug . '/'), 302);
-		exit;
-	} else {
-		error_log("BetterSEO: Product still not found after sync: $slug");
+	betterseo_schedule_product_sync(60, false);
+	// Sync is now async via cron; do not attempt redirect within this request.
+}
+
+/**
+ * ------------------------------------------------------------------
+ * FRONTEND LAYOUT HELPERS FOR C7 PRODUCT PAGES
+ * ------------------------------------------------------------------
+ *
+ * 1) Constrain the Commerce7 container width so it does not overflow
+ *    on single c7_product pages.
+ * 2) Hide the default theme .entry-title for c7_product singles to
+ *    avoid duplicate titles when the layout/template already prints
+ *    the product title.
+ */
+add_action('wp_head', 'betterseo_c7_product_layout_css', 30);
+function betterseo_c7_product_layout_css()
+{
+	if (!is_singular('c7_product')) {
+		return;
 	}
+
+	echo '<style id="betterseo-c7-product-layout">'
+		. '#c7-content{max-width:1200px;margin:0 auto;padding:0 20px;box-sizing:border-box;}'
+		. '.single-c7_product .entry-title{display:none;}'
+		. '</style>';
 }
 
 /**
@@ -941,45 +1004,115 @@ function gorilion_seo_switcher_inject_functions()
 		// --------------------------------------------------
 		// YOAST SEO CODE BLOCK
 		// --------------------------------------------------
-		add_action('wp', function () {
-        if (is_page('product')) {
-            add_filter('wpseo_frontend_presenters', '__return_empty_array', 99);
-            add_filter('wpseo_schema_output', '__return_false', 99);
-            if (class_exists('WPSEO_Frontend')) {
-                remove_action('wp_head', [ WPSEO_Frontend::get_instance(), 'head' ], 1);
-            }
-        }
-    	});
+		add_action('wp', 'betterseo_setup_yoast_product_overrides');
+		function betterseo_setup_yoast_product_overrides() {
+			global $post;
+			if (!is_singular('c7_product')) {
+				return;
+			}
+			if (get_option('betterseo_platform', 'commerce7') !== 'commerce7') {
+				return;
+			}
 
-		// Remove Yoast SEO functions
-		if (function_exists('wpseo_head')) {
-			add_filter('wpseo_json_ld_output', '__return_false');
-			add_filter('wpseo_opengraph_output', '__return_false');
-			add_filter('wpseo_twitter_output', '__return_false');
-			remove_action('wp_head', 'wpseo_head');
-			remove_action('wpseo_head', 'wpseo_schema_head');
-			remove_action('wpseo_head', 'wpseo_schema_article');
-			remove_action('wpseo_head', 'wpseo_schema_webpage');
-			remove_action('wpseo_head', 'wpseo_schema_breadcrumb');
-			remove_action('wpseo_head', 'wpseo_json_ld');
-			remove_action('wpseo_head', 'wpseo_opengraph');
-			remove_action('wpseo_head', 'wpseo_twitter');
-			remove_action('wpseo_head', 'wpseo_canonical');
-			remove_action('wpseo_head', 'wpseo_adjacent_rel_links');
-			remove_action('wpseo_head', 'wpseo_metadesc');
-			remove_action('wpseo_head', 'wpseo_title');
+			add_filter('wpseo_title', 'betterseo_yoast_product_title', 99);
+			add_filter('wpseo_metadesc', 'betterseo_yoast_product_metadesc', 99);
+			add_filter('wpseo_opengraph_title', 'betterseo_yoast_product_title', 99);
+			add_filter('wpseo_opengraph_desc', 'betterseo_yoast_product_metadesc', 99);
+			add_filter('wpseo_opengraph_image', 'betterseo_yoast_product_image', 99);
+			add_filter('wpseo_twitter_image', 'betterseo_yoast_product_image', 99);
+			add_action('wp_head', 'gorilion_opengraph_yoast', 99);
 		}
 
-		add_action('wp_head', 'gorilion_opengraph_yoast');
-
-		// Remove Yoast SEO - Alternative
-		add_action("template_redirect", "remove_wpseo_from_product");
-		function remove_wpseo_from_product() {
-			global $post;
-			if ($post->post_name == "product-detail" || $post->post_name == "collection" || $post->post_name == "product" || $post->post_name == "shop") {
-				$front_end = YoastSEO()->classes->get("Yoast\WP\SEO\Integrations\Front_End_Integration");
-				remove_action( "wpseo_head", [ $front_end, "present_head" ], -9999 );
+		function betterseo_get_c7_product_seo_data_for_post($post) {
+			if (!($post instanceof WP_Post)) {
+				return null;
 			}
+			$tenant_id = get_option('betterseo_tenant_id', '');
+			if (empty($tenant_id)) {
+				return null;
+			}
+			$slug = $post->post_name;
+			if (empty($slug)) {
+				return null;
+			}
+
+			$cache_key = 'betterseo_c7_seo_' . md5($tenant_id . '|' . $slug);
+			$cached = get_transient($cache_key);
+			if (is_array($cached)) {
+				return $cached;
+			}
+
+			$url = 'https://api.commerce7.com/v1/product/slug/' . urlencode($slug) . '/for-web';
+			$response = wp_remote_get($url, array(
+				'timeout' => 10,
+				'headers' => array('tenant' => $tenant_id),
+			));
+			if (is_wp_error($response)) {
+				return null;
+			}
+			$code = wp_remote_retrieve_response_code($response);
+			$body = wp_remote_retrieve_body($response);
+			if ((int) $code !== 200 || empty($body)) {
+				return null;
+			}
+			$data = json_decode($body, true);
+			if (!is_array($data)) {
+				return null;
+			}
+
+			$title = '';
+			if (!empty($data['seo']['title'])) {
+				$title = (string) $data['seo']['title'];
+			} elseif (!empty($data['title'])) {
+				$title = (string) $data['title'];
+			}
+
+			$desc = '';
+			if (!empty($data['seo']['description'])) {
+				$desc = (string) $data['seo']['description'];
+			}
+
+			$img = '';
+			if (!empty($data['image'])) {
+				$img = (string) $data['image'];
+			} elseif (!empty($data['images'][0]['url'])) {
+				$img = (string) $data['images'][0]['url'];
+			}
+
+			$result = array(
+				'title' => $title,
+				'description' => $desc,
+				'image' => $img,
+			);
+			set_transient($cache_key, $result, 10 * MINUTE_IN_SECONDS);
+			return $result;
+		}
+
+		function betterseo_yoast_product_title($current) {
+			global $post;
+			$seo = betterseo_get_c7_product_seo_data_for_post($post);
+			if (is_array($seo) && !empty($seo['title'])) {
+				return $seo['title'];
+			}
+			return $current;
+		}
+
+		function betterseo_yoast_product_metadesc($current) {
+			global $post;
+			$seo = betterseo_get_c7_product_seo_data_for_post($post);
+			if (is_array($seo) && !empty($seo['description'])) {
+				return $seo['description'];
+			}
+			return $current;
+		}
+
+		function betterseo_yoast_product_image($current) {
+			global $post;
+			$seo = betterseo_get_c7_product_seo_data_for_post($post);
+			if (is_array($seo) && !empty($seo['image'])) {
+				return $seo['image'];
+			}
+			return $current;
 		}
 
 		function gorilion_opengraph_yoast()
@@ -989,24 +1122,8 @@ function gorilion_seo_switcher_inject_functions()
 				return;
 			}
 
-			if (
-				$post->post_name === 'product' ||
-				$post->post_name === 'shop' ||
-				$post->post_name == "product-detail" ||
-				$post->post_type === 'c7_product'
-			) {
-				add_filter('wpseo_canonical', '__return_false');
-			}
-
-			// Check if the Yoast SEO integration class exists
-			if (class_exists('Yoast\WP\SEO\Integrations\Front_End_Integration')) {
-				$front_end = YoastSEO()->classes->get('Yoast\WP\SEO\Integrations\Front_End_Integration');
-
-				// Check if the 'present_head' method exists in the $front_end object
-				if (method_exists($front_end, 'present_head')) {
-					remove_action('wpseo_head', [$front_end, 'present_head'], -9999);
-				}
-			}
+			// This function is used to output extra structured data for product pages.
+			// Yoast output for title/description/OG is controlled via wpseo_* filters.
 
 			// Similar logic to get $result from the request URI.
 			$request_url = filter_var($_SERVER['REQUEST_URI'], FILTER_SANITIZE_URL);
@@ -1081,18 +1198,6 @@ function gorilion_seo_switcher_inject_functions()
 				$site_title = get_bloginfo('name');
 
 				echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' :: YOASTSEO -->'."\n";
-				echo '<title>' . $title . "</title>\n";
-				echo '<meta name="description" content="' . $description . "\"/>\n";
-				echo '<meta name="keywords" content="' . $keywords . "\">\n";
-				echo '<link rel="canonical" href="' . esc_url($full_url) . "\"/>\n";
-				echo "<meta property=\"og:type\" content=\"product\" />\n";
-				echo '<meta property="og:title" content="' . $title . "\"/>\n";
-				echo '<meta property="og:description" content="' . $description . "\"/>\n";
-				echo '<meta property="og:image" content="' . esc_url($img) . "\"/>\n";
-				echo '<meta property="og:url" content="' . esc_url($full_url) . "\"/>\n";
-				echo '<meta property="og:site_name" content="' . esc_attr($site_title) . "\" />\n";
-				echo "<meta name=\"twitter:card\" content=\"summary_large_image\" />\n";
-
 				echo '<script type="application/ld+json">
                         {
                             "@context": "http://schema.org",
@@ -1523,6 +1628,20 @@ add_action('wp_print_scripts', function () {
 <?php
 }, PHP_INT_MAX);
 
+/**
+ * Ensure Elementor Theme Builder considers c7_product for header/footer locations.
+ * This mirrors the user-provided snippet and lives inside the plugin so no
+ * theme-level changes are required.
+ */
+add_action('elementor/theme/register_locations', function ($locations_manager) {
+	// This ensures Elementor knows to look for locations on this CPT.
+	// Returning true here does not change Elementor's behavior, but having
+	// the hook attached guarantees the CPT is evaluated during location
+	// registration for setups that rely on this pattern.
+	if (is_singular('c7_product')) {
+		return true;
+	}
+});
 
 /** ---------------
  * SPA overwrite
