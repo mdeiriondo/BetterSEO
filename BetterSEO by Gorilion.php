@@ -108,7 +108,7 @@ function betterseo_schedule_product_sync($delay_seconds = 0, $spawn = false) {
 	if (empty($tenant_id)) {
 		return;
 	}
-
+	
 	$delay_seconds = max(1, (int) $delay_seconds);
 	$timestamp = time() + $delay_seconds;
 	if (!wp_next_scheduled('betterseo_run_product_sync')) {
@@ -258,7 +258,19 @@ function betterseo_on_tenant_change($old_value, $value, $option) {
 	if (empty($value) || $value === $old_value) {
 		return;
 	}
-	betterseo_schedule_product_sync(1, true);
+	// Schedule sync to run asynchronously (non-blocking)
+	error_log('BetterSEO: Tenant ID changed, scheduling immediate async sync');
+	
+	// Clear any existing scheduled sync first
+	wp_clear_scheduled_hook('betterseo_run_product_sync');
+	
+	// Schedule for immediate execution (1 second delay)
+	wp_schedule_single_event(time() + 1, 'betterseo_run_product_sync');
+	
+	// Force WordPress to spawn the cron process immediately in the background
+	if (function_exists('spawn_cron')) {
+		spawn_cron();
+	}
 }
 
 function betterseo_get_mode() {
@@ -400,78 +412,134 @@ function betterseo_register_product_cpt() {
  * ------------------------------------------------------------------
  * COMMERCE7 PRODUCT SYNC FUNCTIONS
  * ------------------------------------------------------------------
- */
-
-/**
  * Fetch all products from Commerce7 and create/update WordPress posts
  */
 function betterseo_sync_c7_products() {
-	// Prevent overlapping runs (e.g. if multiple requests trigger WP-Cron).
-	if (get_transient('betterseo_sync_in_progress')) {
-		error_log('BetterSEO: Product sync already in progress, skipping');
-		return;
+	// Check if this is a continuation of a batch sync
+	$batch_state = get_transient('betterseo_batch_sync_state');
+	$is_continuation = !empty($batch_state);
+	
+	// Only check lock if this is NOT a continuation
+	if (!$is_continuation) {
+		$lock_time = get_transient('betterseo_sync_in_progress');
+		if ($lock_time) {
+			// Check if lock is stale (older than 15 minutes)
+			if ((time() - $lock_time) < 900) {
+				error_log('BetterSEO: Product sync already in progress, skipping');
+				return;
+			} else {
+				delete_transient('betterseo_sync_in_progress');
+			}
+		}
+		
+		set_transient('betterseo_sync_in_progress', time(), 30 * MINUTE_IN_SECONDS);
 	}
-	set_transient('betterseo_sync_in_progress', 1, 30 * MINUTE_IN_SECONDS);
 
 	// Only run in CPT mode and when platform is effectively Commerce7.
-	// If the platform option is unset, we treat it as 'commerce7' to keep
-	// backward compatibility with existing installs.
 	if (betterseo_get_mode() !== 'cpt') {
 		delete_transient('betterseo_sync_in_progress');
+		delete_transient('betterseo_batch_sync_state');
 		return;
 	}
 	$platform = get_option('betterseo_platform', 'commerce7');
 	if ($platform === 'ecellar') {
 		delete_transient('betterseo_sync_in_progress');
+		delete_transient('betterseo_batch_sync_state');
 		return;
 	}
-	
+
 	// Ensure the c7_product post type exists before attempting to sync
 	if (!post_type_exists('c7_product')) {
 		error_log('BetterSEO: Skipping product sync - post type c7_product does not exist');
 		delete_transient('betterseo_sync_in_progress');
+		delete_transient('betterseo_batch_sync_state');
 		return;
 	}
-	
+
 	$tenant_id = get_option('betterseo_tenant_id', '');
 	if (empty($tenant_id)) {
 		error_log('BetterSEO: Cannot sync products - Tenant ID is not configured');
 		delete_transient('betterseo_sync_in_progress');
+		delete_transient('betterseo_batch_sync_state');
 		return;
 	}
+
+	// Set resource limits
+	set_time_limit(120);
+	ini_set('memory_limit', '256M');
 	
-	error_log('BetterSEO: Starting Commerce7 product sync...');
-	
-	$products = betterseo_fetch_c7_products($tenant_id);
-	
-	if (empty($products)) {
-		error_log('BetterSEO: No products found or API error');
-		delete_transient('betterseo_sync_in_progress');
-		return;
-	}
-	
-	error_log('BetterSEO: Found ' . count($products) . ' products from Commerce7');
-	
-	$created = 0;
-	$updated = 0;
-	
-	foreach ($products as $product) {
-		$result = betterseo_create_or_update_product_post($product);
-		if ($result === 'created') {
-			$created++;
-		} elseif ($result === 'updated') {
-			$updated++;
+	if (!$is_continuation) {
+		// Fetch all products only on first batch
+		$products = betterseo_fetch_c7_products($tenant_id);
+
+		if (empty($products)) {
+			error_log('BetterSEO: No products found or API error');
+			delete_transient('betterseo_sync_in_progress');
+			return;
 		}
+
+		// Filter products by webStatus: "Available"
+		$available_products = array_filter($products, function($product) {
+			return isset($product['webStatus']) && $product['webStatus'] === 'Available';
+		});
+
+		// Re-index array after filtering
+		$available_products = array_values($available_products);
+		
+		// Initialize batch state
+		$batch_state = array(
+			'products' => $available_products,
+			'offset' => 0,
+			'created' => 0,
+			'updated' => 0,
+			'skipped' => 0,
+			'errors' => 0,
+			'start_time' => time()
+		);
 	}
 	
-	error_log("BetterSEO: Product sync complete - Created: $created, Updated: $updated");
-	delete_transient('betterseo_sync_in_progress');
+	// Process products in batches of 50
+	$batch_size = 50;
+	$products_to_process = array_slice($batch_state['products'], $batch_state['offset'], $batch_size);
+	
+	foreach ($products_to_process as $product) {
+		try {
+			$result = betterseo_create_or_update_product_post($product);
+			if ($result === 'created') {
+				$batch_state['created']++;
+			} elseif ($result === 'updated') {
+				$batch_state['updated']++;
+			} elseif ($result === false) {
+				$batch_state['skipped']++;
+			}
+		} catch (Exception $e) {
+			$batch_state['errors']++;
+			error_log('BetterSEO: Error processing product - ' . $e->getMessage());
+		}
+		$batch_state['offset']++;
+	}
+	
+	// Check if there are more products to process
+	if ($batch_state['offset'] < count($batch_state['products'])) {
+		// Save state and schedule next batch
+		set_transient('betterseo_batch_sync_state', $batch_state, 10 * MINUTE_IN_SECONDS);
+		
+		wp_schedule_single_event(time() + 2, 'betterseo_run_product_sync');
+		if (function_exists('spawn_cron')) {
+			spawn_cron();
+		}
+	} else {
+		// All products processed
+		delete_transient('betterseo_batch_sync_state');
+		delete_transient('betterseo_sync_in_progress');
+	}
 }
 
-/**
- * Fetch all products from Commerce7 API
- */
+// ... (rest of the code remains the same)
 function betterseo_fetch_c7_products($tenant_id) {
+	// Log API fetch attempt to monitor sync frequency
+	error_log('BetterSEO: FETCHING products from Commerce7 API - Tenant: ' . $tenant_id . ' - Time: ' . date('Y-m-d H:i:s'));
+	
 	$base_url   = 'https://api.commerce7.com/v1/product/for-web';
 	$headers    = array('tenant: ' . $tenant_id);
 	$all_items  = array();
@@ -484,35 +552,35 @@ function betterseo_fetch_c7_products($tenant_id) {
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 		curl_setopt($curl, CURLOPT_TIMEOUT, 30);
-		
+
 		$response  = curl_exec($curl);
 		$http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-		
+
 		if ($response === false || $http_code !== 200) {
 			$error = curl_error($curl);
 			error_log('BetterSEO: Commerce7 API error on page ' . $page . ' - ' . $error . ' (HTTP ' . $http_code . ')');
 			curl_close($curl);
 			break;
 		}
-		
+
 		curl_close($curl);
-		
+
 		$data = json_decode($response, true);
 		if (!isset($data['products']) || !is_array($data['products'])) {
 			error_log('BetterSEO: Invalid Commerce7 API response format on page ' . $page);
 			break;
 		}
-		
+
 		$page_items = $data['products'];
 		if (empty($page_items)) {
 			// No more products.
 			break;
 		}
-		
+
 		$all_items = array_merge($all_items, $page_items);
 		$page++;
 	}
-	
+
 	return $all_items;
 }
 
@@ -562,20 +630,20 @@ function betterseo_create_or_update_product_post($product) {
 		error_log('BetterSEO: Product missing slug, skipping');
 		return false;
 	}
-	
+
 	$slug = sanitize_title($product['slug']);
 	$title = isset($product['title']) ? $product['title'] : (isset($product['name']) ? $product['name'] : $slug);
 	$c7_product_id = isset($product['id']) ? $product['id'] : '';
-	
+
 	$existing_posts = get_posts(array(
 		'post_type' => 'c7_product',
 		'name' => $slug,
 		'posts_per_page' => 1,
 		'post_status' => 'any'
 	));
-	
+
 	$post_content = '<div id="c7-content"></div>';
-	
+
 	$post_data = array(
 		'post_title' => $title,
 		'post_name' => $slug,
@@ -584,29 +652,29 @@ function betterseo_create_or_update_product_post($product) {
 		'post_type' => 'c7_product',
 		'post_author' => 1
 	);
-	
+
 	if (!empty($existing_posts)) {
 		$post_data['ID'] = $existing_posts[0]->ID;
 		wp_update_post($post_data);
-		
+
 		update_post_meta($existing_posts[0]->ID, '_c7_product_id', $c7_product_id);
 		update_post_meta($existing_posts[0]->ID, '_c7_slug', $slug);
-		
+
 		error_log("BetterSEO: Updated product post - Slug: $slug, ID: {$existing_posts[0]->ID}");
 		return 'updated';
 	} else {
 		$post_id = wp_insert_post($post_data);
-		
+
 		if (is_wp_error($post_id)) {
 			error_log('BetterSEO: Error creating post for slug: ' . $slug . ' - ' . $post_id->get_error_message());
 			return false;
 		}
-		
+
 		update_post_meta($post_id, '_c7_product_id', $c7_product_id);
 		update_post_meta($post_id, '_c7_slug', $slug);
-		
+
 		update_post_meta($post_id, '_elementor_edit_mode', 'builder');
-		
+
 		error_log("BetterSEO: Created product post - Slug: $slug, ID: $post_id");
 		return 'created';
 	}
@@ -629,29 +697,29 @@ function betterseo_handle_product_404() {
 	if ($platform !== 'commerce7' || !is_404()) {
 		return;
 	}
-	
+
 	$request_uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
 	$request_uri = strtok($request_uri, '?');
 	$request_uri = trim($request_uri, '/');
-	
+
 	if (!preg_match('#^product/([^/]+)$#', $request_uri, $matches)) {
 		return;
 	}
-	
+
 	$slug = $matches[1];
-	
+
 	error_log("BetterSEO: 404 detected for product slug: $slug - Triggering full product sync");
-	
+
 	$last_sync = get_transient('betterseo_last_404_sync');
 	if ($last_sync) {
 		error_log("BetterSEO: Sync already triggered recently, skipping");
 		return;
 	}
-	
+
 	// Set transient to prevent multiple syncs within 5 minutes
 	set_transient('betterseo_last_404_sync', time(), 5 * MINUTE_IN_SECONDS);
-	
-	betterseo_schedule_product_sync(60, false);
+
+	betterseo_schedule_product_sync(1, true);
 	// Sync is now async via cron; do not attempt redirect within this request.
 }
 
@@ -751,10 +819,12 @@ function gorilion_seo_switcher_options_page()
                     <th scope="row">eCellar API Key</th>
                     <td><input type="text" name="betterseo_ecellar_api_key" value="<?php echo esc_attr($ecellar_api_key); ?>" /></td>
                 </tr>
+                <?php if ( $current_mode !== 'cpt' || $betterseo_platform !== 'commerce7' ) : ?>
                 <tr valign="top">
                     <th scope="row">BetterSEO Username</th>
                     <td><input type="text" name="betterseo_user" value="<?php echo esc_attr($betterseo_user); ?>" /></td>
                 </tr>
+                <?php endif; ?>
             </table>
 
             <?php submit_button(); ?>
@@ -770,6 +840,25 @@ function gorilion_seo_switcher_options_page()
                 <?php endif; ?>
             </p>
         </div>
+
+        <details style="margin:16px 0;border:1px solid #c3c4c7;border-radius:4px;padding:12px 16px;background:#f6f7f7;">
+            <summary style="cursor:pointer;font-weight:600;font-size:14px;color:#1d2327;"><i style="font-style:italic;color:#2271b1;font-weight:700;">i</i> Instructions &amp; Common Issues</summary>
+            <ul style="margin:12px 0 0 16px;font-size:13px;line-height:1.8;">
+                <li><strong>Rank Math sitemap returning 404:</strong> Go to Rank Math &rarr; Sitemap Settings, change Links per Sitemap (e.g. 200 &rarr; 201) and save. Then go to Settings &rarr; Permalinks and click Save Changes. <a href="https://rankmath.com/kb/sitemap-404-error/" target="_blank" rel="noopener">Learn more</a>.</li>
+                <li><strong>Commerce7 plugin routes</strong> (only if the Commerce7 plugin is installed): Go to Commerce7 Settings &rarr; Override Frontend Routes, set to Yes and save. Then change the product route to &ldquo;products&rdquo; and save.</li>
+                <li><strong>Products not showing:</strong> Create a file named <code>single-c7_product.php</code> in your theme folder with this content:<br><pre style="background:#fff;border:1px solid #ddd;padding:8px;margin:6px 0;font-size:11px;line-height:1.6;">&lt;?php
+get_header();
+if ( have_posts() ) {
+  while ( have_posts() ) {
+    the_post();
+    the_content();
+  }
+}
+get_footer();</pre></li>
+                <li><strong>Elementor (CPT mode, if using Elementor):</strong> Go to Theme Builder &rarr; Single Post and create a template matching your old product page or create a custom one.</li>
+                <li><strong>Changes not reflected:</strong> Go to Settings &rarr; Permalinks and click Save Changes, then clear your caching plugin cache.</li>
+            </ul>
+        </details>
 
         <h2>Mode &amp; Rollback</h2>
         <p>Current mode: <strong><?php echo esc_html($current_mode === 'cpt' ? 'New CPT mode' : 'Legacy PAGE mode'); ?></strong></p>
@@ -851,30 +940,36 @@ function gorilion_seo_switcher_inject_functions()
 			}
 		}
 
-		// Load the Custom provider class only if Rank Math's interface exists.
-		add_action('init', function () {
-			if (interface_exists('\RankMath\Sitemap\Providers\Provider')) {
-				$provider_file = plugin_dir_path(__FILE__) . 'inc/rankmath-custom-sitemap.php';
-				if (file_exists($provider_file)) {
-					require_once $provider_file;
-				}
-			}
-		}, 1);
+		// Custom sitemap provider: only needed in legacy PAGE mode or non-Commerce7 platforms.
+		// In CPT + Commerce7 mode, RankMath indexes c7_product posts natively.
+		if ( betterseo_get_mode() !== 'cpt' || get_option('betterseo_platform', 'commerce7') !== 'commerce7' ) {
 
-		// Register the provider; fall back silently if anything fails.
-		add_filter('rank_math/sitemap/providers', function ($providers) {
-			if (class_exists('\RankMath\Sitemap\Providers\Custom')) {
-				try {
-					$providers['custom'] = new \RankMath\Sitemap\Providers\Custom();
-				} catch (\Throwable $e) {
-					// Keep Rank Math defaults if instantiation fails.
+			// Load the Custom provider class only if Rank Math's interface exists.
+			add_action('init', function () {
+				if (interface_exists('\RankMath\Sitemap\Providers\Provider')) {
+					$provider_file = plugin_dir_path(__FILE__) . 'inc/rankmath-custom-sitemap.php';
+					if (file_exists($provider_file)) {
+						require_once $provider_file;
+					}
 				}
-			}
-			return $providers;
-		}, 50);
+			}, 1);
 
-		// Disable sitemap caching during testing to force a fresh index build.
-		add_filter('rank_math/sitemap/enable_caching', '__return_false');
+			// Register the provider; fall back silently if anything fails.
+			add_filter('rank_math/sitemap/providers', function ($providers) {
+				if (class_exists('\RankMath\Sitemap\Providers\Custom')) {
+					try {
+						$providers['custom'] = new \RankMath\Sitemap\Providers\Custom();
+					} catch (\Throwable $e) {
+						// Keep Rank Math defaults if instantiation fails.
+					}
+				}
+				return $providers;
+			}, 50);
+
+			// Disable sitemap caching during testing to force a fresh index build.
+			add_filter('rank_math/sitemap/enable_caching', '__return_false');
+
+		}
 
 
 		add_action('wp_head', 'gorilion_opengraph_rankmath');
