@@ -70,13 +70,14 @@ function betterseo_activation() {
 		global $wpdb;
 		$table_items = $wpdb->prefix . 'redirection_items';
 		if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table_items)) === $table_items) {
-			// Older and newer Redirection versions may use different columns; handle both when present.
-			// Disable rules where the source URL starts with '/product'.
+			// Disable only exact /product and /product/ redirects (not individual product slugs)
 			$wpdb->query(
 				$wpdb->prepare(
-					"UPDATE {$table_items} SET status = 'disabled' WHERE (url LIKE %s OR match_url LIKE %s)",
-					'/product%',
-					'/product%'
+					"UPDATE {$table_items} SET status = 'disabled' WHERE (url IN (%s, %s) OR match_url IN (%s, %s))",
+					'/product',
+					'/product/',
+					'/product',
+					'/product/'
 				)
 			);
 		}
@@ -140,58 +141,16 @@ function betterseo_deactivation() {
  * ------------------------------------------------------------------
  */
 
-require 'plugin-update-checker/plugin-update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/mdeiriondo/BetterSEO',
-	__FILE__,
-	'BetterSEO by Gorilion'
-);
-
-// Set the branch that contains the stable release.
-$myUpdateChecker->setBranch('main');
-
-/**
- * Dashboard update notifications
- */
-
-/* Force the update check on every admin page load. */
-add_action('admin_init', function () use ($myUpdateChecker) {
-	$myUpdateChecker->checkForUpdates();
-});
-
-/* Display an admin notice across the entire backend when an update is available. */
-add_action('admin_notices', function () use ($myUpdateChecker) {
-	if (!current_user_can('update_plugins')) return;
-
-	if (isset($_GET['betterseo_dismiss_update'])
-		&& wp_verify_nonce($_GET['_wpnonce'] ?? '', 'betterseo_dismiss_update')) {
-		update_user_meta(get_current_user_id(), 'betterseo_dismiss_update', '1');
-	}
-
-	// Stop showing the notice if the user has dismissed it
-	if (get_user_meta(get_current_user_id(), 'betterseo_dismiss_update', true)) return;
-
-	$update = $myUpdateChecker->getUpdate();
-	if (!$update) return;
-
-	// Build URLs for "Update now" and "Dismiss"
-	$plugin_file = plugin_basename(__FILE__);
-	$update_url = wp_nonce_url(
-		self_admin_url('update.php?action=upgrade-plugin&plugin=' . urlencode($plugin_file)),
-		'upgrade-plugin_' . $plugin_file
+$puc_path = plugin_dir_path(__FILE__) . 'plugin-update-checker/plugin-update-checker.php';
+if (file_exists($puc_path)) {
+	require_once $puc_path;
+	$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+		'https://github.com/mdeiriondo/BetterSEO',
+		__FILE__,
+		'BetterSEO by Gorilion'
 	);
-
-	// Optional: link to GitHub release notes or changelog
-	$details_url = 'https://github.com/mdeiriondo/BetterSEO/releases';
-
-	// Render the notice
-	echo '<div class="notice notice-warning is-dismissible" style="border-left-color:#d63638;">
-            <p><strong>BetterSEO by Gorilion</strong>: a new version is available
-            (<code>' . esc_html($update->version) . '</code>).
-            <a href="' . esc_url($update_url) . '">Update now</a> ·
-            <a href="' . esc_url($details_url) . '" target="_blank" rel="noopener">View details</a>
-          </div>';
-});
+	$myUpdateChecker->setBranch('main');
+}
 
 
 /**
@@ -309,9 +268,11 @@ function betterseo_migrate_to_page_mode() {
 	if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table_items)) === $table_items) {
 		$wpdb->query(
 			$wpdb->prepare(
-				"UPDATE {$table_items} SET status = 'enabled' WHERE (url LIKE %s OR match_url LIKE %s)",
-				'/product%',
-				'/product%'
+				"UPDATE {$table_items} SET status = 'enabled' WHERE (url IN (%s, %s) OR match_url IN (%s, %s))",
+				'/product',
+				'/product/',
+				'/product',
+				'/product/'
 			)
 		);
 	}
@@ -360,9 +321,11 @@ function betterseo_migrate_to_cpt_mode() {
 	if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table_items)) === $table_items) {
 		$wpdb->query(
 			$wpdb->prepare(
-				"UPDATE {$table_items} SET status = 'disabled' WHERE (url LIKE %s OR match_url LIKE %s)",
-				'/product%',
-				'/product%'
+				"UPDATE {$table_items} SET status = 'disabled' WHERE (url IN (%s, %s) OR match_url IN (%s, %s))",
+				'/product',
+				'/product/',
+				'/product',
+				'/product/'
 			)
 		);
 	}
