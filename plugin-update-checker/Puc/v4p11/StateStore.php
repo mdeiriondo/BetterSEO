@@ -76,7 +76,7 @@ if ( !class_exists('Puc_v4p11_StateStore', false) ):
 		 * @param Puc_v4p11_Update|null $update
 		 * @return $this
 		 */
-		public function setUpdate(Puc_v4p11_Update $update = null) {
+		public function setUpdate(?Puc_v4p11_Update $update = null) {
 			$this->lazyLoad();
 			$this->update = $update;
 			return $this;

@@ -378,123 +378,73 @@ function betterseo_register_product_cpt() {
  * Fetch all products from Commerce7 and create/update WordPress posts
  */
 function betterseo_sync_c7_products() {
-	// Check if this is a continuation of a batch sync
-	$batch_state = get_transient('betterseo_batch_sync_state');
-	$is_continuation = !empty($batch_state);
-	
-	// Only check lock if this is NOT a continuation
-	if (!$is_continuation) {
-		$lock_time = get_transient('betterseo_sync_in_progress');
-		if ($lock_time) {
-			// Check if lock is stale (older than 15 minutes)
-			if ((time() - $lock_time) < 900) {
-				error_log('BetterSEO: Product sync already in progress, skipping');
-				return;
-			} else {
-				delete_transient('betterseo_sync_in_progress');
-			}
-		}
-		
-		set_transient('betterseo_sync_in_progress', time(), 30 * MINUTE_IN_SECONDS);
-	}
-
-	// Only run in CPT mode and when platform is effectively Commerce7.
-	if (betterseo_get_mode() !== 'cpt') {
-		delete_transient('betterseo_sync_in_progress');
-		delete_transient('betterseo_batch_sync_state');
-		return;
-	}
+	// Validate prerequisites
+	if (betterseo_get_mode() !== 'cpt') return;
 	$platform = get_option('betterseo_platform', 'commerce7');
-	if ($platform === 'ecellar') {
-		delete_transient('betterseo_sync_in_progress');
-		delete_transient('betterseo_batch_sync_state');
-		return;
-	}
-
-	// Ensure the c7_product post type exists before attempting to sync
-	if (!post_type_exists('c7_product')) {
-		error_log('BetterSEO: Skipping product sync - post type c7_product does not exist');
-		delete_transient('betterseo_sync_in_progress');
-		delete_transient('betterseo_batch_sync_state');
-		return;
-	}
-
+	if ($platform === 'ecellar') return;
+	if (!post_type_exists('c7_product')) return;
 	$tenant_id = get_option('betterseo_tenant_id', '');
-	if (empty($tenant_id)) {
-		error_log('BetterSEO: Cannot sync products - Tenant ID is not configured');
-		delete_transient('betterseo_sync_in_progress');
-		delete_transient('betterseo_batch_sync_state');
-		return;
+	if (empty($tenant_id)) return;
+
+	// Check for batch metadata (lightweight - only offset/counts)
+	$batch_meta = get_option('betterseo_batch_meta');
+	$is_continuation = (is_array($batch_meta) && isset($batch_meta['offset']));
+	
+	// Lock check only for new sync
+	if (!$is_continuation) {
+		$lock = get_option('betterseo_sync_lock');
+		if ($lock && (time() - $lock) < 900) return;
+		update_option('betterseo_sync_lock', time(), false);
 	}
 
-	// Set resource limits
 	set_time_limit(120);
 	ini_set('memory_limit', '256M');
 	
+	// Fetch products (every batch re-fetches to avoid storing large arrays)
+	$products = betterseo_fetch_c7_products($tenant_id);
+	if (empty($products)) {
+		delete_option('betterseo_batch_meta');
+		delete_option('betterseo_sync_lock');
+		return;
+	}
+
+	$available = array_values(array_filter($products, function($p) {
+		return isset($p['webStatus']) && $p['webStatus'] === 'Available';
+	}));
+	
+	$total = count($available);
+	
+	// Initialize or continue
 	if (!$is_continuation) {
-		// Fetch all products only on first batch
-		$products = betterseo_fetch_c7_products($tenant_id);
-
-		if (empty($products)) {
-			error_log('BetterSEO: No products found or API error');
-			delete_transient('betterseo_sync_in_progress');
-			return;
-		}
-
-		// Filter products by webStatus: "Available"
-		$available_products = array_filter($products, function($product) {
-			return isset($product['webStatus']) && $product['webStatus'] === 'Available';
-		});
-
-		// Re-index array after filtering
-		$available_products = array_values($available_products);
-		
-		// Initialize batch state
-		$batch_state = array(
-			'products' => $available_products,
-			'offset' => 0,
-			'created' => 0,
-			'updated' => 0,
-			'skipped' => 0,
-			'errors' => 0,
-			'start_time' => time()
-		);
+		$batch_meta = array('offset' => 0, 'total' => $total, 'created' => 0, 'updated' => 0, 'skipped' => 0, 'errors' => 0, 'start' => time());
+		error_log('BetterSEO: Sync started - ' . $total . ' products');
 	}
 	
-	// Process products in batches of 50
 	$batch_size = 50;
-	$products_to_process = array_slice($batch_state['products'], $batch_state['offset'], $batch_size);
+	$end = min($batch_meta['offset'] + $batch_size, $total);
 	
-	foreach ($products_to_process as $product) {
+	for ($i = $batch_meta['offset']; $i < $end; $i++) {
 		try {
-			$result = betterseo_create_or_update_product_post($product);
-			if ($result === 'created') {
-				$batch_state['created']++;
-			} elseif ($result === 'updated') {
-				$batch_state['updated']++;
-			} elseif ($result === false) {
-				$batch_state['skipped']++;
-			}
+			$result = betterseo_create_or_update_product_post($available[$i]);
+			if ($result === 'created') $batch_meta['created']++;
+			elseif ($result === 'updated') $batch_meta['updated']++;
+			elseif ($result === false) $batch_meta['skipped']++;
 		} catch (Exception $e) {
-			$batch_state['errors']++;
-			error_log('BetterSEO: Error processing product - ' . $e->getMessage());
+			$batch_meta['errors']++;
 		}
-		$batch_state['offset']++;
 	}
 	
-	// Check if there are more products to process
-	if ($batch_state['offset'] < count($batch_state['products'])) {
-		// Save state and schedule next batch
-		set_transient('betterseo_batch_sync_state', $batch_state, 10 * MINUTE_IN_SECONDS);
-		
+	$batch_meta['offset'] = $end;
+	
+	if ($batch_meta['offset'] < $total) {
+		update_option('betterseo_batch_meta', $batch_meta, false);
+		error_log('BetterSEO: Batch complete - ' . $batch_meta['offset'] . '/' . $total);
 		wp_schedule_single_event(time() + 2, 'betterseo_run_product_sync');
-		if (function_exists('spawn_cron')) {
-			spawn_cron();
-		}
+		if (function_exists('spawn_cron')) spawn_cron();
 	} else {
-		// All products processed
-		delete_transient('betterseo_batch_sync_state');
-		delete_transient('betterseo_sync_in_progress');
+		error_log('BetterSEO: Sync complete - Created: ' . $batch_meta['created'] . ', Updated: ' . $batch_meta['updated']);
+		delete_option('betterseo_batch_meta');
+		delete_option('betterseo_sync_lock');
 	}
 }
 
