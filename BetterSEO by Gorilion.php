@@ -36,54 +36,13 @@ if (!defined('BETTERSEO_VERSION')) {
  */
 register_activation_hook(__FILE__, 'betterseo_activation');
 function betterseo_activation() {
-	$mode = betterseo_get_mode();
-
-	if ($mode === 'cpt') {
-		// Prevent activation if CPT already exists
-		if (post_type_exists('c7_product')) {
-			wp_die(__('BetterSEO by Gorilion cannot be activated because the post type "c7_product" already exists.', 'gorilion-seo-switcher'));
-		}
-		
-		// If a /product PAGE exists, move it to trash to avoid route conflicts with the CPT.
-		// The page can be restored later when switching back to PAGE mode.
-		$product_page = get_page_by_path('product');
-		if ($product_page instanceof WP_Post) {
-			wp_trash_post($product_page->ID);
-		}
-
-		// Register the custom post type
-		betterseo_register_product_cpt();
-		update_option('betterseo_c7_product_owned', 1);
-		
-		// Schedule daily cron job for product sync (sync function itself guards by platform/mode)
-		if (!wp_next_scheduled('betterseo_daily_product_sync')) {
-			wp_schedule_event(time(), 'daily', 'betterseo_daily_product_sync');
-		}
-		
-		// If a tenant is already configured, validate route and trigger initial product sync
-		$tenant_id = get_option('betterseo_tenant_id', '');
-		if (!empty($tenant_id)) {
-			betterseo_schedule_product_sync(1, true);
-		}
-		
-		// Disable Redirection plugin rules that point to the product slug
-		global $wpdb;
-		$table_items = $wpdb->prefix . 'redirection_items';
-		if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table_items)) === $table_items) {
-			// Disable only exact /product and /product/ redirects (not individual product slugs)
-			$wpdb->query(
-				$wpdb->prepare(
-					"UPDATE {$table_items} SET status = 'disabled' WHERE (url IN (%s, %s) OR match_url IN (%s, %s))",
-					'/product',
-					'/product/',
-					'/product',
-					'/product/'
-				)
-			);
-		}
+	// Don't make assumptions on first install - wait for user to configure settings
+	// Only check if c7_product CPT already exists from another plugin
+	if (post_type_exists('c7_product') && !get_option('betterseo_c7_product_owned')) {
+		wp_die(__('BetterSEO by Gorilion cannot be activated because the post type "c7_product" already exists.', 'gorilion-seo-switcher'));
 	}
-
-	// Flush rewrite rules so URLs work immediately (for both modes)
+	
+	// Flush rewrite rules
 	flush_rewrite_rules();
 }
 
@@ -448,7 +407,6 @@ function betterseo_sync_c7_products() {
 	}
 }
 
-// ... (rest of the code remains the same)
 function betterseo_fetch_c7_products($tenant_id) {
 	// Log API fetch attempt to monitor sync frequency
 	error_log('BetterSEO: FETCHING products from Commerce7 API - Tenant: ' . $tenant_id . ' - Time: ' . date('Y-m-d H:i:s'));
