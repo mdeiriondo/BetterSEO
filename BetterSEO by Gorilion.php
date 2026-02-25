@@ -191,6 +191,19 @@ function betterseo_on_tenant_change($old_value, $value, $option) {
 	}
 }
 
+add_action('update_option_betterseo_platform', 'betterseo_on_platform_change', 10, 3);
+
+function betterseo_on_platform_change($old_value, $value, $option) {
+	if ($value === 'ecellar') {
+		// eCellar always uses Page mode (legacy) - just set the mode, don't create anything
+		update_option('betterseo_mode', 'page');
+	} elseif ($value === 'commerce7') {
+		// Commerce7 defaults to CPT mode - trigger full setup
+		update_option('betterseo_mode', 'cpt');
+		betterseo_migrate_to_cpt_mode();
+	}
+}
+
 function betterseo_get_mode() {
 	$mode = get_option('betterseo_mode', 'cpt');
 	return ($mode === 'page') ? 'page' : 'cpt';
@@ -294,8 +307,13 @@ function betterseo_migrate_to_cpt_mode() {
 		wp_schedule_event(time(), 'daily', 'betterseo_daily_product_sync');
 	}
 
-	// 4) Switch mode flag and optionally trigger an initial sync
+	// 4) Switch mode flag
 	update_option('betterseo_mode', 'cpt');
+	
+	// 5) Flush rewrite rules so /product/slug URLs work immediately
+	flush_rewrite_rules();
+	
+	// 6) Trigger initial sync
 	betterseo_schedule_product_sync(1, true);
 }
 
@@ -731,6 +749,7 @@ get_footer();</pre></li>
             </ul>
         </details>
 
+        <?php if ($betterseo_platform === 'commerce7') : ?>
         <h2>Mode &amp; Rollback</h2>
         <p>Current mode: <strong><?php echo esc_html($current_mode === 'cpt' ? 'New CPT mode' : 'Legacy PAGE mode'); ?></strong></p>
         <form method="post">
@@ -747,6 +766,7 @@ get_footer();</pre></li>
                 </p>
             <?php endif; ?>
         </form>
+        <?php endif; ?>
     </div>
 
     <script>
