@@ -170,6 +170,22 @@ function gorilion_seo_switcher_register_settings()
 	);
 }
 
+/**
+ * Trash /product page when settings are saved in CPT + Commerce7 mode
+ */
+add_action('update_option_betterseo_mode', 'betterseo_trash_product_page_on_save', 10, 3);
+add_action('update_option_gorilion_seo_switcher_choice', 'betterseo_trash_product_page_on_save', 10, 3);
+function betterseo_trash_product_page_on_save($old_value, $value, $option) {
+    if (betterseo_get_mode() === 'cpt' && get_option('betterseo_platform', 'commerce7') === 'commerce7') {
+        $product_page = get_page_by_path('product');
+        if ($product_page instanceof WP_Post && $product_page->post_status !== 'trash') {
+            wp_trash_post($product_page->ID);
+        }
+    }
+}
+ 
+add_action('update_option_betterseo_tenant_id', 'betterseo_on_tenant_change', 10, 3);
+
 add_action('update_option_betterseo_tenant_id', 'betterseo_on_tenant_change', 10, 3);
 
 function betterseo_on_tenant_change($old_value, $value, $option) {
@@ -335,7 +351,8 @@ function betterseo_register_product_cpt() {
 			),
 			'public' => true,
 			'publicly_queryable' => true,
-			'has_archive' => false,
+			'show_ui' => true,
+			'has_archive' => true,
 			'rewrite' => array(
 				'slug'       => 'product',
 				'with_front' => false,
@@ -1184,6 +1201,9 @@ function gorilion_seo_switcher_inject_functions()
 				$site_title = get_bloginfo('name');
 
 				echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' :: YOASTSEO -->'."\n";
+				if (!empty($img)) {
+					echo '<meta property="og:image" content="' . esc_url($img) . '" />' . "\n";
+				}
 				echo '<script type="application/ld+json">
                         {
                             "@context": "http://schema.org",
