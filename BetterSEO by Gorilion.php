@@ -3,7 +3,7 @@
  * Plugin Name: BetterSEO by Gorilion
  * Plugin URI: https://www.gorilion.com/better-seo/
  * Description: Dynamically enable code for Rank Math or Yoast SEO, and update from GitHub.
- * Version: 1.42
+ * Version: 2.0
  * Author: Gorilion
  * Author URI: https://www.gorilion.com
  * License: GPL2
@@ -27,6 +27,17 @@ if (!defined('ABSPATH')) {
 if (!defined('BETTERSEO_VERSION')) {
 	$data = get_file_data(__FILE__, array('Version' => 'Version'), 'plugin');
 	define('BETTERSEO_VERSION', isset($data['Version']) ? $data['Version'] : '');
+}
+
+// Set to true to enable debug logging via error_log().
+if (!defined('BETTERSEO_DEBUG')) {
+	define('BETTERSEO_DEBUG', false);
+}
+
+function betterseo_log($message) {
+	if (BETTERSEO_DEBUG) {
+		error_log($message);
+	}
 }
 
 /**
@@ -193,7 +204,7 @@ function betterseo_on_tenant_change($old_value, $value, $option) {
 		return;
 	}
 	// Schedule sync to run asynchronously (non-blocking)
-	error_log('BetterSEO: Tenant ID changed, scheduling immediate async sync');
+	betterseo_log('BetterSEO: Tenant ID changed, scheduling immediate async sync');
 	
 	// Clear any existing scheduled sync first
 	wp_clear_scheduled_hook('betterseo_run_product_sync');
@@ -221,7 +232,9 @@ function betterseo_on_platform_change($old_value, $value, $option) {
 }
 
 function betterseo_get_mode() {
-	$mode = get_option('betterseo_mode', 'cpt');
+	$platform = get_option('betterseo_platform', 'commerce7');
+	$default  = ($platform === 'ecellar') ? 'page' : 'cpt';
+	$mode     = get_option('betterseo_mode', $default);
 	return ($mode === 'page') ? 'page' : 'cpt';
 }
 
@@ -411,7 +424,7 @@ function betterseo_sync_c7_products() {
 	// Initialize or continue
 	if (!$is_continuation) {
 		$batch_meta = array('offset' => 0, 'total' => $total, 'created' => 0, 'updated' => 0, 'skipped' => 0, 'errors' => 0, 'start' => time());
-		error_log('BetterSEO: Sync started - ' . $total . ' products');
+		betterseo_log('BetterSEO: Sync started - ' . $total . ' products');
 	}
 	
 	$batch_size = 50;
@@ -432,11 +445,11 @@ function betterseo_sync_c7_products() {
 	
 	if ($batch_meta['offset'] < $total) {
 		update_option('betterseo_batch_meta', $batch_meta, false);
-		error_log('BetterSEO: Batch complete - ' . $batch_meta['offset'] . '/' . $total);
+		betterseo_log('BetterSEO: Batch complete - ' . $batch_meta['offset'] . '/' . $total);
 		wp_schedule_single_event(time() + 2, 'betterseo_run_product_sync');
 		if (function_exists('spawn_cron')) spawn_cron();
 	} else {
-		error_log('BetterSEO: Sync complete - Created: ' . $batch_meta['created'] . ', Updated: ' . $batch_meta['updated']);
+		betterseo_log('BetterSEO: Sync complete - Created: ' . $batch_meta['created'] . ', Updated: ' . $batch_meta['updated']);
 		delete_option('betterseo_batch_meta');
 		delete_option('betterseo_sync_lock');
 	}
@@ -444,7 +457,7 @@ function betterseo_sync_c7_products() {
 
 function betterseo_fetch_c7_products($tenant_id) {
 	// Log API fetch attempt to monitor sync frequency
-	error_log('BetterSEO: FETCHING products from Commerce7 API - Tenant: ' . $tenant_id . ' - Time: ' . date('Y-m-d H:i:s'));
+	betterseo_log('BetterSEO: FETCHING products from Commerce7 API - Tenant: ' . $tenant_id . ' - Time: ' . date('Y-m-d H:i:s'));
 	
 	$base_url   = 'https://api.commerce7.com/v1/product/for-web';
 	$headers    = array('tenant: ' . $tenant_id);
@@ -464,7 +477,7 @@ function betterseo_fetch_c7_products($tenant_id) {
 
 		if ($response === false || $http_code !== 200) {
 			$error = curl_error($curl);
-			error_log('BetterSEO: Commerce7 API error on page ' . $page . ' - ' . $error . ' (HTTP ' . $http_code . ')');
+			betterseo_log('BetterSEO: Commerce7 API error on page ' . $page . ' - ' . $error . ' (HTTP ' . $http_code . ')');
 			curl_close($curl);
 			break;
 		}
@@ -473,7 +486,7 @@ function betterseo_fetch_c7_products($tenant_id) {
 
 		$data = json_decode($response, true);
 		if (!isset($data['products']) || !is_array($data['products'])) {
-			error_log('BetterSEO: Invalid Commerce7 API response format on page ' . $page);
+			betterseo_log('BetterSEO: Invalid Commerce7 API response format on page ' . $page);
 			break;
 		}
 
@@ -533,7 +546,7 @@ function betterseo_validate_and_sync_for_tenant($tenant_id) {
  */
 function betterseo_create_or_update_product_post($product) {
 	if (empty($product['slug'])) {
-		error_log('BetterSEO: Product missing slug, skipping');
+		betterseo_log('BetterSEO: Product missing slug, skipping');
 		return false;
 	}
 
@@ -566,13 +579,13 @@ function betterseo_create_or_update_product_post($product) {
 		update_post_meta($existing_posts[0]->ID, '_c7_product_id', $c7_product_id);
 		update_post_meta($existing_posts[0]->ID, '_c7_slug', $slug);
 
-		error_log("BetterSEO: Updated product post - Slug: $slug, ID: {$existing_posts[0]->ID}");
+		betterseo_log("BetterSEO: Updated product post - Slug: $slug, ID: {$existing_posts[0]->ID}");
 		return 'updated';
 	} else {
 		$post_id = wp_insert_post($post_data);
 
 		if (is_wp_error($post_id)) {
-			error_log('BetterSEO: Error creating post for slug: ' . $slug . ' - ' . $post_id->get_error_message());
+			betterseo_log('BetterSEO: Error creating post for slug: ' . $slug . ' - ' . $post_id->get_error_message());
 			return false;
 		}
 
@@ -581,7 +594,7 @@ function betterseo_create_or_update_product_post($product) {
 
 		update_post_meta($post_id, '_elementor_edit_mode', 'builder');
 
-		error_log("BetterSEO: Created product post - Slug: $slug, ID: $post_id");
+		betterseo_log("BetterSEO: Created product post - Slug: $slug, ID: $post_id");
 		return 'created';
 	}
 }
@@ -614,11 +627,11 @@ function betterseo_handle_product_404() {
 
 	$slug = $matches[1];
 
-	error_log("BetterSEO: 404 detected for product slug: $slug - Triggering full product sync");
+	betterseo_log("BetterSEO: 404 detected for product slug: $slug - Triggering full product sync");
 
 	$last_sync = get_transient('betterseo_last_404_sync');
 	if ($last_sync) {
-		error_log("BetterSEO: Sync already triggered recently, skipping");
+		betterseo_log("BetterSEO: Sync already triggered recently, skipping");
 		return;
 	}
 
@@ -1244,6 +1257,14 @@ function gorilion_opengraph_ecellar() {
 		$key = $ecellar_api_key;
 		$request_url = trim($_SERVER["REQUEST_URI"], "/");
 
+		echo '<!-- BETTERSEO_DEBUG'
+			. ' SERVER_SOFTWARE=' . esc_html($_SERVER['SERVER_SOFTWARE'] ?? 'unknown')
+			. ' REQUEST_URI=' . esc_html($_SERVER['REQUEST_URI'] ?? '')
+			. ' REDIRECT_URL=' . esc_html($_SERVER['REDIRECT_URL'] ?? '(empty)')
+			. ' PATH_INFO=' . esc_html($_SERVER['PATH_INFO'] ?? '(empty)')
+			. ' wp_request=' . esc_html($GLOBALS['wp']->request ?? '')
+			. ' -->' . PHP_EOL;
+
 		if (str_contains($request_url, "product/")) {
 			$result = end(explode("/", $request_url));
 		} elseif (!empty($_SERVER["QUERY_STRING"])) {
@@ -1314,10 +1335,6 @@ function gorilion_opengraph_ecellar() {
 	(function(){
 		var catalog = <?php echo $encoded; ?>;
 
-		console.group("%cBetterSEO eCellar Data","color:green;font-weight:bold;");
-		console.log("Full Array Response:", catalog);
-		console.groupEnd();
-
 		function clean(t){
 			t = (t || "").toString();
 			t = t.replace(/<\s*br\s*\/?>/gi, ' ');
@@ -1371,11 +1388,6 @@ function gorilion_opengraph_ecellar() {
 			if (!s){ s = document.createElement('script'); s.type='application/ld+json'; s.className='ecellar-jsonld'; document.head.appendChild(s); }
 			s.textContent = JSON.stringify(ld);
 
-			// Logs for debugging
-			console.group('%cBetterSEO eCellar Matched','color:purple;font-weight:bold;');
-			console.log('Found product_id:', prod.product_id);
-			console.log('Product:', prod);
-			console.groupEnd();
 		}
 
 		// Find data-ecp-id with robust strategies
