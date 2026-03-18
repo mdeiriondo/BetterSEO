@@ -995,25 +995,23 @@ function gorilion_seo_switcher_inject_functions()
 				echo '<meta property="og:site_name" content="' . esc_attr($site_title) . "\" />\n";
 				echo "<meta name=\"twitter:card\" content=\"summary_large_image\" />\n";
 
-				echo '<script type="application/ld+json">
-                        {
-                            "@context": "http://schema.org",
-                            "@type": "Product",
-                            "name": "' . esc_js($title) . '",
-                            "image": "' . esc_url($img) . '",
-                            "description": "' . esc_js($description) . '",
-                            "brand": {
-                                "@type": "Brand",
-                                "name": "' . esc_js($site_title) . '",
-                                "logo": "' . esc_url(wp_get_attachment_image_src(get_theme_mod('custom_logo'), 'full')[0]) . '"
-                            },
-                            "offers": {
-                                "@type": "Offer",
-                                "priceCurrency": "USD",
-                                "price": "' . esc_js($price) . '"
-                            }
-                        }
-                      </script>';
+				echo '<script type="application/ld+json">' . wp_json_encode( [
+								'@context'    => 'http://schema.org',
+								'@type'       => 'Product',
+								'name'        => $title,
+								'image'       => esc_url( $img ),
+								'description' => $description,
+								'brand'       => [
+									'@type' => 'Brand',
+									'name'  => $site_title,
+									'logo'  => esc_url( wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' )[0] ),
+								],
+								'offers'      => [
+									'@type'         => 'Offer',
+									'priceCurrency' => 'USD',
+									'price'         => $price,
+								],
+							], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>';
 			}
 		}
 	} else {
@@ -1217,25 +1215,23 @@ function gorilion_seo_switcher_inject_functions()
 				if (!empty($img)) {
 					echo '<meta property="og:image" content="' . esc_url($img) . '" />' . "\n";
 				}
-				echo '<script type="application/ld+json">
-                        {
-                            "@context": "http://schema.org",
-                            "@type": "Product",
-                            "name": "' . esc_js($title) . '",
-                            "image": "' . esc_url($img) . '",
-                            "description": "' . esc_js($description) . '",
-                            "brand": {
-                                "@type": "Brand",
-                                "name": "' . esc_js($site_title) . '",
-                                "logo": "' . esc_url(wp_get_attachment_image_src(get_theme_mod('custom_logo'), 'full')[0]) . '"
-                            },
-                            "offers": {
-                                "@type": "Offer",
-                                "priceCurrency": "USD",
-                                "price": "' . esc_js($price) . '"
-                            }
-                        }
-                      </script>';
+				echo '<script type="application/ld+json">' . wp_json_encode( [
+							'@context'    => 'http://schema.org',
+							'@type'       => 'Product',
+							'name'        => $title,
+							'image'       => esc_url( $img ),
+							'description' => $description,
+							'brand'       => [
+								'@type' => 'Brand',
+								'name'  => $site_title,
+								'logo'  => esc_url( wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' )[0] ),
+							],
+							'offers'      => [
+								'@type'         => 'Offer',
+								'priceCurrency' => 'USD',
+								'price'         => $price,
+							],
+						], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>';
 			}
 		}
 	}
@@ -1256,14 +1252,6 @@ function gorilion_opengraph_ecellar() {
 	if ($post->post_name == "product-detail" || $post->post_name == "shop") {
 		$key = $ecellar_api_key;
 		$request_url = trim($_SERVER["REQUEST_URI"], "/");
-
-		echo '<!-- BETTERSEO_DEBUG'
-			. ' SERVER_SOFTWARE=' . esc_html($_SERVER['SERVER_SOFTWARE'] ?? 'unknown')
-			. ' REQUEST_URI=' . esc_html($_SERVER['REQUEST_URI'] ?? '')
-			. ' REDIRECT_URL=' . esc_html($_SERVER['REDIRECT_URL'] ?? '(empty)')
-			. ' PATH_INFO=' . esc_html($_SERVER['PATH_INFO'] ?? '(empty)')
-			. ' wp_request=' . esc_html($GLOBALS['wp']->request ?? '')
-			. ' -->' . PHP_EOL;
 
 		if (str_contains($request_url, "product/")) {
 			$result = end(explode("/", $request_url));
