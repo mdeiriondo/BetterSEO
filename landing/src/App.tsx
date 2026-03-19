@@ -33,23 +33,37 @@ function Nav() {
           </div>
         </div>
         <div className="hidden md:flex items-center gap-8">
-          {["Features", "How It Works", "Pricing", "FAQ"].map((item) => (
+          {[
+            { label: "Features", href: "#features" },
+            { label: "How It Works", href: "#how-it-works" },
+            { label: "Pricing", href: "#pricing" },
+            { label: "FAQ", href: "#faq" },
+          ].map((item) => (
             <a
-              key={item}
-              href="#"
+              key={item.label}
+              href={item.href}
               style={{ color: C.navy }}
               className="text-sm font-medium hover:opacity-60 transition-opacity"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </div>
-        <button
+        <a
+          href="#pricing"
           style={{ background: C.navy, color: C.white }}
           className="text-sm font-semibold px-5 py-2 rounded-md hover:opacity-90 transition-opacity"
+          onClick={(e) => {
+            e.preventDefault();
+            document.querySelector("#pricing")?.scrollIntoView({ behavior: "smooth" });
+          }}
         >
           Get Started
-        </button>
+        </a>
       </div>
     </nav>
   );
@@ -164,6 +178,7 @@ function Hero() {
             <button
               style={{ border: `2px solid ${C.navy}`, color: C.navy }}
               className="font-semibold px-7 py-3 rounded-md hover:bg-gray-50 transition-colors text-sm bg-transparent"
+              onClick={() => document.querySelector("#how-it-works")?.scrollIntoView({ behavior: "smooth" })}
             >
               See How It Works ↓
             </button>
@@ -243,7 +258,7 @@ function HowItWorks() {
   ];
 
   return (
-    <section style={{ background: C.white }} className="py-24 px-6">
+    <section id="how-it-works" style={{ background: C.white }} className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-16 tracking-tight" style={{ color: C.navy }}>
           Three steps. Zero code.
@@ -656,12 +671,20 @@ function CtaFinal() {
           Start with BetterSEO today. $30 a month, up and running in under 24 hours, cancel anytime.
         </p>
         <div className="flex flex-wrap justify-center gap-4 mb-8">
-          <button style={{ background: C.white, color: C.navy }} className="font-bold px-8 py-4 rounded-lg hover:opacity-90 transition-opacity text-sm">
+          <button
+            style={{ background: C.white, color: C.navy }}
+            className="font-bold px-8 py-4 rounded-lg hover:opacity-90 transition-opacity text-sm"
+            onClick={() => document.querySelector("#pricing")?.scrollIntoView({ behavior: "smooth" })}
+          >
             Get Started Now
           </button>
-          <button style={{ border: "2px solid rgba(255,255,255,0.35)", color: C.white }} className="font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-sm bg-transparent">
+          <a
+            href="mailto:hello@gorilion.com"
+            style={{ border: "2px solid rgba(255,255,255,0.35)", color: C.white }}
+            className="font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-sm"
+          >
             Talk to the Team
-          </button>
+          </a>
         </div>
         <p className="text-xs" style={{ color: "rgba(255,255,255,0.38)" }}>
           No contract · Setup in 24h · Support included · Commerce7 & eCellar
