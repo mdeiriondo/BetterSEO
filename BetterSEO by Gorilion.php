@@ -515,6 +515,7 @@ function betterseo_sync_c7_products() {
 		betterseo_log('BetterSEO: Sync complete - Created: ' . $batch_meta['created'] . ', Updated: ' . $batch_meta['updated']);
 		delete_option('betterseo_batch_meta');
 		delete_option('betterseo_sync_lock');
+		flush_rewrite_rules();
 	}
 }
 

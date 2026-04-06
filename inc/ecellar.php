@@ -243,6 +243,7 @@ function betterseo_sync_ecellar_products() {
 		betterseo_log( 'BetterSEO eCellar: Sync complete - Created: ' . $batch_meta['created'] . ', Updated: ' . $batch_meta['updated'] . ', Skipped: ' . $batch_meta['skipped'] . ', Errors: ' . $batch_meta['errors'] );
 		delete_option( 'betterseo_ecellar_batch_meta' );
 		delete_option( 'betterseo_ecellar_sync_lock' );
+		flush_rewrite_rules();
 	}
 }
 
