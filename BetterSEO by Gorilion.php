@@ -1072,25 +1072,23 @@ function gorilion_seo_switcher_inject_functions()
 				echo '<meta property="og:site_name" content="' . esc_attr($site_title) . "\" />\n";
 				echo "<meta name=\"twitter:card\" content=\"summary_large_image\" />\n";
 
-				echo '<script type="application/ld+json">
-                        {
-                            "@context": "http://schema.org",
-                            "@type": "Product",
-                            "name": "' . esc_js($title) . '",
-                            "image": "' . esc_url($img) . '",
-                            "description": "' . esc_js($description) . '",
-                            "brand": {
-                                "@type": "Brand",
-                                "name": "' . esc_js($site_title) . '",
-                                "logo": "' . esc_url(wp_get_attachment_image_src(get_theme_mod('custom_logo'), 'full')[0]) . '"
-                            },
-                            "offers": {
-                                "@type": "Offer",
-                                "priceCurrency": "USD",
-                                "price": "' . esc_js($price) . '"
-                            }
-                        }
-                      </script>';
+				echo '<script type="application/ld+json">' . wp_json_encode( [
+								'@context'    => 'http://schema.org',
+								'@type'       => 'Product',
+								'name'        => $title,
+								'image'       => esc_url( $img ),
+								'description' => $description,
+								'brand'       => [
+									'@type' => 'Brand',
+									'name'  => $site_title,
+									'logo'  => esc_url( wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' )[0] ),
+								],
+								'offers'      => [
+									'@type'         => 'Offer',
+									'priceCurrency' => 'USD',
+									'price'         => $price,
+								],
+							], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>';
 			}
 		}
 	} else {
@@ -1294,25 +1292,23 @@ function gorilion_seo_switcher_inject_functions()
 				if (!empty($img)) {
 					echo '<meta property="og:image" content="' . esc_url($img) . '" />' . "\n";
 				}
-				echo '<script type="application/ld+json">
-                        {
-                            "@context": "http://schema.org",
-                            "@type": "Product",
-                            "name": "' . esc_js($title) . '",
-                            "image": "' . esc_url($img) . '",
-                            "description": "' . esc_js($description) . '",
-                            "brand": {
-                                "@type": "Brand",
-                                "name": "' . esc_js($site_title) . '",
-                                "logo": "' . esc_url(wp_get_attachment_image_src(get_theme_mod('custom_logo'), 'full')[0]) . '"
-                            },
-                            "offers": {
-                                "@type": "Offer",
-                                "priceCurrency": "USD",
-                                "price": "' . esc_js($price) . '"
-                            }
-                        }
-                      </script>';
+				echo '<script type="application/ld+json">' . wp_json_encode( [
+							'@context'    => 'http://schema.org',
+							'@type'       => 'Product',
+							'name'        => $title,
+							'image'       => esc_url( $img ),
+							'description' => $description,
+							'brand'       => [
+								'@type' => 'Brand',
+								'name'  => $site_title,
+								'logo'  => esc_url( wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' )[0] ),
+							],
+							'offers'      => [
+								'@type'         => 'Offer',
+								'priceCurrency' => 'USD',
+								'price'         => $price,
+							],
+						], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>';
 			}
 		}
 	}
