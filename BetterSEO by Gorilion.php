@@ -125,6 +125,19 @@ function betterseo_deactivation() {
 }
 
 /**
+ * Minimal schema piece class for injecting Product schema into Yoast's @graph.
+ * Implements the two methods Yoast calls on every piece (duck-typed, no interface required).
+ */
+class BetterSEO_Product_Schema_Piece {
+	private $schema;
+	public function __construct( array $schema ) {
+		$this->schema = $schema;
+	}
+	public function is_needed() { return true; }
+	public function generate()  { return $this->schema; }
+}
+
+/**
  * ------------------------------------------------------------------
  * 1) GITHUB PLUGIN UPDATE CONFIGURATION
  * ------------------------------------------------------------------
@@ -1112,7 +1125,50 @@ function gorilion_seo_switcher_inject_functions()
 			add_filter('wpseo_opengraph_desc', 'betterseo_yoast_product_metadesc', 99);
 			add_filter('wpseo_opengraph_image', 'betterseo_yoast_product_image', 99);
 			add_filter('wpseo_twitter_image', 'betterseo_yoast_product_image', 99);
-			add_action('wp_head', 'gorilion_opengraph_yoast', 99);
+
+			$captured_post = $post;
+			add_filter('wpseo_schema_graph_pieces', function( $pieces, $context ) use ( $captured_post ) {
+				$seo = betterseo_get_c7_product_seo_data_for_post( $captured_post );
+				if ( ! is_array( $seo ) || empty( $seo['title'] ) ) {
+					return $pieces;
+				}
+
+				$permalink = get_permalink( $captured_post );
+				$schema    = array(
+					'@type'            => 'Product',
+					'@id'              => $permalink . '#product',
+					'name'             => $seo['title'],
+					'url'              => $permalink,
+					'mainEntityOfPage' => $permalink,
+					'brand'            => array(
+						'@type' => 'Brand',
+						'name'  => get_bloginfo( 'name' ),
+					),
+				);
+
+				if ( ! empty( $seo['description'] ) ) {
+					$schema['description'] = html_entity_decode( $seo['description'], ENT_QUOTES | ENT_HTML5, 'UTF-8' );
+				}
+				if ( ! empty( $seo['image'] ) ) {
+					$schema['image'] = $seo['image'];
+				}
+				if ( ! empty( $seo['sku'] ) ) {
+					$schema['sku'] = $seo['sku'];
+				}
+				if ( $seo['price'] !== '' ) {
+					$schema['offers'] = array(
+						'@type'         => 'Offer',
+						'@id'           => $permalink . '#offer',
+						'url'           => $permalink,
+						'priceCurrency' => 'USD',
+						'price'         => (string) $seo['price'],
+						'availability'  => 'https://schema.org/InStock',
+					);
+				}
+
+				$pieces[] = new BetterSEO_Product_Schema_Piece( $schema );
+				return $pieces;
+			}, 99, 2 );
 		}
 
 		function betterseo_get_c7_product_seo_data_for_post($post) {
@@ -1171,10 +1227,22 @@ function gorilion_seo_switcher_inject_functions()
 				$img = (string) $data['images'][0]['url'];
 			}
 
+			$price = '';
+			if (isset($data['variants'][0]['price']) && $data['variants'][0]['price'] !== '') {
+				$price = (float) $data['variants'][0]['price'] / 100.0;
+			}
+
+			$sku = '';
+			if (!empty($data['variants'][0]['sku'])) {
+				$sku = (string) $data['variants'][0]['sku'];
+			}
+
 			$result = array(
-				'title' => $title,
+				'title'       => $title,
 				'description' => $desc,
-				'image' => $img,
+				'image'       => $img,
+				'price'       => $price,
+				'sku'         => $sku,
 			);
 			set_transient($cache_key, $result, 10 * MINUTE_IN_SECONDS);
 			return $result;
@@ -1207,111 +1275,6 @@ function gorilion_seo_switcher_inject_functions()
 			return $current;
 		}
 
-		function gorilion_opengraph_yoast()
-		{
-			global $post;
-			if (!is_object($post)) {
-				return;
-			}
-
-			// This function is used to output extra structured data for product pages.
-			// Yoast output for title/description/OG is controlled via wpseo_* filters.
-
-			// Similar logic to get $result from the request URI.
-			$request_url = filter_var($_SERVER['REQUEST_URI'], FILTER_SANITIZE_URL);
-			$request_url = trim($request_url, '/');
-			$parts = explode('/', $request_url);
-			$result = end($parts);
-
-			if (!$result || $result === '' || $result === 'product' || $post->post_name === 'shop' || $post->post_name == "product-detail") {
-				$redirect_url = isset($_SERVER['REDIRECT_URL']) ? $_SERVER['REDIRECT_URL'] : '';
-				$redirect_url = trim($redirect_url, '/');
-				$parts2 = explode('/', $redirect_url);
-				$result = end($parts2);
-			}
-			if (!$result || $result === '' || $result === 'product' || $post->post_name === 'shop' || $post->post_name == "product-detail") {
-				if (is_admin()) {
-					add_action('admin_notices', 'betterseo_missing_request_notice');
-				}
-			}
-
-			// Platform check (only run Commerce7 blocks if platform is commerce7)
-			$betterseo_platform = get_option('betterseo_platform');
-
-			// If it's a "collection" page (Commerce7 only).
-			if ($betterseo_platform === 'commerce7' && $post->post_name === 'collection') {
-				$tenant_id = get_option('betterseo_tenant_id', 'default-tenant-id');
-				$collection_url_base = 'https://api.commerce7.com/v1/product/for-web?&collectionSlug=';
-				$url = $collection_url_base . $result;
-				$headers = array('tenant: ' . $tenant_id);
-				$curl = curl_init($url);
-				curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-				curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-				$response = curl_exec($curl);
-				if ($response) {
-					$response = json_decode($response);
-					$new_title = isset($response->collection->seo->title) ? $response->collection->seo->title : '';
-					$new_description = isset($response->collection->seo->description) ? $response->collection->seo->description : '';
-
-					echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' :: YOASTSEO -->'."\n";
-					echo '<title>' . $new_title . "</title>\n";
-					echo '<meta name="description" content="' . $new_description . "\"/>\n";
-				}
-			}
-
-			// If it's a product page (Commerce7 only).
-			if ($betterseo_platform === 'commerce7' && ($post->post_type === 'c7_product' || $post->post_name === 'product')) {
-				$tenant_id = get_option('betterseo_tenant_id', 'default-tenant-id');
-				$url = 'https://api.commerce7.com/v1/product/slug/' . $result . '/for-web';
-				$headers = array('tenant: ' . $tenant_id);
-
-				$curl = curl_init($url);
-				curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-				curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-
-				$responseData = curl_exec($curl);
-				if ($responseData === false || empty($responseData)) {
-					$error = curl_error($curl);
-					echo 'Error from curl: ' . esc_html($error);
-				} else {
-					curl_close($curl);
-					$response = json_decode($responseData);
-				}
-
-				$price = isset($response->variants[0]->price) ? $response->variants[0]->price / 100.0 : '';
-				$description = isset($response->seo->description) ? $response->seo->description : '';
-				$wine = isset($response->wine) ? $response->wine : array();
-				$title = isset($response->seo->title) ? $response->seo->title : '';
-				$sku = isset($response->variants[0]->sku) ? $response->variants[0]->sku : '';
-				$img = isset($response->image) ? $response->image : '';
-
-				$keywords = implode(',', array($title, $sku, implode(',', (array) $wine)));
-				$full_url = 'https://' . rtrim($_SERVER['HTTP_HOST'], '/') . '/' . $request_url . '/' . $result;
-				$site_title = get_bloginfo('name');
-
-				echo '<!-- BetterSEO meta :: VERSION ' . BETTERSEO_VERSION . ' :: YOASTSEO -->'."\n";
-				if (!empty($img)) {
-					echo '<meta property="og:image" content="' . esc_url($img) . '" />' . "\n";
-				}
-				echo '<script type="application/ld+json">' . wp_json_encode( [
-							'@context'    => 'http://schema.org',
-							'@type'       => 'Product',
-							'name'        => $title,
-							'image'       => esc_url( $img ),
-							'description' => $description,
-							'brand'       => [
-								'@type' => 'Brand',
-								'name'  => $site_title,
-								'logo'  => esc_url( wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' )[0] ),
-							],
-							'offers'      => [
-								'@type'         => 'Offer',
-								'priceCurrency' => 'USD',
-								'price'         => $price,
-							],
-						], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>';
-			}
-		}
 	}
 };
 
