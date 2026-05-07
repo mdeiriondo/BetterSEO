@@ -3,7 +3,7 @@
  * Plugin Name: BetterSEO by Gorilion
  * Plugin URI: https://www.gorilion.com/better-seo/
  * Description: Dynamically enable code for Rank Math or Yoast SEO, and update from GitHub.
- * Version: 2.0
+ * Version: 2.1
  * Author: Gorilion
  * Author URI: https://www.gorilion.com
  * License: GPL2
@@ -819,7 +819,7 @@ function gorilion_seo_switcher_options_page()
                     <th scope="row">eCellar Shop Path</th>
                     <td>
                         <input type="text" name="betterseo_ecellar_shop_path" value="<?php echo esc_attr(get_option('betterseo_ecellar_shop_path', '')); ?>" />
-                        <p class="description">Slug de la página de productos (ej: <code>product-detail</code> o <code>shop</code>). Se usa como prefijo de URL para los productos y para reutilizar el template Elementor de esa página.</p>
+                        <p class="description">Slug of the products page (e.g. <code>product-detail</code> or <code>shop</code>). Used as the URL prefix for products and to reuse the Elementor template of that page.</p>
                     </td>
                 </tr>
                 <?php if ( $current_mode !== 'cpt' || $betterseo_platform !== 'commerce7' ) : ?>
