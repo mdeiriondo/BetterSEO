@@ -385,7 +385,7 @@ function betterseo_c7_validate_app_key($plaintext, $tenant_id = '') {
 	}
 	if ($code === 403) {
 		betterseo_set_c7_app_key_admin_notice(
-			__('App permissions insufficient — verify the App has Read Products + Read Collections. Key was not saved.', 'gorilion-seo-switcher'),
+			__('App permissions insufficient. Key was not saved.', 'gorilion-seo-switcher'),
 			'error'
 		);
 		return 'invalid';
