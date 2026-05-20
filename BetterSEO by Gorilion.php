@@ -3,7 +3,7 @@
  * Plugin Name: BetterSEO by Gorilion
  * Plugin URI: https://www.gorilion.com/better-seo/
  * Description: Dynamically enable code for Rank Math or Yoast SEO, and update from GitHub.
- * Version: 2.1
+ * Version: 2.2
  * Author: Gorilion
  * Author URI: https://www.gorilion.com
  * License: GPL2
@@ -378,14 +378,14 @@ function betterseo_c7_validate_app_key($plaintext, $tenant_id = '') {
 
 	if ($code === 401) {
 		betterseo_set_c7_app_key_admin_notice(
-			__('App Key rejected — verify it was copy-pasted correctly and the App is installed in this tenant. Key was not saved.', 'gorilion-seo-switcher'),
+			__('App Key rejected — verify it was copy-pasted correctly or contact Gorilion. Key was not saved.', 'gorilion-seo-switcher'),
 			'error'
 		);
 		return 'invalid';
 	}
 	if ($code === 403) {
 		betterseo_set_c7_app_key_admin_notice(
-			__('App permissions insufficient. Key was not saved.', 'gorilion-seo-switcher'),
+			__('App Key rejected — verify it was copy-pasted correctly or contact Gorilion. Key was not saved.', 'gorilion-seo-switcher'),
 			'error'
 		);
 		return 'invalid';
@@ -1229,9 +1229,8 @@ function gorilion_seo_switcher_options_page()
                     <td>
                         <input type="hidden" name="betterseo_c7_app_key_encrypted" value="" />
                         <input type="password" name="betterseo_c7_app_key" value="" autocomplete="off" placeholder="<?php echo get_option('betterseo_c7_app_key_encrypted') ? esc_attr__('••••••••••• (saved)', 'gorilion-seo-switcher') : esc_attr__('Paste your Commerce7 App Secret Key', 'gorilion-seo-switcher'); ?>" />
-                        <p class="description"><?php esc_html_e('Enables syncing club-restricted products. Stored encrypted. Provided via your BetterSEO dashboard.', 'gorilion-seo-switcher'); ?></p>
                         <?php if (betterseo_c7_get_app_key()) : ?>
-                            <p style="color:green;">&#10003; <?php esc_html_e('Admin API active — club products will be synced', 'gorilion-seo-switcher'); ?></p>
+                            <p style="color:green;">&#10003; <?php esc_html_e('Admin API active', 'gorilion-seo-switcher'); ?></p>
                         <?php endif; ?>
                     </td>
                 </tr>
