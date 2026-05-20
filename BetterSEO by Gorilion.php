@@ -34,6 +34,42 @@ if (!defined('BETTERSEO_DEBUG')) {
 	define('BETTERSEO_DEBUG', false);
 }
 
+if (!defined('BETTERSEO_C7_APP_ID')) {
+	define('BETTERSEO_C7_APP_ID', 'better-seo-by-gorilion');
+}
+
+function betterseo_c7_get_crypto_key() {
+	return substr(hash('sha256', wp_salt('auth'), true), 0, SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
+}
+
+function betterseo_c7_encrypt($plaintext) {
+	if (empty($plaintext)) {
+		return '';
+	}
+	$nonce = random_bytes(SODIUM_CRYPTO_SECRETBOX_NONCEBYTES);
+	$ciphertext = sodium_crypto_secretbox($plaintext, $nonce, betterseo_c7_get_crypto_key());
+	return base64_encode($nonce . $ciphertext);
+}
+
+function betterseo_c7_decrypt($encoded) {
+	if (empty($encoded)) {
+		return '';
+	}
+	$decoded = base64_decode($encoded, true);
+	if ($decoded === false || strlen($decoded) < SODIUM_CRYPTO_SECRETBOX_NONCEBYTES) {
+		return '';
+	}
+	$nonce = substr($decoded, 0, SODIUM_CRYPTO_SECRETBOX_NONCEBYTES);
+	$ciphertext = substr($decoded, SODIUM_CRYPTO_SECRETBOX_NONCEBYTES);
+	$plaintext = sodium_crypto_secretbox_open($ciphertext, $nonce, betterseo_c7_get_crypto_key());
+	return $plaintext === false ? '' : $plaintext;
+}
+
+function betterseo_c7_get_app_key() {
+	$key = betterseo_c7_decrypt(get_option('betterseo_c7_app_key_encrypted', ''));
+	return empty($key) ? null : $key;
+}
+
 function betterseo_log($message) {
 	if (BETTERSEO_DEBUG) {
 		error_log($message);
@@ -47,6 +83,11 @@ function betterseo_log($message) {
  */
 register_activation_hook(__FILE__, 'betterseo_activation');
 function betterseo_activation() {
+	if (!function_exists('sodium_crypto_secretbox')) {
+		deactivate_plugins(plugin_basename(__FILE__));
+		wp_die(__('BetterSEO requires PHP libsodium (PHP 7.2+).', 'gorilion-seo-switcher'));
+	}
+
 	// Don't make assumptions on first install - wait for user to configure settings
 	// Only check if c7_product CPT already exists from another plugin
 	if (post_type_exists('c7_product') && !get_option('betterseo_c7_product_owned')) {
@@ -181,6 +222,8 @@ function gorilion_seo_switcher_admin_menu()
 
 // Register the settings where we store the user's choices.
 add_action('admin_init', 'gorilion_seo_switcher_register_settings');
+add_action('load-settings_page_gorilion_seo_switcher', 'betterseo_settings_page_setup_notices');
+add_action('admin_notices', 'betterseo_settings_page_admin_notices');
 
 function gorilion_seo_switcher_register_settings()
 {
@@ -219,6 +262,142 @@ function gorilion_seo_switcher_register_settings()
 		'gorilion_seo_switcher_settings_group',
 		'betterseo_mode'
 	);
+	register_setting(
+		'gorilion_seo_switcher_settings_group',
+		'betterseo_c7_app_key_encrypted',
+		array('sanitize_callback' => 'betterseo_sanitize_c7_app_key')
+	);
+}
+
+function betterseo_settings_page_setup_notices() {
+	remove_action('admin_notices', 'settings_errors');
+	delete_transient('settings_errors');
+	global $wp_settings_errors;
+	$wp_settings_errors = array();
+}
+
+function betterseo_settings_page_admin_notices() {
+	if (!function_exists('get_current_screen')) {
+		return;
+	}
+	$screen = get_current_screen();
+	if (!$screen || $screen->id !== 'settings_page_gorilion_seo_switcher') {
+		return;
+	}
+
+	$user_id = get_current_user_id();
+	if (!$user_id) {
+		return;
+	}
+
+	$notice = get_transient('betterseo_c7_app_key_notice_' . $user_id);
+	if (!is_array($notice) || empty($notice['message'])) {
+		return;
+	}
+
+	delete_transient('betterseo_c7_app_key_notice_' . $user_id);
+
+	$type = isset($notice['type']) ? $notice['type'] : 'error';
+	if (!in_array($type, array('error', 'warning', 'success', 'info'), true)) {
+		$type = 'error';
+	}
+
+	printf(
+		'<div class="notice notice-%1$s is-dismissible"><p>%2$s</p></div>',
+		esc_attr($type),
+		esc_html($notice['message'])
+	);
+}
+
+function betterseo_set_c7_app_key_admin_notice($message, $type = 'error') {
+	static $added = false;
+	if ($added) {
+		return;
+	}
+	$added = true;
+
+	$user_id = get_current_user_id();
+	if (!$user_id) {
+		return;
+	}
+
+	set_transient(
+		'betterseo_c7_app_key_notice_' . $user_id,
+		array(
+			'message' => $message,
+			'type'    => $type,
+		),
+		60
+	);
+}
+
+function betterseo_sanitize_c7_app_key($value) {
+	if (empty($_POST['betterseo_c7_app_key'])) {
+		return get_option('betterseo_c7_app_key_encrypted', '');
+	}
+	$plaintext = sanitize_text_field(wp_unslash($_POST['betterseo_c7_app_key']));
+	$tenant_id = '';
+	if (!empty($_POST['betterseo_tenant_id'])) {
+		$tenant_id = sanitize_text_field(wp_unslash($_POST['betterseo_tenant_id']));
+	}
+	if ($tenant_id === '') {
+		$tenant_id = get_option('betterseo_tenant_id', '');
+	}
+	$status = betterseo_c7_validate_app_key($plaintext, $tenant_id);
+	if ($status === 'invalid') {
+		return get_option('betterseo_c7_app_key_encrypted', '');
+	}
+	return betterseo_c7_encrypt($plaintext);
+}
+
+/**
+ * @return string 'valid'|'invalid'|'unverified'
+ */
+function betterseo_c7_validate_app_key($plaintext, $tenant_id = '') {
+	if ($tenant_id === '') {
+		$tenant_id = get_option('betterseo_tenant_id', '');
+	}
+	if (empty($tenant_id)) {
+		betterseo_set_c7_app_key_admin_notice(
+			__('Commerce7 App Key saved, but Tenant ID is missing — could not verify.', 'gorilion-seo-switcher'),
+			'warning'
+		);
+		return 'unverified';
+	}
+
+	$url = 'https://api.commerce7.com/v1/product?page=1&limit=1';
+	$curl = curl_init($url);
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($curl, CURLOPT_HTTPHEADER, array('tenant: ' . $tenant_id));
+	curl_setopt($curl, CURLOPT_USERPWD, BETTERSEO_C7_APP_ID . ':' . $plaintext);
+	curl_setopt($curl, CURLOPT_TIMEOUT, 15);
+
+	curl_exec($curl);
+	$code = (int) curl_getinfo($curl, CURLINFO_HTTP_CODE);
+	curl_close($curl);
+
+	if ($code === 401) {
+		betterseo_set_c7_app_key_admin_notice(
+			__('App Key rejected — verify it was copy-pasted correctly and the App is installed in this tenant. Key was not saved.', 'gorilion-seo-switcher'),
+			'error'
+		);
+		return 'invalid';
+	}
+	if ($code === 403) {
+		betterseo_set_c7_app_key_admin_notice(
+			__('App permissions insufficient — verify the App has Read Products + Read Collections. Key was not saved.', 'gorilion-seo-switcher'),
+			'error'
+		);
+		return 'invalid';
+	}
+	if ($code !== 200) {
+		betterseo_set_c7_app_key_admin_notice(
+			__('Couldn\'t reach Commerce7 — check tenant ID and network. Key was saved but not verified.', 'gorilion-seo-switcher'),
+			'warning'
+		);
+		return 'unverified';
+	}
+	return 'valid';
 }
 
 /**
@@ -256,6 +435,24 @@ function betterseo_on_tenant_change($old_value, $value, $option) {
 	if (function_exists('spawn_cron')) {
 		spawn_cron();
 	}
+}
+
+add_action('update_option_betterseo_c7_app_key_encrypted', 'betterseo_on_c7_app_key_change', 10, 3);
+
+function betterseo_on_c7_app_key_change($old_value, $value, $option) {
+	if ($value === $old_value) {
+		return;
+	}
+	if (betterseo_c7_get_app_key() === null) {
+		return;
+	}
+	if (betterseo_get_mode() !== 'cpt') {
+		return;
+	}
+	if (get_option('betterseo_platform', 'commerce7') !== 'commerce7') {
+		return;
+	}
+	betterseo_schedule_product_sync(1, true);
 }
 
 add_action('update_option_betterseo_platform', 'betterseo_on_platform_change', 10, 3);
@@ -456,6 +653,215 @@ function betterseo_register_product_cpt() {
 
 /**
  * ------------------------------------------------------------------
+ * COMMERCE7 API HELPERS
+ * ------------------------------------------------------------------
+ */
+function betterseo_c7_build_url($type) {
+	$admin = betterseo_c7_get_app_key() !== null;
+
+	if ($type === 'list') {
+		return $admin
+			? 'https://api.commerce7.com/v1/product'
+			: 'https://api.commerce7.com/v1/product/for-web';
+	}
+
+	return '';
+}
+
+function betterseo_c7_api_request($url, $timeout = 30, $use_app_auth = false) {
+	$tenant_id = get_option('betterseo_tenant_id', '');
+	$headers = array('tenant: ' . $tenant_id);
+
+	$curl = curl_init($url);
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+	curl_setopt($curl, CURLOPT_TIMEOUT, $timeout);
+
+	if ($use_app_auth) {
+		$app_key = betterseo_c7_get_app_key();
+		if ($app_key !== null) {
+			curl_setopt($curl, CURLOPT_USERPWD, BETTERSEO_C7_APP_ID . ':' . $app_key);
+		}
+	}
+
+	$body = curl_exec($curl);
+	$code = (int) curl_getinfo($curl, CURLINFO_HTTP_CODE);
+
+	if ($body === false) {
+		$error = curl_error($curl);
+		curl_close($curl);
+		return new WP_Error('betterseo_c7_curl', $error);
+	}
+
+	curl_close($curl);
+	return array('code' => $code, 'body' => $body);
+}
+
+function betterseo_c7_parse_product_fields_from_api($data) {
+	if (!is_array($data)) {
+		return array(
+			'title'       => '',
+			'description' => '',
+			'image'       => '',
+			'price'       => '',
+			'sku'         => '',
+		);
+	}
+	if (isset($data['product']) && is_array($data['product'])) {
+		$data = $data['product'];
+	}
+
+	$title = '';
+	if (!empty($data['seo']['title'])) {
+		$title = (string) $data['seo']['title'];
+	} elseif (!empty($data['title'])) {
+		$title = (string) $data['title'];
+	}
+
+	$description = '';
+	if (!empty($data['seo']['description'])) {
+		$description = (string) $data['seo']['description'];
+	}
+
+	$image = '';
+	if (!empty($data['image'])) {
+		$image = (string) $data['image'];
+	} elseif (!empty($data['images'][0]['src'])) {
+		$image = (string) $data['images'][0]['src'];
+	}
+
+	$price = '';
+	if (isset($data['variants'][0]['price']) && $data['variants'][0]['price'] !== '') {
+		$price = (float) $data['variants'][0]['price'] / 100.0;
+	}
+
+	$sku = '';
+	if (!empty($data['variants'][0]['sku'])) {
+		$sku = (string) $data['variants'][0]['sku'];
+	}
+
+	return array(
+		'title'       => $title,
+		'description' => $description,
+		'image'       => $image,
+		'price'       => $price,
+		'sku'         => $sku,
+	);
+}
+
+/**
+ * Admin product fetch for club fallback (OG + Yoast schema). Cached 10 min per tenant + C7 product id.
+ *
+ * @param WP_Post $post
+ * @return array|null Keys title, description, image, price, sku.
+ */
+function betterseo_get_c7_admin_product_data_for_post($post) {
+	if (!($post instanceof WP_Post)) {
+		return null;
+	}
+
+	if (betterseo_c7_get_app_key() === null) {
+		return null;
+	}
+
+	$tenant_id = get_option('betterseo_tenant_id', '');
+	$product_id = $post->post_type === 'c7_product'
+		? (string) get_post_meta($post->ID, '_c7_product_id', true)
+		: '';
+	if (empty($tenant_id) || $product_id === '') {
+		return null;
+	}
+
+	$cache_key = 'betterseo_c7_og_admin_' . md5($tenant_id . '|' . $product_id);
+	$cached = get_transient($cache_key);
+	if (is_array($cached)) {
+		return $cached;
+	}
+
+	$url = 'https://api.commerce7.com/v1/product/' . rawurlencode($product_id);
+	$result = betterseo_c7_api_request($url, 10, true);
+	if (is_wp_error($result)) {
+		betterseo_log('BetterSEO OG Admin: ' . $result->get_error_message() . ' (id: ' . $product_id . ')');
+		return null;
+	}
+	if ((int) $result['code'] !== 200 || empty($result['body'])) {
+		betterseo_log('BetterSEO OG Admin: HTTP ' . $result['code'] . ' (id: ' . $product_id . ')');
+		return null;
+	}
+
+	$data = json_decode($result['body'], true);
+	$parsed = betterseo_c7_parse_product_fields_from_api($data);
+	if ($parsed['title'] === '' && $parsed['description'] === '' && $parsed['image'] === '') {
+		return null;
+	}
+
+	set_transient($cache_key, $parsed, 10 * MINUTE_IN_SECONDS);
+	return $parsed;
+}
+
+/**
+ * OG fallback for club products: /for-web first (caller passes result); Admin GET /v1/product/{id} if still empty.
+ *
+ * @param WP_Post $post
+ * @param array|null $for_web Keys title, description, image from /for-web.
+ * @return array|null OG fields or null when for-web already sufficient or unavailable.
+ */
+function betterseo_get_c7_og_data_for_post($post, $for_web = null) {
+	if (!($post instanceof WP_Post)) {
+		return null;
+	}
+
+	$for_web = is_array($for_web) ? $for_web : array();
+	$title = isset($for_web['title']) ? trim((string) $for_web['title']) : '';
+	$description = isset($for_web['description']) ? trim((string) $for_web['description']) : '';
+	$image = isset($for_web['image']) ? trim((string) $for_web['image']) : '';
+
+	if ($title !== '' || $description !== '' || $image !== '') {
+		return null;
+	}
+
+	$admin = betterseo_get_c7_admin_product_data_for_post($post);
+	if (!is_array($admin)) {
+		return null;
+	}
+
+	return array(
+		'title'       => $admin['title'],
+		'description' => $admin['description'],
+		'image'       => $admin['image'],
+	);
+}
+
+/**
+ * SEO data for Yoast Product schema: /for-web first, then Admin product API.
+ *
+ * @param WP_Post $post
+ * @return array|null Keys title, description, image, price, sku.
+ */
+function betterseo_resolve_c7_product_seo_for_schema($post) {
+	if (!($post instanceof WP_Post)) {
+		return null;
+	}
+
+	if (!function_exists('betterseo_get_c7_product_seo_data_for_post')) {
+		return null;
+	}
+
+	$seo = betterseo_get_c7_product_seo_data_for_post($post);
+	if (is_array($seo) && !empty($seo['title'])) {
+		return $seo;
+	}
+
+	$admin = betterseo_get_c7_admin_product_data_for_post($post);
+	if (is_array($admin) && !empty($admin['title'])) {
+		return $admin;
+	}
+
+	return null;
+}
+
+/**
+ * ------------------------------------------------------------------
  * COMMERCE7 PRODUCT SYNC FUNCTIONS
  * ------------------------------------------------------------------
  * Fetch all products from Commerce7 and create/update WordPress posts
@@ -535,33 +941,36 @@ function betterseo_sync_c7_products() {
 function betterseo_fetch_c7_products($tenant_id) {
 	// Log API fetch attempt to monitor sync frequency
 	betterseo_log('BetterSEO: FETCHING products from Commerce7 API - Tenant: ' . $tenant_id . ' - Time: ' . date('Y-m-d H:i:s'));
-	
-	$base_url   = 'https://api.commerce7.com/v1/product/for-web';
-	$headers    = array('tenant: ' . $tenant_id);
-	$all_items  = array();
-	$page       = 1;
+
+	$base_url  = betterseo_c7_build_url('list');
+	$all_items = array();
+	$page      = 1;
 
 	// Paginate through all product pages until an empty result set is returned.
 	while (true) {
 		$url = $base_url . '?page=' . $page;
-		$curl = curl_init($url);
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-		curl_setopt($curl, CURLOPT_TIMEOUT, 30);
+		$retries = 0;
+		$result = null;
 
-		$response  = curl_exec($curl);
-		$http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-
-		if ($response === false || $http_code !== 200) {
-			$error = curl_error($curl);
-			betterseo_log('BetterSEO: Commerce7 API error on page ' . $page . ' - ' . $error . ' (HTTP ' . $http_code . ')');
-			curl_close($curl);
+		while (true) {
+			$result = betterseo_c7_api_request($url, 30, betterseo_c7_get_app_key() !== null);
+			if (is_wp_error($result)) {
+				betterseo_log('BetterSEO: Commerce7 API error on page ' . $page . ' - ' . $result->get_error_message());
+				break 2;
+			}
+			if ($result['code'] === 429 && $retries < 3) {
+				sleep((int) pow(2, $retries + 1));
+				$retries++;
+				continue;
+			}
+			if ($result['code'] !== 200) {
+				betterseo_log('BetterSEO: Commerce7 API error on page ' . $page . ' (HTTP ' . $result['code'] . ')');
+				break 2;
+			}
 			break;
 		}
 
-		curl_close($curl);
-
-		$data = json_decode($response, true);
+		$data = json_decode($result['body'], true);
 		if (!isset($data['products']) || !is_array($data['products'])) {
 			betterseo_log('BetterSEO: Invalid Commerce7 API response format on page ' . $page);
 			break;
@@ -569,7 +978,6 @@ function betterseo_fetch_c7_products($tenant_id) {
 
 		$page_items = $data['products'];
 		if (empty($page_items)) {
-			// No more products.
 			break;
 		}
 
@@ -649,14 +1057,18 @@ function betterseo_create_or_update_product_post($product) {
 		'post_author' => 1
 	);
 
+	$available_to = isset($product['security']['availableTo']) ? $product['security']['availableTo'] : 'Public';
+
 	if (!empty($existing_posts)) {
 		$post_data['ID'] = $existing_posts[0]->ID;
 		wp_update_post($post_data);
 
-		update_post_meta($existing_posts[0]->ID, '_c7_product_id', $c7_product_id);
-		update_post_meta($existing_posts[0]->ID, '_c7_slug', $slug);
+		$post_id = $existing_posts[0]->ID;
+		update_post_meta($post_id, '_c7_product_id', $c7_product_id);
+		update_post_meta($post_id, '_c7_slug', $slug);
+		update_post_meta($post_id, '_c7_security_available_to', sanitize_text_field($available_to));
 
-		betterseo_log("BetterSEO: Updated product post - Slug: $slug, ID: {$existing_posts[0]->ID}");
+		betterseo_log("BetterSEO: Updated product post - Slug: $slug, ID: $post_id");
 		return 'updated';
 	} else {
 		$post_id = wp_insert_post($post_data);
@@ -668,6 +1080,7 @@ function betterseo_create_or_update_product_post($product) {
 
 		update_post_meta($post_id, '_c7_product_id', $c7_product_id);
 		update_post_meta($post_id, '_c7_slug', $slug);
+		update_post_meta($post_id, '_c7_security_available_to', sanitize_text_field($available_to));
 
 		update_post_meta($post_id, '_elementor_edit_mode', 'builder');
 
@@ -809,6 +1222,17 @@ function gorilion_seo_switcher_options_page()
                     <th scope="row">Tenant ID for Warehouse</th>
                     <td>
                         <input type="text" name="betterseo_tenant_id" value="<?php echo esc_attr($tenant_id); ?>" />
+                    </td>
+                </tr>
+                <tr valign="top" class="field-commerce7">
+                    <th scope="row">Commerce7 App Key</th>
+                    <td>
+                        <input type="hidden" name="betterseo_c7_app_key_encrypted" value="" />
+                        <input type="password" name="betterseo_c7_app_key" value="" autocomplete="off" placeholder="<?php echo get_option('betterseo_c7_app_key_encrypted') ? esc_attr__('••••••••••• (saved)', 'gorilion-seo-switcher') : esc_attr__('Paste your Commerce7 App Secret Key', 'gorilion-seo-switcher'); ?>" />
+                        <p class="description"><?php esc_html_e('Enables syncing club-restricted products. Stored encrypted. Provided via your BetterSEO dashboard.', 'gorilion-seo-switcher'); ?></p>
+                        <?php if (betterseo_c7_get_app_key()) : ?>
+                            <p style="color:green;">&#10003; <?php esc_html_e('Admin API active — club products will be synced', 'gorilion-seo-switcher'); ?></p>
+                        <?php endif; ?>
                     </td>
                 </tr>
                 <tr valign="top" class="field-ecellar">
@@ -1078,6 +1502,28 @@ function gorilion_seo_switcher_inject_functions()
 				echo '<meta name="description" content="' . $description . "\"/>\n";
 				echo '<meta name="keywords" content="' . $keywords . "\">\n";
 				echo '<link rel="canonical" href="' . esc_url($full_url) . "\"/>\n";
+				if ($post->post_type === 'c7_product') {
+					$available_to = get_post_meta($post->ID, '_c7_security_available_to', true);
+					if ($available_to && $available_to !== 'Public') {
+						echo '<meta name="robots" content="noindex,follow"/>' . "\n";
+					}
+				}
+				$og = betterseo_get_c7_og_data_for_post($post, array(
+					'title'       => $title,
+					'description' => $description,
+					'image'       => $img,
+				));
+				if (is_array($og)) {
+					if (!empty($og['title'])) {
+						$title = $og['title'];
+					}
+					if (!empty($og['description'])) {
+						$description = $og['description'];
+					}
+					if (!empty($og['image'])) {
+						$img = $og['image'];
+					}
+				}
 				echo "<meta property=\"og:type\" content=\"product\" />\n";
 				echo '<meta property="og:title" content="' . $title . "\"/>\n";
 				echo '<meta property="og:description" content="' . $description . "\"/>\n";
@@ -1121,14 +1567,15 @@ function gorilion_seo_switcher_inject_functions()
 
 			add_filter('wpseo_title', 'betterseo_yoast_product_title', 99);
 			add_filter('wpseo_metadesc', 'betterseo_yoast_product_metadesc', 99);
-			add_filter('wpseo_opengraph_title', 'betterseo_yoast_product_title', 99);
-			add_filter('wpseo_opengraph_desc', 'betterseo_yoast_product_metadesc', 99);
-			add_filter('wpseo_opengraph_image', 'betterseo_yoast_product_image', 99);
-			add_filter('wpseo_twitter_image', 'betterseo_yoast_product_image', 99);
+			add_filter('wpseo_opengraph_title', 'betterseo_yoast_product_og_title', 99);
+			add_filter('wpseo_opengraph_desc', 'betterseo_yoast_product_og_desc', 99);
+			add_filter('wpseo_opengraph_image', 'betterseo_yoast_product_og_image', 99);
+			add_filter('wpseo_twitter_image', 'betterseo_yoast_product_og_image', 99);
+			add_filter('wpseo_robots', 'betterseo_yoast_product_robots', 99);
 
 			$captured_post = $post;
 			add_filter('wpseo_schema_graph_pieces', function( $pieces, $context ) use ( $captured_post ) {
-				$seo = betterseo_get_c7_product_seo_data_for_post( $captured_post );
+				$seo = betterseo_resolve_c7_product_seo_for_schema( $captured_post );
 				if ( ! is_array( $seo ) || empty( $seo['title'] ) ) {
 					return $pieces;
 				}
@@ -1223,6 +1670,8 @@ function gorilion_seo_switcher_inject_functions()
 			$img = '';
 			if (!empty($data['image'])) {
 				$img = (string) $data['image'];
+			} elseif (!empty($data['images'][0]['src'])) {
+				$img = (string) $data['images'][0]['src'];
 			} elseif (!empty($data['images'][0]['url'])) {
 				$img = (string) $data['images'][0]['url'];
 			}
@@ -1266,13 +1715,67 @@ function gorilion_seo_switcher_inject_functions()
 			return $current;
 		}
 
-		function betterseo_yoast_product_image($current) {
-			global $post;
+		function betterseo_yoast_product_for_web_og_context($post) {
 			$seo = betterseo_get_c7_product_seo_data_for_post($post);
-			if (is_array($seo) && !empty($seo['image'])) {
-				return $seo['image'];
+			if (!is_array($seo)) {
+				return array('title' => '', 'description' => '', 'image' => '');
+			}
+			return array(
+				'title'       => isset($seo['title']) ? $seo['title'] : '',
+				'description' => isset($seo['description']) ? $seo['description'] : '',
+				'image'       => isset($seo['image']) ? $seo['image'] : '',
+			);
+		}
+
+		function betterseo_yoast_product_og_title($current) {
+			global $post;
+			$for_web = betterseo_yoast_product_for_web_og_context($post);
+			$og = betterseo_get_c7_og_data_for_post($post, $for_web);
+			if (is_array($og) && !empty($og['title'])) {
+				return $og['title'];
+			}
+			if (!empty($for_web['title'])) {
+				return $for_web['title'];
 			}
 			return $current;
+		}
+
+		function betterseo_yoast_product_og_desc($current) {
+			global $post;
+			$for_web = betterseo_yoast_product_for_web_og_context($post);
+			$og = betterseo_get_c7_og_data_for_post($post, $for_web);
+			if (is_array($og) && !empty($og['description'])) {
+				return $og['description'];
+			}
+			if (!empty($for_web['description'])) {
+				return $for_web['description'];
+			}
+			return $current;
+		}
+
+		function betterseo_yoast_product_og_image($current) {
+			global $post;
+			$for_web = betterseo_yoast_product_for_web_og_context($post);
+			$og = betterseo_get_c7_og_data_for_post($post, $for_web);
+			if (is_array($og) && !empty($og['image'])) {
+				return $og['image'];
+			}
+			if (!empty($for_web['image'])) {
+				return $for_web['image'];
+			}
+			return $current;
+		}
+
+		function betterseo_yoast_product_robots($robots) {
+			global $post;
+			if (!($post instanceof WP_Post) || $post->post_type !== 'c7_product') {
+				return $robots;
+			}
+			$available_to = get_post_meta($post->ID, '_c7_security_available_to', true);
+			if ($available_to && $available_to !== 'Public') {
+				return 'noindex,follow';
+			}
+			return $robots;
 		}
 
 	}
